@@ -181,8 +181,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Aliarme con los equipos Beta y Alpha. As\xED podremos recolectar recursos
-    de manera m\xE1s segura, aunque tendremos que compartir el premio entre todos."
+  m_text: "Creo que no deber\xEDa seguir en el departamento, debo ser honesto con
+    el resto y que entre una persona que lo haga mejor."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.25
+  m_fontSize: 24.7
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -404,7 +404,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 7dcbcb493fe6dcd4e8c14cd9dcf10e6f, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 7dcbcb493fe6dcd4e8c14cd9dcf10e6f,
+      type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 7dcbcb493fe6dcd4e8c14cd9dcf10e6f, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -527,54 +528,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 218700057}
-  volumeLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  stopNaNPropagation: 1
-  finalBlitToCameraTarget: 0
-  antialiasingMode: 0
-  temporalAntialiasing:
-    jitterSpread: 0.75
-    sharpness: 0.25
-    stationaryBlending: 0.95
-    motionBlending: 0.85
-  subpixelMorphologicalAntialiasing:
-    quality: 2
-  fastApproximateAntialiasing:
-    fastMode: 0
-    keepAlpha: 0
-  fog:
-    enabled: 1
-    excludeSkybox: 1
-  debugLayer:
-    lightMeter:
-      width: 512
-      height: 256
-      showCurves: 1
-    histogram:
-      width: 512
-      height: 256
-      channel: 3
-    waveform:
-      exposure: 0.12
-      height: 256
-    vectorscope:
-      size: 256
-      exposure: 0.12
-    overlaySettings:
-      linearDepth: 0
-      motionColorIntensity: 4
-      motionGridSize: 64
-      colorBlindnessType: 0
-      colorBlindnessStrength: 1
-  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
-  m_ShowToolkit: 0
-  m_ShowCustomSorter: 0
-  breakBeforeColorGrading: 0
-  m_BeforeTransparentBundles: []
-  m_BeforeStackBundles: []
-  m_AfterStackBundles: []
 --- !u!114 &218700054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1130,8 +1083,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 568563956}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0236, y: 0.0292, z: 0}
-  m_LocalScale: {x: 0.10567585, y: 0.10689415, z: 1}
+  m_LocalPosition: {x: -0.0443, y: -0.0327, z: 0}
+  m_LocalScale: {x: 0.28817153, y: 0.2851938, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 697947290}
@@ -1178,7 +1131,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 05a300a4d5633ed46a23ba660c943101, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 575227ceda722ad468fe8054bdac26da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1279,8 +1232,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "No perder\xE9 mucho tiempo, partiremos r\xE1pidamente aunque corramos
-    m\xE1s riesgos. Iremos a una zona inexplorada y peligrosa pero muy rica en recursos"
+  m_text: "S\xE9 que no he estado a la altura de mis compa\xF1eros pero, a veces
+    hace falta equivocarse para encontrar la soluci\xF3n correcta."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1307,7 +1260,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.5
+  m_fontSize: 24.95
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1601,10 +1554,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xBFQu\xE9 estrategia decides utilizar?"
+  m_text: 'Es momento de tomar decisiones
+
+    sobre lo sucedido:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 320aa51946cb92f408d347e4cb0e6946, type: 2}
-  m_sharedMaterial: {fileID: 1331669058547700877, guid: 320aa51946cb92f408d347e4cb0e6946, type: 2}
+  m_sharedMaterial: {fileID: 1331669058547700877, guid: 320aa51946cb92f408d347e4cb0e6946,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1628,7 +1584,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 49.65
+  m_fontSize: 47.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1748,7 +1704,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 7dcbcb493fe6dcd4e8c14cd9dcf10e6f, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 7dcbcb493fe6dcd4e8c14cd9dcf10e6f,
+      type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 7dcbcb493fe6dcd4e8c14cd9dcf10e6f, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -2340,7 +2297,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 7dcbcb493fe6dcd4e8c14cd9dcf10e6f, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 7dcbcb493fe6dcd4e8c14cd9dcf10e6f,
+      type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 7dcbcb493fe6dcd4e8c14cd9dcf10e6f, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -3253,8 +3211,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Desarrollar\xE9 una estrategia meticulosa para ir un paso por delante
-    de los dem\xE1s equipos, ser\xE1 menos seguro pero recogeremos m\xE1s recursos."
+  m_text: "Quiz\xE1 dentro de poco podr\xEDa dedicarme a esta tarea, pero de momento,
+    voy a buscar otras oportunidades."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
