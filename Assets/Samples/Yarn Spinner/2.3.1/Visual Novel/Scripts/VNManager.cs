@@ -60,7 +60,7 @@ namespace Yarn.Unity.Example {
 
             runner.AddCommandHandler<string>("SceneChange", ChangeScene);
             runner.AddCommandHandler<string,string,string,string,string>("Act", SetActor );
-			runner.AddCommandHandler<string,string,string>("Draw", SetSpriteYarn );
+            runner.AddCommandHandler<string,string,string>("Draw", SetSpriteYarn );
 
 			runner.AddCommandHandler<string>("Hide", HideSprite );
 			runner.AddCommandHandler("HideAll", HideAllSprites );
@@ -110,6 +110,9 @@ namespace Yarn.Unity.Example {
         {
 			SceneManager.LoadScene(sceneName);
         }
+
+        
+        
 
         /// <summary>
         /// SetActor(actorName,spriteName,positionX,positionY,color) main
@@ -178,10 +181,12 @@ namespace Yarn.Unity.Example {
 			return SetSpriteActual( spriteName, pos );
 		}
 
-		///<summary>Hide(spriteName). "spriteName" can use wildcards, e.g.
-		///HideSprite(Sally*) will hide both SallyIdle and
-		///Sally_Happy</summary>
-		public void HideSprite(string spriteName) {
+        
+
+        ///<summary>Hide(spriteName). "spriteName" can use wildcards, e.g.
+        ///HideSprite(Sally*) will hide both SallyIdle and
+        ///Sally_Happy</summary>
+        public void HideSprite(string spriteName) {
 			
 			var wildcard = new Wildcard(spriteName);
 
@@ -500,8 +505,10 @@ namespace Yarn.Unity.Example {
 			return newSpriteObject;
 		}
 
-		// TODO: change to Image[] and grab all valid results?
-		Image FindActorOrSprite(string actorOrSpriteName) {
+       
+
+        // TODO: change to Image[] and grab all valid results?
+        Image FindActorOrSprite(string actorOrSpriteName) {
 			if ( actors.ContainsKey( actorOrSpriteName ) ) {
 				return actors[actorOrSpriteName].actorImage;
 			} else { // or is it a generic sprite?
