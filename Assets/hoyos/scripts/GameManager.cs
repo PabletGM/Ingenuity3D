@@ -103,10 +103,10 @@ public class GameManager : MonoBehaviour
                     //cambiamos tamaño
                     button.gameObject.transform.localScale = new Vector3(aumento, aumento, aumento);
                     //cambiamos color de letra a verde
-                    button.gameObject.GetComponentInChildren<TextMeshProUGUI>().color = Color.green;
+                    //button.gameObject.GetComponentInChildren<TextMeshProUGUI>().color = Color.green;
                     //para modificar a el hijp del hijo de button, esto es a el texto del boton click
                     GameObject grandChild = button.gameObject.transform.GetChild(0).GetChild(0).gameObject;
-                    grandChild.GetComponentInChildren<TextMeshProUGUI>().text = "Excavar";
+                    //grandChild.GetComponentInChildren<TextMeshProUGUI>().text = "Excavar";
                     current.transform.DOPause();
                     //hacemos tween sobre texto escalable
                     grandChild.transform.DOScale(new Vector3(1.35f, 1.35f, 1.35f), 1).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
@@ -132,7 +132,7 @@ public class GameManager : MonoBehaviour
     public void NormalPala(Vector3 size, SelectedButton button)
     {
         button.gameObject.transform.localScale = size;
-        button.gameObject.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
+        //button.gameObject.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
     }
 
     //devuelve el boton que ha sido pulsado

@@ -79,7 +79,7 @@ public class Excavando : MonoBehaviour
                 //así podemos saber el boton anterior al actual, que es el que queremos cambiar
                 SelectedButton buttonAnterior = _myGameManager.botonDevueltoIndice(i - 1);
                 GameObject go = buttonAnterior.gameObject;
-                go.GetComponentInChildren<TextMeshProUGUI>().text = "";
+                //go.GetComponentInChildren<TextMeshProUGUI>().text = "";
                 //accedemos a su metodo
                 term.CerrarExcavacionManual(buttonAnterior.gameObject);
                
