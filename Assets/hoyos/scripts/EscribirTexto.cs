@@ -52,7 +52,7 @@ public class EscribirTexto : MonoBehaviour
             //sumamos 1 al clickcount
             clickCount++;
             //si el numero de clicks es mayor que numero de lineas aparece boton entendido
-            if(clickCount > lines.Length)
+            if(clickCount >= lines.Length)
             {
                 continuar.SetActive(true);
                 //cuando ya no hay mas lineas ya no hay mas permiso de escritura
@@ -103,13 +103,13 @@ public class EscribirTexto : MonoBehaviour
         if (index < lines.Length - 1)
         {
             index++;
-            dialogueText.text = string.Empty;
+            //dialogueText.text = string.Empty;
             StartCoroutine(WriteLine());
         }
         //sino cerramos dialogo porque es ultima linea
         else
         {
-            dialogueText.text = string.Empty;
+            //dialogueText.text = string.Empty;
         }
     }
 
