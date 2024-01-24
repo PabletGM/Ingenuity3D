@@ -32,6 +32,10 @@ public class GameManager : MonoBehaviour
     public int[] valoresPicadasHoyoIndividual;
     //numero de posicion del hoyo a devolver
     int valorArray = 0;
+    [SerializeField]
+    private Sprite picoElegido;
+    [SerializeField]
+    private Sprite picoNormal;
 
 
 
@@ -87,7 +91,7 @@ public class GameManager : MonoBehaviour
                 NormalPala(size, current);
                 //hacemos tween de movimiento
                 current.transform.DOMoveY(600.5f, 0.8f).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
-                
+                current.GetComponent<Image>().sprite = picoNormal;
                 //para modificar a el hijp del hijo de button, esto es a el texto del boton click
                 GameObject grandChild = current.gameObject.transform.GetChild(0).GetChild(0).gameObject;
                 grandChild.GetComponentInChildren<TextMeshProUGUI>().text = "";
@@ -107,6 +111,7 @@ public class GameManager : MonoBehaviour
                     //para modificar a el hijp del hijo de button, esto es a el texto del boton click
                     GameObject grandChild = button.gameObject.transform.GetChild(0).GetChild(0).gameObject;
                     //grandChild.GetComponentInChildren<TextMeshProUGUI>().text = "Excavar";
+                    current.GetComponent<Image>().sprite = picoElegido;
                     current.transform.DOPause();
                     //hacemos tween sobre texto escalable
                     grandChild.transform.DOScale(new Vector3(1.35f, 1.35f, 1.35f), 1).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
