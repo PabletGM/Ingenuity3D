@@ -12,6 +12,7 @@ public class SelectedButton : MonoBehaviour
     private float aumentoSize = 1.2f;
     GameManager _myGameManager;
 
+
     //devuelve estado del boton
     public bool Selected
     {
@@ -35,6 +36,7 @@ public class SelectedButton : MonoBehaviour
         Selected = isSelected;
         //se hace mas grande la pala correspondiente y el resto se quedan normales
         _myGameManager.ChangeBiggerPala(aumentoSize, this);
+
     }
     // Start is called before the first frame update
     void Start()

@@ -32,11 +32,15 @@ public class GameManager : MonoBehaviour
     public int[] valoresPicadasHoyoIndividual;
     //numero de posicion del hoyo a devolver
     int valorArray = 0;
+
     [SerializeField]
     private Sprite picoElegido;
     [SerializeField]
     private Sprite picoNormal;
 
+
+    [SerializeField]
+    private GameObject[] flechasHoyosPorInvestigar;
 
 
     /// <summary>
@@ -78,6 +82,7 @@ public class GameManager : MonoBehaviour
     //se pasa el aumento que quieres hacer y la instancia a la que haces el aumento
     public void ChangeBiggerPala(float aumento,SelectedButton button)
     {
+        
         //buscamos el objeto selected de la lista placedObjects
         foreach (SelectedButton current in buttons)
         {
@@ -91,7 +96,7 @@ public class GameManager : MonoBehaviour
                 NormalPala(size, current);
                 //hacemos tween de movimiento
                 current.transform.DOMoveY(600.5f, 0.8f).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
-                current.GetComponent<Image>().sprite = picoNormal;
+                
                 //para modificar a el hijp del hijo de button, esto es a el texto del boton click
                 GameObject grandChild = current.gameObject.transform.GetChild(0).GetChild(0).gameObject;
                 grandChild.GetComponentInChildren<TextMeshProUGUI>().text = "";
@@ -102,6 +107,7 @@ public class GameManager : MonoBehaviour
                 //lo ponemos al boton como pulsado si quedan picadas por hacer en ese hoyo, sino quedan picadas no
                 if(QuedanPicadasHoyoReturn())
                 {
+
                     NewbuttonPressed(current);
                     current.Selected = true;
                     //cambiamos tamaño
@@ -111,14 +117,26 @@ public class GameManager : MonoBehaviour
                     //para modificar a el hijp del hijo de button, esto es a el texto del boton click
                     GameObject grandChild = button.gameObject.transform.GetChild(0).GetChild(0).gameObject;
                     //grandChild.GetComponentInChildren<TextMeshProUGUI>().text = "Excavar";
-                    current.GetComponent<Image>().sprite = picoElegido;
+                    PicoUsandose(current);
                     current.transform.DOPause();
                     //hacemos tween sobre texto escalable
                     grandChild.transform.DOScale(new Vector3(1.35f, 1.35f, 1.35f), 1).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
+                   
                 }
                 
             }
+            
         }
+    }
+
+    public void PicoSinUsar(SelectedButton current)
+    {
+        current.GetComponent<Image>().sprite = picoNormal;
+    }
+
+    public void PicoUsandose(SelectedButton current)
+    {
+        current.GetComponent<Image>().sprite = picoElegido;
     }
 
     //cambia estado booleano y se le llama cuando ya no queden picadas

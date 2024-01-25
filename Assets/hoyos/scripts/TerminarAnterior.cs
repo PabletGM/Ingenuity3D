@@ -15,12 +15,18 @@ public class TerminarAnterior : MonoBehaviour
     [SerializeField]
     private Button botonAnteriorExcavacion;
 
+
+    [SerializeField]
+    private GameObject flechaAsociada;
+
     public void CerrarExcavacion()
     {
         //cambiamos a sprite Pico
         botonAnteriorExcavacion.GetComponent<Image>().sprite = dobleTick;
         //hacemos boton interactuable
         botonAnteriorExcavacion.GetComponent<Button>().interactable = false;
+
+        flechaAsociada.SetActive(false);
 
         
     }
