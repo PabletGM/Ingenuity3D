@@ -27,7 +27,7 @@ public class PicarAnimacion : MonoBehaviour
         //sonido pala golpe al acabar animacion
         AudioManager.Instance.PlaySFX("Pala");
         //invocamos en 1 segundo y medio que es lo que dura la animacion el nopicar para que pare
-        Invoke("NoPicar", 1.5f);
+        Invoke("NoPicar", 0.75f);
 
     }
 
