@@ -13,9 +13,9 @@ public class Quit : MonoBehaviour
     //metodo temporal pasar a escena Hanoi
     public void ChangeSceneHanoi()
     {
-        //SceneManager.LoadScene("tutorial");
+        SceneManager.LoadScene("5.5Conversacion");
         //LevelLoader.LoadLevel("tutorial");
-        LevelLoader.LoadLevel("EscenaInicial3EnRaya");
+        //LevelLoader.LoadLevel("EscenaInicial3EnRaya");
     }
 
     public void ChangeNextScene()
