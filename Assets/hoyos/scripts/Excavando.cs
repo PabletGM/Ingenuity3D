@@ -31,7 +31,9 @@ public class Excavando : MonoBehaviour
 
     private bool picarMas = true;
 
-   
+
+    [SerializeField]
+    private bool soyUltimoHoyo;
    
   
 
@@ -85,6 +87,13 @@ public class Excavando : MonoBehaviour
                
                 //volvemos a reiniciar la variable privada de clicks Instantaneos a 0 de el script PicarAnimacion
                 clicksInstantaneos.ReiniciarClicksInstantaneos();
+
+                //si eres el ultimo hoyo
+                if(soyUltimoHoyo)
+                {
+                    //pasas de escena
+                    _myGameManager.NextScene();
+                }
             }
 
             

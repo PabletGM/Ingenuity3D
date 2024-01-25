@@ -42,6 +42,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject[] flechasHoyosPorInvestigar;
 
+    [SerializeField]
+    private GameObject nextScene;
+
 
     /// <summary>
     /// Unique GameManager instance (Singleton Pattern).
@@ -275,6 +278,15 @@ public class GameManager : MonoBehaviour
                 return buttons[0];
         }
     }
+
+
+    public void NextScene()
+    {
+        //HACES fADEOUT
+        nextScene.GetComponent<DOTweenAnimation>().DORestart();
+    }
+
+    
 
 
 
