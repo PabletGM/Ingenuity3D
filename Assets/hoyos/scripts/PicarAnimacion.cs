@@ -20,14 +20,10 @@ public class PicarAnimacion : MonoBehaviour
     {
         
         animatorPicar.SetBool("picar", true);
-        //se suma 1 en el click instantaneo
-        clickInst++;
-        //comprobamos si hemos superado el limite de clicks instantaneos para ladesactivacion temporal del resto de cliks
-        if(clickInst > maxclicksInstantaneos)
-        {
+        
             //mientras está activa debemos desactivar el isInteractable del boton para que no se pueda dar a picar todo el rato
             _myGameManager.FuncionalidadBotonPicoTemporalPonerQuitar(false);  
-        }
+        
         //sonido pala golpe al acabar animacion
         AudioManager.Instance.PlaySFX("Pala");
         //invocamos en 1 segundo y medio que es lo que dura la animacion el nopicar para que pare
