@@ -487,8 +487,40 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 86f4aa52d30b0c644b1f2e267787de9e, type: 3}
   - name: Escribir
     clip: {fileID: 8300000, guid: d32fb155bf8213f48b8f72312753dae9, type: 3}
-  dialogueSounds: []
-  transitionSounds: []
+  - name: aterrizajeGolpe
+    clip: {fileID: 8300000, guid: 44876212ee6ce2341a2889d08f9e50b9, type: 3}
+  - name: naveAterrizando
+    clip: {fileID: 8300000, guid: 807fe561915658f48a7c48341c07f3c3, type: 3}
+  - name: robot1
+    clip: {fileID: 8300000, guid: d63894e37683065428af4039697b9741, type: 3}
+  - name: robot2
+    clip: {fileID: 8300000, guid: 1a7df04f0fd308e449b395d2da3421ab, type: 3}
+  - name: pasosMetal
+    clip: {fileID: 8300000, guid: 93ec24a5450d9be46bda79f686df4168, type: 3}
+  - name: puertaAbriendose
+    clip: {fileID: 8300000, guid: e3e4932e0fbeab844a19537a33cd576f, type: 3}
+  dialogueSounds:
+  - name: comandante
+    clip: {fileID: 8300000, guid: f5949be25cbe2d048b69ebac6a611784, type: 3}
+  - name: conversacion
+    clip: {fileID: 8300000, guid: cbe6f293659269f42bbd68d5764918fd, type: 3}
+  - name: genteHablando
+    clip: {fileID: 8300000, guid: ec384408f4742654c823834b9f6accd3, type: 3}
+  - name: bostezo
+    clip: {fileID: 8300000, guid: 0c5fea2c538116d4fa0c02abdd969a43, type: 3}
+  transitionSounds:
+  - name: abrirTablet
+    clip: {fileID: 8300000, guid: 49cec6014c1bac4438387a98fff9e682, type: 3}
+  - name: barridoLateral
+    clip: {fileID: 8300000, guid: 08341b0341353664a91db15634bfb468, type: 3}
+  - name: cerrarTablet
+    clip: {fileID: 8300000, guid: 6dce265879573c0459788c70e174e441, type: 3}
+  - name: clickElectronico
+    clip: {fileID: 8300000, guid: b18596115bfd6a84ea4afe3f6eb5762c, type: 3}
+  - name: itemSound
+    clip: {fileID: 8300000, guid: acaf7fabe35b86e47b1634c51ed289f5, type: 3}
+  - name: transitionFadeOut
+    clip: {fileID: 8300000, guid: c19e848c3b39f0f44ba2981828516dcc, type: 3}
   musicSource: {fileID: 1327269675}
   sfxSource: {fileID: 1068102017}
   sfxSource2: {fileID: 1801351987}
@@ -514,7 +546,7 @@ Transform:
   - {fileID: 437092500}
   - {fileID: 684504267}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &437092499
 GameObject:
@@ -1472,7 +1504,7 @@ PrefabInstance:
     - target: {fileID: 527573963612187103, guid: e80a28a56d137574fa9c302ee389731b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 527573963612187103, guid: e80a28a56d137574fa9c302ee389731b,
         type: 3}
@@ -2340,84 +2372,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contadorPasarSiguienteTexto: 10
   pasarSiguienteTexto: {fileID: 454480860}
---- !u!1001 &1674046793
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1332845154168183317, guid: 5fe652164ac96394680655d7f3356ab0,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4106625343048776248, guid: 5fe652164ac96394680655d7f3356ab0,
-        type: 3}
-      propertyPath: m_Name
-      value: AudioManagerSecuencia5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7510429993650005785, guid: 5fe652164ac96394680655d7f3356ab0,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7510429993650005785, guid: 5fe652164ac96394680655d7f3356ab0,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 689.87775
-      objectReference: {fileID: 0}
-    - target: {fileID: 7510429993650005785, guid: 5fe652164ac96394680655d7f3356ab0,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 387.8537
-      objectReference: {fileID: 0}
-    - target: {fileID: 7510429993650005785, guid: 5fe652164ac96394680655d7f3356ab0,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6.1774817
-      objectReference: {fileID: 0}
-    - target: {fileID: 7510429993650005785, guid: 5fe652164ac96394680655d7f3356ab0,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7510429993650005785, guid: 5fe652164ac96394680655d7f3356ab0,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7510429993650005785, guid: 5fe652164ac96394680655d7f3356ab0,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7510429993650005785, guid: 5fe652164ac96394680655d7f3356ab0,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7510429993650005785, guid: 5fe652164ac96394680655d7f3356ab0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7510429993650005785, guid: 5fe652164ac96394680655d7f3356ab0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7510429993650005785, guid: 5fe652164ac96394680655d7f3356ab0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5fe652164ac96394680655d7f3356ab0, type: 3}
 --- !u!1 &1801351985
 GameObject:
   m_ObjectHideFlags: 0
