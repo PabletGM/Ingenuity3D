@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
     public Sound[] musicSounds, sfxSounds, dialogueSounds, transitionSounds;
-    public AudioSource musicSource, sfxSource, sfxSource2, sfxSource3, dialogueSource, dialogueSource2, dialogueSource3, transitionSource;
+    public AudioSource musicSource, sfxSource, sfxSource2, sfxSource3, dialogueSource, dialogueSource2, dialogueSource3, transitionSource, transitionSource2, transitionSource3;
 
     private void Awake()
     {
@@ -209,6 +209,39 @@ public class AudioManager : MonoBehaviour
         {
             transitionSource.volume = volume;
             transitionSource.PlayOneShot(s.clip);
+        }
+    }
+
+    public void PlayTransition2(string name, float volume)
+    {
+        //buscamos la musica que queremos poner en el musicSound
+        Sound s = Array.Find(transitionSounds, x => x.name == name);
+
+        if (s == null)
+        {
+            Debug.Log("Sound Not Found");
+        }
+
+        else
+        {
+            transitionSource2.volume = volume;
+            transitionSource2.PlayOneShot(s.clip);
+        }
+    }
+    public void PlayTransition3(string name, float volume)
+    {
+        //buscamos la musica que queremos poner en el musicSound
+        Sound s = Array.Find(transitionSounds, x => x.name == name);
+
+        if (s == null)
+        {
+            Debug.Log("Sound Not Found");
+        }
+
+        else
+        {
+            transitionSource3.volume = volume;
+            transitionSource3.PlayOneShot(s.clip);
         }
     }
 

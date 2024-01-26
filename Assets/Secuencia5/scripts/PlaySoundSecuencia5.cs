@@ -49,17 +49,17 @@ public class PlaySoundSecuencia5 : MonoBehaviour
     #region SFX
     public void PlaySFX1(string sfx1)
     {
-        AudioManagerSecuencia4.instance.PlaySFX1(sfx1, volumeSFX1);
+        AudioManager.Instance.PlaySFX(sfx1);
     }
 
     public void PlaySFX2(string sfx2)
     {
-        AudioManagerSecuencia5.instance.PlaySFX2(sfx2, volumeSFX2);
+        AudioManager.Instance.PlaySFX2(sfx2, volumeSFX2);
     }
 
     public void PlaySFX3(string sfx3)
     {
-        AudioManagerSecuencia5.instance.PlaySFX3(sfx3, volumeSFX3);
+        AudioManager.Instance.PlaySFX3(sfx3, volumeSFX3);
     }
 
     public void ChangeVolumeSFX1(float volume)
@@ -79,22 +79,22 @@ public class PlaySoundSecuencia5 : MonoBehaviour
 
     public void StopAllSFX()
     {
-        AudioManagerSecuencia5.instance.StopSFX();
+         AudioManager.Instance.StopSFX();
     }
 
     public void stopSFX1(string sfx1)
     {
-        AudioManagerSecuencia5.instance.StopSFX1();
+        AudioManager.Instance.StopSFX1();
     }
 
     public void stopSFX2(string sfx2)
     {
-        AudioManagerSecuencia5.instance.StopSFX2();
+        AudioManager.Instance.StopSFX2();
     }
 
     public void stopSFX3(string sfx3)
     {
-        AudioManagerSecuencia5.instance.StopSFX3();
+        AudioManager.Instance.StopSFX3();
     }
 
 
@@ -108,7 +108,7 @@ public class PlaySoundSecuencia5 : MonoBehaviour
     #region Music
     public void PlayMusic(string music)
     {
-        AudioManagerSecuencia5.instance.PlayMusic(music, volumeMusic);
+        AudioManager.Instance.PlayMusic(music);
     }
 
     public void ChangeVolumeMusic(float volume)
@@ -118,7 +118,7 @@ public class PlaySoundSecuencia5 : MonoBehaviour
 
     public void StopAllMusic()
     {
-        AudioManagerSecuencia5.instance.StopMusic();
+        AudioManager.Instance.StopMusic();
     }
     #endregion
 
@@ -129,17 +129,17 @@ public class PlaySoundSecuencia5 : MonoBehaviour
     #region Dialogue
     public void PlayDialogue1(string music)
     {
-        AudioManagerSecuencia5.instance.PlayDialogue1(music, volumeDialogue1);
+        AudioManager.Instance.PlayDialogue1(music, volumeDialogue1);
     }
 
     public void PlayDialogue2(string music)
     {
-        AudioManagerSecuencia5.instance.PlayDialogue2(music, volumeDialogue2);
+        AudioManager.Instance.PlayDialogue2(music, volumeDialogue2);
     }
 
     public void PlayDialogue3(string music)
     {
-        AudioManagerSecuencia5.instance.PlayDialogue3(music, volumeDialogue3);
+        AudioManager.Instance.PlayDialogue3(music, volumeDialogue3);
     }
 
     public void ChangeVolumeDialogue1(float volume)
@@ -159,7 +159,7 @@ public class PlaySoundSecuencia5 : MonoBehaviour
 
     public void StopAllDialogue()
     {
-        AudioManagerSecuencia5.instance.StopDialogue();
+        AudioManager.Instance.StopDialogue();
     }
     #endregion
 
@@ -170,8 +170,19 @@ public class PlaySoundSecuencia5 : MonoBehaviour
 
     public void PlayTransition(string music)
     {
-        AudioManagerSecuencia5.instance.PlayTransition(music, volumeTransition);
+        AudioManager.Instance.PlayTransition(music, volumeTransition);
     }
+    public void PlayTransition2(string music)
+    {
+        AudioManager.Instance.PlayTransition(music, volumeTransition);
+    }
+
+    public void PlayTransition3(string music)
+    {
+        AudioManager.Instance.PlayTransition(music, volumeTransition);
+    }
+
+
 
     public void ChangeVolumeTransition(float volume)
     {
@@ -180,7 +191,7 @@ public class PlaySoundSecuencia5 : MonoBehaviour
 
     public void StopAllTransition()
     {
-        AudioManagerSecuencia5.instance.StopTransition();
+        AudioManager.Instance.StopTransition();
     }
     #endregion
 }
