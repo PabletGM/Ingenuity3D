@@ -52,9 +52,16 @@ public class AterrizajePlanetaSecuencia2 : MonoBehaviour
         }
         else if(SceneManager.GetActiveScene().name == nameSecuencia5)
         {
-
+            AudioManager.Instance.PlaySFX("naveAterrizando");
+            Invoke("GolpeAterrizaje", 2f);
         }
         
+    }
+
+    private void GolpeAterrizaje()
+    {
+        AudioManager.Instance.StopSFX1();
+        AudioManager.Instance.PlaySFX2("aterrizajeGolpe",1f);
     }
 
     private void QuitarFuncionalidadEscena()

@@ -174,12 +174,12 @@ public class PlaySoundSecuencia5 : MonoBehaviour
     }
     public void PlayTransition2(string music)
     {
-        AudioManager.Instance.PlayTransition(music, volumeTransition);
+        AudioManager.Instance.PlayTransition2(music, volumeTransition);
     }
 
     public void PlayTransition3(string music)
     {
-        AudioManager.Instance.PlayTransition(music, volumeTransition);
+        AudioManager.Instance.PlayTransition3(music, volumeTransition);
     }
 
 
