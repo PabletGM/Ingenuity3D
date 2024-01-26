@@ -41,37 +41,55 @@ public class PlayerMovement : MonoBehaviour
                 
                 target = waypoint[0];
                 //metodo flechas
-                Flechas(flechas[0]);
+                if (flechas[0]!=null)
+                {
+                    Flechas(flechas[0]);
+                }
+                
                 break;
 
             case "Hoyo1":
                 
                 target = waypoint[1];
-                Flechas(flechas[1]);
+                if (flechas[1] != null)
+                {
+                    Flechas(flechas[1]);
+                }
                 break;
 
             case "Hoyo2":
                 
                 target = waypoint[2];
-                Flechas(flechas[2]);
+                if (flechas[2] != null)
+                {
+                    Flechas(flechas[2]);
+                }
                 break;
 
             case "Hoyo3":
                 
                 target = waypoint[3];
-                Flechas(flechas[3]);
+                if (flechas[3] != null)
+                {
+                    Flechas(flechas[3]);
+                }
                 break;
 
             case "Hoyo4":
                 
                 target = waypoint[4];
-                Flechas(flechas[4]);
+                if (flechas[4] != null)
+                {
+                    Flechas(flechas[4]);
+                }
                 break;
 
             case "Hoyo5":
                 
                 target = waypoint[5];
-                Flechas(null);
+                
+                    Flechas(null);
+                
                 break;
 
             default:

@@ -96,8 +96,13 @@ public class GameManager : MonoBehaviour
                 //pasamos el tamaño normal y el boton que debe cambiar
                 NormalPala(size, current);
                 //activamos tween de movimiento
-                current.GetComponent<DOTweenAnimation>().isActive = true;
-                current.GetComponent<DOTweenAnimation>().DOPlay();
+
+                if (current.GetComponent<DOTweenAnimation>())
+                {
+                    current.GetComponent<DOTweenAnimation>().isActive = true;
+                    current.GetComponent<DOTweenAnimation>().DOPlay();
+                }
+                    
 
                 
 
@@ -124,8 +129,12 @@ public class GameManager : MonoBehaviour
                     PicoUsandose(current);
                     current.transform.DOPause();
                     //activamos tween de movimiento
-                    current.GetComponent<DOTweenAnimation>().isActive = false;
-                    current.GetComponent<DOTweenAnimation>().DOPause();
+                    if(current.GetComponent<DOTweenAnimation>())
+                    {
+                        current.GetComponent<DOTweenAnimation>().isActive = false;
+                        current.GetComponent<DOTweenAnimation>().DOPause();
+                    }
+                    
 
                     
 
