@@ -60,8 +60,9 @@ public class AterrizajePlanetaSecuencia2 : MonoBehaviour
 
     private void GolpeAterrizaje()
     {
-        AudioManager.Instance.StopSFX1();
+        
         AudioManager.Instance.PlaySFX2("aterrizajeGolpe",1f);
+        AudioManager.Instance.StopSFX1();
     }
 
     private void QuitarFuncionalidadEscena()
