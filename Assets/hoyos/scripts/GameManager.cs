@@ -39,8 +39,6 @@ public class GameManager : MonoBehaviour
     private Sprite picoNormal;
 
 
-    [SerializeField]
-    private GameObject[] flechasHoyosPorInvestigar;
 
     [SerializeField]
     private GameObject nextScene;
@@ -101,6 +99,8 @@ public class GameManager : MonoBehaviour
                 current.GetComponent<DOTweenAnimation>().isActive = true;
                 current.GetComponent<DOTweenAnimation>().DOPlay();
 
+                
+
                 //para modificar a el hijp del hijo de button, esto es a el texto del boton click
                 GameObject grandChild = current.gameObject.transform.GetChild(0).GetChild(0).gameObject;
                 grandChild.GetComponentInChildren<TextMeshProUGUI>().text = "";
@@ -126,6 +126,9 @@ public class GameManager : MonoBehaviour
                     //activamos tween de movimiento
                     current.GetComponent<DOTweenAnimation>().isActive = false;
                     current.GetComponent<DOTweenAnimation>().DOPause();
+
+                    
+
                     //hacemos tween sobre texto escalable
                     grandChild.transform.DOScale(new Vector3(1.35f, 1.35f, 1.35f), 1).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
                    

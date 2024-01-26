@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour
     //lista de waypoints a los que se podrá desplazar el jugador
     [SerializeField]
     private Transform[] waypoint;
+
+    [SerializeField]
+    private GameObject[] flechas;
     //saber posicion del waypoint
     public Transform target;
     public float speed;
@@ -37,36 +40,71 @@ public class PlayerMovement : MonoBehaviour
             case "Hoyo0":
                 
                 target = waypoint[0];
+                //metodo flechas
+                Flechas(flechas[0]);
                 break;
 
             case "Hoyo1":
                 
                 target = waypoint[1];
+                Flechas(flechas[1]);
                 break;
 
             case "Hoyo2":
                 
                 target = waypoint[2];
+                Flechas(flechas[2]);
                 break;
 
             case "Hoyo3":
                 
                 target = waypoint[3];
+                Flechas(flechas[3]);
                 break;
 
             case "Hoyo4":
                 
                 target = waypoint[4];
+                Flechas(flechas[4]);
                 break;
 
             case "Hoyo5":
                 
                 target = waypoint[5];
+                Flechas(null);
                 break;
 
             default:
                 
                 break;
+        }
+    }
+
+    private void Flechas(GameObject flechaBuena)
+    {
+        //si existe flecha buena
+        if(flechaBuena!=null)
+        {
+            foreach(GameObject flecha in flechas)
+            {
+                //encontramos la buena
+                if(flecha== flechaBuena)
+                {
+                    flecha.SetActive(true);
+                }
+                else
+                {
+                    flecha.SetActive(false);
+                }
+            }
+        }
+        //sino existe flecha buena se quitan todas
+        else
+        {
+            foreach (GameObject flecha in flechas)
+            {  
+               flecha.SetActive(false);
+            }
         }
     }
     

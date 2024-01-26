@@ -16,8 +16,7 @@ public class TerminarAnterior : MonoBehaviour
     private Button botonAnteriorExcavacion;
 
 
-    [SerializeField]
-    private GameObject flechaAsociada;
+
 
     public void CerrarExcavacion()
     {
@@ -26,7 +25,7 @@ public class TerminarAnterior : MonoBehaviour
         //hacemos boton interactuable
         botonAnteriorExcavacion.GetComponent<Button>().interactable = false;
 
-        flechaAsociada.SetActive(false);
+        //flechaAsociada.SetActive(false);
 
         
     }
