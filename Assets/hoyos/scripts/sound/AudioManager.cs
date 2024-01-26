@@ -6,8 +6,8 @@ using System;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
-    public Sound[] musicSounds, sfxSounds;
-    public AudioSource musicSource, sfxSource;
+    public Sound[] musicSounds, sfxSounds, dialogueSounds, transitionSounds;
+    public AudioSource musicSource, sfxSource, sfxSource2, sfxSource3, dialogueSource, dialogueSource2, dialogueSource3, transitionSource;
 
     private void Awake()
     {
