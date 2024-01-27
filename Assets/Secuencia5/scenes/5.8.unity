@@ -736,6 +736,46 @@ PrefabInstance:
       propertyPath: onComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: DORestartById
       objectReference: {fileID: 0}
+    - target: {fileID: 1670631209462889305, guid: 53157bf24ede0b64aabc8d2ae3521af1,
+        type: 3}
+      propertyPath: hasOnStart
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1670631209462889305, guid: 53157bf24ede0b64aabc8d2ae3521af1,
+        type: 3}
+      propertyPath: onStart.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1670631209462889305, guid: 53157bf24ede0b64aabc8d2ae3521af1,
+        type: 3}
+      propertyPath: onStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1670631209462889305, guid: 53157bf24ede0b64aabc8d2ae3521af1,
+        type: 3}
+      propertyPath: onStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1638451994}
+    - target: {fileID: 1670631209462889305, guid: 53157bf24ede0b64aabc8d2ae3521af1,
+        type: 3}
+      propertyPath: onStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1670631209462889305, guid: 53157bf24ede0b64aabc8d2ae3521af1,
+        type: 3}
+      propertyPath: onStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StopAllDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 1670631209462889305, guid: 53157bf24ede0b64aabc8d2ae3521af1,
+        type: 3}
+      propertyPath: onStart.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlaySoundSecuencia5, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1670631209462889305, guid: 53157bf24ede0b64aabc8d2ae3521af1,
+        type: 3}
+      propertyPath: onStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2674079848095839479, guid: 53157bf24ede0b64aabc8d2ae3521af1,
         type: 3}
       propertyPath: m_text
@@ -934,6 +974,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e80a28a56d137574fa9c302ee389731b, type: 3}
+--- !u!114 &1638451994 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4881113965180278515, guid: e80a28a56d137574fa9c302ee389731b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1638451993}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621ff7d4c3746b2468de936874fa3c93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2045013618
 GameObject:
   m_ObjectHideFlags: 0
