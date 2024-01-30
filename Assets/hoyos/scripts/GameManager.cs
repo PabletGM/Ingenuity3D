@@ -5,12 +5,16 @@ using TMPro;
 using DG.Tweening;
 using UnityEngine.UI;
 using static UnityEngine.GraphicsBuffer;
+using System;
 
 public class GameManager : MonoBehaviour
 {
     //lista de objetos botones generales que pueden ser seleccionados con clase SelectedButton
     [SerializeField]
     private SelectedButton[] buttons;
+
+    [SerializeField]
+    private GameObject[] butonFlechas;
     //saber en que posicion de boton estamos
     private int posBotonHoyo;
     //lista de objetos Button texto de botones especificos 
@@ -74,10 +78,70 @@ public class GameManager : MonoBehaviour
     //segun el booleano que se pase se activará en el boton selected el isInteractable o no para así solo se pueda presionar en el pico mientras no hace animacion
     public void FuncionalidadBotonPicoTemporalPonerQuitar(bool estado)
     {
+
+        for(int i=0; i< buttons.Length; i++)
+        {
+            buttons[i].gameObject.GetComponent<Button>().interactable = estado;
+        }
+
+        for (int i = 0; i < butonFlechas.Length; i++)
+        {
+            if (butonFlechas[i].gameObject.activeInHierarchy)
+            {
+                butonFlechas[i].gameObject.GetComponent<Button>().interactable = estado;
+            }
+            
+        }
         //vemos en que boton estamos actualmente
         SelectedButton buttonNow = buttonPressed();
+
+        //flecha correcta la activamos
+        ActivarFlechaCorrecta(buttonNow.gameObject.name);
+
         //accedemos a su GO para cambiar su propiedad
         buttonNow.gameObject.GetComponent<Button>().interactable = estado;
+    }
+
+
+    //segun cual sea el boton actual pulsado o hoyo cavando se activará una flecha u otra
+    private void ActivarFlechaCorrecta(string botonPulsado)
+    {
+
+        //desactivamos todas primero
+        for(int i=0;i< butonFlechas.Length;i++)
+        {
+            butonFlechas[i].gameObject.SetActive(false);
+        }
+
+
+
+        switch(botonPulsado)
+        {
+            case "Hoyo0":
+                //se activa flecha1
+                butonFlechas[0].gameObject.SetActive(true);
+                break;
+
+            case "Hoyo1":
+                //se activa flecha2
+                butonFlechas[1].gameObject.SetActive(true);
+                break;
+
+            case "Hoyo2":
+                //se activa flecha3
+                butonFlechas[2].gameObject.SetActive(true);
+                break;
+
+            case "Hoyo3":
+                //se activa flecha4
+                butonFlechas[3].gameObject.SetActive(true);
+                break;
+
+            case "Hoyo4":
+                //se activa flecha5
+                butonFlechas[4].gameObject.SetActive(true);
+                break;
+        }
     }
 
     //se pasa el aumento que quieres hacer y la instancia a la que haces el aumento
