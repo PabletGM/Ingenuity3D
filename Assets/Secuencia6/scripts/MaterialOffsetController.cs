@@ -7,6 +7,7 @@ public class MaterialOffsetController : MonoBehaviour
     public Material originalMaterial;
     private Material clonedMaterial;
     public float aumentoOffsetX = 0.25f;
+    public float limiteOffsetX;
 
     void Start()
     {
@@ -30,12 +31,18 @@ public class MaterialOffsetController : MonoBehaviour
             // Obtén el offset actual
             Vector2 offset = clonedMaterial.GetTextureOffset("_MainTex");
 
+           
             // Calcula el nuevo offset 
             float offsetX = offset.x + aumentoOffsetX;
             float offsetY = offset.y;
 
-            // Aplica el nuevo offset al material clonado
-            clonedMaterial.SetTextureOffset("_MainTex", new Vector2(offsetX, offsetY));
+            //sino ha superado el limite
+            if (offsetX < limiteOffsetX)
+            {
+                // Aplica el nuevo offset al material clonado
+                clonedMaterial.SetTextureOffset("_MainTex", new Vector2(offsetX, offsetY));
+            }
+               
         }
         else
         {
