@@ -158,7 +158,7 @@ public class gamecontroller : MonoBehaviour
 
     public void FichaEnemySound()
     {
-        AudioManager3EnRaya.instance.PlaySFXDuracion("FichaEnemy", 1f);
+        //AudioManager3EnRaya.instance.PlaySFXDuracion("FichaEnemy", 1f);
     }
 
     public void ReturnTotalRounds()
