@@ -1706,7 +1706,7 @@ public class gamecontroller : MonoBehaviour
     //para decir si ha ganado enemy
     void Win()
     {
-        AudioManager3EnRaya.instance.PlaySFXDuracion("Ganar", 1f);
+        //AudioManager3EnRaya.instance.PlaySFXDuracion("Ganar", 1f);
         SetBoardInteractable(false);
         DesactivarTableroAlGanarOPerder();
 
