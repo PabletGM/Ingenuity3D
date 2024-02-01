@@ -12,6 +12,11 @@ public class GripSpace : MonoBehaviour
     [SerializeField]
     private gamecontroller GameController;
 
+    [SerializeField]
+    private GameObject fichaX;
+    [SerializeField]
+    private GameObject ficha0;
+
     public void SetSpace()
     {
          //aqui empieza turno jugador desde que tienes posibilidad de pulsar algun boton
@@ -19,10 +24,11 @@ public class GripSpace : MonoBehaviour
         //si el boton es interactivo
         if (this.gameObject.GetComponent<Button>().interactable)
         {
-           
-            
+
+
             //siempre ponemos la X de player ya que solo se pulsa boton en nuestro turno
             buttonText.text = "X";
+            ActivarFichaPlayerSprite();
             FichaPlayerSound();
             //al acabar de pulsarse el boton, acaba el turno del jugador y empieza el del enemigo
             gamecontroller.GetInstanceGameController().EmpezarTurnoEnemigo();
@@ -40,6 +46,16 @@ public class GripSpace : MonoBehaviour
             Invoke("TurnoEnemy", 1.5f);
 
         }
+    }
+
+    private void ActivarFichaPlayerSprite()
+    {
+        fichaX.SetActive(true);
+    }
+
+    public void ActivarFichaEnemySprite()
+    {
+        ficha0.SetActive(true);
     }
 
     public void FichaPlayerSound()

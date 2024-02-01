@@ -477,6 +477,7 @@ public class gamecontroller : MonoBehaviour
                                 {
                                     //si está en el modo dificil si pone la primera posicion en el medio
                                     buttonList[1].text = enemySide;
+                                    buttonList[1].gameObject.GetComponentInParent<GripSpace>().ActivarFichaEnemySprite();
                                     //lo marcas como pulsado
                                     PosicionBotonPulsadoOcupada(buttonList[1].transform.parent.gameObject);
                                 }
@@ -485,6 +486,7 @@ public class gamecontroller : MonoBehaviour
                                 {
                                     //si está en el modo dificil si pone la primera posicion en el medio
                                     buttonList[4].text = enemySide;
+                                    buttonList[4].gameObject.GetComponentInParent<GripSpace>().ActivarFichaEnemySprite();
                                     //lo marcas como pulsado
                                     PosicionBotonPulsadoOcupada(buttonList[4].transform.parent.gameObject);
                                 }      
@@ -510,6 +512,7 @@ public class gamecontroller : MonoBehaviour
         PosicionBotonPulsadoOcupada(devolverBotonConNumero(botonElegido));
         //metodo que al pasarle un numero te devuelva el GameObject boton donde cambias el texto del hijo con enemySide
         devolverBotonConNumero(botonElegido).GetComponentInChildren<TMP_Text>().text = enemySide;
+        devolverBotonConNumero(botonElegido).GetComponent<GripSpace>().ActivarFichaEnemySprite();
     }
 
 
@@ -565,7 +568,8 @@ public class gamecontroller : MonoBehaviour
             int numeroBoton = devolverNumeroConBoton(DevolverUnicoHuecoLibre());
             //se le pone la ficha enemy
             buttonList[numeroBoton].GetComponent<TMP_Text>().text = enemySide;
-            
+            buttonList[numeroBoton].GetComponent<GripSpace>().ActivarFichaEnemySprite();
+
             PosicionBotonPulsadoOcupada(buttonList[numeroBoton].transform.parent.gameObject);
             acabado = true;
 
@@ -575,6 +579,7 @@ public class gamecontroller : MonoBehaviour
         else if (evitarDobleJugadaPlayer)
         {
             buttonList[devolverNumeroConBoton(botonConFichaEnemy)].text = enemySide;
+            buttonList[devolverNumeroConBoton(botonConFichaEnemy)].GetComponent<GripSpace>().ActivarFichaEnemySprite();
             //marcar como pulsado
             PosicionBotonPulsadoOcupada(buttonList[devolverNumeroConBoton(botonConFichaEnemy)].transform.parent.gameObject);
             evitarDobleJugadaPlayer = false;
@@ -656,6 +661,7 @@ public class gamecontroller : MonoBehaviour
                         if (buttonList[asignado].text == "" && posicionesLibresSinFicha[asignado] == false)
                         {
                             buttonList[asignado].text = enemySide;
+                            buttonList[asignado].gameObject.GetComponentInParent<GripSpace>().ActivarFichaEnemySprite();
                             //marcar como pulsado
                             PosicionBotonPulsadoOcupada(buttonList[asignado].transform.parent.gameObject);
                             acabado = true;
@@ -913,6 +919,8 @@ public class gamecontroller : MonoBehaviour
             PosicionBotonPulsadoOcupada(devolverBotonConNumero(botonElegido));
             //metodo que al pasarle un numero te devuelva el GameObject boton donde cambias el texto del hijo con enemySide
             devolverBotonConNumero(botonElegido).GetComponentInChildren<TMP_Text>().text = enemySide;
+            //poner sprite ficha
+            devolverBotonConNumero(botonElegido).GetComponent<GripSpace>().ActivarFichaEnemySprite();
 
     }
 
