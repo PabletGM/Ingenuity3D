@@ -113,13 +113,26 @@ public class gamecontroller : MonoBehaviour
     //activa panel enemy waiting durante la duracion del turno del enemigo
     public void SetPanelEnemyWaiting()
     {
+        //debemos desactivar jugabilidad para evitar clicks
+        SetJugabilidadBotones(false);
         panelEnemyWaiting.SetActive(true);
         //desactivar em un segundo al acabar el turno del enemigo
         Invoke("DesactivarPanelWaiting", 1.4f);
     }
+
+    private void SetJugabilidadBotones(bool set)
+    {
+            for(int i = 0; i < buttonList.Length; i++)
+            {
+                buttonList[i].GetComponentInParent<Button>().interactable = set;
+            }
+    }
+
+
     void DesactivarPanelWaiting()
     {
         panelEnemyWaiting.SetActive(false);
+        SetJugabilidadBotones(true);
     }
 
     //cuando termina de mover el enemigo
