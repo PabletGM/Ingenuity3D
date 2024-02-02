@@ -11,7 +11,8 @@ using UnityEngine.UIElements;
 
 public class gamecontroller : MonoBehaviour
 {
-
+    [SerializeField]
+    private GameObject tresEnRaya;
 
     static private gamecontroller _instanceGameController;
 
@@ -282,7 +283,7 @@ public class gamecontroller : MonoBehaviour
 
     public void ActivarNextLevel()
     {
-        nextLevel.SetActive(true);
+        //nextLevel.SetActive(true);
     }
 
     public string GetGameSide()
@@ -704,6 +705,7 @@ public class gamecontroller : MonoBehaviour
     {
         //efecto FadeOut
         background.GetComponent<DOTweenAnimation>().DORestartById("FadeOut");
+        tresEnRaya.GetComponent<DOTweenAnimation>().DORestartById("ScaleSmall");
         Invoke("DesactivarJugabilidad", 1.5f);
     }
 
