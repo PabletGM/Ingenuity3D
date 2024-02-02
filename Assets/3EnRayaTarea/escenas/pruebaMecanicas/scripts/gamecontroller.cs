@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class gamecontroller : MonoBehaviour
 {
@@ -50,6 +52,9 @@ public class gamecontroller : MonoBehaviour
 
     [SerializeField]
     private GameObject nextLevel;
+
+    [SerializeField]
+    private GameObject background;
 
 
     //booleano que permite que durante el modo de dificultad medio se haga la comprobacion 1 vez para taponar jugada player de victoria
@@ -124,7 +129,7 @@ public class gamecontroller : MonoBehaviour
     {
             for(int i = 0; i < buttonList.Length; i++)
             {
-                buttonList[i].GetComponentInParent<Button>().interactable = set;
+                buttonList[i].GetComponentInParent<UnityEngine.UI.Button>().interactable = set;
             }
     }
 
@@ -207,7 +212,7 @@ public class gamecontroller : MonoBehaviour
     public void PosicionBotonPulsadoOcupada(GameObject botonpulsado)
     {
         //hacemos el botonPulsado no interactuable
-        botonpulsado.GetComponent<Button>().interactable = false;
+        botonpulsado.GetComponent<UnityEngine.UI.Button>().interactable = false;
         //vemos que numero es el botonPulsado
         int numero = devolverNumeroConBoton(botonpulsado);
         if(numero!=-1)
@@ -697,7 +702,8 @@ public class gamecontroller : MonoBehaviour
 
     public void DesactivarTableroAlGanarOPerder()
     {
-
+        //efecto FadeOut
+        background.GetComponent<DOTweenAnimation>().DORestartById("FadeOut");
         Invoke("DesactivarJugabilidad", 1.5f);
     }
 
@@ -1721,7 +1727,7 @@ public class gamecontroller : MonoBehaviour
         DesactivarTableroAlGanarOPerder();
 
         gameover.SetActive(true);
-        gameoverText.text = "O has ganado";
+        gameoverText.text = "Derrota";
     }
 
     //para decir si ha ganado enemy
@@ -1732,7 +1738,7 @@ public class gamecontroller : MonoBehaviour
         DesactivarTableroAlGanarOPerder();
 
         win.SetActive(true);
-        gameoverText.text ="X has ganado";
+        gameoverText.text ="Victoria";
     }
 
     //segun en que nivel estés pasas a uno u otro
@@ -1796,7 +1802,7 @@ public class gamecontroller : MonoBehaviour
     {
         for (int i = 0; i < buttonList.Length; i++)
         {
-            buttonList[i].GetComponentInParent<Button>().interactable = toggle;
+            buttonList[i].GetComponentInParent<UnityEngine.UI.Button>().interactable = toggle;
         }
     }
 }
