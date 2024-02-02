@@ -694,8 +694,8 @@ public class gamecontroller : MonoBehaviour
         board.SetActive(false);
         lineas.SetActive(false);
         botones.SetActive(false);
-        player0.SetActive(false);
-        playerX.SetActive(false);
+        //player0.SetActive(false);
+        //playerX.SetActive(false);
     }
 
     public int CuantosHuecoslibres()
@@ -1757,14 +1757,14 @@ public class gamecontroller : MonoBehaviour
         if (gameSide == "X")
         {
 
-            playerX.SetActive(true);
-            player0.SetActive(false);
+            //playerX.SetActive(true);
+            //player0.SetActive(false);
 
         }
         else if (gameSide == "0")
         {
-            playerX.SetActive(false);
-            player0.SetActive(true);
+            //playerX.SetActive(false);
+            //player0.SetActive(true);
 
             
         }
