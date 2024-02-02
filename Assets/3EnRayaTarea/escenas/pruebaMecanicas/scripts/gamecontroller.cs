@@ -568,7 +568,7 @@ public class gamecontroller : MonoBehaviour
             int numeroBoton = devolverNumeroConBoton(DevolverUnicoHuecoLibre());
             //se le pone la ficha enemy
             buttonList[numeroBoton].GetComponent<TMP_Text>().text = enemySide;
-            buttonList[numeroBoton].GetComponent<GripSpace>().ActivarFichaEnemySprite();
+            buttonList[numeroBoton].GetComponentInParent<GripSpace>().ActivarFichaEnemySprite();
 
             PosicionBotonPulsadoOcupada(buttonList[numeroBoton].transform.parent.gameObject);
             acabado = true;
@@ -579,7 +579,7 @@ public class gamecontroller : MonoBehaviour
         else if (evitarDobleJugadaPlayer)
         {
             buttonList[devolverNumeroConBoton(botonConFichaEnemy)].text = enemySide;
-            buttonList[devolverNumeroConBoton(botonConFichaEnemy)].GetComponent<GripSpace>().ActivarFichaEnemySprite();
+            buttonList[devolverNumeroConBoton(botonConFichaEnemy)].GetComponentInParent<GripSpace>().ActivarFichaEnemySprite();
             //marcar como pulsado
             PosicionBotonPulsadoOcupada(buttonList[devolverNumeroConBoton(botonConFichaEnemy)].transform.parent.gameObject);
             evitarDobleJugadaPlayer = false;
@@ -694,8 +694,8 @@ public class gamecontroller : MonoBehaviour
         board.SetActive(false);
         lineas.SetActive(false);
         botones.SetActive(false);
-        //player0.SetActive(false);
-        //playerX.SetActive(false);
+        player0.SetActive(false);
+        playerX.SetActive(false);
     }
 
     public int CuantosHuecoslibres()
@@ -1757,16 +1757,16 @@ public class gamecontroller : MonoBehaviour
         if (gameSide == "X")
         {
 
-            //playerX.SetActive(true);
-            //player0.SetActive(false);
+            playerX.SetActive(true);
+            player0.SetActive(false);
 
         }
         else if (gameSide == "0")
         {
-            //playerX.SetActive(false);
-            //player0.SetActive(true);
+            playerX.SetActive(false);
+            player0.SetActive(true);
 
-            
+
         }
         //si playerSide es "Y" activamos playerY en pantalla
     }
