@@ -7,7 +7,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
+//using UnityEngine.UIElements;
 
 public class gamecontroller : MonoBehaviour
 {
@@ -130,7 +130,7 @@ public class gamecontroller : MonoBehaviour
     {
             for(int i = 0; i < buttonList.Length; i++)
             {
-                buttonList[i].GetComponentInParent<UnityEngine.UI.Button>().interactable = set;
+                buttonList[i].GetComponentInParent<Button>().enabled = set;
             }
     }
 
@@ -213,7 +213,7 @@ public class gamecontroller : MonoBehaviour
     public void PosicionBotonPulsadoOcupada(GameObject botonpulsado)
     {
         //hacemos el botonPulsado no interactuable
-        botonpulsado.GetComponent<UnityEngine.UI.Button>().interactable = false;
+        botonpulsado.GetComponent<Button>().interactable = false;
         //vemos que numero es el botonPulsado
         int numero = devolverNumeroConBoton(botonpulsado);
         if(numero!=-1)
@@ -531,6 +531,8 @@ public class gamecontroller : MonoBehaviour
         PosicionBotonPulsadoOcupada(devolverBotonConNumero(botonElegido));
         //metodo que al pasarle un numero te devuelva el GameObject boton donde cambias el texto del hijo con enemySide
         devolverBotonConNumero(botonElegido).GetComponentInChildren<TMP_Text>().text = enemySide;
+        //lo hacemos no interactuable
+        devolverBotonConNumero(botonElegido).GetComponent<Button>().interactable = false;
         devolverBotonConNumero(botonElegido).GetComponent<GripSpace>().ActivarFichaEnemySprite();
     }
 
@@ -587,6 +589,9 @@ public class gamecontroller : MonoBehaviour
             int numeroBoton = devolverNumeroConBoton(DevolverUnicoHuecoLibre());
             //se le pone la ficha enemy
             buttonList[numeroBoton].GetComponent<TMP_Text>().text = enemySide;
+
+            //lo hacemos no interactuable
+            buttonList[numeroBoton].gameObject.GetComponentInParent<Button>().interactable = false;
             buttonList[numeroBoton].GetComponentInParent<GripSpace>().ActivarFichaEnemySprite();
 
             PosicionBotonPulsadoOcupada(buttonList[numeroBoton].transform.parent.gameObject);
@@ -680,6 +685,7 @@ public class gamecontroller : MonoBehaviour
                         if (buttonList[asignado].text == "" && posicionesLibresSinFicha[asignado] == false)
                         {
                             buttonList[asignado].text = enemySide;
+                            buttonList[asignado].gameObject.GetComponentInParent<Button>().interactable = false;
                             buttonList[asignado].gameObject.GetComponentInParent<GripSpace>().ActivarFichaEnemySprite();
                             //marcar como pulsado
                             PosicionBotonPulsadoOcupada(buttonList[asignado].transform.parent.gameObject);
@@ -953,6 +959,7 @@ public class gamecontroller : MonoBehaviour
             PosicionBotonPulsadoOcupada(devolverBotonConNumero(botonElegido));
             //metodo que al pasarle un numero te devuelva el GameObject boton donde cambias el texto del hijo con enemySide
             devolverBotonConNumero(botonElegido).GetComponentInChildren<TMP_Text>().text = enemySide;
+            devolverBotonConNumero(botonElegido).gameObject.GetComponentInParent<Button>().interactable = false;
             //poner sprite ficha
             devolverBotonConNumero(botonElegido).GetComponent<GripSpace>().ActivarFichaEnemySprite();
 
@@ -1817,7 +1824,7 @@ public class gamecontroller : MonoBehaviour
     {
         for (int i = 0; i < buttonList.Length; i++)
         {
-            buttonList[i].GetComponentInParent<UnityEngine.UI.Button>().interactable = toggle;
+            buttonList[i].GetComponentInParent<Button>().interactable = toggle;
         }
     }
 }
