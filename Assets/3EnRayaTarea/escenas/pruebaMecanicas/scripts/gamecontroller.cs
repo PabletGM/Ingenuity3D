@@ -704,9 +704,22 @@ public class gamecontroller : MonoBehaviour
     public void DesactivarTableroAlGanarOPerder()
     {
         //efecto FadeOut
-        background.GetComponent<DOTweenAnimation>().DORestartById("FadeOut");
-        tresEnRaya.GetComponent<DOTweenAnimation>().DORestartById("ScaleSmall");
+        //board.GetComponent<DOTweenAnimation>().DORestartById("FadeOut");
+        //background.GetComponent<DOTweenAnimation>().DORestartById("FadeOut");
+        //lineas.GetComponentInChildren<DOTweenAnimation>().DORestartById("FadeOut");
+        ////TODOS LOS BOTONES
+        //Invoke("DesactivarBotones", 0.5f);
+        ////tresEnRaya.GetComponent<DOTweenAnimation>().DORestartById("ScaleSmall");
+        tresEnRaya.GetComponent<DOTweenAnimation>().DORestartById("MoverDerecha");
         Invoke("DesactivarJugabilidad", 1.5f);
+    }
+
+    private void DesactivarBotones()
+    {
+        botones.SetActive(false);
+        player0.SetActive(false);
+        playerX.SetActive(false);
+        
     }
 
     private void DesactivarJugabilidad()
