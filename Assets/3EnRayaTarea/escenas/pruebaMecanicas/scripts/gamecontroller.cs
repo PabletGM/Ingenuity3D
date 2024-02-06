@@ -28,6 +28,8 @@ public class gamecontroller : MonoBehaviour
 
     public GameObject win;
 
+    public GameObject empate;
+
     private int moveCount;
 
     //maximo numero de rondas en caso de empate es siempre 4
@@ -433,8 +435,8 @@ public class gamecontroller : MonoBehaviour
         if (moveCount >= maxRounds && !endPartida)
         {
             endPartida = true;
-            gameover.SetActive(true);
-            gameoverText.text = "Empate";
+            empate.SetActive(true);
+            //gameoverText.text = "Empate";
             DesactivarTableroAlGanarOPerder();
         }
     }
