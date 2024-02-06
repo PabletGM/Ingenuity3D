@@ -7,7 +7,7 @@ public class AudioManagerSecuencia6 : MonoBehaviour
 {
     public static AudioManagerSecuencia6 instance;
     public SoundSecuencia6[] musicSounds, sfxSounds, dialogueSounds, transitionSounds;
-    public AudioSource musicSource, sfxSource1, sfxSource2, sfxSource3, dialogueSource, dialogueSource2, dialogueSource3, transitionSource;
+    public AudioSource musicSource, sfxSource1, sfxSource2, sfxSource3, dialogueSource, dialogueSource2, dialogueSource3, transitionSource, transitionSource2, transitionSource3;
 
     private void Awake()
     {
@@ -174,6 +174,42 @@ public class AudioManagerSecuencia6 : MonoBehaviour
         {
             transitionSource.volume = volume;
             transitionSource.PlayOneShot(s.clip);
+        }
+    }
+
+    //primer sonido TRANSITION
+    public void PlayTransition2(string name, float volume)
+    {
+        //buscamos la musica que queremos poner en el musicSound
+        SoundSecuencia6 s = Array.Find(transitionSounds, x => x.name == name);
+
+        if (s == null)
+        {
+            Debug.Log("Sound Not Found");
+        }
+
+        else
+        {
+            transitionSource2.volume = volume;
+            transitionSource2.PlayOneShot(s.clip);
+        }
+    }
+
+    //primer sonido TRANSITION
+    public void PlayTransition3(string name, float volume)
+    {
+        //buscamos la musica que queremos poner en el musicSound
+        SoundSecuencia6 s = Array.Find(transitionSounds, x => x.name == name);
+
+        if (s == null)
+        {
+            Debug.Log("Sound Not Found");
+        }
+
+        else
+        {
+            transitionSource3.volume = volume;
+            transitionSource3.PlayOneShot(s.clip);
         }
     }
 
