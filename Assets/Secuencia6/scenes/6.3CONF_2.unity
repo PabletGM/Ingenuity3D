@@ -405,6 +405,11 @@ PrefabInstance:
       propertyPath: m_text
       value: "\xBFCu\xE1nto quieres apostar?"
       objectReference: {fileID: 0}
+    - target: {fileID: 1510347722773141039, guid: 4b314362b37e4e4428c0cfd6c7bad037,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1869
+      objectReference: {fileID: 0}
     - target: {fileID: 1695033161120683263, guid: 4b314362b37e4e4428c0cfd6c7bad037,
         type: 3}
       propertyPath: m_Name
@@ -419,11 +424,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 500631607}
+      objectReference: {fileID: 0}
     - target: {fileID: 2685365852251608014, guid: 4b314362b37e4e4428c0cfd6c7bad037,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: NextScene
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2685365852251608014, guid: 4b314362b37e4e4428c0cfd6c7bad037,
         type: 3}
@@ -439,11 +444,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 500631607}
+      objectReference: {fileID: 0}
     - target: {fileID: 3564673737149495325, guid: 4b314362b37e4e4428c0cfd6c7bad037,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: NextScene
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3564673737149495325, guid: 4b314362b37e4e4428c0cfd6c7bad037,
         type: 3}
@@ -579,16 +584,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 500631607}
+      objectReference: {fileID: 0}
     - target: {fileID: 7802339128963751416, guid: 4b314362b37e4e4428c0cfd6c7bad037,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: NextScene
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7802339128963751416, guid: 4b314362b37e4e4428c0cfd6c7bad037,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: NextSceneGenericMethod2, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819657153388070858, guid: 4b314362b37e4e4428c0cfd6c7bad037,
+        type: 3}
+      propertyPath: onComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 426605516}
+    - target: {fileID: 8819657153388070858, guid: 4b314362b37e4e4428c0cfd6c7bad037,
+        type: 3}
+      propertyPath: onComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DORestartById
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
