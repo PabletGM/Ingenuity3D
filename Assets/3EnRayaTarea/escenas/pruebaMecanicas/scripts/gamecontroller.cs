@@ -711,7 +711,7 @@ public class gamecontroller : MonoBehaviour
     {
         //efecto FadeOut
         //board.GetComponent<DOTweenAnimation>().DORestartById("FadeOut");
-        background.GetComponent<DOTweenAnimation>().DORestartById("FadeOut");
+        //background.GetComponent<DOTweenAnimation>().DORestartById("FadeOut");
         //lineas.GetComponentInChildren<DOTweenAnimation>().DORestartById("FadeOut");
         ////TODOS LOS BOTONES
         //Invoke("DesactivarBotones", 0.5f);
