@@ -716,7 +716,7 @@ public class gamecontroller : MonoBehaviour
         ////TODOS LOS BOTONES
         //Invoke("DesactivarBotones", 0.5f);
         ////tresEnRaya.GetComponent<DOTweenAnimation>().DORestartById("ScaleSmall");
-        tresEnRaya.GetComponent<DOTweenAnimation>().DORestartById("MoverDerecha");
+        //tresEnRaya.GetComponent<DOTweenAnimation>().DORestartById("MoverDerecha");
         Invoke("DesactivarJugabilidad", 1.5f);
     }
 
