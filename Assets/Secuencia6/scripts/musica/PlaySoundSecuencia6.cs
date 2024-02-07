@@ -49,7 +49,7 @@ public class PlaySoundSecuencia6 : MonoBehaviour
     #region SFX
     public void PlaySFX1(string sfx1)
     {
-        AudioManagerSecuencia6.instance.PlaySFX1(sfx1,1f);
+        AudioManagerSecuencia6.instance.PlaySFX1(sfx1, volumeSFX1);
     }
 
     public void PlaySFX2(string sfx2)
@@ -64,17 +64,22 @@ public class PlaySoundSecuencia6 : MonoBehaviour
 
     public void ChangeVolumeSFX1(float volume)
     {
-        volume = volumeSFX1;
+        volumeSFX1 = volume;
+        AudioManagerSecuencia6.instance.SFXVolume1(volumeSFX1);
     }
 
     public void ChangeVolumeSFX2(float volume)
     {
-        volume = volumeSFX2;
+
+        volumeSFX2 = volume;
+        AudioManagerSecuencia6.instance.SFXVolume2(volumeSFX2);
     }
 
     public void ChangeVolumeSFX3(float volume)
     {
-        volume = volumeSFX3;
+
+        volumeSFX3 = volume;
+        AudioManagerSecuencia6.instance.SFXVolume3(volumeSFX3);
     }
 
     public void StopAllSFX()
