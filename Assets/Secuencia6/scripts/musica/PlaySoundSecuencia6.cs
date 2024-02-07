@@ -149,17 +149,20 @@ public class PlaySoundSecuencia6 : MonoBehaviour
 
     public void ChangeVolumeDialogue1(float volume)
     {
-        volume = volumeDialogue1;
+        volumeDialogue1 = volume;
+        AudioManagerSecuencia6.instance.DialogueVolume(volumeDialogue1);
     }
 
     public void ChangeVolumeDialogue2(float volume)
     {
-        volume = volumeDialogue2;
+        volumeDialogue2 = volume;
+        AudioManagerSecuencia6.instance.DialogueVolume(volumeDialogue2);
     }
 
     public void ChangeVolumeDialogue3(float volume)
     {
-        volume = volumeDialogue3;
+        volumeDialogue3 = volume;
+        AudioManagerSecuencia6.instance.DialogueVolume(volumeDialogue3);
     }
 
     public void StopAllDialogue()
@@ -191,7 +194,8 @@ public class PlaySoundSecuencia6 : MonoBehaviour
 
     public void ChangeVolumeTransition(float volume)
     {
-        volume = volumeTransition;
+        volumeTransition = volume;
+        AudioManagerSecuencia6.instance.TransitionVolume(volumeTransition);
     }
 
     public void StopAllTransition()
