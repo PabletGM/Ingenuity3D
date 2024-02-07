@@ -436,7 +436,7 @@ public class gamecontroller : MonoBehaviour
         {
             endPartida = true;
             empate.SetActive(true);
-            AudioManagerSecuencia6.instance.PlaySFX2("empate", 0.3f);
+            AudioManagerSecuencia6.instance.PlaySFX2("empate", 0.1f);
             //gameoverText.text = "Empate";
             DesactivarTableroAlGanarOPerder();
         }
