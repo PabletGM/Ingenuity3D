@@ -60,7 +60,9 @@ public class GripSpace : MonoBehaviour
 
     public void FichaPlayerSound()
     {
-        //AudioManager3EnRaya.instance.PlaySFXDuracion("FichaPlayer", 1f);
+        AudioManagerSecuencia6.instance.PlaySFX1("placeFichaPlayer", 0.3f);
+       
+        
     }
 
     void TurnoEnemy()

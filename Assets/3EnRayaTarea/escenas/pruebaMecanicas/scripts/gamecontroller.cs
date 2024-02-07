@@ -179,7 +179,7 @@ public class gamecontroller : MonoBehaviour
 
     public void FichaEnemySound()
     {
-        //AudioManager3EnRaya.instance.PlaySFXDuracion("FichaEnemy", 1f);
+        AudioManagerSecuencia6.instance.PlaySFX1("placeFichaEnemy", 1f);
     }
 
     public void ReturnTotalRounds()
@@ -436,6 +436,7 @@ public class gamecontroller : MonoBehaviour
         {
             endPartida = true;
             empate.SetActive(true);
+            AudioManagerSecuencia6.instance.PlaySFX2("empate", 0.3f);
             //gameoverText.text = "Empate";
             DesactivarTableroAlGanarOPerder();
         }
@@ -1746,7 +1747,8 @@ public class gamecontroller : MonoBehaviour
     //para decir si ha ganado enemy
     void GameOver()
     {
-        //AudioManager3EnRaya.instance.PlaySFXDuracion("Perder", 1f);
+        AudioManagerSecuencia6.instance.PlaySFX2("gameOver", 0.3f);
+        Invoke("YouLost", 1f);
         SetBoardInteractable(false);
         DesactivarTableroAlGanarOPerder();
 
@@ -1754,9 +1756,20 @@ public class gamecontroller : MonoBehaviour
         gameoverText.text = "Derrota";
     }
 
+    private void YouLost()
+    {
+        AudioManagerSecuencia6.instance.PlaySFX3("youLost", 0.3f);
+    }
+
+    private void YouWin()
+    {
+        AudioManagerSecuencia6.instance.PlaySFX3("winner", 0.3f);
+    }
     //para decir si ha ganado enemy
     void Win()
     {
+        AudioManagerSecuencia6.instance.PlaySFX2("win", 0.3f);
+        Invoke("YouWin", 1f);
         //AudioManager3EnRaya.instance.PlaySFXDuracion("Ganar", 1f);
         SetBoardInteractable(false);
         DesactivarTableroAlGanarOPerder();
@@ -1795,6 +1808,7 @@ public class gamecontroller : MonoBehaviour
 
     void TurnoJugadorCanvas(string gameSides)
     {
+        AudioManagerSecuencia6.instance.PlaySFX2("cambioTurnoLuz", 0.3f);
         gameSide = gameSides;
         //si playerSide es "X" activamos playerX en pantalla
         if (gameSide == "X")
