@@ -1855,6 +1855,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1264612549}
+--- !u!114 &1361937618 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 740279678716981507, guid: 9e0841b82a4ebcd438730d23886e17e6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1092842766}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1884779467
 GameObject:
   m_ObjectHideFlags: 0
@@ -2040,6 +2052,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2099782925}
+--- !u!1 &2131619466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2131619467}
+  - component: {fileID: 2131619468}
+  m_Layer: 0
+  m_Name: ChangingDialoguesWithDecisions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2131619467
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131619466}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1444.9417, y: 414.00375, z: 6.318624}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2131619468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131619466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecb60508666a5d49acdb3c2d6f650b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textToModify: {fileID: 1361937618}
+  nameActualScene: 7.8DialogoOpciones
 --- !u!4 &525259639799481750 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 89412447912365044, guid: 8c3ed9e786dcbcf4e827a6f8551f02dc,

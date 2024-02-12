@@ -657,6 +657,50 @@ MonoBehaviour:
   optionalScrambleMode: 0
   optionalShakeRandomnessMode: 0
   optionalString: 
+--- !u!1 &483659005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 483659006}
+  - component: {fileID: 483659007}
+  m_Layer: 0
+  m_Name: elegirCaminoMapa
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &483659006
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483659005}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1444.9417, y: 414.00375, z: 6.318624}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &483659007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483659005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6102bff28b886b4192890dc85099009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &500631605
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,7 +746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tiempoEsperaPasoEscena: 0
-  nombreCambioEscena: mecanicas3EnRayaModoDificil
+  nombreCambioEscena: 7.7Opciones
 --- !u!1 &1038335709
 GameObject:
   m_ObjectHideFlags: 0
@@ -1165,6 +1209,26 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1975235326497782639, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: onComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1975235326497782639, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: onComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 500631607}
+    - target: {fileID: 1975235326497782639, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: onComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 1975235326497782639, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: onComplete.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NextSceneGenericMethod2, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2426732234181178550, guid: 200791452d419d04d98e7c108dffc505,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1194,6 +1258,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSizeBase
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247404301530756159, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247404301530756159, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247404301530756159, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 483659007}
+    - target: {fileID: 3247404301530756159, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247404301530756159, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: ChooseWayCaminoEstablecido
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247404301530756159, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: ElegirCaminoMapa, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247404301530756159, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247404301530756159, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3284581764400176193, guid: 200791452d419d04d98e7c108dffc505,
         type: 3}
@@ -1320,6 +1424,46 @@ PrefabInstance:
       propertyPath: m_text
       value: Elegir ruta
       objectReference: {fileID: 0}
+    - target: {fileID: 4544165095996214164, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544165095996214164, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544165095996214164, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 483659007}
+    - target: {fileID: 4544165095996214164, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544165095996214164, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: ChooseWayRio
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544165095996214164, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: ElegirCaminoMapa, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544165095996214164, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544165095996214164, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4573332419735732941, guid: 200791452d419d04d98e7c108dffc505,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1339,6 +1483,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -62.99997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5074032741984842829, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -39.533264
+      objectReference: {fileID: 0}
+    - target: {fileID: 5074032741984842829, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.8287048
       objectReference: {fileID: 0}
     - target: {fileID: 5362641024729801713, guid: 200791452d419d04d98e7c108dffc505,
         type: 3}
@@ -1384,6 +1538,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 47
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941786990394656162, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941786990394656162, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941786990394656162, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 483659007}
+    - target: {fileID: 5941786990394656162, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941786990394656162, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: ChooseWayBosque
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941786990394656162, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: ElegirCaminoMapa, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941786990394656162, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941786990394656162, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6180894657454785607, guid: 200791452d419d04d98e7c108dffc505,
         type: 3}
@@ -1554,6 +1748,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -54.434
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560905285664067859, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: onComplete.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560905285664067859, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: onComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560905285664067859, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: onComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 500631607}
+    - target: {fileID: 7560905285664067859, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: onComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560905285664067859, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: onComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560905285664067859, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: onComplete.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NextSceneGenericMethod2, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560905285664067859, guid: 200791452d419d04d98e7c108dffc505,
+        type: 3}
+      propertyPath: onComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7773567695243333846, guid: 200791452d419d04d98e7c108dffc505,
         type: 3}
