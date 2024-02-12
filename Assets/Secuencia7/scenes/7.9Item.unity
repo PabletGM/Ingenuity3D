@@ -1055,7 +1055,7 @@ PrefabInstance:
     - target: {fileID: 525259641197078024, guid: 8f57313e6198a924ca6d90a620364a32,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.0899998
+      value: -1.6900002
       objectReference: {fileID: 0}
     - target: {fileID: 525259641197078024, guid: 8f57313e6198a924ca6d90a620364a32,
         type: 3}
@@ -1150,16 +1150,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateType: 0
   isSpeedBased: 0
-  hasOnStart: 0
+  hasOnStart: 1
   hasOnPlay: 0
   hasOnUpdate: 0
   hasOnStepComplete: 0
-  hasOnComplete: 1
+  hasOnComplete: 0
   hasOnTweenCreated: 0
   hasOnRewind: 0
   onStart:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1264612550}
+        m_TargetAssemblyTypeName: PasarDeWalkAIdle, Assembly-CSharp
+        m_MethodName: PasarWalkIdle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onPlay:
     m_PersistentCalls:
       m_Calls: []
@@ -1292,7 +1304,7 @@ PrefabInstance:
     - target: {fileID: 89412447912365044, guid: 8c3ed9e786dcbcf4e827a6f8551f02dc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.37
+      value: -1.8199998
       objectReference: {fileID: 0}
     - target: {fileID: 89412447912365044, guid: 8c3ed9e786dcbcf4e827a6f8551f02dc,
         type: 3}
