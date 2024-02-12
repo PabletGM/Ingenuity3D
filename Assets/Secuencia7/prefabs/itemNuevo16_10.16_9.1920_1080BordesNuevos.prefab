@@ -142,7 +142,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xBFCu\xE1nto apostar\xE1s esta vez?"
+  m_text: "Opci\xF3n de respuesta:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 320aa51946cb92f408d347e4cb0e6946, type: 2}
   m_sharedMaterial: {fileID: 1331669058547700877, guid: 320aa51946cb92f408d347e4cb0e6946,
@@ -377,7 +377,7 @@ MonoBehaviour:
   autoPlay: 0
   useTargetAsV3: 0
   endValueFloat: 0
-  endValueV3: {x: 0.15, y: 1, z: 0}
+  endValueV3: {x: 0.25, y: 1, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
@@ -485,7 +485,7 @@ MonoBehaviour:
   autoPlay: 0
   useTargetAsV3: 0
   endValueFloat: 0
-  endValueV3: {x: 130, y: 0, z: 0}
+  endValueV3: {x: 115, y: 0, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
@@ -714,7 +714,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Creo que esta vez ganar\xE9, aumento la apuesta"
+  m_text: "La elecci\xF3n ha sido tomada, aunque es cierto que deb\xED haber examinado
+    con m\xE1s cuidado las posibles consecuencias."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -741,8 +742,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1189,7 +1190,7 @@ RectTransform:
   - {fileID: 1510347722773141039}
   - {fileID: 6480241744967535852}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1637,9 +1638,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DG.Tweening.DOTweenAnimation, Assembly-CSharp-firstpass
-        m_MethodName: DORestartById
-        m_Mode: 5
+        m_TargetAssemblyTypeName: NextSceneGenericMethod2, Assembly-CSharp
+        m_MethodName: NextScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1862,7 +1863,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Creo que me he confiado, esta vez reducir\xE9 la apuesta"
+  m_text: "Soy consciente de los pros y contras que implicaba mi decisi\xF3n, a\xFAn
+    as\xED creo que he escogido la mejor alternativa."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1889,8 +1891,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2788,7 +2790,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7642181353439012724}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61bd519a73128374bb77e943d359977d, type: 3}
   m_Name: 
@@ -2833,7 +2835,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1892.0178, y: -1.7644958}
+  m_AnchoredPosition: {x: -1892.0178, y: -1.7645264}
   m_SizeDelta: {x: 1469.3442, y: -51.443}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &3756444043753054334
@@ -3230,7 +3232,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Aunque no haya ganado, mantengo la misma apuesta
+  m_text: "Ahora mismo no concuerdo con tu observaci\xF3n pero probablemente reflexionar\xE9
+    sobre ella en el futuro"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3257,8 +3260,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
