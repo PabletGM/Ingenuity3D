@@ -322,7 +322,7 @@ MonoBehaviour:
   targetGO: {fileID: 0}
   tweenTargetIsTargetGO: 1
   delay: 0
-  duration: 16
+  duration: 5
   easeType: 6
   easeCurve:
     serializedVersion: 2
@@ -442,7 +442,7 @@ MonoBehaviour:
   targetGO: {fileID: 0}
   tweenTargetIsTargetGO: 1
   delay: 0
-  duration: 8
+  duration: 4
   easeType: 6
   easeCurve:
     serializedVersion: 2
@@ -1156,10 +1156,35 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1483188596822187820, guid: 65c39bc0e62a2d5438cd28893c7054a7,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 170598059}
+    - target: {fileID: 1483188596822187820, guid: 65c39bc0e62a2d5438cd28893c7054a7,
+        type: 3}
+      propertyPath: duration
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2660056976445778944, guid: 65c39bc0e62a2d5438cd28893c7054a7,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035724256375340467, guid: 65c39bc0e62a2d5438cd28893c7054a7,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 170598059}
+    - target: {fileID: 3035724256375340467, guid: 65c39bc0e62a2d5438cd28893c7054a7,
+        type: 3}
+      propertyPath: duration
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035724256375340467, guid: 65c39bc0e62a2d5438cd28893c7054a7,
+        type: 3}
+      propertyPath: endValueFloat
+      value: 0.24
       objectReference: {fileID: 0}
     - target: {fileID: 8901809141123254348, guid: 65c39bc0e62a2d5438cd28893c7054a7,
         type: 3}
@@ -1222,7 +1247,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2660056976445778944, guid: 65c39bc0e62a2d5438cd28893c7054a7, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8982877414890054833, guid: 65c39bc0e62a2d5438cd28893c7054a7,
         type: 3}
