@@ -41,6 +41,7 @@ public class resolucionPantalla : MonoBehaviour
         else
         {
             aspectRatioCategory = "Otro";
+            item16x10_16x9.SetActive(true);
         }
 
         Debug.Log("Relación de aspecto: " + aspectRatioCategory);
