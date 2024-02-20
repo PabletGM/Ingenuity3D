@@ -64,6 +64,16 @@ public class vfxManager45 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (SceneManager.GetActiveScene().name != "8.1")
+        {
+            //comenzamos vfx
+            SetChispasGrandes(true);
+            Invoke("ChispasGrandes1", chispasGrandesTime);
+        }
+    }
+
+    public void InitFunctionality()
+    {
         //comenzamos vfx
         SetChispasGrandes(true);
         Invoke("ChispasGrandes1", chispasGrandesTime);
@@ -72,14 +82,21 @@ public class vfxManager45 : MonoBehaviour
     #region ChispasGrandes
     private void ChispasGrandes1()
     {
-        PlaySoundSceneSecuencia4.instance.PlaySFX1("spark");
+        if(SceneManager.GetActiveScene().name != "8.1")
+        {
+            PlaySoundSceneSecuencia4.instance.PlaySFX1("spark");
+        }
+        
         chispasGrandes1.Play();
         Invoke("ChispasGrandes2", chispasGrandesTime);
     }
 
     private void ChispasGrandes2()
     {
-        PlaySoundSceneSecuencia4.instance.PlaySFX2("spark");
+        if (SceneManager.GetActiveScene().name != "8.1")
+        {
+            PlaySoundSceneSecuencia4.instance.PlaySFX2("spark");
+        }
         chispasGrandes2.Play();
         chispasGrandes3.Play();
         Invoke("ChispasGrandes3", chispasGrandesTime);
@@ -106,7 +123,10 @@ public class vfxManager45 : MonoBehaviour
     #region miniChispas
     private void MiniChispas1()
     {
-        PlaySoundSceneSecuencia4.instance.PlaySFX2("explosionPequeña"); 
+        if (SceneManager.GetActiveScene().name != "8.1")
+        {
+            PlaySoundSceneSecuencia4.instance.PlaySFX2("explosionPequeña");
+        }
         SetMiniChispas(true);
         miniChispas1.Play();
         Invoke("MiniChispas2", miniChispasTime);
@@ -114,14 +134,20 @@ public class vfxManager45 : MonoBehaviour
 
     private void MiniChispas2()
     {
-        PlaySoundSceneSecuencia4.instance.PlaySFX1("explosionPequeña");
+        if (SceneManager.GetActiveScene().name != "8.1")
+        {
+            PlaySoundSceneSecuencia4.instance.PlaySFX1("explosionPequeña");
+        }
         miniChispas2.Play();
         Invoke("MiniChispas3", miniChispasTime);
     }
 
     private void MiniChispas3()
     {
-        PlaySoundSceneSecuencia4.instance.PlaySFX3("explosionPequeña");
+        if (SceneManager.GetActiveScene().name != "8.1")
+        {
+            PlaySoundSceneSecuencia4.instance.PlaySFX3("explosionPequeña");
+        }
         miniChispas3.Play();
         miniChispas4.Play();
         Invoke("MiniChispas4", miniChispasTime);
@@ -145,8 +171,11 @@ public class vfxManager45 : MonoBehaviour
     #region roturaCristales
     private void RoturaCristales1()
     {
-        PlaySoundSceneSecuencia4.instance.PlaySFX3("glass");
-        PlaySoundSceneSecuencia4.instance.PlaySFX3("falloSistema");
+        if (SceneManager.GetActiveScene().name != "8.1")
+        {
+            PlaySoundSceneSecuencia4.instance.PlaySFX3("glass");
+            PlaySoundSceneSecuencia4.instance.PlaySFX3("falloSistema");
+        }
         SetRoturaCristales(true);
         roturaCristales1.Play();
         Invoke("RoturaCristales2", roturaCristalesTime);
@@ -154,7 +183,10 @@ public class vfxManager45 : MonoBehaviour
 
     private void RoturaCristales2()
     {
-        PlaySoundSceneSecuencia4.instance.PlayTransition("tecnologia2");
+        if (SceneManager.GetActiveScene().name != "8.1")
+        {
+            PlaySoundSceneSecuencia4.instance.PlayTransition("tecnologia2");
+        }
         Chispazo();
         SetRoturaCristales(false);
     }
@@ -170,8 +202,10 @@ public class vfxManager45 : MonoBehaviour
     #region Chispazo
     private void Chispazo()
     {
-
-        PlaySoundSceneSecuencia4.instance.PlaySFX3("explosionElectrica"); 
+        if (SceneManager.GetActiveScene().name != "8.1")
+        {
+            PlaySoundSceneSecuencia4.instance.PlaySFX3("explosionElectrica");
+        }
         explosionElectricaGO.SetActive(true);
         explosionChispazoGO.SetActive(true);
         Invoke("QuitarChispazo", chispazosTime);
@@ -194,7 +228,10 @@ public class vfxManager45 : MonoBehaviour
 
     private void NextScene()
     {
-        SceneManager.LoadScene("4.6Item");
+        if (SceneManager.GetActiveScene().name != "8.1")
+        {
+            SceneManager.LoadScene("4.6Item");
+        }
     }
 
 
