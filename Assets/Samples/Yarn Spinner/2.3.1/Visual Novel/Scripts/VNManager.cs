@@ -47,7 +47,10 @@ namespace Yarn.Unity.Example {
 		[SerializeField]
 		private GameObject PopUpTelefono;
 
-		void Awake () {
+        [SerializeField]
+        private GameObject nextScene;
+
+        void Awake () {
 			// manually add all Yarn command handlers, so that we don't
 			// have to type out game object names in Yarn scripts (also
 			// gives us a performance increase by avoiding GameObject.Find)
@@ -56,6 +59,7 @@ namespace Yarn.Unity.Example {
             runner.AddCommandHandler<string,float>("ChangeLocalScale", ChangeLocalScale);
 
             runner.AddCommandHandler("AparecerPopUpTelefono", AparecerPopUpTelefono);
+            runner.AddCommandHandler("FadeOutBlanco", FadeOutBlanco);
 
 
             runner.AddCommandHandler<string>("SceneChange", ChangeScene);
@@ -94,6 +98,20 @@ namespace Yarn.Unity.Example {
 
 		#region YarnCommands
 
+
+		public void FadeOutBlanco()
+		{
+			SetFade("white", 0.0f ,1.0f ,2.0f);
+
+			Invoke("NextSceneManual", 2f);
+
+        }
+
+		private void NextSceneManual()
+		{
+			nextScene.GetComponent<NextSceneGenericMethod2>().NextScene();
+
+        }
 		/// <summary>changes background image</summary>
 		public void DoSceneChange(string spriteName) {
 			bgImage.sprite = FetchAsset<Sprite>( spriteName );
