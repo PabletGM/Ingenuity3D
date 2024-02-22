@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 namespace Yarn.Unity.Example {
 	/// <summary>
@@ -49,6 +50,9 @@ namespace Yarn.Unity.Example {
 
         [SerializeField]
         private GameObject nextScene;
+
+        [SerializeField]
+        private GameObject tweenObject;
 
         void Awake () {
 			// manually add all Yarn command handlers, so that we don't
@@ -101,10 +105,26 @@ namespace Yarn.Unity.Example {
 
 		public void FadeOutBlanco()
 		{
-			SetFade("white", 0.0f ,1.0f ,2.0f);
+			if(SceneManager.GetActiveScene().name == "8.6SalaComandanteEntra")
+			{
+				//activa objeto con tweens que hagan cosas
+				tweenObject.SetActive(true);
+				tweenObject.GetComponent<DOTweenAnimation>().DORestartById("catchOrange");
+				Invoke("Fade", 2f);
+			}
+			else
+			{
+                SetFade("white", 0.0f, 1.0f, 2.0f);
 
-			Invoke("NextSceneManual", 2f);
+                Invoke("NextSceneManual", 2f);
+            }
+			
 
+        }
+
+		private void Fade()
+		{
+            SetFade("black", 0.0f, 1.0f, 2.0f);
         }
 
 		private void NextSceneManual()
