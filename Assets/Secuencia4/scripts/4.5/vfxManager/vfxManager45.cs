@@ -86,6 +86,10 @@ public class vfxManager45 : MonoBehaviour
         {
             PlaySoundSceneSecuencia4.instance.PlaySFX1("spark");
         }
+        else
+        {
+            PlaySoundSecuencia8.instance.PlaySFX1("spark");
+        }
         
         chispasGrandes1.Play();
         Invoke("ChispasGrandes2", chispasGrandesTime);
@@ -96,6 +100,10 @@ public class vfxManager45 : MonoBehaviour
         if (SceneManager.GetActiveScene().name != "8.1")
         {
             PlaySoundSceneSecuencia4.instance.PlaySFX2("spark");
+        }
+        else
+        {
+            PlaySoundSecuencia8.instance.PlaySFX2("spark");
         }
         chispasGrandes2.Play();
         chispasGrandes3.Play();
@@ -127,6 +135,10 @@ public class vfxManager45 : MonoBehaviour
         {
             PlaySoundSceneSecuencia4.instance.PlaySFX2("explosionPequeña");
         }
+        else
+        {
+            PlaySoundSecuencia8.instance.PlaySFX2("explosionPequeña");
+        }
         SetMiniChispas(true);
         miniChispas1.Play();
         Invoke("MiniChispas2", miniChispasTime);
@@ -138,6 +150,11 @@ public class vfxManager45 : MonoBehaviour
         {
             PlaySoundSceneSecuencia4.instance.PlaySFX1("explosionPequeña");
         }
+        else
+        {
+            PlaySoundSecuencia8.instance.PlaySFX2("explosionPequeña");
+        }
+
         miniChispas2.Play();
         Invoke("MiniChispas3", miniChispasTime);
     }
@@ -147,6 +164,10 @@ public class vfxManager45 : MonoBehaviour
         if (SceneManager.GetActiveScene().name != "8.1")
         {
             PlaySoundSceneSecuencia4.instance.PlaySFX3("explosionPequeña");
+        }
+        else
+        {
+            PlaySoundSecuencia8.instance.PlaySFX3("explosionPequeña");
         }
         miniChispas3.Play();
         miniChispas4.Play();
@@ -175,6 +196,11 @@ public class vfxManager45 : MonoBehaviour
         {
             PlaySoundSceneSecuencia4.instance.PlaySFX3("glass");
             PlaySoundSceneSecuencia4.instance.PlaySFX3("falloSistema");
+        }
+        else
+        {
+            PlaySoundSecuencia8.instance.PlaySFX3("glass");
+            PlaySoundSecuencia8.instance.PlaySFX3("falloSistema");
         }
         SetRoturaCristales(true);
         roturaCristales1.Play();
@@ -206,6 +232,11 @@ public class vfxManager45 : MonoBehaviour
         {
             PlaySoundSceneSecuencia4.instance.PlaySFX3("explosionElectrica");
         }
+        else
+        {
+            PlaySoundSecuencia8.instance.PlaySFX3("explosionElectrica");
+        }
+
         explosionElectricaGO.SetActive(true);
         explosionChispazoGO.SetActive(true);
         Invoke("QuitarChispazo", chispazosTime);

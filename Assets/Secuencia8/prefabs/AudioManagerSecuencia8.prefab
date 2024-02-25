@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 8611763196923602331}
   - component: {fileID: 2102138648936153751}
   m_Layer: 0
-  m_Name: AudioManagerSecuencia7
+  m_Name: AudioManagerSecuencia8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -373,9 +373,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSounds: []
-  sfxSounds: []
-  dialogueSounds: []
-  transitionSounds: []
+  sfxSounds:
+  - name: explosionElectrica
+    clip: {fileID: 8300000, guid: 0e49a593f03dac24799b15470467e943, type: 3}
+  - name: "explosionPeque\xF1a"
+    clip: {fileID: 8300000, guid: 271b0baabbe37d743b88b106d7cbb7bd, type: 3}
+  - name: humo
+    clip: {fileID: 8300000, guid: db85db7facbbdbb4cbd9fee9b1e2204b, type: 3}
+  - name: pasos
+    clip: {fileID: 8300000, guid: be3f8bde07be65d4ebfbfebfe43f3ace, type: 3}
+  - name: sistema
+    clip: {fileID: 8300000, guid: 6aec3da7e3782154290517716e372333, type: 3}
+  - name: spark
+    clip: {fileID: 8300000, guid: 8bdff84244fdacd458e1c226f4a06ee8, type: 3}
+  - name: alarma
+    clip: {fileID: 8300000, guid: bd80bb48c3167bb4789fdccfeb5df632, type: 3}
+  - name: fire
+    clip: {fileID: 8300000, guid: bb8fa319d70943d409919f27d6513aa5, type: 3}
+  - name: glass
+    clip: {fileID: 8300000, guid: 1152f1ecb6081324ab9a70968a01ce09, type: 3}
+  - name: gente
+    clip: {fileID: 8300000, guid: baa551be46b3b2846b2703bde371a0a1, type: 3}
+  - name: abrirTablet
+    clip: {fileID: 8300000, guid: c3c8b87d3fb77f5498bad171c8798baa, type: 3}
+  - name: barridoLateral
+    clip: {fileID: 8300000, guid: 11364665e8ec68e4fb345670ad6acc1d, type: 3}
+  - name: cerrarTablet
+    clip: {fileID: 8300000, guid: 63659ba520212664aaa8055ce54f0964, type: 3}
+  - name: clickElectronico
+    clip: {fileID: 8300000, guid: 447a3aa2e999e3e40abdda6f0b03163e, type: 3}
+  - name: item
+    clip: {fileID: 8300000, guid: 0119029ce4eb8264f85090493bf36f3b, type: 3}
+  - name: holograma
+    clip: {fileID: 8300000, guid: 4dfadca23ba9dd240925c513f2ee14fc, type: 3}
+  - name: robot1
+    clip: {fileID: 8300000, guid: a38c2c4bdb051cb4086d277ccdc0491e, type: 3}
+  - name: robot2
+    clip: {fileID: 8300000, guid: 7598503361a98c4459b5d2a945305c24, type: 3}
+  - name: robot3
+    clip: {fileID: 8300000, guid: 07a831c3b90139a418ff8fc70add4a24, type: 3}
+  - name: forcejear
+    clip: {fileID: 8300000, guid: cf69bf82d2023af4a8aa6fb39108f6f2, type: 3}
+  dialogueSounds:
+  - name: Argg
+    clip: {fileID: 8300000, guid: 2efec42696d7f7f4581d09847c1fc144, type: 3}
+  transitionSounds:
+  - name: fadeOut
+    clip: {fileID: 8300000, guid: f01ce72a2515e874d944bea06181a087, type: 3}
   musicSource: {fileID: 580268813566612799}
   sfxSource1: {fileID: 4698754355619053464}
   sfxSource2: {fileID: 4994205796824483476}
