@@ -792,7 +792,7 @@ MonoBehaviour:
   hasOnPlay: 0
   hasOnUpdate: 0
   hasOnStepComplete: 0
-  hasOnComplete: 0
+  hasOnComplete: 1
   hasOnTweenCreated: 0
   hasOnRewind: 0
   onStart:
@@ -822,6 +822,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1247255156}
+        m_TargetAssemblyTypeName: PasarDeIdleGesticular, Assembly-CSharp
+        m_MethodName: PasarGesticular
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onPlay:
     m_PersistentCalls:
       m_Calls: []
@@ -833,7 +845,19 @@ MonoBehaviour:
       m_Calls: []
   onComplete:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1247255154}
+        m_TargetAssemblyTypeName: PasarDeWalkAIdle, Assembly-CSharp
+        m_MethodName: PasarWalkIdle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onTweenCreated:
     m_PersistentCalls:
       m_Calls: []
@@ -4638,15 +4662,23 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1544241626246120873, guid: fa80f91f177c8d34987348e1499a4bd1,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1247255155}
-    - targetCorrespondingSourceObject: {fileID: 1544241626246120873, guid: fa80f91f177c8d34987348e1499a4bd1,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1247255154}
     - targetCorrespondingSourceObject: {fileID: 1544241626246120873, guid: fa80f91f177c8d34987348e1499a4bd1,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1247255153}
+    - targetCorrespondingSourceObject: {fileID: 1544241626246120873, guid: fa80f91f177c8d34987348e1499a4bd1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1247255156}
+    - targetCorrespondingSourceObject: {fileID: 1544241626246120873, guid: fa80f91f177c8d34987348e1499a4bd1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1247255158}
+    - targetCorrespondingSourceObject: {fileID: 1544241626246120873, guid: fa80f91f177c8d34987348e1499a4bd1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1247255157}
   m_SourcePrefab: {fileID: 100100000, guid: fa80f91f177c8d34987348e1499a4bd1, type: 3}
 --- !u!4 &1247255150 stripped
 Transform:
@@ -4692,7 +4724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1247255152}
---- !u!114 &1247255155
+--- !u!114 &1247255156
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4701,7 +4733,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 1247255151}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 526c877a2d56a1141ae77b6a2cab590f, type: 3}
+  m_Script: {fileID: 11500000, guid: c6de757bf48999f4ebf06b3a872a965c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1247255152}
+--- !u!114 &1247255157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247255151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f655e90d495ca4a90e77bf27885019, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1247255152}
+--- !u!114 &1247255158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247255151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b400a0426cb7424db394cfa70ceb354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1247255152}
