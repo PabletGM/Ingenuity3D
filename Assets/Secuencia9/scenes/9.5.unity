@@ -1250,6 +1250,18 @@ MonoBehaviour:
   onStart:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 767231391}
+        m_TargetAssemblyTypeName: PlaySoundSecuencia9, Assembly-CSharp
+        m_MethodName: PlaySFX3
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 0.1
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 646321386}
         m_TargetAssemblyTypeName: PasarDeIdleARun, Assembly-CSharp
         m_MethodName: PasarIdleAWalk
@@ -1444,6 +1456,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e384f6f61a13c74783dc2d55d5dff1c, type: 3}
+--- !u!114 &767231391 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8164743115386472203, guid: 1e384f6f61a13c74783dc2d55d5dff1c,
+    type: 3}
+  m_PrefabInstance: {fileID: 767231390}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1797527ed2437047bed429ac933ab38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &778564775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2111,6 +2135,30 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 767231391}
+        m_TargetAssemblyTypeName: PlaySoundSecuencia9, Assembly-CSharp
+        m_MethodName: PlaySFX1
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 0.01
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 767231391}
+        m_TargetAssemblyTypeName: PlaySoundSecuencia9, Assembly-CSharp
+        m_MethodName: PlaySFX1
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: pasos
           m_BoolArgument: 0
         m_CallState: 2
   onPlay:
@@ -3975,6 +4023,18 @@ MonoBehaviour:
   onStart:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 767231391}
+        m_TargetAssemblyTypeName: PlaySoundSecuencia9, Assembly-CSharp
+        m_MethodName: ChangeVolumeSFX2
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1753590850}
         m_TargetAssemblyTypeName: PasarDeIdleARun, Assembly-CSharp
         m_MethodName: PasarIdleAWalk
