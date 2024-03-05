@@ -1652,6 +1652,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1919632862}
+        m_TargetAssemblyTypeName: PlaySoundSecuencia9, Assembly-CSharp
+        m_MethodName: PlaySFX1
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: pasos
+          m_BoolArgument: 0
+        m_CallState: 2
   onPlay:
     m_PersistentCalls:
       m_Calls: []
@@ -1674,6 +1686,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1919632862}
+        m_TargetAssemblyTypeName: PlaySoundSecuencia9, Assembly-CSharp
+        m_MethodName: stopSFX1
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: pasos
           m_BoolArgument: 0
         m_CallState: 2
   onTweenCreated:
@@ -1813,6 +1837,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5684521776063574849, guid: 44fd2d5c7fbafd04eb9f909041cb2f75,
         type: 3}
+      propertyPath: musicSounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5684521776063574849, guid: 44fd2d5c7fbafd04eb9f909041cb2f75,
+        type: 3}
       propertyPath: dialogueSounds.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1878,6 +1907,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5684521776063574849, guid: 44fd2d5c7fbafd04eb9f909041cb2f75,
         type: 3}
+      propertyPath: musicSounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b7fdab0df53aefa4895dc0ff19b1880b, type: 3}
+    - target: {fileID: -5684521776063574849, guid: 44fd2d5c7fbafd04eb9f909041cb2f75,
+        type: 3}
+      propertyPath: musicSounds.Array.data[0].name
+      value: nave
+      objectReference: {fileID: 0}
+    - target: {fileID: -5684521776063574849, guid: 44fd2d5c7fbafd04eb9f909041cb2f75,
+        type: 3}
       propertyPath: dialogueSounds.Array.data[0].clip
       value: 
       objectReference: {fileID: 8300000, guid: 2efec42696d7f7f4581d09847c1fc144, type: 3}
@@ -1896,6 +1935,11 @@ PrefabInstance:
       propertyPath: transitionSounds.Array.data[0].name
       value: fadeOut
       objectReference: {fileID: 0}
+    - target: {fileID: 580268813566612799, guid: 44fd2d5c7fbafd04eb9f909041cb2f75,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b7fdab0df53aefa4895dc0ff19b1880b, type: 3}
     - target: {fileID: 4254654664226193632, guid: 44fd2d5c7fbafd04eb9f909041cb2f75,
         type: 3}
       propertyPath: m_Name
@@ -4514,6 +4558,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e384f6f61a13c74783dc2d55d5dff1c, type: 3}
+--- !u!114 &1919632862 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8164743115386472203, guid: 1e384f6f61a13c74783dc2d55d5dff1c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1919632861}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1797527ed2437047bed429ac933ab38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2003579777
 GameObject:
   m_ObjectHideFlags: 0
