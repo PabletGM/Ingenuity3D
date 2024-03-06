@@ -52,8 +52,8 @@ public class TutorialManager : MonoBehaviour
         reproductor.SetActive(true);
         //ponemos portada
         PortadaAntesDeVideo.SetActive(true);
-        relleno.SetActive(true);
-        bordes.SetActive(true);
+        relleno.SetActive(false);
+        bordes.SetActive(false);
         marco.SetActive(true);
         botonPlayVideo.SetActive(true);
     }
