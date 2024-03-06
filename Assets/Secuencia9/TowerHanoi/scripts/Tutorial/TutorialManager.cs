@@ -24,6 +24,11 @@ public class TutorialManager : MonoBehaviour
     private GameObject PortadaAntesDeVideo;
     [SerializeField]
     private GameObject marco;
+    [Header("ElementosItem ")]
+    [SerializeField]
+    private GameObject relleno;
+    [SerializeField]
+    private GameObject bordes;
 
 
 
@@ -38,6 +43,7 @@ public class TutorialManager : MonoBehaviour
     bool verVideoCorrectWin = false;
 
     //al hacer click en boton video disco sobre otro correcto del menuInicio
+    //se abre menu video
     public void PlayVideoTutorial()
     {
         //cerramos menu inicio
@@ -46,6 +52,8 @@ public class TutorialManager : MonoBehaviour
         reproductor.SetActive(true);
         //ponemos portada
         PortadaAntesDeVideo.SetActive(true);
+        relleno.SetActive(true);
+        bordes.SetActive(true);
         marco.SetActive(true);
         botonPlayVideo.SetActive(true);
     }
@@ -58,6 +66,8 @@ public class TutorialManager : MonoBehaviour
         video.gameObject.SetActive(true);
         videoPlayer.Play();
         botonPlayVideo.SetActive(false);
+        relleno.SetActive(false);
+        bordes.SetActive(false);
     }
 
     
@@ -76,6 +86,8 @@ public class TutorialManager : MonoBehaviour
             marco.SetActive(false);
             PortadaAntesDeVideo.SetActive(false);
             botonPlayVideo.SetActive(false);
+            relleno.SetActive(false);
+            bordes.SetActive(false);
             //damos a Play el video
             video.gameObject.SetActive(true);
             videoPlayer.Play();
@@ -87,6 +99,8 @@ public class TutorialManager : MonoBehaviour
             //ponemos portada
             marco.SetActive(false);
             PortadaAntesDeVideo.SetActive(true);
+            relleno.SetActive(true);
+            bordes.SetActive(true);
             botonPlayVideo.SetActive(true);
             //paramos video
             video.gameObject.SetActive(false);
@@ -108,6 +122,8 @@ public class TutorialManager : MonoBehaviour
         reproductor.SetActive(false);
         //ponemos portada
         PortadaAntesDeVideo.SetActive(false);
+        relleno.SetActive(true);
+        bordes.SetActive(true);
         marco.SetActive(false);
         botonPlayVideo.SetActive(false);
     }
