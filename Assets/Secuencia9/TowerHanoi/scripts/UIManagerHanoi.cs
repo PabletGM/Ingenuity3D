@@ -47,9 +47,9 @@ public class UIManagerHanoi : MonoBehaviour
 
     public void SetFireworksWin(bool set)
     {
-        vfxFireworks.SetActive(set);
+        
         ImageWin.SetActive(set);
-        zoom.GetComponent<ZoomAutomatic>().ZoomOut();
+        zoom.GetComponent<DOTweenAnimation>().DORestartById("ZoomOut");
         ImageWin.transform.DOScale(new Vector3(0.8f, 0.8f, 1f), 2).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
         //boton quit tween
         
