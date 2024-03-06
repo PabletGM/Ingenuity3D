@@ -1,43 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
 public class TutorialManager : MonoBehaviour
 {
+
+
+    [Header("Reproductor y MenuInicio")]
     [SerializeField]
     private GameObject reproductor;
-
-
     [SerializeField]
     private GameObject menuInicio;
 
+
+
+    [Header("Boton Play y portada y marco ")]
     [SerializeField]
-    private Button PanelbotonPlayVideoCorrectWin;
-
-
-
-
-
-
-
-
-
+    private GameObject botonPlayVideo;
     [SerializeField]
-    private GameObject videoCorrect;
-
+    private GameObject PortadaAntesDeVideo;
     [SerializeField]
-    private VideoPlayer videoPlayerCorrect;
+    private GameObject marco;
+
+
+
+    [Header("VideoTutorial")]
+    [SerializeField]
+    private GameObject video;
+    [SerializeField]
+    private VideoPlayer videoPlayer;
+
+
 
     bool verVideoCorrectWin = false;
-
-    private void Start()
-    {
-
-        videoPlayerCorrect = videoCorrect.GetComponent<VideoPlayer>();
-
-    }
 
     //al hacer click en boton video disco sobre otro correcto del menuInicio
     public void PlayVideoTutorial()
@@ -46,7 +44,20 @@ public class TutorialManager : MonoBehaviour
         menuInicio.SetActive(false);
         //abrimos reproductor
         reproductor.SetActive(true);
+        //ponemos portada
+        PortadaAntesDeVideo.SetActive(true);
+        marco.SetActive(true);
+        botonPlayVideo.SetActive(true);
+    }
 
+
+    public void QuitPortadaImagen()
+    {
+        PortadaAntesDeVideo.SetActive(false);
+        marco.SetActive(false);
+        video.gameObject.SetActive(true);
+        videoPlayer.Play();
+        botonPlayVideo.SetActive(false);
     }
 
     
@@ -61,16 +72,25 @@ public class TutorialManager : MonoBehaviour
         //si se esta viendo el video
         if (verVideoCorrectWin)
         {
+            //quitamos portada
+            marco.SetActive(false);
+            PortadaAntesDeVideo.SetActive(false);
+            botonPlayVideo.SetActive(false);
             //damos a Play el video
-            videoCorrect.gameObject.SetActive(true);
-            videoPlayerCorrect.Play();
+            video.gameObject.SetActive(true);
+            videoPlayer.Play();
 
         }
         //sino se esta viendo el video
         else
         {
-            videoCorrect.gameObject.SetActive(false);
-            videoPlayerCorrect.Stop();
+            //ponemos portada
+            marco.SetActive(false);
+            PortadaAntesDeVideo.SetActive(true);
+            botonPlayVideo.SetActive(true);
+            //paramos video
+            video.gameObject.SetActive(false);
+            videoPlayer.Stop();
 
 
         }
@@ -80,12 +100,16 @@ public class TutorialManager : MonoBehaviour
     public void BackToMenuInicio()
     {
         //paramos ambos videos
-        videoPlayerCorrect.Stop();
+        videoPlayer.Stop();
 
         //abrimos menu inicio
         menuInicio.SetActive(true);
         //cerramos reproductor
         reproductor.SetActive(false);
+        //ponemos portada
+        PortadaAntesDeVideo.SetActive(false);
+        marco.SetActive(false);
+        botonPlayVideo.SetActive(false);
     }
 
     public void IniciarPartida()
