@@ -15,6 +15,10 @@ public class UIManagerHanoi : MonoBehaviour
 
     [SerializeField] private GameObject panelIncorrect;
     [SerializeField] private GameObject panelFueraLimites;
+
+    [SerializeField] private GameObject nextScene;
+
+
     private void Awake()
     {
         //si la instancia no existe se hace este script la instancia
@@ -50,9 +54,14 @@ public class UIManagerHanoi : MonoBehaviour
         
         ImageWin.SetActive(set);
         zoom.GetComponent<DOTweenAnimation>().DORestartById("ZoomOut");
-        ImageWin.transform.DOScale(new Vector3(0.8f, 0.8f, 1f), 2).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
         //boton quit tween
-        
+        Invoke("NextScene", 3f);
+
+    }
+
+    private void NextScene()
+    {
+        nextScene.GetComponent<NextSceneGenericMethod2>().NextScene();
     }
 
 

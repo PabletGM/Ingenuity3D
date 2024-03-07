@@ -119,8 +119,17 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
             _myGameManagerHanoi.AumentarNumMovimientosOutOfLimitsHanoiRegistrado();
             //su posicion la cambia a ultima pos
             transform.position = ultimaPos;
-            //al superar limites algun hueco en el que hay disco se borra
-            _myGameManagerHanoi.FueraLimites();
+            //if(limitessuperados)
+            //{
+            //    //al superar limites algun hueco en el que hay disco se borra
+            //    _myGameManagerHanoi.FueraLimites();
+            //}
+
+            //if(discoEncimaDeOtro)
+            //{
+            //    _myGameManagerHanoi.Incorrect();
+            //}
+           
             GameObject huecoAnterior = eventData.pointerDrag.GetComponent<DragDrop>().ReturnPosSeleccionada();
             if (huecoAnterior != null)
             {
@@ -218,8 +227,10 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         }
         else
         {
-            //no sale de limites
+            // sale de limites
             SetLimitesSuperados(true);
+            //al superar limites algun hueco en el que hay disco se borra
+            _myGameManagerHanoi.FueraLimites();
         }
     }
 
@@ -253,8 +264,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         _myGameManagerHanoi.AumentarNumMovimientosOutOfLimitsHanoiRegistrado();
         //su posicion la cambia a ultima pos
         transform.position = ultimaPos;
-        //al superar limites algun hueco en el que hay disco se borra
-        _myGameManagerHanoi.FueraLimites();
+        
         GameObject huecoAnterior = eventData.pointerDrag.GetComponent<DragDrop>().ReturnPosSeleccionada();
         if (huecoAnterior != null)
         {
