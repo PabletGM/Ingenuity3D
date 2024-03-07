@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 
 
@@ -30,6 +31,13 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private bool discoColocadoEnPosicionExistente = true;
 
 
+    [SerializeField]
+    private Sprite discoMetidoEnPalo;
+
+    [SerializeField]
+    private Sprite discoEntero;
+
+
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -49,6 +57,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     //BEGIN DRAG
     public void OnBeginDrag(PointerEventData eventData)
     {
+        //ponemos disco entero
+        this.gameObject.GetComponent<Image>().sprite = discoEntero;
         //ponemos animaciones de palo opacidad
         _myGameManagerHanoi.SetAnimacionesOpacidad(true);
 
@@ -119,16 +129,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
             _myGameManagerHanoi.AumentarNumMovimientosOutOfLimitsHanoiRegistrado();
             //su posicion la cambia a ultima pos
             transform.position = ultimaPos;
-            //if(limitessuperados)
-            //{
-            //    //al superar limites algun hueco en el que hay disco se borra
-            //    _myGameManagerHanoi.FueraLimites();
-            //}
-
-            //if(discoEncimaDeOtro)
-            //{
-            //    _myGameManagerHanoi.Incorrect();
-            //}
+           
            
             GameObject huecoAnterior = eventData.pointerDrag.GetComponent<DragDrop>().ReturnPosSeleccionada();
             if (huecoAnterior != null)
@@ -176,6 +177,9 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
             VolverASitioAnterior(eventData);
         }
         #endregion
+
+        //ponemos disco entero
+        this.gameObject.GetComponent<Image>().sprite = discoMetidoEnPalo;
     }
 
     public bool GetBoolDiscosEncimaOtro()
