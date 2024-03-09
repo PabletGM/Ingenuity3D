@@ -129,7 +129,11 @@ namespace Yarn.Unity.Example {
 
 		private void NextSceneManual()
 		{
-			nextScene.GetComponent<NextSceneGenericMethod2>().NextScene();
+			if(nextScene!=null)
+			{
+                nextScene.GetComponent<NextSceneGenericMethod2>().NextScene();
+            }
+			
 
         }
 		/// <summary>changes background image</summary>
@@ -429,7 +433,8 @@ namespace Yarn.Unity.Example {
 
 			// do the fade
 			StartCoroutine( FadeCoroutine( fadeColor, startAlpha, endAlpha, fadeTime ) );
-		}
+            Invoke("NextSceneManual", 2f);
+        }
 
 		/// <summary>convenient for an easy fade in, no matter what the
 		/// previous fade color or alpha was</summary>
