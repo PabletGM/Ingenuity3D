@@ -9,6 +9,8 @@ public class AudioManagerIntro : MonoBehaviour
     public SoundIntro[] musicSounds, sfxSounds, dialogueSound;
     public AudioSource musicSource, sfxSource, dialogueSource;
 
+    private bool canDestroy = false;
+
     private void Awake()
     {
         if (instance == null)
@@ -20,6 +22,20 @@ public class AudioManagerIntro : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Update()
+    {
+        if(canDestroy)
+        {
+            Destroy(this.gameObject);
+            canDestroy = false;
+        }
+    }
+
+    public void SetDestroy(bool set)
+    {
+        canDestroy = set;
     }
 
 
