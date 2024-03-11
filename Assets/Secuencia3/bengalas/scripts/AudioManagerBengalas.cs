@@ -10,12 +10,14 @@ public class AudioManagerBengalas : MonoBehaviour
     public SoundBengalas[] musicSounds, sfxSounds, dialogueSounds;
     public AudioSource musicSource, sfxSource, dialogueSource;
 
+    private bool canDestroy = false;
+
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            //DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -23,7 +25,21 @@ public class AudioManagerBengalas : MonoBehaviour
         }
     }
 
-    
+    private void Update()
+    {
+        if (canDestroy)
+        {
+            Destroy(this.gameObject);
+            canDestroy = false;
+        }
+    }
+
+    public void SetDestroy(bool set)
+    {
+        canDestroy = set;
+    }
+
+
 
     private void Start()
     {
