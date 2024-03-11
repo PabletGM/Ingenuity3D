@@ -9,12 +9,28 @@ public class AudioManagerSecuencia7 : MonoBehaviour
     public SoundSecuencia7[] musicSounds, sfxSounds, dialogueSounds, transitionSounds;
     public AudioSource musicSource, sfxSource1, sfxSource2, sfxSource3, dialogueSource, dialogueSource2, dialogueSource3, transitionSource, transitionSource2, transitionSource3;
 
+    private bool canDestroy = false;
+
+    private void Update()
+    {
+        if (canDestroy)
+        {
+            Destroy(this.gameObject);
+            canDestroy = false;
+        }
+    }
+
+    public void SetDestroy(bool set)
+    {
+        canDestroy = set;
+    }
+
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            //DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);
         }
         else
         {

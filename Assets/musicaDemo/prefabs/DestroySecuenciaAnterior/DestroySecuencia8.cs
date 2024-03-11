@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class DestroySecuencia8 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Destroy()
     {
-        
-    }
+        AudioManagerSecuencia8.instance.SetDestroy(true);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

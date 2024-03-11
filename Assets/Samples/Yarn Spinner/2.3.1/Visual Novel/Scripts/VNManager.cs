@@ -131,6 +131,11 @@ namespace Yarn.Unity.Example {
 		{
 			if(nextScene!=null)
 			{
+				if(tweenObject!=null)
+				{
+                    tweenObject.SetActive(true);
+                    tweenObject.GetComponent<DOTweenAnimation>().DORestartById("Destroy");
+                }
                 nextScene.GetComponent<NextSceneGenericMethod2>().NextScene();
             }
 			
