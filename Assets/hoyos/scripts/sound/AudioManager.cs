@@ -9,17 +9,33 @@ public class AudioManager : MonoBehaviour
     public Sound[] musicSounds, sfxSounds, dialogueSounds, transitionSounds;
     public AudioSource musicSource, sfxSource, sfxSource2, sfxSource3, dialogueSource, dialogueSource2, dialogueSource3, transitionSource, transitionSource2, transitionSource3;
 
+
+    private bool canDestroy = false;
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            //DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Update()
+    {
+        if (canDestroy)
+        {
+            Destroy(this.gameObject);
+            canDestroy = false;
+        }
+    }
+
+    public void SetDestroy(bool set)
+    {
+        canDestroy = set;
     }
 
 

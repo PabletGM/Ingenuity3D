@@ -9,6 +9,7 @@ public class AudioManagerSecuencia5 : MonoBehaviour
     public SoundSecuencia5[] musicSounds, sfxSounds, dialogueSounds, transitionSounds;
     public AudioSource musicSource, sfxSource1, sfxSource2, sfxSource3, dialogueSource, dialogueSource2, dialogueSource3, transitionSource;
 
+    private bool canDestroy = false;
     private void Awake()
     {
         if (instance == null)
@@ -20,6 +21,20 @@ public class AudioManagerSecuencia5 : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Update()
+    {
+        if (canDestroy)
+        {
+            Destroy(this.gameObject);
+            canDestroy = false;
+        }
+    }
+
+    public void SetDestroy(bool set)
+    {
+        canDestroy = set;
     }
 
 
