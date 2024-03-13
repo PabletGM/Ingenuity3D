@@ -89,7 +89,7 @@ public class UIManagerLogin : MonoBehaviour
 
     #region urlConexionMongo
 
-    private string uriBackend = "https://simplebackendingenuity.onrender.com/";
+    private string uriBackend = "https://backendingenuity.onrender.com/";
 
     private string uriRegisterBackend;
     private string uriLoginBackend;
@@ -106,6 +106,7 @@ public class UIManagerLogin : MonoBehaviour
         if (_instanceUILogin == null)
         {
             _instanceUILogin = this;
+            DontDestroyOnLoad(this.gameObject);
         }
         //si la instancia existe , destruimos la copia
         else
@@ -192,7 +193,8 @@ public class UIManagerLogin : MonoBehaviour
                     //en caso de que sea correcto nos movemos a escena hoyos
                     //SceneManager.LoadScene("EscenaInicial3EnRaya");
                     Debug.Log("login hecho");
-                    LevelLoader.LoadLevel("tareaCaras2");
+                //LevelLoader.LoadLevel("tareaCaras2");
+                SceneManager.LoadScene("SalidaTierra");
                 }
             }
         }
