@@ -12,7 +12,7 @@ public class InfoTestsMongoDB : MonoBehaviour
     ConfianzaManager _myconfianzaManager;
     CapacidadAdaptacionManager _mycapacidadAdaptacionManager;
     UIManagerLogin _myUIManagerLogin;
-    string baseUrl = "https://simplebackendingenuity.onrender.com/";
+    string baseUrl = "https://backendingenuity.onrender.com/";
     //por defecto uno puesto a mano
     private string access_token = "";
 
@@ -56,7 +56,8 @@ public class InfoTestsMongoDB : MonoBehaviour
         float[] puntuacionConfianza1 = _myconfianzaManager.puntuacionCONF_1();
 
         //recolectar token de script login register
-        access_token = _myUIManagerLogin.GetAccessToken();
+        //access_token = _myUIManagerLogin.GetAccessToken();
+        access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
         //se empieza corrutina hoyosMongoDB
         StartCoroutine(PutTestConfianza1MongoDB(itemNameConfianza1, softskillConfianza1, type, puntuacionConfianza1, totalTime));
     }
@@ -135,7 +136,7 @@ public class InfoTestsMongoDB : MonoBehaviour
         string softskillConfianza1join = string.Join(",", softskillConfianza1);
         string puntuacionConfianza1join = puntuacionConfianza1[0].ToString("0.0", CultureInfo.InvariantCulture);
 
-        string body2 = $"{{ \"itemName\": \"{itemNameConfianza1}\", \"softSkill\": [\"{softskillConfianza1join}\"], \"type\": {type}, \"puntuacion\": [{puntuacionConfianza1join}], \"totalTime\": \"{totalTime}\" }}";
+        string body2 = $"{{ \"itemName\": \"{itemNameConfianza1}\", \"softSkill\": [\"{softskillConfianza1join}\"], \"type\": {type}, \"puntuacion\": [{puntuacionConfianza1join}], \"totalTime\": {totalTime} }}";
 
         Debug.Log(body2);
 

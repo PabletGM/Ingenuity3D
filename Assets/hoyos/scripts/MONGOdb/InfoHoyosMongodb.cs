@@ -10,7 +10,7 @@ public class InfoHoyosMongodb : MonoBehaviour
     //conexion con GameManager
     GameManager _myGameManager;
     UIManagerLogin _myUIManagerLogin;
-    string baseUrl = "https://simplebackendingenuity.onrender.com/";
+    string baseUrl = "https://backendingenuity.onrender.com/";
     //por defecto uno puesto a mano
     private string access_token = "";
 
@@ -32,7 +32,8 @@ public class InfoHoyosMongodb : MonoBehaviour
         //numero picadas totales cada hoyo
         numpicadasHoyosIndiv = _myGameManager.DevolverPicadasHoyo();
         //recolectar token de script login register
-        access_token = _myUIManagerLogin.GetAccessToken();
+        //access_token = _myUIManagerLogin.GetAccessToken();
+        access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
         //se empieza corrutina hoyosMongoDB
         StartCoroutine(PutHoyosMongoDB(totalTime, numExcavacionesTotales, numpicadasHoyosIndiv));
        
@@ -63,8 +64,8 @@ public class InfoHoyosMongodb : MonoBehaviour
             }*/
             if (request.isNetworkError || request.isHttpError)
             {
-                //outputArea.text = request.error;
-                Debug.Log("ERRORRRRR");
+                
+                Debug.Log(request.error);
             }
             else
             {

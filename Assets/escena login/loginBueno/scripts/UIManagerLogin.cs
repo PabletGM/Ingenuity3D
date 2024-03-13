@@ -106,7 +106,7 @@ public class UIManagerLogin : MonoBehaviour
         if (_instanceUILogin == null)
         {
             _instanceUILogin = this;
-            DontDestroyOnLoad(this.gameObject);
+            
         }
         //si la instancia existe , destruimos la copia
         else
@@ -193,8 +193,8 @@ public class UIManagerLogin : MonoBehaviour
                     //en caso de que sea correcto nos movemos a escena hoyos
                     //SceneManager.LoadScene("EscenaInicial3EnRaya");
                     Debug.Log("login hecho");
-                //LevelLoader.LoadLevel("tareaCaras2");
-                SceneManager.LoadScene("SalidaTierra");
+                    //LevelLoader.LoadLevel("tareaCaras2");
+                    SceneManager.LoadScene("hoyosEstetica");
                 }
             }
         }
@@ -514,6 +514,45 @@ public class UIManagerLogin : MonoBehaviour
     public void SetAccessToken(string newToken)
     {
         access_tokenEntreEscenas = newToken;
+    }
+    #endregion
+
+
+    #region Create New Game
+
+    IEnumerator CreateNewGame()
+    {
+        // Crear formulario con los datos, todo en minusculas , porque va predefinido el formulario y username esta vez en minuscula
+
+        WWWForm form = new WWWForm();
+        form.AddField("processId", null);
+
+
+        using (UnityWebRequest request = UnityWebRequest.Post(uriLoginBackend, form))
+        {
+
+            yield return request.SendWebRequest();
+
+            //primera barrera de seguridad, para ver fallo
+            
+
+            if (request.isNetworkError || request.isHttpError)
+            {
+                Debug.Log(request.error);
+                errorCode = request.error;
+                //segunda barrera de seguridad, fallo numerico
+            }
+            else
+            {
+
+                ComprobacionAccessTokenLoginCorrect(request.downloadHandler.text);
+                //en caso de que sea correcto nos movemos a escena hoyos
+                //SceneManager.LoadScene("EscenaInicial3EnRaya");
+                Debug.Log("login hecho");
+                //LevelLoader.LoadLevel("tareaCaras2");
+                SceneManager.LoadScene("hoyosEstetica");
+            }
+        }
     }
     #endregion
 }
