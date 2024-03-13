@@ -33,7 +33,6 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         //si la instancia existe , destruimos la copia
         else
         {
-
             Destroy(this.gameObject);
         }
     }

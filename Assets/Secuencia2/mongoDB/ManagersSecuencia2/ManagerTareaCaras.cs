@@ -76,9 +76,6 @@ public class ManagerTareaCaras : MonoBehaviour
     private int numSecsPartidaCaras2 = 0;
     #endregion
 
-   
-
-
     #region TestsCaras
     [SerializeField]
     private GameObject test1Caras;
@@ -86,9 +83,6 @@ public class ManagerTareaCaras : MonoBehaviour
     [SerializeField]
     private GameObject test2Caras;
     #endregion
-
-
-
 
 
     #region methods Caras1
@@ -197,6 +191,14 @@ public class ManagerTareaCaras : MonoBehaviour
     public void ChooseOptionCCarasa2()
     {
         resultadoPruebaCaras2 = "c";
+        //ponemos valor numerico segun el resultado
+        resultadoNumPruebaCaras2 = 10;
+    }
+
+    //metodo que elige la opcion C de la prueba1 de capacidad
+    public void ChooseOptionDCarasa2()
+    {
+        resultadoPruebaCaras2 = "d";
         //ponemos valor numerico segun el resultado
         resultadoNumPruebaCaras2 = 10;
     }

@@ -1578,6 +1578,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590109323}
   m_CullTransparentMesh: 0
+--- !u!1 &616237017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 616237018}
+  - component: {fileID: 616237019}
+  m_Layer: 0
+  m_Name: mongoDB
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &616237018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616237017}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 205.06346, y: -121.223816, z: 6097.9595}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &616237019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616237017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7952d04e05051214698201406f6d68c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &623545041
 GameObject:
   m_ObjectHideFlags: 0
@@ -1660,7 +1704,7 @@ GameObject:
   - component: {fileID: 757492307}
   - component: {fileID: 757492310}
   m_Layer: 5
-  m_Name: boton31
+  m_Name: boton3A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2070,7 +2114,7 @@ GameObject:
   - component: {fileID: 818305580}
   - component: {fileID: 818305583}
   m_Layer: 5
-  m_Name: boton24
+  m_Name: boton2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2145,6 +2189,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: GameControllerCaras, Assembly-CSharp
         m_MethodName: SetIniciarTanda3
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1963052200}
+        m_TargetAssemblyTypeName: ManagerTareaCaras, Assembly-CSharp
+        m_MethodName: ChooseOptionDCarasa2
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3073,7 +3129,7 @@ GameObject:
   - component: {fileID: 1011413956}
   - component: {fileID: 1011413955}
   m_Layer: 5
-  m_Name: boton1
+  m_Name: botonA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3162,6 +3218,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: GameControllerCaras, Assembly-CSharp
         m_MethodName: SetIniciarTanda2
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1963052200}
+        m_TargetAssemblyTypeName: ManagerTareaCaras, Assembly-CSharp
+        m_MethodName: ChooseOptionACaras1
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3531,7 +3599,7 @@ GameObject:
   - component: {fileID: 1325425965}
   - component: {fileID: 1325425968}
   m_Layer: 5
-  m_Name: boton4
+  m_Name: botonD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3606,6 +3674,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: GameControllerCaras, Assembly-CSharp
         m_MethodName: SetIniciarTanda2
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1963052200}
+        m_TargetAssemblyTypeName: ManagerTareaCaras, Assembly-CSharp
+        m_MethodName: ChooseOptionDCaras1
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3924,7 +4004,7 @@ GameObject:
   - component: {fileID: 1375643678}
   - component: {fileID: 1375643681}
   m_Layer: 5
-  m_Name: boton22
+  m_Name: boton2B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3999,6 +4079,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: GameControllerCaras, Assembly-CSharp
         m_MethodName: SetIniciarTanda3
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1963052200}
+        m_TargetAssemblyTypeName: ManagerTareaCaras, Assembly-CSharp
+        m_MethodName: ChooseOptionBCaras2
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4246,7 +4338,7 @@ GameObject:
   - component: {fileID: 1460927741}
   - component: {fileID: 1460927744}
   m_Layer: 5
-  m_Name: boton21
+  m_Name: boton2A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4321,6 +4413,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: GameControllerCaras, Assembly-CSharp
         m_MethodName: SetIniciarTanda3
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1963052200}
+        m_TargetAssemblyTypeName: ManagerTareaCaras, Assembly-CSharp
+        m_MethodName: ChooseOptionACaras2
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4511,7 +4615,7 @@ GameObject:
   - component: {fileID: 1552936608}
   - component: {fileID: 1552936611}
   m_Layer: 5
-  m_Name: boton2
+  m_Name: botonB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4594,6 +4698,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1963052200}
+        m_TargetAssemblyTypeName: ManagerTareaCaras, Assembly-CSharp
+        m_MethodName: ChooseOptionBCaras1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1552936609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4660,7 +4776,7 @@ GameObject:
   - component: {fileID: 1558079218}
   - component: {fileID: 1558079221}
   m_Layer: 5
-  m_Name: boton32
+  m_Name: boton3B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4809,7 +4925,7 @@ GameObject:
   - component: {fileID: 1575389047}
   - component: {fileID: 1575389050}
   m_Layer: 5
-  m_Name: boton3
+  m_Name: botonC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4892,6 +5008,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1963052200}
+        m_TargetAssemblyTypeName: ManagerTareaCaras, Assembly-CSharp
+        m_MethodName: ChooseOptionCCaras1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1575389048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4958,7 +5086,7 @@ GameObject:
   - component: {fileID: 1606392181}
   - component: {fileID: 1606392184}
   m_Layer: 5
-  m_Name: boton34
+  m_Name: boton3D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5251,7 +5379,7 @@ GameObject:
   - component: {fileID: 1645134059}
   - component: {fileID: 1645134062}
   m_Layer: 5
-  m_Name: boton33
+  m_Name: boton3C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5521,79 +5649,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715145987}
   m_CullTransparentMesh: 1
---- !u!1001 &1734764314
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4026289406019915571, guid: d62322dbda1381f49b24d0ea23cc3d3b,
-        type: 3}
-      propertyPath: m_Name
-      value: mongoDB
-      objectReference: {fileID: 0}
-    - target: {fileID: 8096299094901789594, guid: d62322dbda1381f49b24d0ea23cc3d3b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8096299094901789594, guid: d62322dbda1381f49b24d0ea23cc3d3b,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.474525
-      objectReference: {fileID: 0}
-    - target: {fileID: 8096299094901789594, guid: d62322dbda1381f49b24d0ea23cc3d3b,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.9671042
-      objectReference: {fileID: 0}
-    - target: {fileID: 8096299094901789594, guid: d62322dbda1381f49b24d0ea23cc3d3b,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8096299094901789594, guid: d62322dbda1381f49b24d0ea23cc3d3b,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8096299094901789594, guid: d62322dbda1381f49b24d0ea23cc3d3b,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8096299094901789594, guid: d62322dbda1381f49b24d0ea23cc3d3b,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8096299094901789594, guid: d62322dbda1381f49b24d0ea23cc3d3b,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8096299094901789594, guid: d62322dbda1381f49b24d0ea23cc3d3b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8096299094901789594, guid: d62322dbda1381f49b24d0ea23cc3d3b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8096299094901789594, guid: d62322dbda1381f49b24d0ea23cc3d3b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d62322dbda1381f49b24d0ea23cc3d3b, type: 3}
 --- !u!1 &1752619076
 GameObject:
   m_ObjectHideFlags: 0
@@ -6363,6 +6418,7 @@ GameObject:
   - component: {fileID: 1963052198}
   - component: {fileID: 1963052197}
   - component: {fileID: 1963052196}
+  - component: {fileID: 1963052200}
   m_Layer: 5
   m_Name: CanvasFijo
   m_TagString: Untagged
@@ -6455,6 +6511,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0.36, y: 1.74}
   m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1963052200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963052195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7838e9a779da16c4ba137a0dd9a6dff9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  test1Caras: {fileID: 1182889931}
+  test2Caras: {fileID: 2103403638}
 --- !u!1 &1976426625
 GameObject:
   m_ObjectHideFlags: 0
@@ -6853,7 +6923,7 @@ GameObject:
   - component: {fileID: 2136344371}
   - component: {fileID: 2136344374}
   m_Layer: 5
-  m_Name: boton23
+  m_Name: boton2C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6928,6 +6998,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: GameControllerCaras, Assembly-CSharp
         m_MethodName: SetIniciarTanda3
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1963052200}
+        m_TargetAssemblyTypeName: ManagerTareaCaras, Assembly-CSharp
+        m_MethodName: ChooseOptionCCarasa2
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

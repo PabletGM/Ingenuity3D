@@ -96,6 +96,7 @@ public class GameControllerCaras : MonoBehaviour
         mainCamera = Camera.main; // Obtén la cámara principal
     }
 
+    //PARA ZOOM INICIAL Y EFECTOS PREGUNTAS
     void Update()
     {
         // Calcula la posición objetivo para el zoom
@@ -121,6 +122,8 @@ public class GameControllerCaras : MonoBehaviour
         }
     }
 
+
+    //poner tanda 1
     #region Tanda1
     public void SetIniciarTanda1(bool set)
     {
@@ -136,6 +139,7 @@ public class GameControllerCaras : MonoBehaviour
 
     #endregion
 
+    //poner tanda 2
     #region Tanda2
     public void SetIniciarTanda2(bool set)
     {
@@ -160,6 +164,7 @@ public class GameControllerCaras : MonoBehaviour
 
     #endregion
 
+    //poner tanda 3
     #region Tanda3
     public void SetIniciarTanda3(bool set)
     {
@@ -183,12 +188,14 @@ public class GameControllerCaras : MonoBehaviour
 
     #endregion
 
+    //efecto Imagen
     private void SetImagenBigSize(GameObject foto)
     {
         foto.SetActive(true);
         foto.transform.DOScale(new Vector3(0.01f, 0.01f, 0.01f), 1f);
     }
 
+    //set de seguridad para poner tanda correcta solo
     private void SetTandaChosen(bool setTanda1, bool setTanda2, bool setTanda3)
     {
         //comprobacion extra
@@ -197,7 +204,7 @@ public class GameControllerCaras : MonoBehaviour
         tanda3.SetActive(setTanda3);
     }
 
-
+    //para poner panel pequeño o grande
     private void SetTamañoPanel(GameObject dialoguePanel, bool set)
     {
         dialoguePanel.SetActive(set);
@@ -214,6 +221,7 @@ public class GameControllerCaras : MonoBehaviour
 
     }
 
+    //activar botones opciones de la tanda que sea
     private void SetActiveBotonesOpciones(GameObject boton1, GameObject boton2, GameObject boton3, GameObject boton4, bool set)
     {
         boton1.SetActive(set);
@@ -222,6 +230,7 @@ public class GameControllerCaras : MonoBehaviour
         boton4.SetActive(set);
     }
 
+    //set de seguridad para activar el panel de dialogo que sea
     private void SetDialoguePanel(bool setTanda1, bool setTanda2, bool setTanda3)
     {
         dialoguePanel1.SetActive(setTanda1);
@@ -233,13 +242,5 @@ public class GameControllerCaras : MonoBehaviour
     {
         SceneManager.LoadScene("escenaConversacionRobot3");
         //SceneManager.LoadScene("BengalasPrueba");
-
-        Debug.Log("Next Scene");
     }
-
-
-    //public void BotonContinue()
-    //{
-    //    botonContinue.SetActive(true);
-    //}
 }
