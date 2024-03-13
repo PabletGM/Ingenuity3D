@@ -93,6 +93,8 @@ public class ManagerTareaCaras : MonoBehaviour
         resultadoPruebaCaras1 = "a";
         //ponemos valor numerico segun el resultado
         resultadoNumPruebaCaras1 = 0;
+        //enviamos respuesta
+        SetCaras1();
 
     }
 
@@ -102,6 +104,8 @@ public class ManagerTareaCaras : MonoBehaviour
         resultadoPruebaCaras1 = "b";
         //ponemos valor numerico segun el resultado
         resultadoNumPruebaCaras1 = 5;
+        //enviamos respuesta
+        SetCaras1();
     }
 
     //metodo que elige la opcion C de la prueba1 de capacidad
@@ -110,6 +114,8 @@ public class ManagerTareaCaras : MonoBehaviour
         resultadoPruebaCaras1 = "c";
         //ponemos valor numerico segun el resultado
         resultadoNumPruebaCaras1 = 10;
+        //enviamos respuesta
+        SetCaras1();
     }
 
     //metodo que elige la opcion C de la prueba1 de capacidad
@@ -118,6 +124,8 @@ public class ManagerTareaCaras : MonoBehaviour
         resultadoPruebaCaras1 = "d";
         //ponemos valor numerico segun el resultado
         resultadoNumPruebaCaras1 = 10;
+        //enviamos respuesta
+        SetCaras1();
     }
 
     //para pasar a siguiente test
@@ -176,6 +184,8 @@ public class ManagerTareaCaras : MonoBehaviour
         resultadoPruebaCaras2 = "a";
         //ponemos valor numerico segun el resultado
         resultadoNumPruebaCaras2 = 0;
+        //enviamos respuesta
+        SetCaras2();
 
     }
 
@@ -185,6 +195,8 @@ public class ManagerTareaCaras : MonoBehaviour
         resultadoPruebaCaras2 = "b";
         //ponemos valor numerico segun el resultado
         resultadoNumPruebaCaras2 = 5;
+        //enviamos respuesta
+        SetCaras2();
     }
 
     //metodo que elige la opcion C de la prueba1 de capacidad
@@ -193,6 +205,8 @@ public class ManagerTareaCaras : MonoBehaviour
         resultadoPruebaCaras2 = "c";
         //ponemos valor numerico segun el resultado
         resultadoNumPruebaCaras2 = 10;
+        //enviamos respuesta
+        SetCaras2();
     }
 
     //metodo que elige la opcion C de la prueba1 de capacidad
@@ -201,6 +215,8 @@ public class ManagerTareaCaras : MonoBehaviour
         resultadoPruebaCaras2 = "d";
         //ponemos valor numerico segun el resultado
         resultadoNumPruebaCaras2 = 10;
+        //enviamos respuesta
+        SetCaras2();
     }
 
     //para pasar a siguiente test

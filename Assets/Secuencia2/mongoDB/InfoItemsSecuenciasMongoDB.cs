@@ -72,7 +72,7 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         //access token temporal
         access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
         //se empieza corrutina hoyosMongoDB
-        StartCoroutine(PutTestConfianza1MongoDB(itemNameCaras1, softskillCaras1, type, puntuacionCaras1, totalTime));
+        StartCoroutine(PutTestCarasMongoDB(itemNameCaras1, softskillCaras1, type, puntuacionCaras1, totalTime));
     }
 
     [System.Obsolete]
@@ -92,7 +92,7 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         //access token temporal
         access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
         //se empieza corrutina hoyosMongoDB
-        StartCoroutine(PutTestConfianza1MongoDB(itemNameCaras2, softskillCaras2, type2, puntuacionCaras2, totalTime2));
+        StartCoroutine(PutTestCarasMongoDB(itemNameCaras2, softskillCaras2, type2, puntuacionCaras2, totalTime2));
     }
     #endregion
 
@@ -102,7 +102,7 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
    
     //method to connect the face method with put
     [System.Obsolete]
-    IEnumerator PutTestConfianza1MongoDB(string itemNameCaras, string[] softskillCaras, int type, float[] puntuacionCaras, int totalTime)
+    IEnumerator PutTestCarasMongoDB(string itemNameCaras, string[] softskillCaras, int type, float[] puntuacionCaras, int totalTime)
     {
 
 
@@ -114,10 +114,10 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         //"puntuacion": [1.2]
 
 
-        string softskillConfianza1join = string.Join(",", softskillCaras);
-        string puntuacionConfianza1join = puntuacionCaras[0].ToString("0.0", CultureInfo.InvariantCulture);
+        string softskillCarasjoin = string.Join(",", softskillCaras);
+        string puntuacionCarasjoin = puntuacionCaras[0].ToString("0.0", CultureInfo.InvariantCulture);
 
-        string body2 = $"{{ \"itemName\": \"{itemNameCaras}\", \"softSkill\": [\"{softskillConfianza1join}\"], \"type\": {type}, \"puntuacion\": [{puntuacionConfianza1join}], \"totalTime\": {totalTime} }}";
+        string body2 = $"{{ \"itemName\": \"{itemNameCaras}\", \"softSkill\": [\"{softskillCarasjoin}\"], \"type\": {type}, \"puntuacion\": [{puntuacionCarasjoin}], \"totalTime\": {totalTime} }}";
 
         Debug.Log(body2);
 
