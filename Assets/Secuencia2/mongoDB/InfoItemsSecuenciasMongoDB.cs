@@ -7,7 +7,7 @@ using UnityEngine.Networking;
 public class InfoItemsSecuenciasMongoDB : MonoBehaviour
 {
     //instance
-    static private InfoItemsSecuenciasMongoDB _instanceTests;
+    static private InfoItemsSecuenciasMongoDB _instanceItems;
 
     //conexion con Managers
     ManagerTareaCaras _myManagerCaras;
@@ -26,9 +26,9 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
     private void Awake()
     {
         //si la instancia no existe se hace este script la instancia
-        if (_instanceTests == null)
+        if (_instanceItems == null)
         {
-            _instanceTests = this;
+            _instanceItems = this;
         }
         //si la instancia existe , destruimos la copia
         else
@@ -46,6 +46,11 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         
         //para recolectar el token
         _myUIManagerLogin = UIManagerLogin.GetInstanceUI();
+    }
+
+    static public InfoItemsSecuenciasMongoDB GetIstanceInfoItemsSecuenciasMongoDB()
+    {
+        return _instanceItems;
     }
 
 

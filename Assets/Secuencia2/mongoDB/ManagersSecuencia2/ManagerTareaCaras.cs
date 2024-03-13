@@ -6,10 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class ManagerTareaCaras : MonoBehaviour
 {
+    static private InfoItemsSecuenciasMongoDB _instanceItems;
     static private ManagerTareaCaras _instanceTareaCaras;
     static public ManagerTareaCaras GetInstanceManagerTareaCaras()
     {
         return _instanceTareaCaras;
+    }
+
+    private void Start()
+    {
+        //conectamos con manager caras
+       _instanceItems = InfoItemsSecuenciasMongoDB.GetIstanceInfoItemsSecuenciasMongoDB();
     }
 
     private void Awake()
@@ -122,6 +129,8 @@ public class ManagerTareaCaras : MonoBehaviour
     //para pasar a siguiente test
     public void SetCaras1()
     {
+        //mandas solicitud para guardar en base de datos
+        _instanceItems.RecolectarArgumentosCARAS_1();
         //como ya has mandando solicitud de test anterior a backend reinicias valores
         //para reutilizar parametros vacios
     }
@@ -195,7 +204,8 @@ public class ManagerTareaCaras : MonoBehaviour
     //para pasar a siguiente test
     public void SetCaras2()
     {
-        
+        //mandas solicitud para guardar en base de datos
+        _instanceItems.RecolectarArgumentosCARAS_2();
     }
 
     public int TiempoPartidaCaras2()
