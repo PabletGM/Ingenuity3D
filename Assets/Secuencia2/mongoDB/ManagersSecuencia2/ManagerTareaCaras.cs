@@ -81,7 +81,7 @@ public class ManagerTareaCaras : MonoBehaviour
     #endregion
     #region campos tanda1 caras
 
-        private string itemNameCaras_1 = "CARAS";
+        private string itemNameCaras_1 = "EI_1";
 
         //cantidad de softskills que mide y nombres
         private string[] softSkillCaras;
@@ -102,7 +102,7 @@ public class ManagerTareaCaras : MonoBehaviour
         private int resultadoNumPruebaCaras2 = 0;
     #endregion
     #region camposTanda2Caras
-    private string itemNameCaras_2 = "CARAS_2";
+    private string itemNameCaras_2 = "EI_2";
     //cantidad de softskills que mide y nombres
     private string[] softSkillCaras_2;
     //tipo de test que es, si imagenes, preguntas escritas, etc
@@ -119,7 +119,7 @@ public class ManagerTareaCaras : MonoBehaviour
     private int resultadoNumPruebaCaras3 = 0;
     #endregion
     #region camposTanda3Caras
-    private string itemNameCaras_3 = "CARAS_3";
+    private string itemNameCaras_3 = "EI_3";
     //cantidad de softskills que mide y nombres
     private string[] softSkillCaras_3;
     //tipo de test que es, si imagenes, preguntas escritas, etc
@@ -136,7 +136,7 @@ public class ManagerTareaCaras : MonoBehaviour
     private int resultadoNumPruebaCaras4 = 0;
     #endregion
     #region camposTanda4Caras
-    private string itemNameCaras_4 = "CARAS_4";
+    private string itemNameCaras_4 = "EI_4";
     //cantidad de softskills que mide y nombres
     private string[] softSkillCaras_4;
     //tipo de test que es, si imagenes, preguntas escritas, etc
@@ -153,7 +153,7 @@ public class ManagerTareaCaras : MonoBehaviour
     private int resultadoNumPruebaCaras5 = 0;
     #endregion
     #region camposTanda5Caras
-    private string itemNameCaras_5 = "CARAS_5";
+    private string itemNameCaras_5 = "EI_5";
     //cantidad de softskills que mide y nombres
     private string[] softSkillCaras_5;
     //tipo de test que es, si imagenes, preguntas escritas, etc
@@ -170,7 +170,7 @@ public class ManagerTareaCaras : MonoBehaviour
     private int resultadoNumPruebaCaras6 = 0;
     #endregion
     #region camposTanda6Caras
-    private string itemNameCaras_6 = "CARAS_6";
+    private string itemNameCaras_6 = "EI_6";
     //cantidad de softskills que mide y nombres
     private string[] softSkillCaras_6;
     //tipo de test que es, si imagenes, preguntas escritas, etc
@@ -187,7 +187,7 @@ public class ManagerTareaCaras : MonoBehaviour
     private int resultadoNumPruebaCaras7 = 0;
     #endregion
     #region camposTanda7Caras
-    private string itemNameCaras_7 = "CARAS_7";
+    private string itemNameCaras_7 = "EI_7";
     //cantidad de softskills que mide y nombres
     private string[] softSkillCaras_7;
     //tipo de test que es, si imagenes, preguntas escritas, etc
@@ -204,7 +204,7 @@ public class ManagerTareaCaras : MonoBehaviour
     private int resultadoNumPruebaCaras8 = 0;
     #endregion
     #region camposTanda8Caras
-    private string itemNameCaras_8 = "CARAS_8";
+    private string itemNameCaras_8 = "EI_8";
     //cantidad de softskills que mide y nombres
     private string[] softSkillCaras_8;
     //tipo de test que es, si imagenes, preguntas escritas, etc
@@ -221,7 +221,7 @@ public class ManagerTareaCaras : MonoBehaviour
     private int resultadoNumPruebaCaras9 = 0;
     #endregion
     #region camposTanda9Caras
-    private string itemNameCaras_9 = "CARAS_9";
+    private string itemNameCaras_9 = "EI_9";
     //cantidad de softskills que mide y nombres
     private string[] softSkillCaras_9;
     //tipo de test que es, si imagenes, preguntas escritas, etc
@@ -238,7 +238,7 @@ public class ManagerTareaCaras : MonoBehaviour
     private int resultadoNumPruebaCaras10 = 0;
     #endregion
     #region camposTanda10Caras
-    private string itemNameCaras_10 = "CARAS_10";
+    private string itemNameCaras_10 = "EI_10";
     //cantidad de softskills que mide y nombres
     private string[] softSkillCaras_10;
     //tipo de test que es, si imagenes, preguntas escritas, etc
