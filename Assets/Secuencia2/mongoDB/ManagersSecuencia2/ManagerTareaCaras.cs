@@ -81,7 +81,7 @@ public class ManagerTareaCaras : MonoBehaviour
     #endregion
     #region campos tanda1 caras
 
-        private string itemNameCaras_1 = "EI_1";
+        private string itemNameCaras_1 = "IE_1";
 
         //cantidad de softskills que mide y nombres
         private string[] softSkillCaras;
@@ -102,7 +102,7 @@ public class ManagerTareaCaras : MonoBehaviour
         private int resultadoNumPruebaCaras2 = 0;
     #endregion
     #region camposTanda2Caras
-    private string itemNameCaras_2 = "EI_2";
+    private string itemNameCaras_2 = "IE_2";
     //cantidad de softskills que mide y nombres
     private string[] softSkillCaras_2;
     //tipo de test que es, si imagenes, preguntas escritas, etc
@@ -119,7 +119,7 @@ public class ManagerTareaCaras : MonoBehaviour
     private int resultadoNumPruebaCaras3 = 0;
     #endregion
     #region camposTanda3Caras
-    private string itemNameCaras_3 = "EI_3";
+    private string itemNameCaras_3 = "IE_3";
     //cantidad de softskills que mide y nombres
     private string[] softSkillCaras_3;
     //tipo de test que es, si imagenes, preguntas escritas, etc
@@ -136,7 +136,7 @@ public class ManagerTareaCaras : MonoBehaviour
     private int resultadoNumPruebaCaras4 = 0;
     #endregion
     #region camposTanda4Caras
-    private string itemNameCaras_4 = "EI_4";
+    private string itemNameCaras_4 = "IE_4";
     //cantidad de softskills que mide y nombres
     private string[] softSkillCaras_4;
     //tipo de test que es, si imagenes, preguntas escritas, etc
@@ -153,7 +153,7 @@ public class ManagerTareaCaras : MonoBehaviour
     private int resultadoNumPruebaCaras5 = 0;
     #endregion
     #region camposTanda5Caras
-    private string itemNameCaras_5 = "EI_5";
+    private string itemNameCaras_5 = "IE_5";
     //cantidad de softskills que mide y nombres
     private string[] softSkillCaras_5;
     //tipo de test que es, si imagenes, preguntas escritas, etc
@@ -170,7 +170,7 @@ public class ManagerTareaCaras : MonoBehaviour
     private int resultadoNumPruebaCaras6 = 0;
     #endregion
     #region camposTanda6Caras
-    private string itemNameCaras_6 = "EI_6";
+    private string itemNameCaras_6 = "IE_6";
     //cantidad de softskills que mide y nombres
     private string[] softSkillCaras_6;
     //tipo de test que es, si imagenes, preguntas escritas, etc
@@ -187,7 +187,7 @@ public class ManagerTareaCaras : MonoBehaviour
     private int resultadoNumPruebaCaras7 = 0;
     #endregion
     #region camposTanda7Caras
-    private string itemNameCaras_7 = "EI_7";
+    private string itemNameCaras_7 = "IE_7";
     //cantidad de softskills que mide y nombres
     private string[] softSkillCaras_7;
     //tipo de test que es, si imagenes, preguntas escritas, etc
@@ -204,7 +204,7 @@ public class ManagerTareaCaras : MonoBehaviour
     private int resultadoNumPruebaCaras8 = 0;
     #endregion
     #region camposTanda8Caras
-    private string itemNameCaras_8 = "EI_8";
+    private string itemNameCaras_8 = "IE_8";
     //cantidad de softskills que mide y nombres
     private string[] softSkillCaras_8;
     //tipo de test que es, si imagenes, preguntas escritas, etc
@@ -221,7 +221,7 @@ public class ManagerTareaCaras : MonoBehaviour
     private int resultadoNumPruebaCaras9 = 0;
     #endregion
     #region camposTanda9Caras
-    private string itemNameCaras_9 = "EI_9";
+    private string itemNameCaras_9 = "IE_9";
     //cantidad de softskills que mide y nombres
     private string[] softSkillCaras_9;
     //tipo de test que es, si imagenes, preguntas escritas, etc
@@ -238,7 +238,7 @@ public class ManagerTareaCaras : MonoBehaviour
     private int resultadoNumPruebaCaras10 = 0;
     #endregion
     #region camposTanda10Caras
-    private string itemNameCaras_10 = "EI_10";
+    private string itemNameCaras_10 = "IE_10";
     //cantidad de softskills que mide y nombres
     private string[] softSkillCaras_10;
     //tipo de test que es, si imagenes, preguntas escritas, etc
@@ -328,7 +328,7 @@ public class ManagerTareaCaras : MonoBehaviour
     public string[] softskillCARAS_1()
     {
         softSkillCaras = new string[1];
-        softSkillCaras[0] = "caras";
+        softSkillCaras[0] = " Inteligencia Emocional";
         return softSkillCaras;
     }
 
@@ -414,7 +414,7 @@ public class ManagerTareaCaras : MonoBehaviour
     public string[] softskillCARAS_2()
     {
         softSkillCaras_2 = new string[1];
-        softSkillCaras_2[0] = "confianza";
+        softSkillCaras_2[0] = " Inteligencia Emocional";
         return softSkillCaras_2;
     }
 
@@ -500,7 +500,7 @@ public class ManagerTareaCaras : MonoBehaviour
     public string[] softskillCARAS_3()
     {
         softSkillCaras_3 = new string[1];
-        softSkillCaras_3[0] = "confianza";
+        softSkillCaras_3[0] = " Inteligencia Emocional";
         return softSkillCaras_3;
     }
 
@@ -586,7 +586,7 @@ public class ManagerTareaCaras : MonoBehaviour
     public string[] softskillCARAS_4()
     {
         softSkillCaras_4 = new string[1];
-        softSkillCaras_4[0] = "confianza";
+        softSkillCaras_4[0] = " Inteligencia Emocional";
         return softSkillCaras_4;
     }
 
@@ -672,7 +672,7 @@ public class ManagerTareaCaras : MonoBehaviour
     public string[] softskillCARAS_5()
     {
         softSkillCaras_5 = new string[1];
-        softSkillCaras_5[0] = "confianza";
+        softSkillCaras_5[0] = " Inteligencia Emocional";
         return softSkillCaras_5;
     }
 
@@ -758,7 +758,7 @@ public class ManagerTareaCaras : MonoBehaviour
     public string[] softskillCARAS_6()
     {
         softSkillCaras_6 = new string[1];
-        softSkillCaras_6[0] = "confianza";
+        softSkillCaras_6[0] = " Inteligencia Emocional";
         return softSkillCaras_6;
     }
 
@@ -844,7 +844,7 @@ public class ManagerTareaCaras : MonoBehaviour
     public string[] softskillCARAS_7()
     {
         softSkillCaras_7 = new string[1];
-        softSkillCaras_7[0] = "confianza";
+        softSkillCaras_7[0] = "Inteligencia Emocional";
         return softSkillCaras_7;
     }
 
@@ -930,7 +930,7 @@ public class ManagerTareaCaras : MonoBehaviour
     public string[] softskillCARAS_8()
     {
         softSkillCaras_8 = new string[1];
-        softSkillCaras_8[0] = "confianza";
+        softSkillCaras_8[0] = "Inteligencia Emocional";
         return softSkillCaras_8;
     }
 
@@ -1016,7 +1016,7 @@ public class ManagerTareaCaras : MonoBehaviour
     public string[] softskillCARAS_9()
     {
         softSkillCaras_9 = new string[1];
-        softSkillCaras_9[0] = "confianza";
+        softSkillCaras_9[0] = "Inteligencia Emocional";
         return softSkillCaras_9;
     }
 
@@ -1102,7 +1102,7 @@ public class ManagerTareaCaras : MonoBehaviour
     public string[] softskillCARAS_10()
     {
         softSkillCaras_10 = new string[1];
-        softSkillCaras_10[0] = "confianza";
+        softSkillCaras_10[0] = "Inteligencia Emocional";
         return softSkillCaras_10;
     }
 
