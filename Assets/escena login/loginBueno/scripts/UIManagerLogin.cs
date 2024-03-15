@@ -194,6 +194,7 @@ public class UIManagerLogin : MonoBehaviour
                     //SceneManager.LoadScene("EscenaInicial3EnRaya");
                     Debug.Log("login hecho");
                     //LevelLoader.LoadLevel("tareaCaras2");
+                    StartCoroutine(CreateNewGame());
                     SceneManager.LoadScene("hoyosEstetica");
                 }
             }
@@ -260,6 +261,8 @@ public class UIManagerLogin : MonoBehaviour
 
     #endregion
 
+
+   
 
     #region ComprobationLoginRegisterCorrect
     //metodo que mira a ver si lo que ha devuelto el register es un codigo 201, esto es register correct
@@ -525,10 +528,11 @@ public class UIManagerLogin : MonoBehaviour
         // Crear formulario con los datos, todo en minusculas , porque va predefinido el formulario y username esta vez en minuscula
 
         WWWForm form = new WWWForm();
-        form.AddField("processId", null);
+        form.AddField("processId", "string");
 
+        string uriStartGameBackend = "Users/me/startGame";
 
-        using (UnityWebRequest request = UnityWebRequest.Post(uriLoginBackend, form))
+        using (UnityWebRequest request = UnityWebRequest.Post(uriStartGameBackend, form))
         {
 
             yield return request.SendWebRequest();
@@ -544,11 +548,6 @@ public class UIManagerLogin : MonoBehaviour
             }
             else
             {
-
-                ComprobacionAccessTokenLoginCorrect(request.downloadHandler.text);
-                //en caso de que sea correcto nos movemos a escena hoyos
-                //SceneManager.LoadScene("EscenaInicial3EnRaya");
-                Debug.Log("login hecho");
                 //LevelLoader.LoadLevel("tareaCaras2");
                 SceneManager.LoadScene("hoyosEstetica");
             }
