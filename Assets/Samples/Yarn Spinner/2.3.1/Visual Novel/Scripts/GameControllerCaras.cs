@@ -23,8 +23,15 @@ public class GameControllerCaras : MonoBehaviour
     private GameObject tanda2;
     [SerializeField]
     private GameObject tanda3;
+    [SerializeField]
+    private GameObject tanda4;
+    [SerializeField]
+    private GameObject tanda5;
+    [SerializeField]
+    private GameObject tanda6;
+    [SerializeField]
+    private GameObject tanda7;
     #endregion
-
 
     #region Tanda1
     [Header("Tanda 1 - Foto, respuestas y diálogo")]
@@ -91,6 +98,90 @@ public class GameControllerCaras : MonoBehaviour
     private GameObject dialoguePanel3;
     #endregion
 
+    #region Tanda4
+    [Header("Tanda 4 - Foto, respuestas y diálogo")]
+    [SerializeField]
+    private GameObject foto4;
+
+    [SerializeField]
+    private GameObject botonRespuesta41;
+    [SerializeField]
+    private GameObject botonRespuesta42;
+    [SerializeField]
+    private GameObject botonRespuesta43;
+    [SerializeField]
+    private GameObject botonRespuesta44;
+
+    //[SerializeField]
+    //private GameObject botonContinue3;
+
+    [SerializeField]
+    private GameObject dialoguePanel4;
+    #endregion
+
+    #region Tanda5
+    [Header("Tanda 5 - Foto, respuestas y diálogo")]
+    [SerializeField]
+    private GameObject foto5;
+
+    [SerializeField]
+    private GameObject botonRespuesta51;
+    [SerializeField]
+    private GameObject botonRespuesta52;
+    [SerializeField]
+    private GameObject botonRespuesta53;
+    [SerializeField]
+    private GameObject botonRespuesta54;
+
+    //[SerializeField]
+    //private GameObject botonContinue3;
+
+    [SerializeField]
+    private GameObject dialoguePanel5;
+    #endregion
+
+    #region Tanda6
+    [Header("Tanda 6 - Foto, respuestas y diálogo")]
+    [SerializeField]
+    private GameObject foto6;
+
+    [SerializeField]
+    private GameObject botonRespuesta61;
+    [SerializeField]
+    private GameObject botonRespuesta62;
+    [SerializeField]
+    private GameObject botonRespuesta63;
+    [SerializeField]
+    private GameObject botonRespuesta64;
+
+    //[SerializeField]
+    //private GameObject botonContinue3;
+
+    [SerializeField]
+    private GameObject dialoguePanel6;
+    #endregion
+
+    #region Tanda7
+    [Header("Tanda 7 - Foto, respuestas y diálogo")]
+    [SerializeField]
+    private GameObject foto7;
+
+    [SerializeField]
+    private GameObject botonRespuesta71;
+    [SerializeField]
+    private GameObject botonRespuesta72;
+    [SerializeField]
+    private GameObject botonRespuesta73;
+    [SerializeField]
+    private GameObject botonRespuesta74;
+
+    //[SerializeField]
+    //private GameObject botonContinue3;
+
+    [SerializeField]
+    private GameObject dialoguePanel7;
+    #endregion
+
     void Start()
     {
         mainCamera = Camera.main; // Obtén la cámara principal
@@ -128,7 +219,7 @@ public class GameControllerCaras : MonoBehaviour
     public void SetIniciarTanda1(bool set)
     {
         //activamos tanda1
-        SetTandaChosen(true, false, false);
+        SetTandaChosen(true, false, false, false, false, false, false);
         //quitamos dialoguePanel1
         SetTamañoPanel(dialoguePanel1, true);
         //ponemos imagen  ajustamos tamaño 
@@ -146,14 +237,14 @@ public class GameControllerCaras : MonoBehaviour
         Debug.Log("IniciarTanda2");
 
         //activamos tanda 2
-        SetTandaChosen(false,true, false);
+        SetTandaChosen(false,true, false, false, false, false, false);
 
         //quitamos dialoguePanel1
         SetTamañoPanel(dialoguePanel1, false);
         //ponemos dialoguePanel2  a grande
         SetTamañoPanel(dialoguePanel2, true);
         //activamos dialogo 2
-        SetDialoguePanel(false, true, false);
+        SetDialoguePanel(false, true, false, false, false, false, false);
 
         //poner imagen 2 a grande
         SetImagenBigSize(foto2);
@@ -171,19 +262,115 @@ public class GameControllerCaras : MonoBehaviour
         Debug.Log("IniciarTanda3");
 
         //activamos tanda3
-        SetTandaChosen(false, false, true);
+        SetTandaChosen(false, false, true, false, false, false, false);
 
         //quitamos dialoguePanel2
         SetTamañoPanel(dialoguePanel2, false);
         //ponemos dialoguePanel3
         SetTamañoPanel(dialoguePanel3, true);
         //activamos dialogo3
-        SetDialoguePanel(false, false, true);
+        SetDialoguePanel(false, false, true, false, false, false, false);
 
         //ponemos imagen  ajustamos tamaño 
         SetImagenBigSize(foto3);
         //y botones de respuesta
         SetActiveBotonesOpciones(botonRespuesta31, botonRespuesta32, botonRespuesta33, botonRespuesta34, true);
+    }
+
+    #endregion
+
+    //poner tanda 4
+    #region Tanda4
+    public void SetIniciarTanda4(bool set)
+    {
+        Debug.Log("IniciarTanda4");
+
+        //activamos tanda4
+        SetTandaChosen(false, false, false, true, false, false, false);
+
+        //quitamos dialoguePanel3
+        SetTamañoPanel(dialoguePanel3, false);
+        //ponemos dialoguePanel4
+        SetTamañoPanel(dialoguePanel4, true);
+        //activamos dialogo4
+        SetDialoguePanel(false, false, false, true, false, false, false);
+
+        //ponemos imagen  ajustamos tamaño 
+        SetImagenBigSize(foto4);
+        //y botones de respuesta
+        SetActiveBotonesOpciones(botonRespuesta41, botonRespuesta42, botonRespuesta43, botonRespuesta44, true);
+    }
+
+    #endregion
+
+    //poner tanda 5
+    #region Tanda5
+    public void SetIniciarTanda5(bool set)
+    {
+        Debug.Log("IniciarTanda5");
+
+        //activamos tanda5
+        SetTandaChosen(false, false, false, false, true, false, false);
+
+        //quitamos dialoguePanel4
+        SetTamañoPanel(dialoguePanel4, false);
+        //ponemos dialoguePanel5
+        SetTamañoPanel(dialoguePanel5, true);
+        //activamos dialogo5
+        SetDialoguePanel(false, false, false, false, true, false, false);
+
+        //ponemos imagen  ajustamos tamaño 
+        SetImagenBigSize(foto5);
+        //y botones de respuesta
+        SetActiveBotonesOpciones(botonRespuesta51, botonRespuesta52, botonRespuesta53, botonRespuesta54, true);
+    }
+
+    #endregion
+
+    //poner tanda 6
+    #region Tanda6
+    public void SetIniciarTanda6(bool set)
+    {
+        Debug.Log("IniciarTanda6");
+
+        //activamos tanda6
+        SetTandaChosen(false, false, false, false, false, true, false);
+
+        //quitamos dialoguePanel5
+        SetTamañoPanel(dialoguePanel5, false);
+        //ponemos dialoguePanel6
+        SetTamañoPanel(dialoguePanel6, true);
+        //activamos dialogo6
+        SetDialoguePanel(false, false, false, false, false, true, false);
+
+        //ponemos imagen  ajustamos tamaño 
+        SetImagenBigSize(foto6);
+        //y botones de respuesta
+        SetActiveBotonesOpciones(botonRespuesta61, botonRespuesta62, botonRespuesta63, botonRespuesta64, true);
+    }
+
+    #endregion
+
+    //poner tanda 7
+    #region Tanda7
+    public void SetIniciarTanda7(bool set)
+    {
+        Debug.Log("IniciarTanda7");
+
+        //activamos tanda7
+        SetTandaChosen(false, false, false, false, false, false, true);
+
+        //quitamos dialoguePanel6
+        SetTamañoPanel(dialoguePanel6, false);
+        //ponemos dialoguePanel7
+        SetTamañoPanel(dialoguePanel7, true);
+        //activamos dialogo7
+        SetDialoguePanel(false, false, false, false, false,false,true);
+
+        //ponemos imagen  ajustamos tamaño 
+        SetImagenBigSize(foto7);
+        //y botones de respuesta
+        SetActiveBotonesOpciones(botonRespuesta71, botonRespuesta72, botonRespuesta73, botonRespuesta74, true);
     }
 
     #endregion
@@ -196,12 +383,16 @@ public class GameControllerCaras : MonoBehaviour
     }
 
     //set de seguridad para poner tanda correcta solo
-    private void SetTandaChosen(bool setTanda1, bool setTanda2, bool setTanda3)
+    private void SetTandaChosen(bool setTanda1, bool setTanda2, bool setTanda3, bool setTanda4, bool setTanda5, bool setTanda6, bool setTanda7)
     {
         //comprobacion extra
         tanda1.SetActive(setTanda1);
         tanda2.SetActive(setTanda2);
         tanda3.SetActive(setTanda3);
+        tanda4.SetActive(setTanda4);
+        tanda5.SetActive(setTanda5);
+        tanda6.SetActive(setTanda6);
+        tanda7.SetActive(setTanda7);
     }
 
     //para poner panel pequeño o grande
@@ -231,11 +422,12 @@ public class GameControllerCaras : MonoBehaviour
     }
 
     //set de seguridad para activar el panel de dialogo que sea
-    private void SetDialoguePanel(bool setTanda1, bool setTanda2, bool setTanda3)
+    private void SetDialoguePanel(bool setTanda1, bool setTanda2, bool setTanda3, bool setTanda4, bool setTanda5, bool setTanda6, bool setTanda7)
     {
         dialoguePanel1.SetActive(setTanda1);
         dialoguePanel2.SetActive(setTanda2);
         dialoguePanel3.SetActive(setTanda3);
+        dialoguePanel4.SetActive(setTanda4);
     }
 
     public void NextScene()
