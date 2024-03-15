@@ -78,7 +78,7 @@ public class ManagerItemsSecuencia2 : MonoBehaviour
     {
         resultadoPruebaItemsSecuencia2 = "b";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaItemsSecuencia2 = 0;
+        resultadoNumPruebaItemsSecuencia2 = 5;
         //enviamos respuesta
         SetItemsSecuencia2();
     }
@@ -94,7 +94,7 @@ public class ManagerItemsSecuencia2 : MonoBehaviour
     }
 
     //metodo que elige la opcion C de la prueba1 de capacidad
-    public void ChooseOptionDCaras1()
+    public void ChooseOptionDSecuencia2()
     {
         resultadoPruebaItemsSecuencia2 = "d";
         //ponemos valor numerico segun el resultado
