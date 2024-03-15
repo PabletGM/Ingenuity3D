@@ -303,7 +303,7 @@ public class GameControllerCaras : MonoBehaviour
     #region Tanda2
     public void SetIniciarTanda2(bool set)
     {
-        Debug.Log("IniciarTanda2");
+    
 
         //activamos tanda 2
         SetTandaChosen(false,true, false, false, false, false, false, false, false, false);
@@ -328,7 +328,6 @@ public class GameControllerCaras : MonoBehaviour
     #region Tanda3
     public void SetIniciarTanda3(bool set)
     {
-        Debug.Log("IniciarTanda3");
 
         //activamos tanda3
         SetTandaChosen(false, false, true, false, false, false, false, false, false, false);
@@ -352,7 +351,6 @@ public class GameControllerCaras : MonoBehaviour
     #region Tanda4
     public void SetIniciarTanda4(bool set)
     {
-        Debug.Log("IniciarTanda4");
 
         //activamos tanda4
         SetTandaChosen(false, false, false, true, false, false, false, false, false, false);
@@ -376,7 +374,6 @@ public class GameControllerCaras : MonoBehaviour
     #region Tanda5
     public void SetIniciarTanda5(bool set)
     {
-        Debug.Log("IniciarTanda5");
 
         //activamos tanda5
         SetTandaChosen(false, false, false, false, true, false, false, false, false, false);
@@ -400,7 +397,6 @@ public class GameControllerCaras : MonoBehaviour
     #region Tanda6
     public void SetIniciarTanda6(bool set)
     {
-        Debug.Log("IniciarTanda6");
 
         //activamos tanda6
         SetTandaChosen(false, false, false, false, false, true, false, false, false, false);
@@ -424,7 +420,6 @@ public class GameControllerCaras : MonoBehaviour
     #region Tanda7
     public void SetIniciarTanda7(bool set)
     {
-        Debug.Log("IniciarTanda7");
 
         //activamos tanda7
         SetTandaChosen(false, false, false, false, false, false, true, false, false, false);
@@ -448,7 +443,6 @@ public class GameControllerCaras : MonoBehaviour
     #region Tanda8
     public void SetIniciarTanda8(bool set)
     {
-        Debug.Log("IniciarTanda8");
 
         //activamos tanda8
         SetTandaChosen(false, false, false, false, false, false, false, true, false, false);
@@ -472,7 +466,6 @@ public class GameControllerCaras : MonoBehaviour
     #region Tanda9
     public void SetIniciarTanda9(bool set)
     {
-        Debug.Log("IniciarTanda9");
 
         //activamos tanda9
         SetTandaChosen(false, false, false, false, false, false, false, false, true, false);
@@ -496,7 +489,6 @@ public class GameControllerCaras : MonoBehaviour
     #region Tanda10
     public void SetIniciarTanda10(bool set)
     {
-        Debug.Log("IniciarTanda10");
 
         //activamos tanda10
         SetTandaChosen(false, false, false, false, false, false, false, false, false, true);
