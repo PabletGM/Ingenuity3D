@@ -277,7 +277,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras1 = "b";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras1 = 5;
+        resultadoNumPruebaCaras1 = 0;
         //enviamos respuesta
         SetCaras1();
     }
@@ -297,7 +297,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras1 = "d";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras1 = 10;
+        resultadoNumPruebaCaras1 = 0;
         //enviamos respuesta
         SetCaras1();
     }
@@ -366,7 +366,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras2 = "b";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras2 = 5;
+        resultadoNumPruebaCaras2 = 0;
         //enviamos respuesta
         SetCaras2();
     }
@@ -376,7 +376,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras2 = "c";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras2 = 10;
+        resultadoNumPruebaCaras2 = 0;
         //enviamos respuesta
         SetCaras2();
     }
@@ -452,7 +452,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras3 = "b";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras3 = 5;
+        resultadoNumPruebaCaras3 = 10;
         //enviamos respuesta
         SetCaras3();
     }
@@ -462,7 +462,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras3 = "c";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras3= 10;
+        resultadoNumPruebaCaras3= 0;
         //enviamos respuesta
         SetCaras3();
     }
@@ -472,7 +472,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras3 = "d";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras3 = 10;
+        resultadoNumPruebaCaras3 = 0;
         //enviamos respuesta
         SetCaras3();
     }
@@ -527,7 +527,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras4 = "a";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras4 = 0;
+        resultadoNumPruebaCaras4 = 10;
         //enviamos respuesta
         SetCaras4();
 
@@ -538,7 +538,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras4 = "b";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras4 = 5;
+        resultadoNumPruebaCaras4 = 0;
         //enviamos respuesta
         SetCaras4();
     }
@@ -548,7 +548,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras4 = "c";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras4 = 10;
+        resultadoNumPruebaCaras4 = 0;
         //enviamos respuesta
         SetCaras4();
     }
@@ -558,7 +558,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras4 = "d";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras4 = 10;
+        resultadoNumPruebaCaras4 = 0;
         //enviamos respuesta
         SetCaras4();
     }
@@ -624,7 +624,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras5 = "b";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras5 = 5;
+        resultadoNumPruebaCaras5 = 0;
         //enviamos respuesta
         SetCaras5();
     }
@@ -634,7 +634,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras5 = "c";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras5 = 10;
+        resultadoNumPruebaCaras5 = 0;
         //enviamos respuesta
         SetCaras5();
     }
@@ -699,7 +699,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras6 = "a";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras6 = 0;
+        resultadoNumPruebaCaras6 = 10;
         //enviamos respuesta
         SetCaras6();
 
@@ -710,7 +710,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras6 = "b";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras6 = 5;
+        resultadoNumPruebaCaras6 = 0;
         //enviamos respuesta
         SetCaras6();
     }
@@ -720,7 +720,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras6 = "c";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras6 = 10;
+        resultadoNumPruebaCaras6 = 0;
         //enviamos respuesta
         SetCaras6();
     }
@@ -730,7 +730,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras6 = "d";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras6 = 10;
+        resultadoNumPruebaCaras6 = 0;
         //enviamos respuesta
         SetCaras6();
     }
@@ -796,7 +796,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras7 = "b";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras7 = 5;
+        resultadoNumPruebaCaras7 = 0;
         //enviamos respuesta
         SetCaras7();
     }
@@ -816,7 +816,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras7 = "d";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras7 = 10;
+        resultadoNumPruebaCaras7 = 0;
         //enviamos respuesta
         SetCaras7();
     }
@@ -882,7 +882,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras8 = "b";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras8 = 5;
+        resultadoNumPruebaCaras8 = 10;
         //enviamos respuesta
         SetCaras8();
     }
@@ -892,7 +892,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras8 = "c";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras8 = 10;
+        resultadoNumPruebaCaras8 = 0;
         //enviamos respuesta
         SetCaras8();
     }
@@ -902,7 +902,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras8 = "d";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras8 = 10;
+        resultadoNumPruebaCaras8 = 0;
         //enviamos respuesta
         SetCaras8();
     }
@@ -968,7 +968,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras9 = "b";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras9 = 5;
+        resultadoNumPruebaCaras9 = 0;
         //enviamos respuesta
         SetCaras9();
     }
@@ -978,7 +978,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras9 = "c";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras9 = 10;
+        resultadoNumPruebaCaras9 = 0;
         //enviamos respuesta
         SetCaras9();
     }
@@ -1043,7 +1043,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras10 = "a";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras10 = 0;
+        resultadoNumPruebaCaras10 = 10;
         //enviamos respuesta
         SetCaras10();
 
@@ -1054,7 +1054,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras10 = "b";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras10 = 5;
+        resultadoNumPruebaCaras10 = 0;
         //enviamos respuesta
         SetCaras10();
     }
@@ -1064,7 +1064,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras10 = "c";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras10 = 10;
+        resultadoNumPruebaCaras10 = 0;
         //enviamos respuesta
         SetCaras10();
     }
@@ -1074,7 +1074,7 @@ public class ManagerTareaCaras : MonoBehaviour
     {
         resultadoPruebaCaras10 = "d";
         //ponemos valor numerico segun el resultado
-        resultadoNumPruebaCaras10 = 10;
+        resultadoNumPruebaCaras10 = 0;
         //enviamos respuesta
         SetCaras10();
     }
