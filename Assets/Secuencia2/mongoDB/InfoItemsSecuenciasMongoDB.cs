@@ -344,9 +344,9 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         float[] puntuacionItemsSecuencia4 = _myManagerItemsSecuencia4.puntuacionItemSecuencia4();
 
         //recolectar token de script login register
-        //access_token = _myUIManagerLogin.GetAccessToken();
+        access_token = _myUIManagerLogin.GetAccessToken();
         //access token temporal
-        access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+        //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
         //se empieza corrutina hoyosMongoDB
         StartCoroutine(PutTestCarasMongoDB(itemNameItemsSecuencia4, softskillItemsSecuencia4, type, puntuacionItemsSecuencia4, totalTime));
     }

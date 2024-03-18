@@ -195,7 +195,7 @@ public class UIManagerLogin : MonoBehaviour
                     Debug.Log("login hecho");
                     //LevelLoader.LoadLevel("tareaCaras2");
                     StartCoroutine(CreateNewGame());
-                    SceneManager.LoadScene("3.1IntroduccionPrimeraMision");
+                    //SceneManager.LoadScene("3.1IntroduccionPrimeraMision");
                 }
             }
         }
@@ -526,40 +526,27 @@ public class UIManagerLogin : MonoBehaviour
     IEnumerator CreateNewGame()
     {
         // Crear formulario con los datos, todo en minusculas , porque va predefinido el formulario y username esta vez en minuscula
-
-        string body;
-
-        #region opcion1
-        // Construir el cuerpo del mensaje JSON
-        body = "{\"processId\": \"\"}";
-        #endregion
+        // Crear formulario con los datos
+        WWWForm form = new WWWForm();
+        form.AddField("processId", "2f8fd8");
 
         string uriStartGameBackend = uriBackend + "Users/me/startGame";
 
-
-        using (UnityWebRequest request = UnityWebRequest.Post(uriStartGameBackend, body, "application/json"))
+        using (UnityWebRequest request = UnityWebRequest.Post(uriStartGameBackend, form))
         {
-            #region opcion2
-            //    WWWForm form = new WWWForm();
-            //form.AddField("processId", "string");
-
-            //using (UnityWebRequest request = UnityWebRequest.Post(uriStartGameBackend, form))
-            //{
-            #endregion
             yield return request.SendWebRequest();
 
-            if (request.isNetworkError || request.isHttpError)
+            if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
             {
                 Debug.Log(request.error);
                 errorCode = request.error;
-                //segunda barrera de seguridad, fallo numerico
             }
             else
             {
-                //LevelLoader.LoadLevel("tareaCaras2");
                 SceneManager.LoadScene("hoyosEstetica");
             }
         }
+
     }
     #endregion
 }
