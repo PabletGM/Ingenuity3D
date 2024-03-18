@@ -9,9 +9,12 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
     //instance
     static private InfoItemsSecuenciasMongoDB _instanceItems;
 
-    //conexion con Managers
+    //conexion con Managers, SECUENCIA 2
     ManagerTareaCaras _myManagerCaras;
     ManagerItemsSecuencia2 _myManagerItemsSecuencia2;
+
+    //conexion con Managers, SECUENCIA 3
+    ManagerItemsSecuencia3 _myManagerItemsSecuencia3;
 
 
     //recoger token con loginRegister
@@ -46,7 +49,8 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         _myManagerCaras = ManagerTareaCaras.GetInstanceManagerTareaCaras();
         //conectamos con info items secuencia 2
         _myManagerItemsSecuencia2 = ManagerItemsSecuencia2.GetInstanceManagerItemsSecuencia2();
-
+        //conectamos con info items secuencia 3
+        _myManagerItemsSecuencia3 = ManagerItemsSecuencia3.GetInstanceManagerItemsSecuencia3();
 
         //para recolectar el token
         _myUIManagerLogin = UIManagerLogin.GetInstanceUI();
@@ -261,7 +265,7 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
     }
     #endregion
 
-    #region MethodsConnectItem1Secuencia2
+    #region MethodsConnectItemsSecuencia2
     public void RecolectarArgumentosItemsSecuencia2()
     {
         //para recolectar el token
@@ -300,8 +304,27 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
     }
     #endregion
 
+    #region MethodsConnectItemsSecuencia3
+    public void RecolectarArgumentosItemsSecuencia3()
+    {
+        //para recolectar el token
+        _myUIManagerLogin = UIManagerLogin.GetInstanceUI();
 
+        int totalTime = _myManagerItemsSecuencia3.TiempoPartidaItemsSecuencia3();
+        string itemNameItemsSecuencia3 = _myManagerItemsSecuencia3.itemNameItemSecuencia3();
+        string[] softskillItemsSecuencia3 = _myManagerItemsSecuencia3.softskillItemsSecuencia3();
+        int type = _myManagerItemsSecuencia3.typeItemsSecuencia3();
+        float[] puntuacionItemsSecuencia3 = _myManagerItemsSecuencia3.puntuacionItemSecuencia3();
 
+        //recolectar token de script login register
+        //access_token = _myUIManagerLogin.GetAccessToken();
+        //access token temporal
+        access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+        //se empieza corrutina hoyosMongoDB
+        StartCoroutine(PutTestCarasMongoDB(itemNameItemsSecuencia3, softskillItemsSecuencia3, type, puntuacionItemsSecuencia3, totalTime));
+    }
+
+    #endregion
 
 
     //method to connect the face method with put
