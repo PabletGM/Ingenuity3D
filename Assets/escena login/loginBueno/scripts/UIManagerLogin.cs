@@ -195,7 +195,7 @@ public class UIManagerLogin : MonoBehaviour
                     Debug.Log("login hecho");
                     //LevelLoader.LoadLevel("tareaCaras2");
                     StartCoroutine(CreateNewGame());
-                    SceneManager.LoadScene("hoyosEstetica");
+                    //SceneManager.LoadScene("hoyosEstetica");
                 }
             }
         }
@@ -527,14 +527,25 @@ public class UIManagerLogin : MonoBehaviour
     {
         // Crear formulario con los datos, todo en minusculas , porque va predefinido el formulario y username esta vez en minuscula
 
-        WWWForm form = new WWWForm();
-        form.AddField("processId", "string");
+        string body;
 
-        string uriStartGameBackend = "Users/me/startGame";
+        #region opcion1
+        body = $@"{{
+                    ""processId"": "" ""
+                  }}";
 
-        using (UnityWebRequest request = UnityWebRequest.Post(uriStartGameBackend, form))
+        #endregion
+
+        string uriStartGameBackend = uriBackend + "Users/me/startGame";
+        using (UnityWebRequest request = UnityWebRequest.Post(uriStartGameBackend, body, "application/json"))
         {
+            #region opcion2
+            //    WWWForm form = new WWWForm();
+            //form.AddField("processId", "string");
 
+            //using (UnityWebRequest request = UnityWebRequest.Post(uriStartGameBackend, form))
+            //{
+            #endregion
             yield return request.SendWebRequest();
 
             //primera barrera de seguridad, para ver fallo
