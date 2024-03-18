@@ -32,8 +32,8 @@ public class InfoHoyosMongodb : MonoBehaviour
         //numero picadas totales cada hoyo
         numpicadasHoyosIndiv = _myGameManager.DevolverPicadasHoyo();
         //recolectar token de script login register
-        //access_token = _myUIManagerLogin.GetAccessToken();
-        access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+        access_token = _myUIManagerLogin.GetAccessToken();
+        //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
         //se empieza corrutina hoyosMongoDB
         StartCoroutine(PutHoyosMongoDB(totalTime, numExcavacionesTotales, numpicadasHoyosIndiv));
        

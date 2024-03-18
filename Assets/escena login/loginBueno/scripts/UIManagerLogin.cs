@@ -195,7 +195,7 @@ public class UIManagerLogin : MonoBehaviour
                     Debug.Log("login hecho");
                     //LevelLoader.LoadLevel("tareaCaras2");
                     StartCoroutine(CreateNewGame());
-                    //SceneManager.LoadScene("hoyosEstetica");
+                    SceneManager.LoadScene("BengalasPrueba");
                 }
             }
         }
@@ -530,13 +530,13 @@ public class UIManagerLogin : MonoBehaviour
         string body;
 
         #region opcion1
-        body = $@"{{
-                    ""processId"": "" ""
-                  }}";
-
+        // Construir el cuerpo del mensaje JSON
+        body = "{\"processId\": \"\"}";
         #endregion
 
         string uriStartGameBackend = uriBackend + "Users/me/startGame";
+
+
         using (UnityWebRequest request = UnityWebRequest.Post(uriStartGameBackend, body, "application/json"))
         {
             #region opcion2
@@ -547,9 +547,6 @@ public class UIManagerLogin : MonoBehaviour
             //{
             #endregion
             yield return request.SendWebRequest();
-
-            //primera barrera de seguridad, para ver fallo
-            
 
             if (request.isNetworkError || request.isHttpError)
             {
