@@ -195,7 +195,7 @@ public class UIManagerLogin : MonoBehaviour
                     Debug.Log("login hecho");
                     //LevelLoader.LoadLevel("tareaCaras2");
                     StartCoroutine(CreateNewGame());
-                    SceneManager.LoadScene("BengalasPrueba");
+                    SceneManager.LoadScene("3.1IntroduccionPrimeraMision");
                 }
             }
         }
