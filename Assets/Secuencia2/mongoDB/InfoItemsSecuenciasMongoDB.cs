@@ -82,9 +82,9 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         float[] puntuacionCaras1 = _myManagerCaras.puntuacionCARAS_1();
 
         //recolectar token de script login register
-        //access_token = _myUIManagerLogin.GetAccessToken();
+        access_token = _myUIManagerLogin.GetAccessToken();
         //access token temporal
-        access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+        //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
         //se empieza corrutina hoyosMongoDB
         StartCoroutine(PutTestCarasMongoDB(itemNameCaras1, softskillCaras1, type, puntuacionCaras1, totalTime));
     }
@@ -102,9 +102,9 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         float[] puntuacionCaras2 = _myManagerCaras.puntuacionCARAS_2();
 
         //recolectar token de script login register
-        //access_token = _myUIManagerLogin.GetAccessToken();
+        access_token = _myUIManagerLogin.GetAccessToken();
         //access token temporal
-        access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+        //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
         //se empieza corrutina hoyosMongoDB
         StartCoroutine(PutTestCarasMongoDB(itemNameCaras2, softskillCaras2, type2, puntuacionCaras2, totalTime2));
     }
@@ -122,9 +122,9 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         float[] puntuacionCaras3 = _myManagerCaras.puntuacionCARAS_3();
 
         //recolectar token de script login register
-        //access_token = _myUIManagerLogin.GetAccessToken();
+        access_token = _myUIManagerLogin.GetAccessToken();
         //access token temporal
-        access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+        //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
         //se empieza corrutina hoyosMongoDB
         StartCoroutine(PutTestCarasMongoDB(itemNameCaras3, softskillCaras3, type3, puntuacionCaras3, totalTime3));
     }
@@ -142,9 +142,9 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         float[] puntuacionCaras4 = _myManagerCaras.puntuacionCARAS_4();
 
         //recolectar token de script login register
-        //access_token = _myUIManagerLogin.GetAccessToken();
+        access_token = _myUIManagerLogin.GetAccessToken();
         //access token temporal
-        access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+        //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
         //se empieza corrutina hoyosMongoDB
         StartCoroutine(PutTestCarasMongoDB(itemNameCaras4, softskillCaras4, type4, puntuacionCaras4, totalTime4));
     }
@@ -162,9 +162,9 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         float[] puntuacionCaras5 = _myManagerCaras.puntuacionCARAS_5();
 
         //recolectar token de script login register
-        //access_token = _myUIManagerLogin.GetAccessToken();
+        access_token = _myUIManagerLogin.GetAccessToken();
         //access token temporal
-        access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+        //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
         //se empieza corrutina hoyosMongoDB
         StartCoroutine(PutTestCarasMongoDB(itemNameCaras5, softskillCaras5, type5, puntuacionCaras5, totalTime5));
     }
@@ -182,9 +182,9 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         float[] puntuacionCaras6 = _myManagerCaras.puntuacionCARAS_6();
 
         //recolectar token de script login register
-        //access_token = _myUIManagerLogin.GetAccessToken();
+        access_token = _myUIManagerLogin.GetAccessToken();
         //access token temporal
-        access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+        //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
         //se empieza corrutina hoyosMongoDB
         StartCoroutine(PutTestCarasMongoDB(itemNameCaras6, softskillCaras6, type6, puntuacionCaras6, totalTime6));
     }
@@ -202,9 +202,9 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         float[] puntuacionCaras7 = _myManagerCaras.puntuacionCARAS_7();
 
         //recolectar token de script login register
-        //access_token = _myUIManagerLogin.GetAccessToken();
+        access_token = _myUIManagerLogin.GetAccessToken();
         //access token temporal
-        access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+        //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
         //se empieza corrutina hoyosMongoDB
         StartCoroutine(PutTestCarasMongoDB(itemNameCaras7, softskillCaras7, type7, puntuacionCaras7, totalTime7));
     }
@@ -222,9 +222,9 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         float[] puntuacionCaras8 = _myManagerCaras.puntuacionCARAS_8();
 
         //recolectar token de script login register
-        //access_token = _myUIManagerLogin.GetAccessToken();
+        access_token = _myUIManagerLogin.GetAccessToken();
         //access token temporal
-        access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+        //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
         //se empieza corrutina hoyosMongoDB
         StartCoroutine(PutTestCarasMongoDB(itemNameCaras8, softskillCaras8, type8, puntuacionCaras8, totalTime8));
     }
@@ -242,9 +242,9 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         float[] puntuacionCaras9 = _myManagerCaras.puntuacionCARAS_9();
 
         //recolectar token de script login register
-        //access_token = _myUIManagerLogin.GetAccessToken();
+        access_token = _myUIManagerLogin.GetAccessToken();
         //access token temporal
-        access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+        //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
         //se empieza corrutina hoyosMongoDB
         StartCoroutine(PutTestCarasMongoDB(itemNameCaras9, softskillCaras9, type9, puntuacionCaras9, totalTime9));
     }
@@ -262,9 +262,9 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         float[] puntuacionCaras2 = _myManagerCaras.puntuacionCARAS_10();
 
         //recolectar token de script login register
-        //access_token = _myUIManagerLogin.GetAccessToken();
+        access_token = _myUIManagerLogin.GetAccessToken();
         //access token temporal
-        access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+        //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
         //se empieza corrutina hoyosMongoDB
         StartCoroutine(PutTestCarasMongoDB(itemNameCaras10, softskillCaras10, type10, puntuacionCaras2, totalTime10));
     }
@@ -283,9 +283,9 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         float[] puntuacionItemsSecuencia2 = _myManagerItemsSecuencia2.puntuacionItemSecuencia2();
 
         //recolectar token de script login register
-        //access_token = _myUIManagerLogin.GetAccessToken();
+        access_token = _myUIManagerLogin.GetAccessToken();
         //access token temporal
-        access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+        //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
         //se empieza corrutina hoyosMongoDB
         StartCoroutine(PutTestCarasMongoDB(itemNameItemsSecuencia2, softskillItemsSecuencia2, type, puntuacionItemsSecuencia2, totalTime));
     }
@@ -301,9 +301,9 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         float[] puntuacionItemsSecuencia2 = _myManagerItemsSecuencia2.puntuacionItemSecuencia22();
 
         //recolectar token de script login register
-        //access_token = _myUIManagerLogin.GetAccessToken();
+        access_token = _myUIManagerLogin.GetAccessToken();
         //access token temporal
-        access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+        //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
         //se empieza corrutina hoyosMongoDB
         StartCoroutine(PutTestCarasMongoDB(itemNameItemsSecuencia2, softskillItemsSecuencia2, type, puntuacionItemsSecuencia2, totalTime));
     }
@@ -322,9 +322,9 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         float[] puntuacionItemsSecuencia3 = _myManagerItemsSecuencia3.puntuacionItemSecuencia3();
 
         //recolectar token de script login register
-        //access_token = _myUIManagerLogin.GetAccessToken();
+        access_token = _myUIManagerLogin.GetAccessToken();
         //access token temporal
-        access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+        //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
         //se empieza corrutina hoyosMongoDB
         StartCoroutine(PutTestCarasMongoDB(itemNameItemsSecuencia3, softskillItemsSecuencia3, type, puntuacionItemsSecuencia3, totalTime));
     }
@@ -363,9 +363,9 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         float[] puntuacionItemsSecuencia4 = _myManagerItemsSecuencia4.puntuacionItemSecuencia42();
 
         //recolectar token de script login register
-        //access_token = _myUIManagerLogin.GetAccessToken();
+        access_token = _myUIManagerLogin.GetAccessToken();
         //access token temporal
-        access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+        //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
         //se empieza corrutina hoyosMongoDB
         StartCoroutine(PutTestCarasMongoDB(itemNameItemsSecuencia4, softskillItemsSecuencia4, type, puntuacionItemsSecuencia4, totalTime));
     }
@@ -382,9 +382,9 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         float[] puntuacionItemsSecuencia4 = _myManagerItemsSecuencia4.puntuacionItemSecuencia43();
 
         //recolectar token de script login register
-        //access_token = _myUIManagerLogin.GetAccessToken();
+        access_token = _myUIManagerLogin.GetAccessToken();
         //access token temporal
-        access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+        //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
         //se empieza corrutina hoyosMongoDB
         StartCoroutine(PutTestCarasMongoDB(itemNameItemsSecuencia4, softskillItemsSecuencia4, type, puntuacionItemsSecuencia4, totalTime));
     }

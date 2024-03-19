@@ -195,7 +195,6 @@ public class UIManagerLogin : MonoBehaviour
                     Debug.Log("login hecho");
                     //LevelLoader.LoadLevel("tareaCaras2");
                     StartCoroutine(CreateNewGame());
-                    //SceneManager.LoadScene("3.1IntroduccionPrimeraMision");
                 }
             }
         }
@@ -525,15 +524,20 @@ public class UIManagerLogin : MonoBehaviour
 
     IEnumerator CreateNewGame()
     {
-        // Crear formulario con los datos, todo en minusculas , porque va predefinido el formulario y username esta vez en minuscula
-        // Crear formulario con los datos
-        WWWForm form = new WWWForm();
-        form.AddField("processId", "2f8fd8");
 
         string uriStartGameBackend = uriBackend + "Users/me/startGame";
+        string body = $@"{{
+                            ""processId"": ""2f8fd8""
+                        }}";
+        //string c = "2f8fd8";
+        //string body = $"{{ \"processId\": \"{c}\"}}";
 
-        using (UnityWebRequest request = UnityWebRequest.Post(uriStartGameBackend, form))
+        using (UnityWebRequest request = UnityWebRequest.Post(uriStartGameBackend, body, "application/json"))
         {
+            //porque tiene candado necesita token con acceso 
+            request.SetRequestHeader("Authorization", "Bearer " + access_tokenEntreEscenas);
+            request.SetRequestHeader("Content-Type", "application/json");
+           
             yield return request.SendWebRequest();
 
             if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
@@ -543,7 +547,7 @@ public class UIManagerLogin : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene("hoyosEstetica");
+                SceneManager.LoadScene("escenaIntro");
             }
         }
 

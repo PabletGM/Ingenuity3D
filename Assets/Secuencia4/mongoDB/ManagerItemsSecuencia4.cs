@@ -44,7 +44,7 @@ public class ManagerItemsSecuencia4 : MonoBehaviour
     #endregion
     #region campos tanda1 ItemsSecuencia4
 
-    private string itemNameItemsSecuencia4 = "IN_2";
+    private string itemNameItemsSecuencia4 = "EQUI_1";
 
     //cantidad de softskills que mide y nombres
     private string[] softSkillItemsSecuencia4;
@@ -68,7 +68,7 @@ public class ManagerItemsSecuencia4 : MonoBehaviour
     #endregion
     #region campos tanda2 ItemsSecuencia4
 
-    private string itemNameItemsSecuencia42 = "IN_2";
+    private string itemNameItemsSecuencia42 = "IN_3";
 
     //cantidad de softskills que mide y nombres
     private string[] softSkillItemsSecuencia42;
@@ -92,7 +92,7 @@ public class ManagerItemsSecuencia4 : MonoBehaviour
     #endregion
     #region campos tanda3 ItemsSecuencia4
 
-    private string itemNameItemsSecuencia43 = "IN_2";
+    private string itemNameItemsSecuencia43 = "RES_4";
 
     //cantidad de softskills que mide y nombres
     private string[] softSkillItemsSecuencia43;
@@ -179,7 +179,7 @@ public class ManagerItemsSecuencia4 : MonoBehaviour
     public string[] softskillItemsSecuencia4()
     {
         softSkillItemsSecuencia4 = new string[1];
-        softSkillItemsSecuencia4[0] = "Iniciativa";
+        softSkillItemsSecuencia4[0] = "Trabajo en Equipo";
         return softSkillItemsSecuencia4;
     }
 
@@ -357,7 +357,7 @@ public class ManagerItemsSecuencia4 : MonoBehaviour
     public string[] softskillItemsSecuencia43()
     {
         softSkillItemsSecuencia43 = new string[1];
-        softSkillItemsSecuencia43[0] = "Iniciativa";
+        softSkillItemsSecuencia43[0] = "Resiliencia";
         return softSkillItemsSecuencia43;
     }
 

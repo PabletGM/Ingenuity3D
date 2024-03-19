@@ -44,7 +44,7 @@ public class ManagerItemsSecuencia2 : MonoBehaviour
     #endregion
     #region campos tanda1 ItemsSecuencia2
 
-    private string itemNameItemsSecuencia2 = "IN_2";
+    private string itemNameItemsSecuencia2 = "IN_1";
 
     //cantidad de softskills que mide y nombres
     private string[] softSkillItemsSecuencia2;
