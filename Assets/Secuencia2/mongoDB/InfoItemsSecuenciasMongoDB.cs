@@ -28,8 +28,11 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
     //conexion con Managers, SECUENCIA 7
     ManagerSecuencia7 _myManagerItemsSecuencia7;
 
-    //conexion con Managers, SECUENCIA 7
+    //conexion con Managers, SECUENCIA 8
     ManagerSecuencia8 _myManagerItemsSecuencia8;
+
+    //conexion con Managers, SECUENCIA 9
+    ManagerSecuencia9 _myManagerItemsSecuencia9;
 
 
     //recoger token con loginRegister
@@ -76,6 +79,8 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         _myManagerItemsSecuencia7 = ManagerSecuencia7.GetInstanceManagerItemsSecuencia7();
         //conectamos con info items secuencia 8
         _myManagerItemsSecuencia8 = ManagerSecuencia8.GetInstanceManagerItemsSecuencia8();
+        //conectamos con info items secuencia 9
+        _myManagerItemsSecuencia9 = ManagerSecuencia9.GetInstanceManagerItemsSecuencia9();
 
         //para recolectar el token
         _myUIManagerLogin = UIManagerLogin.GetInstanceUI();
@@ -651,9 +656,31 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         StartCoroutine(PutTestCarasMongoDB(itemNameItemsSecuencia8, softskillItemsSecuencia8, type, puntuacionItemsSecuencia8, totalTime));
     }
 
-  
 
 
+
+
+    #endregion
+
+    #region MethodsConnectItemsSecuencia9
+    public void RecolectarArgumentosItemsSecuencia9()
+    {
+        //para recolectar el token
+        _myUIManagerLogin = UIManagerLogin.GetInstanceUI();
+
+        int totalTime = _myManagerItemsSecuencia9.TiempoPartidaItemsSecuencia9();
+        string itemNameItemsSecuencia7 = _myManagerItemsSecuencia9.itemNameItemSecuencia9();
+        string[] softskillItemsSecuencia7 = _myManagerItemsSecuencia9.softskillItemsSecuencia9();
+        int type = _myManagerItemsSecuencia9.typeItemsSecuencia9();
+        float[] puntuacionItemsSecuencia5 = _myManagerItemsSecuencia9.puntuacionItemSecuencia9();
+
+        //recolectar token de script login register
+        access_token = _myUIManagerLogin.GetAccessToken();
+        //access token temporal
+        //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+        //se empieza corrutina hoyosMongoDB
+        StartCoroutine(PutTestCarasMongoDB(itemNameItemsSecuencia7, softskillItemsSecuencia7, type, puntuacionItemsSecuencia5, totalTime));
+    }
 
     #endregion
 
@@ -664,11 +691,6 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
 
 
         string uri = $"{baseUrl + "Users/me/gameData/item"}";
-
-        //"itemName": "CONF_2",
-        //"softSkill": [  "confianza"],
-        //"type": 1,
-        //"puntuacion": [1.2]
 
 
         string softskillCarasjoin = string.Join(",", softskillCaras);
@@ -689,7 +711,7 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
             if (request.isNetworkError || request.isHttpError)
             {
                 //outputArea.text = request.error;
-                Debug.Log("ERRORRRRR");
+                Debug.Log(request.error);
             }
             else
             {

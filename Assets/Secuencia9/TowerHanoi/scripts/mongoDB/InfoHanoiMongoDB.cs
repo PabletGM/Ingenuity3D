@@ -8,10 +8,29 @@ public class InfoHanoiMongoDB : MonoBehaviour
     //conexion con GameManager
     GameManagerHanoi _myGameManagerHanoi;
     UIManagerLogin _myUIManagerLogin;
-    string baseUrl = "https://simplebackendingenuity.onrender.com/";
+    string baseUrl = "https://backendingenuity.onrender.com/";
     //por defecto uno puesto a mano
     private string access_token = "";
 
+    static public InfoHanoiMongoDB infoHanoiMongoDB;
+    static public InfoHanoiMongoDB GetInstanceManagerItemsSecuencia9()
+    {
+        return infoHanoiMongoDB;
+    }
+
+    private void Awake()
+    {
+        //si la instancia no existe se hace este script la instancia
+        if (infoHanoiMongoDB == null)
+        {
+            infoHanoiMongoDB = this;
+        }
+        //si la instancia existe , destruimos la copia
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
     private void Start()
     {
         //gameManager
@@ -58,7 +77,7 @@ public class InfoHanoiMongoDB : MonoBehaviour
             if (request.isNetworkError || request.isHttpError)
             {
                 //outputArea.text = request.error;
-                Debug.Log("ERRORRRRR");
+                Debug.Log(request.error);
             }
             else
             {

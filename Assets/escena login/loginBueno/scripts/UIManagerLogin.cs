@@ -547,7 +547,7 @@ public class UIManagerLogin : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene("escenaIntro");
+                SceneManager.LoadScene("Hanoi");
             }
         }
 

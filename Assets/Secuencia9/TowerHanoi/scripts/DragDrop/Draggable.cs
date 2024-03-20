@@ -24,7 +24,7 @@ public class Draggable : MonoBehaviour
     {
        
             transform.position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) - difference;
-            Debug.Log("Drag");
+            //Debug.Log("Drag");
        
             
     }

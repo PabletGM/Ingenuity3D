@@ -1166,6 +1166,7 @@ public class GameManagerHanoi : MonoBehaviour
         AudioManagerHanoi.Instance.PlaySFX("firework");
         //efectos especiales fuegos artificiales ACTIVARLOS UIMANAGER
         _myUIManagerHanoi.SetFireworksWin(true);
+        InfoHanoiMongoDB.GetInstanceManagerItemsSecuencia9().RecolectarArgumentosHanoiI();
     }
 
    
