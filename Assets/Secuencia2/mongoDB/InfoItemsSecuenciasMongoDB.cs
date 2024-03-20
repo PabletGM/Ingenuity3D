@@ -25,6 +25,12 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
     //conexion con Managers, SECUENCIA 6
     ManagerSecuencia6 _myManagerItemsSecuencia6;
 
+    //conexion con Managers, SECUENCIA 7
+    ManagerSecuencia7 _myManagerItemsSecuencia7;
+
+    //conexion con Managers, SECUENCIA 7
+    ManagerSecuencia8 _myManagerItemsSecuencia8;
+
 
     //recoger token con loginRegister
     UIManagerLogin _myUIManagerLogin;
@@ -64,8 +70,12 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         _myManagerItemsSecuencia4 = ManagerItemsSecuencia4.GetInstanceManagerItemsSecuencia4();
         //conectamos con info items secuencia 5
         _myManagerItemsSecuencia5 = ManagerItemsSecuencia5.GetInstanceManagerItemsSecuencia5();
-        //conectamos con info items secuencia 5
+        //conectamos con info items secuencia 6
         _myManagerItemsSecuencia6 = ManagerSecuencia6.GetInstanceManagerItemsSecuencia6();
+        //conectamos con info items secuencia 7
+        _myManagerItemsSecuencia7 = ManagerSecuencia7.GetInstanceManagerItemsSecuencia7();
+        //conectamos con info items secuencia 8
+        _myManagerItemsSecuencia8 = ManagerSecuencia8.GetInstanceManagerItemsSecuencia8();
 
         //para recolectar el token
         _myUIManagerLogin = UIManagerLogin.GetInstanceUI();
@@ -540,6 +550,112 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
 
     #endregion
 
+    #region MethodsConnectItemsSecuencia7
+    public void RecolectarArgumentosItemsSecuencia7()
+    {
+        //para recolectar el token
+        _myUIManagerLogin = UIManagerLogin.GetInstanceUI();
+
+        int totalTime = _myManagerItemsSecuencia7.TiempoPartidaItemsSecuencia7();
+        string itemNameItemsSecuencia7 = _myManagerItemsSecuencia7.itemNameItemSecuencia7();
+        string[] softskillItemsSecuencia7 = _myManagerItemsSecuencia7.softskillItemsSecuencia7();
+        int type = _myManagerItemsSecuencia7.typeItemsSecuencia7();
+        float[] puntuacionItemsSecuencia5 = _myManagerItemsSecuencia7.puntuacionItemSecuencia7();
+
+        //recolectar token de script login register
+        access_token = _myUIManagerLogin.GetAccessToken();
+        //access token temporal
+        //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+        //se empieza corrutina hoyosMongoDB
+        StartCoroutine(PutTestCarasMongoDB(itemNameItemsSecuencia7, softskillItemsSecuencia7, type, puntuacionItemsSecuencia5, totalTime));
+    }
+
+    public void RecolectarArgumentosItemsSecuencia72()
+    {
+        //para recolectar el token
+        _myUIManagerLogin = UIManagerLogin.GetInstanceUI();
+
+        int totalTime = _myManagerItemsSecuencia7.TiempoPartidaItemsSecuencia72();
+        string itemNameItemsSecuencia7 = _myManagerItemsSecuencia7.itemNameItemSecuencia72();
+        string[] softskillItemsSecuencia7 = _myManagerItemsSecuencia7.softskillItemsSecuencia72();
+        int type = _myManagerItemsSecuencia7.typeItemsSecuencia72();
+        float[] puntuacionItemsSecuencia7 = _myManagerItemsSecuencia7.puntuacionItemSecuencia72();
+
+        //recolectar token de script login register
+        access_token = _myUIManagerLogin.GetAccessToken();
+        //access token temporal
+        //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+        //se empieza corrutina hoyosMongoDB
+        StartCoroutine(PutTestCarasMongoDB(itemNameItemsSecuencia7, softskillItemsSecuencia7, type, puntuacionItemsSecuencia7, totalTime));
+    }
+
+    public void RecolectarArgumentosItemsSecuencia73()
+    {
+        //para recolectar el token
+        _myUIManagerLogin = UIManagerLogin.GetInstanceUI();
+
+        int totalTime = _myManagerItemsSecuencia7.TiempoPartidaItemsSecuencia73();
+        string itemNameItemsSecuencia6 = _myManagerItemsSecuencia7.itemNameItemSecuencia73();
+        string[] softskillItemsSecuencia6 = _myManagerItemsSecuencia7.softskillItemsSecuencia73();
+        int type = _myManagerItemsSecuencia7.typeItemsSecuencia73();
+        float[] puntuacionItemsSecuencia6 = _myManagerItemsSecuencia7.puntuacionItemSecuencia73();
+
+        //recolectar token de script login register
+        access_token = _myUIManagerLogin.GetAccessToken();
+        //access token temporal
+        //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+        //se empieza corrutina hoyosMongoDB
+        StartCoroutine(PutTestCarasMongoDB(itemNameItemsSecuencia6, softskillItemsSecuencia6, type, puntuacionItemsSecuencia6, totalTime));
+    }
+
+
+
+    #endregion
+
+    #region MethodsConnectItemsSecuencia8
+    public void RecolectarArgumentosItemsSecuencia8()
+    {
+        //para recolectar el token
+        _myUIManagerLogin = UIManagerLogin.GetInstanceUI();
+
+        int totalTime = _myManagerItemsSecuencia8.TiempoPartidaItemsSecuencia8();
+        string itemNameItemsSecuencia7 = _myManagerItemsSecuencia8.itemNameItemSecuencia8();
+        string[] softskillItemsSecuencia7 = _myManagerItemsSecuencia8.softskillItemsSecuencia7();
+        int type = _myManagerItemsSecuencia8.typeItemsSecuencia8();
+        float[] puntuacionItemsSecuencia5 = _myManagerItemsSecuencia8.puntuacionItemSecuencia8();
+
+        //recolectar token de script login register
+        access_token = _myUIManagerLogin.GetAccessToken();
+        //access token temporal
+        //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+        //se empieza corrutina hoyosMongoDB
+        StartCoroutine(PutTestCarasMongoDB(itemNameItemsSecuencia7, softskillItemsSecuencia7, type, puntuacionItemsSecuencia5, totalTime));
+    }
+
+    public void RecolectarArgumentosItemsSecuencia82()
+    {
+        //para recolectar el token
+        _myUIManagerLogin = UIManagerLogin.GetInstanceUI();
+
+        int totalTime = _myManagerItemsSecuencia8.TiempoPartidaItemsSecuencia82();
+        string itemNameItemsSecuencia8 = _myManagerItemsSecuencia8.itemNameItemSecuencia82();
+        string[] softskillItemsSecuencia8 = _myManagerItemsSecuencia8.softskillItemsSecuencia82();
+        int type = _myManagerItemsSecuencia8.typeItemsSecuencia82();
+        float[] puntuacionItemsSecuencia8 = _myManagerItemsSecuencia8.puntuacionItemSecuencia82();
+
+        //recolectar token de script login register
+        access_token = _myUIManagerLogin.GetAccessToken();
+        //access token temporal
+        //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+        //se empieza corrutina hoyosMongoDB
+        StartCoroutine(PutTestCarasMongoDB(itemNameItemsSecuencia8, softskillItemsSecuencia8, type, puntuacionItemsSecuencia8, totalTime));
+    }
+
+  
+
+
+
+    #endregion
 
     //method to connect the face method with put
     [System.Obsolete]
