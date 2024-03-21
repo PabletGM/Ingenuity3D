@@ -246,7 +246,7 @@ public class ManagerItemsSecuencia2 : MonoBehaviour
     {
         softSkillItemsSecuencia22 = new string[1];
         softSkillItemsSecuencia22[0] = "iniciativa";
-        return softSkillItemsSecuencia2;
+        return softSkillItemsSecuencia22;
     }
 
     public int typeItemsSecuencia22()

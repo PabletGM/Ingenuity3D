@@ -328,7 +328,7 @@ public class ManagerTareaCaras : MonoBehaviour
     public string[] softskillCARAS_1()
     {
         softSkillCaras = new string[1];
-        softSkillCaras[0] = " Inteligencia Emocional";
+        softSkillCaras[0] = "inteligenciaEmocional";
         return softSkillCaras;
     }
 
@@ -414,7 +414,7 @@ public class ManagerTareaCaras : MonoBehaviour
     public string[] softskillCARAS_2()
     {
         softSkillCaras_2 = new string[1];
-        softSkillCaras_2[0] = " Inteligencia Emocional";
+        softSkillCaras_2[0] = "inteligenciaEmocional";
         return softSkillCaras_2;
     }
 
@@ -500,7 +500,7 @@ public class ManagerTareaCaras : MonoBehaviour
     public string[] softskillCARAS_3()
     {
         softSkillCaras_3 = new string[1];
-        softSkillCaras_3[0] = " Inteligencia Emocional";
+        softSkillCaras_3[0] = "inteligenciaEmocional";
         return softSkillCaras_3;
     }
 
@@ -586,7 +586,7 @@ public class ManagerTareaCaras : MonoBehaviour
     public string[] softskillCARAS_4()
     {
         softSkillCaras_4 = new string[1];
-        softSkillCaras_4[0] = " Inteligencia Emocional";
+        softSkillCaras_4[0] = "inteligenciaEmocional";
         return softSkillCaras_4;
     }
 
@@ -672,7 +672,7 @@ public class ManagerTareaCaras : MonoBehaviour
     public string[] softskillCARAS_5()
     {
         softSkillCaras_5 = new string[1];
-        softSkillCaras_5[0] = " Inteligencia Emocional";
+        softSkillCaras_5[0] = "inteligenciaEmocional";
         return softSkillCaras_5;
     }
 
@@ -758,7 +758,7 @@ public class ManagerTareaCaras : MonoBehaviour
     public string[] softskillCARAS_6()
     {
         softSkillCaras_6 = new string[1];
-        softSkillCaras_6[0] = " Inteligencia Emocional";
+        softSkillCaras_6[0] = "inteligenciaEmocional";
         return softSkillCaras_6;
     }
 
@@ -844,7 +844,7 @@ public class ManagerTareaCaras : MonoBehaviour
     public string[] softskillCARAS_7()
     {
         softSkillCaras_7 = new string[1];
-        softSkillCaras_7[0] = "Inteligencia Emocional";
+        softSkillCaras_7[0] = "inteligenciaEmocional";
         return softSkillCaras_7;
     }
 
@@ -930,7 +930,7 @@ public class ManagerTareaCaras : MonoBehaviour
     public string[] softskillCARAS_8()
     {
         softSkillCaras_8 = new string[1];
-        softSkillCaras_8[0] = "Inteligencia Emocional";
+        softSkillCaras_8[0] = "inteligenciaEmocional";
         return softSkillCaras_8;
     }
 
@@ -1016,7 +1016,7 @@ public class ManagerTareaCaras : MonoBehaviour
     public string[] softskillCARAS_9()
     {
         softSkillCaras_9 = new string[1];
-        softSkillCaras_9[0] = "Inteligencia Emocional";
+        softSkillCaras_9[0] = "inteligenciaEmocional";
         return softSkillCaras_9;
     }
 
@@ -1102,7 +1102,7 @@ public class ManagerTareaCaras : MonoBehaviour
     public string[] softskillCARAS_10()
     {
         softSkillCaras_10 = new string[1];
-        softSkillCaras_10[0] = "Inteligencia Emocional";
+        softSkillCaras_10[0] = "inteligenciaEmocional";
         return softSkillCaras_10;
     }
 

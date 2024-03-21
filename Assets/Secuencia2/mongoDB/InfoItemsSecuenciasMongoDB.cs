@@ -728,10 +728,14 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
 
     public IEnumerator GetEndGame()
     {
-
+        access_token = _myUIManagerLogin.GetAccessToken();
         string uri = $"{baseUrl + "Users/me/endGame"}";
         using (UnityWebRequest request = UnityWebRequest.Get(uri))
         {
+            //porque tiene candado necesita token con acceso 
+            request.SetRequestHeader("Authorization", "Bearer " + access_token);
+            request.SetRequestHeader("Content-Type", "application/json");
+
             yield return request.SendWebRequest();
             if (request.isNetworkError || request.isHttpError)
             {
