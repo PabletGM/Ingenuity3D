@@ -179,7 +179,7 @@ public class ManagerItemsSecuencia5 : MonoBehaviour
     public string[] softskillItemsSecuencia5()
     {
         softSkillItemsSecuencia5 = new string[1];
-        softSkillItemsSecuencia5[0] = "Integridad";
+        softSkillItemsSecuencia5[0] = "integridad";
         return softSkillItemsSecuencia5;
     }
 
@@ -268,7 +268,7 @@ public class ManagerItemsSecuencia5 : MonoBehaviour
     public string[] softskillItemsSecuencia52()
     {
         softSkillItemsSecuencia52 = new string[1];
-        softSkillItemsSecuencia52[0] = "Resiliencia";
+        softSkillItemsSecuencia52[0] = "resiliencia";
         return softSkillItemsSecuencia52;
     }
 
@@ -357,7 +357,7 @@ public class ManagerItemsSecuencia5 : MonoBehaviour
     public string[] softskillItemsSecuencia53()
     {
         softSkillItemsSecuencia53 = new string[1];
-        softSkillItemsSecuencia53[0] = "Integridad";
+        softSkillItemsSecuencia53[0] = "integridad";
         return softSkillItemsSecuencia53;
     }
 

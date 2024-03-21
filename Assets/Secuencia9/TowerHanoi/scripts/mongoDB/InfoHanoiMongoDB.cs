@@ -5,6 +5,7 @@ using UnityEngine.Networking;
 
 public class InfoHanoiMongoDB : MonoBehaviour
 {
+    static private InfoItemsSecuenciasMongoDB _instanceItems;
     //conexion con GameManager
     GameManagerHanoi _myGameManagerHanoi;
     UIManagerLogin _myUIManagerLogin;
@@ -37,6 +38,7 @@ public class InfoHanoiMongoDB : MonoBehaviour
         _myGameManagerHanoi = GameManagerHanoi.GetInstance();
         //para recolectar el token
         _myUIManagerLogin = UIManagerLogin.GetInstanceUI();
+        _instanceItems = InfoItemsSecuenciasMongoDB.GetIstanceInfoItemsSecuenciasMongoDB();
     }
 
     [System.Obsolete]
@@ -50,6 +52,9 @@ public class InfoHanoiMongoDB : MonoBehaviour
         access_token = _myUIManagerLogin.GetAccessToken();
         //se empieza corrutina hoyosMongoDB
         StartCoroutine(PutHanoiMongoDB(TotalTime, numJugadas, numMovimientosIncorrectos, numMovimientosOutOfLimits));
+        //se hace getMethod de endGame tras esto para terminar
+        _instanceItems.EndGame();
+
     }
 
     [System.Obsolete]
@@ -83,6 +88,8 @@ public class InfoHanoiMongoDB : MonoBehaviour
             {
                 //outputArea.text = request.downloadHandler.text;
                 Debug.Log("BIEN");
+
+                
             }
         }
     }

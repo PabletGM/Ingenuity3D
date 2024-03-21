@@ -126,7 +126,7 @@ public class ManagerItemsSecuencia3 : MonoBehaviour
     public string[] softskillItemsSecuencia3()
     {
         softSkillItemsSecuencia3 = new string[1];
-        softSkillItemsSecuencia3[0] = "Integridad";
+        softSkillItemsSecuencia3[0] = "integridad";
         return softSkillItemsSecuencia3;
     }
 

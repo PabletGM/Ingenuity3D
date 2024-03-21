@@ -129,7 +129,7 @@ public class ManagerSecuencia9 : MonoBehaviour
     public string[] softskillItemsSecuencia9()
     {
         softSkillItemsSecuencia9 = new string[1];
-        softSkillItemsSecuencia9[0] = "Confianza";
+        softSkillItemsSecuencia9[0] = "confianza";
         return softSkillItemsSecuencia9;
     }
 

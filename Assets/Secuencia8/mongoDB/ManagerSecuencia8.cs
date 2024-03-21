@@ -154,7 +154,7 @@ public class ManagerSecuencia8 : MonoBehaviour
     public string[] softskillItemsSecuencia7()
     {
         softSkillItemsSecuencia8 = new string[1];
-        softSkillItemsSecuencia8[0] = "Trabajo en Equipo";
+        softSkillItemsSecuencia8[0] = "trabajoEquipo";
         return softSkillItemsSecuencia8;
     }
 
@@ -243,7 +243,7 @@ public class ManagerSecuencia8 : MonoBehaviour
     public string[] softskillItemsSecuencia82()
     {
         softSkillItemsSecuencia82 = new string[1];
-        softSkillItemsSecuencia82[0] = "Trabajo en Equipo";
+        softSkillItemsSecuencia82[0] = "trabajoEquipo";
         return softSkillItemsSecuencia82;
     }
 

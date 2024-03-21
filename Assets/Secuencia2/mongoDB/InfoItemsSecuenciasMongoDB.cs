@@ -721,5 +721,26 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         }
     }
 
+    public void EndGame()
+    {
+        StartCoroutine(GetEndGame());
+    }
 
+    public IEnumerator GetEndGame()
+    {
+
+        string uri = $"{baseUrl + "Users/me/endGame"}";
+        using (UnityWebRequest request = UnityWebRequest.Get(uri))
+        {
+            yield return request.SendWebRequest();
+            if (request.isNetworkError || request.isHttpError)
+            {
+               Debug.Log(request.error);
+            }
+            else
+            {
+                Debug.Log("bien");
+            }
+        }
+    }
 }

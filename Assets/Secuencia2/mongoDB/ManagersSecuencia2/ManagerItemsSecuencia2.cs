@@ -156,7 +156,7 @@ public class ManagerItemsSecuencia2 : MonoBehaviour
     public string[] softskillItemsSecuencia2()
     {
         softSkillItemsSecuencia2 = new string[1];
-        softSkillItemsSecuencia2[0] = "Iniciativa";
+        softSkillItemsSecuencia2[0] = "iniciativa";
         return softSkillItemsSecuencia2;
     }
 
@@ -244,8 +244,8 @@ public class ManagerItemsSecuencia2 : MonoBehaviour
 
     public string[] softskillItemsSecuencia22()
     {
-        softSkillItemsSecuencia2 = new string[1];
-        softSkillItemsSecuencia2[0] = "Iniciativa";
+        softSkillItemsSecuencia22 = new string[1];
+        softSkillItemsSecuencia22[0] = "iniciativa";
         return softSkillItemsSecuencia2;
     }
 
