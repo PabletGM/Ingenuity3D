@@ -76,6 +76,9 @@ public class UIManagerLogin : MonoBehaviour
     private TMP_InputField passwordLogin;
 
     [SerializeField]
+    private TMP_InputField processIdLogin;
+
+    [SerializeField]
     private GameObject loading;
 
     #endregion
@@ -526,11 +529,12 @@ public class UIManagerLogin : MonoBehaviour
     {
 
         string uriStartGameBackend = uriBackend + "Users/me/startGame";
-        string body = $@"{{
-                            ""processId"": ""2f8fd8""
-                        }}";
-        //string c = "2f8fd8";
-        //string body = $"{{ \"processId\": \"{c}\"}}";
+        
+        //string body = $@"{{
+        //            ""processId"": ""{processIdText}""
+        //        }}";
+
+        string body = $"{{ \"processId\": \"{processIdLogin.text}\"}}";
 
         using (UnityWebRequest request = UnityWebRequest.Post(uriStartGameBackend, body, "application/json"))
         {
