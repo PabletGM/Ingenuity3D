@@ -43,6 +43,8 @@ public class GameControllerCaras : MonoBehaviour
     [Header("Tanda 1 - Foto, respuestas y diálogo")]
     [SerializeField]
     private GameObject foto1;
+    [SerializeField]
+    private GameObject marco1;
 
     [SerializeField]
     private GameObject botonRespuesta1;
@@ -52,6 +54,7 @@ public class GameControllerCaras : MonoBehaviour
     private GameObject botonRespuesta3;
     [SerializeField]
     private GameObject botonRespuesta4;
+    
 
     private bool stopTanda1 = false;
 
@@ -66,6 +69,8 @@ public class GameControllerCaras : MonoBehaviour
     [Header("Tanda 2 - Foto, respuestas y diálogo")]
     [SerializeField]
     private GameObject foto2;
+    [SerializeField]
+    private GameObject marco2;
 
     [SerializeField]
     private GameObject botonRespuesta21;
@@ -87,6 +92,8 @@ public class GameControllerCaras : MonoBehaviour
     [Header("Tanda 3 - Foto, respuestas y diálogo")]
     [SerializeField]
     private GameObject foto3;
+    [SerializeField]
+    private GameObject marco3;
 
     [SerializeField]
     private GameObject botonRespuesta31;
@@ -108,6 +115,8 @@ public class GameControllerCaras : MonoBehaviour
     [Header("Tanda 4 - Foto, respuestas y diálogo")]
     [SerializeField]
     private GameObject foto4;
+    [SerializeField]
+    private GameObject marco4;
 
     [SerializeField]
     private GameObject botonRespuesta41;
@@ -129,6 +138,8 @@ public class GameControllerCaras : MonoBehaviour
     [Header("Tanda 5 - Foto, respuestas y diálogo")]
     [SerializeField]
     private GameObject foto5;
+    [SerializeField]
+    private GameObject marco5;
 
     [SerializeField]
     private GameObject botonRespuesta51;
@@ -150,6 +161,8 @@ public class GameControllerCaras : MonoBehaviour
     [Header("Tanda 6 - Foto, respuestas y diálogo")]
     [SerializeField]
     private GameObject foto6;
+    [SerializeField]
+    private GameObject marco6;
 
     [SerializeField]
     private GameObject botonRespuesta61;
@@ -171,6 +184,8 @@ public class GameControllerCaras : MonoBehaviour
     [Header("Tanda 7 - Foto, respuestas y diálogo")]
     [SerializeField]
     private GameObject foto7;
+    [SerializeField]
+    private GameObject marco7;
 
     [SerializeField]
     private GameObject botonRespuesta71;
@@ -192,6 +207,8 @@ public class GameControllerCaras : MonoBehaviour
     [Header("Tanda 8 - Foto, respuestas y diálogo")]
     [SerializeField]
     private GameObject foto8;
+    [SerializeField]
+    private GameObject marco8;
 
     [SerializeField]
     private GameObject botonRespuesta81;
@@ -213,6 +230,8 @@ public class GameControllerCaras : MonoBehaviour
     [Header("Tanda 9 - Foto, respuestas y diálogo")]
     [SerializeField]
     private GameObject foto9;
+    [SerializeField]
+    private GameObject marco9;
 
     [SerializeField]
     private GameObject botonRespuesta91;
@@ -234,6 +253,8 @@ public class GameControllerCaras : MonoBehaviour
     [Header("Tanda 10 - Foto, respuestas y diálogo")]
     [SerializeField]
     private GameObject foto10;
+    [SerializeField]
+    private GameObject marco10;
 
     [SerializeField]
     private GameObject botonRespuesta101;
@@ -293,6 +314,8 @@ public class GameControllerCaras : MonoBehaviour
         SetTamañoPanel(dialoguePanel1, true);
         //ponemos imagen  ajustamos tamaño 
         SetImagenBigSize(foto1);
+        //ajustamos marco
+        SetMarcoBigSize(marco1);
         //y botones de respuesta
         SetActiveBotonesOpciones(botonRespuesta1, botonRespuesta2, botonRespuesta3, botonRespuesta4, true);
     }
@@ -317,6 +340,8 @@ public class GameControllerCaras : MonoBehaviour
 
         //poner imagen 2 a grande
         SetImagenBigSize(foto2);
+        //ajustamos marco
+        SetMarcoBigSize(marco2);
 
         //y botones de respuesta
         SetActiveBotonesOpciones(botonRespuesta21, botonRespuesta22, botonRespuesta23, botonRespuesta24, true);
@@ -341,6 +366,8 @@ public class GameControllerCaras : MonoBehaviour
 
         //ponemos imagen  ajustamos tamaño 
         SetImagenBigSize(foto3);
+        //ajustamos marco
+        SetMarcoBigSize(marco3);
         //y botones de respuesta
         SetActiveBotonesOpciones(botonRespuesta31, botonRespuesta32, botonRespuesta33, botonRespuesta34, true);
     }
@@ -364,6 +391,8 @@ public class GameControllerCaras : MonoBehaviour
 
         //ponemos imagen  ajustamos tamaño 
         SetImagenBigSize(foto4);
+        //ajustamos marco
+        SetMarcoBigSize(marco4);
         //y botones de respuesta
         SetActiveBotonesOpciones(botonRespuesta41, botonRespuesta42, botonRespuesta43, botonRespuesta44, true);
     }
@@ -387,6 +416,8 @@ public class GameControllerCaras : MonoBehaviour
 
         //ponemos imagen  ajustamos tamaño 
         SetImagenBigSize(foto5);
+        //ajustamos marco
+        SetMarcoBigSize(marco5);
         //y botones de respuesta
         SetActiveBotonesOpciones(botonRespuesta51, botonRespuesta52, botonRespuesta53, botonRespuesta54, true);
     }
@@ -410,6 +441,9 @@ public class GameControllerCaras : MonoBehaviour
 
         //ponemos imagen  ajustamos tamaño 
         SetImagenBigSize(foto6);
+        //ajustamos marco
+        SetMarcoBigSize(marco6);
+
         //y botones de respuesta
         SetActiveBotonesOpciones(botonRespuesta61, botonRespuesta62, botonRespuesta63, botonRespuesta64, true);
     }
@@ -433,6 +467,9 @@ public class GameControllerCaras : MonoBehaviour
 
         //ponemos imagen  ajustamos tamaño 
         SetImagenBigSize(foto7);
+        //ajustamos marco
+        SetMarcoBigSize(marco7);
+
         //y botones de respuesta
         SetActiveBotonesOpciones(botonRespuesta71, botonRespuesta72, botonRespuesta73, botonRespuesta74, true);
     }
@@ -456,6 +493,9 @@ public class GameControllerCaras : MonoBehaviour
 
         //ponemos imagen  ajustamos tamaño 
         SetImagenBigSize(foto8);
+        //ajustamos marco
+        SetMarcoBigSize(marco8);
+
         //y botones de respuesta
         SetActiveBotonesOpciones(botonRespuesta81, botonRespuesta82, botonRespuesta83, botonRespuesta84, true);
     }
@@ -479,6 +519,9 @@ public class GameControllerCaras : MonoBehaviour
 
         //ponemos imagen  ajustamos tamaño 
         SetImagenBigSize(foto9);
+
+        //ajustamos marco
+        SetMarcoBigSize(marco9);
         //y botones de respuesta
         SetActiveBotonesOpciones(botonRespuesta91, botonRespuesta92, botonRespuesta93, botonRespuesta94, true);
     }
@@ -502,6 +545,8 @@ public class GameControllerCaras : MonoBehaviour
 
         //ponemos imagen  ajustamos tamaño 
         SetImagenBigSize(foto10);
+        //ajustamos marco
+        SetMarcoBigSize(marco10);
         //y botones de respuesta
         SetActiveBotonesOpciones(botonRespuesta101, botonRespuesta102, botonRespuesta103, botonRespuesta104, true);
     }
@@ -515,6 +560,13 @@ public class GameControllerCaras : MonoBehaviour
         foto.transform.DOScale(new Vector3(0.01f, 0.01f, 0.01f), 1f);
     }
 
+
+    //efecto marco
+    private void SetMarcoBigSize(GameObject foto)
+    {
+        foto.SetActive(true);
+        foto.transform.DOScale(new Vector3(0.01f, 0.01f, 0.01f), 1f);
+    }
     //set de seguridad para poner tanda correcta solo
     private void SetTandaChosen(bool setTanda1, bool setTanda2, bool setTanda3, bool setTanda4, bool setTanda5, bool setTanda6, bool setTanda7, bool setTanda8, bool setTanda9, bool setTanda10)
     {
@@ -539,7 +591,7 @@ public class GameControllerCaras : MonoBehaviour
         if (set)
         {
             
-            dialoguePanel.transform.DOScale(new Vector3(1.1f, 1.1f, 1.1f), 1f);
+            dialoguePanel.transform.DOScale(new Vector3(1.4f, 1.4f, 1.4f), 1f);
         }
         else
         {
