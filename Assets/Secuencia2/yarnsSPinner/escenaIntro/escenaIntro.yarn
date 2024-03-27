@@ -9,9 +9,6 @@ colorID: 0
 Robot:¡Bienvenido a bordo! Tras muchos años en criosueño, hemos encontrado un posible lugar habitable.
 <<PlayAudio clickButton>>
 
-<<PlayAudio robot1>>
-Robot:¡Bienvenido a bordo! Tras muchos años en criosueño, hemos encontrado un posible lugar habitable.
-<<PlayAudio clickButton>>
 
 
 <<PlayAudio robot2>>
@@ -24,8 +21,8 @@ Robot:¡Tranquilo! Tu cuerpo aún se está acostumbrando, vamos a revisar tu est
 
 <<PlayAudio clickButton>>
 
-<<Fade black 0.0 1.0 2.0>>
-<<SceneChange escenaConversacionRobot2>>
+// <<Fade black 0.0 1.0 2.0>>
+<<PulsoVerde>>
 // THE END.
 
 ===

@@ -54,6 +54,10 @@ namespace Yarn.Unity.Example {
         [SerializeField]
         private GameObject tweenObject;
 
+        [Header("extrasSecuencia2")]
+        [SerializeField]
+        private GameObject pulsoVerde;
+
         void Awake () {
 			// manually add all Yarn command handlers, so that we don't
 			// have to type out game object names in Yarn scripts (also
@@ -88,11 +92,17 @@ namespace Yarn.Unity.Example {
 			runner.AddCommandHandler<float>("FadeIn", SetFadeIn );
 			runner.AddCommandHandler<string,string,float>("CamOffset", SetCameraOffset );
 
-			// adds all Resources to internal lists / one big pile... it
-			// will scan inside all subfolders too! note: but when
-			// referencing sprites in the Yarn script, just use the file
-			// name and omit folder names
-			if ( useResourcesFolders ) {
+            #region Secuencia2Methods
+
+            runner.AddCommandHandler("PulsoVerde", PulsoVerde);
+
+            #endregion
+
+            // adds all Resources to internal lists / one big pile... it
+            // will scan inside all subfolders too! note: but when
+            // referencing sprites in the Yarn script, just use the file
+            // name and omit folder names
+            if ( useResourcesFolders ) {
 				var allSpritesInResources = Resources.LoadAll<Sprite>("");
 				loadSprites.AddRange( allSpritesInResources );
 				var allAudioInResources = Resources.LoadAll<AudioClip>("");
@@ -472,10 +482,25 @@ namespace Yarn.Unity.Example {
         #endregion
 
 
+        #region Secuencia2
+        public void PulsoVerde()
+		{
+			//activas pulso verde
+			pulsoVerde.SetActive(true);
 
-        #region Utility
+			//next scene
+			Invoke("NextSceneSecuencia2", 4f);
+		}
 
-        public override void RunLine(LocalizedLine dialogueLine, System.Action onDialogueLineFinished)
+		public void NextSceneSecuencia2()
+		{
+			SceneManager.LoadScene("escenaConversacionRobot2");
+		}
+		#endregion
+
+		#region Utility
+
+		public override void RunLine(LocalizedLine dialogueLine, System.Action onDialogueLineFinished)
         {
             var actorName = dialogueLine.CharacterName;
 
