@@ -1,0 +1,27 @@
+﻿title: escenaIntro
+position: -140,115
+colorID: 0
+---
+
+// <<Act Compañero4 Robot3dSinSprite left center >>
+
+<<PlayAudio robot1>>
+Robot:¡Bienvenido a bordo! Tras muchos años en criosueño, hemos encontrado un posible lugar habitable.
+<<PlayAudio clickButton>>
+
+
+<<PlayAudio robot2>>
+Robot: Has sido seleccionado para formar parte del primer grupo de reconocimiento del planeta.
+
+<<PlayAudio clickButton>>
+
+<<PlayAudio robot3>>
+Robot:¡Tranquilo! Tu cuerpo aún se está acostumbrando, vamos a revisar tu estado físico…
+
+<<PlayAudio clickButton>>
+
+<<Fade black 0.0 1.0 2.0>>
+<<SceneChange escenaConversacionRobot2>>
+// THE END.
+
+===
