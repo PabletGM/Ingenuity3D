@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,7 +30,7 @@ public class TextManager : MonoBehaviour
     private int tiempoNarracionTexto4;
 
     [SerializeField]
-    private Animator robotAnim;
+    private GameObject robot;
 
 
 
@@ -268,7 +269,7 @@ public class TextManager : MonoBehaviour
             
             //animacion desaparecer robot
             
-            if(robotAnim!=null)
+            if(robot!=null)
             {
                 SetAnimRobotDesaparecer();
             }
@@ -313,8 +314,11 @@ public class TextManager : MonoBehaviour
 
     private void SetAnimRobotDesaparecer()
     {
-        Debug.Log(robotAnim);
-        robotAnim.SetBool("aparecer", false);
+        Debug.Log(robot);
+        //robotAnim.SetBool("aparecer", false);
+        //TO-DO ->Activar tween de desaparecer
+        robot.GetComponent<DOTweenAnimation>().DORestartById("SalirRobot");
+
     }
 
     public void VolverAnteriorTexto()
@@ -356,7 +360,7 @@ public class TextManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "escenaIntro")
         {
             //cargas escena intermedia
-            SceneManager.LoadScene("escenaRadar3D");
+            SceneManager.LoadScene("escenaConversacionRobot2");
         }
         else if (SceneManager.GetActiveScene().name == "escenaConversacionRobot2")
         {
