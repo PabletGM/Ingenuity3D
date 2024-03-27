@@ -539,7 +539,7 @@ public class GameControllerCaras : MonoBehaviour
         if (set)
         {
             
-            dialoguePanel.transform.DOScale(new Vector3(1.4f, 1.4f, 1.4f), 1f);
+            dialoguePanel.transform.DOScale(new Vector3(1.1f, 1.1f, 1.1f), 1f);
         }
         else
         {
