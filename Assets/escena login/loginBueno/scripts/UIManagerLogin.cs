@@ -215,23 +215,16 @@ public class UIManagerLogin : MonoBehaviour
 
                 // Cambia esto al valor adecuado de la edad
                 string body;
-            //
-            // body = $@"{{
-            //    ""userName"": ""{userNameRegister}"",
-            //    ""company"": ""{company}"",
-            //    ""email"": ""{email}"",
-            //    ""password"": ""{passwordRegister}""
-            //}}";
+           
             Debug.Log(email);
                 body = $@"{{
                             ""email"": ""{email}"",
                             ""firstName"": ""{firstName}"",
                             ""lastName"": ""{lastName}"",
-                            ""age"": ""0"",
                             ""password"": ""{passwordRegister}""
                         }}";
 
-        using (UnityWebRequest request = UnityWebRequest.Post(uriRegisterBackend, body, "application/json"))
+            using (UnityWebRequest request = UnityWebRequest.Post(uriRegisterBackend, body, "application/json"))
             {
                 yield return request.SendWebRequest();
               
@@ -245,7 +238,7 @@ public class UIManagerLogin : MonoBehaviour
                     //ponemos errorCode
                     errorCode = request.error;
                     TiposFalloRegisterNumerico(errorCode);
-                    Debug.Log("ERRORRRRR");
+                    Debug.Log(errorCode);
                 }
                 //si la solicitud llega a base de datos vemos el texto que devuelve
                 else
