@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tiempoEsperaPasoEscena: 0
-  nombreCambioEscena: 3.1IntroduccionPrimeraMision
+  nombreCambioEscena: IntroduccionPrimeraMisionChange
 --- !u!4 &592716701
 Transform:
   m_ObjectHideFlags: 0
@@ -748,6 +748,79 @@ ParticleSystem:
     type: 3}
   m_PrefabInstance: {fileID: 1265952600}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1273235560
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1745345751571801845, guid: cafb5af2f843d3640be7aee5499111e2,
+        type: 3}
+      propertyPath: m_Name
+      value: PlaySoundSceneGeneric2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554272950834834069, guid: cafb5af2f843d3640be7aee5499111e2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554272950834834069, guid: cafb5af2f843d3640be7aee5499111e2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.6017478
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554272950834834069, guid: cafb5af2f843d3640be7aee5499111e2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5788555
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554272950834834069, guid: cafb5af2f843d3640be7aee5499111e2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.9077897
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554272950834834069, guid: cafb5af2f843d3640be7aee5499111e2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554272950834834069, guid: cafb5af2f843d3640be7aee5499111e2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554272950834834069, guid: cafb5af2f843d3640be7aee5499111e2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554272950834834069, guid: cafb5af2f843d3640be7aee5499111e2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554272950834834069, guid: cafb5af2f843d3640be7aee5499111e2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554272950834834069, guid: cafb5af2f843d3640be7aee5499111e2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554272950834834069, guid: cafb5af2f843d3640be7aee5499111e2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cafb5af2f843d3640be7aee5499111e2, type: 3}
 --- !u!1 &1583768178
 GameObject:
   m_ObjectHideFlags: 0
@@ -1482,7 +1555,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 5732f5857516379449d1d758c887ace4, type: 3}
   musicSource: {fileID: 1826338270}
   sfxSource: {fileID: 1990490593}
+  sfxSource2: {fileID: 0}
+  sfxSource3: {fileID: 0}
   dialogueSource: {fileID: 1225339786}
+  transitionSource: {fileID: 0}
 --- !u!4 &1972597998
 Transform:
   m_ObjectHideFlags: 0

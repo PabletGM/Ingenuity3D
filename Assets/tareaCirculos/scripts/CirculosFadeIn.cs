@@ -30,7 +30,7 @@ public class CirculosFadeIn : MonoBehaviour
 
     public void StartCoroutineFadeIn()
     {
-        AudioManagerCirculos.instance.PlaySFX("fadeOut");
+        //AudioManagerCirculos.instance.PlaySFX("fadeOut");
         StartCoroutine(FadeIn());
         Invoke("ActivarCanvas", 1.5f);
         Invoke("ActivarGameManager", 1.5f);

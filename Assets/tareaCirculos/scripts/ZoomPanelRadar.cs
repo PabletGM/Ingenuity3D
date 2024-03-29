@@ -33,7 +33,7 @@ public class ZoomPanelRadar : MonoBehaviour
         zoomStartTime = Time.time;
 
         //activas musica zoom
-        AudioManagerCirculos.instance.PlaySFX("zoom");
+        //AudioManagerCirculos.instance.PlaySFX("zoom");
     }
 
     public void ZoomOut()

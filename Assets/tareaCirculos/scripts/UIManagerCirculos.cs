@@ -97,7 +97,7 @@ public class UIManagerCirculos : MonoBehaviour
     public void ActivarPanelRonda()
     {
         //sonido panel ronda
-        AudioManagerCirculos.instance.PlaySFX("panelRonda");
+        //AudioManagerCirculos.instance.PlaySFX("panelRonda");
         //quitas panel game de canvas
         panelGame.SetActive(false);
         //activas panel ronda

@@ -16,7 +16,7 @@ public class SceneTransition : MonoBehaviour
 
     public void TransitionToScene(string sceneName)
     {
-        AudioManagerCirculos.instance.PlaySFX("fadeIn");
+        //AudioManagerCirculos.instance.PlaySFX1("fadeIn");
         StartCoroutine(FadeOut(sceneName));
        
     }
