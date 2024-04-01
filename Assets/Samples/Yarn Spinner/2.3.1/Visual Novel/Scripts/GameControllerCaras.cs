@@ -315,7 +315,7 @@ public class GameControllerCaras : MonoBehaviour
         //ponemos imagen  ajustamos tamaño 
         SetImagenBigSize(foto1);
         //ajustamos marco
-        SetMarcoBigSize(marco1);
+        //SetMarcoBigSize(marco1);
         //y botones de respuesta
         SetActiveBotonesOpciones(botonRespuesta1, botonRespuesta2, botonRespuesta3, botonRespuesta4, true);
     }
@@ -341,7 +341,7 @@ public class GameControllerCaras : MonoBehaviour
         //poner imagen 2 a grande
         SetImagenBigSize(foto2);
         //ajustamos marco
-        SetMarcoBigSize(marco2);
+        //SetMarcoBigSize(marco2);
 
         //y botones de respuesta
         SetActiveBotonesOpciones(botonRespuesta21, botonRespuesta22, botonRespuesta23, botonRespuesta24, true);
@@ -367,7 +367,7 @@ public class GameControllerCaras : MonoBehaviour
         //ponemos imagen  ajustamos tamaño 
         SetImagenBigSize(foto3);
         //ajustamos marco
-        SetMarcoBigSize(marco3);
+        //SetMarcoBigSize(marco3);
         //y botones de respuesta
         SetActiveBotonesOpciones(botonRespuesta31, botonRespuesta32, botonRespuesta33, botonRespuesta34, true);
     }
@@ -392,7 +392,7 @@ public class GameControllerCaras : MonoBehaviour
         //ponemos imagen  ajustamos tamaño 
         SetImagenBigSize(foto4);
         //ajustamos marco
-        SetMarcoBigSize(marco4);
+        //SetMarcoBigSize(marco4);
         //y botones de respuesta
         SetActiveBotonesOpciones(botonRespuesta41, botonRespuesta42, botonRespuesta43, botonRespuesta44, true);
     }
@@ -417,7 +417,7 @@ public class GameControllerCaras : MonoBehaviour
         //ponemos imagen  ajustamos tamaño 
         SetImagenBigSize(foto5);
         //ajustamos marco
-        SetMarcoBigSize(marco5);
+        //SetMarcoBigSize(marco5);
         //y botones de respuesta
         SetActiveBotonesOpciones(botonRespuesta51, botonRespuesta52, botonRespuesta53, botonRespuesta54, true);
     }
@@ -442,7 +442,7 @@ public class GameControllerCaras : MonoBehaviour
         //ponemos imagen  ajustamos tamaño 
         SetImagenBigSize(foto6);
         //ajustamos marco
-        SetMarcoBigSize(marco6);
+        //SetMarcoBigSize(marco6);
 
         //y botones de respuesta
         SetActiveBotonesOpciones(botonRespuesta61, botonRespuesta62, botonRespuesta63, botonRespuesta64, true);
@@ -468,7 +468,7 @@ public class GameControllerCaras : MonoBehaviour
         //ponemos imagen  ajustamos tamaño 
         SetImagenBigSize(foto7);
         //ajustamos marco
-        SetMarcoBigSize(marco7);
+        //SetMarcoBigSize(marco7);
 
         //y botones de respuesta
         SetActiveBotonesOpciones(botonRespuesta71, botonRespuesta72, botonRespuesta73, botonRespuesta74, true);
@@ -494,7 +494,7 @@ public class GameControllerCaras : MonoBehaviour
         //ponemos imagen  ajustamos tamaño 
         SetImagenBigSize(foto8);
         //ajustamos marco
-        SetMarcoBigSize(marco8);
+        //SetMarcoBigSize(marco8);
 
         //y botones de respuesta
         SetActiveBotonesOpciones(botonRespuesta81, botonRespuesta82, botonRespuesta83, botonRespuesta84, true);
@@ -521,7 +521,7 @@ public class GameControllerCaras : MonoBehaviour
         SetImagenBigSize(foto9);
 
         //ajustamos marco
-        SetMarcoBigSize(marco9);
+        //SetMarcoBigSize(marco9);
         //y botones de respuesta
         SetActiveBotonesOpciones(botonRespuesta91, botonRespuesta92, botonRespuesta93, botonRespuesta94, true);
     }
@@ -546,7 +546,7 @@ public class GameControllerCaras : MonoBehaviour
         //ponemos imagen  ajustamos tamaño 
         SetImagenBigSize(foto10);
         //ajustamos marco
-        SetMarcoBigSize(marco10);
+        //SetMarcoBigSize(marco10);
         //y botones de respuesta
         SetActiveBotonesOpciones(botonRespuesta101, botonRespuesta102, botonRespuesta103, botonRespuesta104, true);
     }
