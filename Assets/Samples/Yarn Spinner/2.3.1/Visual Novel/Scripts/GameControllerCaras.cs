@@ -557,7 +557,7 @@ public class GameControllerCaras : MonoBehaviour
     private void SetImagenBigSize(GameObject foto)
     {
         foto.SetActive(true);
-        foto.transform.DOScale(new Vector3(0.01f, 0.01f, 0.01f), 1f);
+        foto.transform.DOScale(new Vector3(0.012f, 0.012f, 0.012f), 1f);
     }
 
 
