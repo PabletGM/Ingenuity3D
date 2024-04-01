@@ -289,7 +289,7 @@ public class GameControllerCaras : MonoBehaviour
 
         //rango especifico de texto
         //comprobamos que es la escena tareaCaras2
-        if(SceneManager.GetActiveScene().name == "tareaCaras2" && (Mathf.Abs(mainCamera.orthographicSize - targetZoom) <= 0.3f)&& !stopTanda1)
+        if(SceneManager.GetActiveScene().name == "tareaCaras2" && (Mathf.Abs(mainCamera.orthographicSize - (targetZoom*1.5f)) <= 0.3f)&& !stopTanda1)
         {
             //ponemos texto de pregunta
             SetTamañoPanel(dialoguePanel1, true);
