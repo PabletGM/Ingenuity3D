@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,7 +26,7 @@ public class AndandoBosqueManager : MonoBehaviour
         //activamos popUp robot
         telefonoPopUp.SetActive(true);
         //activamos animator
-        telefonoPopUp.GetComponent<Animator>().enabled = true;
+        telefonoPopUp.GetComponent<DOTweenAnimation>().DORestartById("Telefono");
     }
 
     private void SoundCogerLlamada()
