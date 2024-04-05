@@ -187,6 +187,7 @@ public class UIManagerTareaBengalas : MonoBehaviour
     public void ApareceRobotHablando()
     {
         robotPanel.SetActive(true);
+        robotPanel.GetComponent<DOTweenAnimation>().DORestartById("EntrarRobot");
         //tras animacion entrada robot aparece dialogo
         Invoke("DialogoAppearAfterAnimation", 1.3f);
     }
@@ -199,14 +200,14 @@ public class UIManagerTareaBengalas : MonoBehaviour
 
     public void DesactivarRobot()
     {
+
+        robotPanel.GetComponent<DOTweenAnimation>().DORestartById("SalirRobot");
         Invoke("DesactivarRobotoTrasAnimacion",1f);
     }
 
     public void DesactivarRobotoTrasAnimacion()
     {
-        robotPanel.SetActive(false);
-        //activar robot en pradera al final
-        robotPocaPequeño.SetActive(true);
+        robotPanel.SetActive(false );
     }
 
 
