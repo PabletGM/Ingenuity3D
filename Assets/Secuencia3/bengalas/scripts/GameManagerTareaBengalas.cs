@@ -133,10 +133,16 @@ public class GameManagerTareaBengalas : MonoBehaviour
         Invoke("QuitarAnimacionPlayer", 1.5f);
     }
 
-    private void QuitarAnimacionPlayer()
+    public void QuitarAnimacionPlayer()
     {
         //reinicia animacion player
         player.GetComponent<DOTweenAnimation>().DORestartById("StopForcejeo");
+    }
+
+    public void IdlePlayer()
+    {
+        //reinicia animacion player
+        player.GetComponent<DOTweenAnimation>().DORestartById("Idle");
     }
 
     [Obsolete]
@@ -179,7 +185,7 @@ public class GameManagerTareaBengalas : MonoBehaviour
     //metodo que pone en pos inicial la bengala y la activa de nuevo
     public void SiguienteLanzamiento()
     {
-
+        IdlePlayer();
 
         bengalaParaDespegar.GetComponent<SpriteRenderer>().DOFade(1f, 0.1f);
         //Activa bengala
@@ -194,7 +200,7 @@ public class GameManagerTareaBengalas : MonoBehaviour
         //vemos si se ha acabado ya, esto es si lanzadas de prueba se han acabado
         if (contadorNumeroTiradas>=numeroTiradasTotal)
         {
-            QuitarAnimacionPlayer();
+            
             Debug.Log("YOU WIN!");
             //llama a metodo que desactiva jugabilidad
             Invoke("DesactivarJugabilidad", 0.25f);
