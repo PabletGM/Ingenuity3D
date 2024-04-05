@@ -54,6 +54,9 @@ namespace Yarn.Unity.Example {
         [SerializeField]
         private GameObject tweenObject;
 
+        [SerializeField]
+        private GameObject visualNovelPrefab;
+
         [Header("extrasSecuencia2")]
         [SerializeField]
         private GameObject pulsoVerde;
@@ -68,6 +71,9 @@ namespace Yarn.Unity.Example {
 
             runner.AddCommandHandler("AparecerPopUpTelefono", AparecerPopUpTelefono);
             runner.AddCommandHandler("FadeOutBlanco", FadeOutBlanco);
+
+            //extra
+            runner.AddCommandHandler("EventAfterDialogue", EventAfterDialogue); 
 
 
             runner.AddCommandHandler<string>("SceneChange", ChangeScene);
@@ -135,6 +141,22 @@ namespace Yarn.Unity.Example {
 		private void Fade()
 		{
             SetFade("black", 0.0f, 1.0f, 2.0f);
+        }
+
+		private void EventAfterDialogue()
+		{
+            if (tweenObject != null)
+            {
+                tweenObject.GetComponent<DOTweenAnimation>().DORestartById("EventAfterDialogue");
+				Invoke("FinishAnimation", 1f);
+                tweenObject.SetActive(true);
+                
+            }
+        }
+
+		private void FinishAnimation()
+		{
+            visualNovelPrefab.SetActive(false);
         }
 
 		private void NextSceneManual()
