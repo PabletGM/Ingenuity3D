@@ -32,6 +32,8 @@ public class GameManagerTareaBengalas : MonoBehaviour
 
     private float timeBengalaVida = 0;
 
+    [SerializeField]
+    private GameObject player;
 
     [SerializeField]
     private GameObject AudioManagerObject;
@@ -118,14 +120,23 @@ public class GameManagerTareaBengalas : MonoBehaviour
         timeBengalaVida = timeToExplote;
         //hacemos impulsable boton hasta nueva tirada
         UITareaBengalas.SetBoton(false);
-        EncenderCohete();
+        EncenderCoheteAnimacion();
         Invoke("MecanicaCohete",1.5f);
+
     }
 
-    public void EncenderCohete()
+    public void EncenderCoheteAnimacion()
     {
         //hacemos animacion encender cohete
-        //astronautaEscena.GetComponent<ComportamientoAstronauta>().AnimacionEncenderBengala();
+        //player hace animacion de forcejear
+        player.GetComponent<DOTweenAnimation>().DORestartById("GirarseForcejear");
+        Invoke("QuitarAnimacionPlayer", 1.5f);
+    }
+
+    private void QuitarAnimacionPlayer()
+    {
+        //reinicia animacion player
+        player.GetComponent<DOTweenAnimation>().DORestartById("StopForcejeo");
     }
 
     [Obsolete]
@@ -160,13 +171,16 @@ public class GameManagerTareaBengalas : MonoBehaviour
         {
             AudioManagerBengalas.instance.PlaySFX("vueloDespegue", 1f);
         }
+
         
+
     }
 
     //metodo que pone en pos inicial la bengala y la activa de nuevo
     public void SiguienteLanzamiento()
     {
-        //lo ponemos visible
+
+
         bengalaParaDespegar.GetComponent<SpriteRenderer>().DOFade(1f, 0.1f);
         //Activa bengala
         bengalaParaDespegar.SetActive(true);
@@ -180,6 +194,7 @@ public class GameManagerTareaBengalas : MonoBehaviour
         //vemos si se ha acabado ya, esto es si lanzadas de prueba se han acabado
         if (contadorNumeroTiradas>=numeroTiradasTotal)
         {
+            QuitarAnimacionPlayer();
             Debug.Log("YOU WIN!");
             //llama a metodo que desactiva jugabilidad
             Invoke("DesactivarJugabilidad", 0.25f);
@@ -215,6 +230,7 @@ public class GameManagerTareaBengalas : MonoBehaviour
 
     public void DesactivarJugabilidadFinPractica()
     {
+        
         //desactivamos boton start y cohete
         botonStart.SetActive(false);
         bengalaParaDespegar.SetActive(false);
