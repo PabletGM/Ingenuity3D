@@ -43,7 +43,7 @@ public class ComportamientoBotonStart : MonoBehaviour, IPointerDownHandler, IPoi
             BotonPulsado();
 
             // Realizamos el tween para agrandar la imagen
-            //imagenParaAgrandar.transform.DOScale(escalaFinal, duracionTween);
+            imagenParaAgrandar.transform.DOScale(escalaFinal, duracionTween);
         }
 
         //si se pulsa boton se inicia timer
@@ -77,7 +77,7 @@ public class ComportamientoBotonStart : MonoBehaviour, IPointerDownHandler, IPoi
                 BotonSoltado();
 
                 // Volver al tamaño original con otro tween
-                //imagenParaAgrandar.transform.DOScale(escalaOriginal, duracionTween);
+                imagenParaAgrandar.transform.DOScale(escalaOriginal, duracionTween);
                 
             }
             //si se suelta el boton se para el timer
@@ -124,7 +124,7 @@ public class ComportamientoBotonStart : MonoBehaviour, IPointerDownHandler, IPoi
         // Acción cuando se suelta el botón
         BotonSoltado();
         // Volver al tamaño original con otro tween
-        //imagenParaAgrandar.transform.DOScale(escalaOriginal, duracionTween);
+        imagenParaAgrandar.transform.DOScale(escalaOriginal, duracionTween);
 
 
 
