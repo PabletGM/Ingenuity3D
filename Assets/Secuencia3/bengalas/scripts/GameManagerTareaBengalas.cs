@@ -125,7 +125,7 @@ public class GameManagerTareaBengalas : MonoBehaviour
     public void EncenderCohete()
     {
         //hacemos animacion encender cohete
-        astronautaEscena.GetComponent<ComportamientoAstronauta>().AnimacionEncenderBengala();
+        //astronautaEscena.GetComponent<ComportamientoAstronauta>().AnimacionEncenderBengala();
     }
 
     [Obsolete]
