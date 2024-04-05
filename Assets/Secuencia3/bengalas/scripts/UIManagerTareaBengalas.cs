@@ -187,15 +187,20 @@ public class UIManagerTareaBengalas : MonoBehaviour
     public void ApareceRobotHablando()
     {
         robotPanel.SetActive(true);
-        robotPanel.GetComponent<DOTweenAnimation>().DORestartById("EntrarRobot");
+        if (SceneManager.GetActiveScene().name != "TareaBengalasGame")
+        {
+            robotPanel.GetComponent<DOTweenAnimation>().DORestartById("EntrarRobot");
+        }
         //tras animacion entrada robot aparece dialogo
         Invoke("DialogoAppearAfterAnimation", 1f);
     }
 
     public void DialogoAppearAfterAnimation()
     {
-
-        TestPanel.SetActive(true);
+        if(SceneManager.GetActiveScene().name != "TareaBengalasGame")
+        {
+            TestPanel.SetActive(true);
+        }
     }
 
 
