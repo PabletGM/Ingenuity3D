@@ -29,7 +29,7 @@ public class AndandoBosqueManager : MonoBehaviour
         telefonoPopUp.GetComponent<DOTweenAnimation>().DORestartById("Telefono");
     }
 
-    private void SoundCogerLlamada()
+    public void SoundCogerLlamada()
     {
         AudioManagerBengalas.instance.PlaySFX("cogerLlamada", 1f);
     }
