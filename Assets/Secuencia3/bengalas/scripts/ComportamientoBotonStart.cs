@@ -25,6 +25,9 @@ public class ComportamientoBotonStart : MonoBehaviour, IPointerDownHandler, IPoi
 
     private Vector3 escalaOriginal; // Tamaño original de la imagen
 
+    [SerializeField]
+    private GameObject clickingEffect;
+
 
     // Start is called before the first frame update
     void Start()
@@ -51,10 +54,14 @@ public class ComportamientoBotonStart : MonoBehaviour, IPointerDownHandler, IPoi
         {
             //iniciamos timer
             enMarcha = true;
-
-            //sonido boton
-            AudioManagerBengalas.instance.PulsarBotonSound();
-           
+            if (clickingEffect != null)
+            {
+                clickingEffect.SetActive(false);
+            }
+        //sonido boton
+        AudioManagerBengalas.instance.PulsarBotonSound();
+            
+            
         }
 
     #endregion
