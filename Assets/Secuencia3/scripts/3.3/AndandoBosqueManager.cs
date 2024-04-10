@@ -43,6 +43,6 @@ public class AndandoBosqueManager : MonoBehaviour
     private void Awake()
     {
         //cambiamos a musica de bosque
-        AudioManagerBengalas.instance.PlayMusic("selvaMusic", 1f);
+        //AudioManagerBengalas.instance.PlayMusic("selvaMusic", 1f);
     }
 }
