@@ -131,7 +131,7 @@ public class ComportamientoBengalaADisparar : MonoBehaviour
         if(AudioManagerBengalas.instance!= null)
         {
             AudioManagerBengalas.instance.StopSFX();
-            AudioManagerBengalas.instance.PlaySFX("explosion", 1f);
+            AudioManagerBengalas.instance.PlaySFX("explosion", 0.1f);
         }
         
 

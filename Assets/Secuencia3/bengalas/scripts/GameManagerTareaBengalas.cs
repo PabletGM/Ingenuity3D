@@ -130,6 +130,7 @@ public class GameManagerTareaBengalas : MonoBehaviour
         //hacemos animacion encender cohete
         //player hace animacion de forcejear
         player.GetComponent<DOTweenAnimation>().DORestartById("GirarseForcejear");
+        AudioManagerBengalas.instance.PlaySFX("mecheroMecha", 0.001f);
         Invoke("QuitarAnimacionPlayer", 1.5f);
     }
 
@@ -175,7 +176,7 @@ public class GameManagerTareaBengalas : MonoBehaviour
         //sonido vuelo despegue
         if(AudioManagerBengalas.instance != null)
         {
-            AudioManagerBengalas.instance.PlaySFX("vueloDespegue", 1f);
+            AudioManagerBengalas.instance.PlaySFX("vueloDespegue", 0.1f);
         }
 
         
