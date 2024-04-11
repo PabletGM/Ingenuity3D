@@ -64,7 +64,7 @@ public class vfxManager45 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (SceneManager.GetActiveScene().name != "8.1")
+        if (SceneManager.GetActiveScene().name != "8.1" && SceneManager.GetActiveScene().name != "4.5New")
         {
             //comenzamos vfx
             SetChispasGrandes(true);
