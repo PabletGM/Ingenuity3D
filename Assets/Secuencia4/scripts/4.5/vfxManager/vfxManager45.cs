@@ -64,7 +64,7 @@ public class vfxManager45 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (SceneManager.GetActiveScene().name != "8.1" && SceneManager.GetActiveScene().name != "4.5New")
+        if (SceneManager.GetActiveScene().name != "8.1" && SceneManager.GetActiveScene().name != "4.6TallerRobot")
         {
             //comenzamos vfx
             SetChispasGrandes(true);
@@ -261,7 +261,7 @@ public class vfxManager45 : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name != "8.1")
         {
-            SceneManager.LoadScene("4.6Item");
+            SceneManager.LoadScene("4.7Item");
         }
     }
 
