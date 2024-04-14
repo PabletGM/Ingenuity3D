@@ -34,13 +34,21 @@ public class ModifyPostProcessSecuencia47 : MonoBehaviour
     private void SubirIntensidadVignette()
     {
         StartCoroutine(ChangeVignetteIntensity(initialIntensityVignette, finalIntensityVignette));
-        Invoke("BajarIntensidadVignette", changeDuration);
+        if(this.gameObject.activeSelf)
+        {
+            Invoke("BajarIntensidadVignette", changeDuration);
+        }
+       
     }
 
     private void BajarIntensidadVignette()
     {
+      
         StartCoroutine(ChangeVignetteIntensity(finalIntensityVignette, initialIntensityVignette));
-        Invoke("SubirIntensidadVignette", changeDuration);
+        if (this.gameObject.activeSelf)
+        {
+            Invoke("SubirIntensidadVignette", changeDuration);
+        }
     }
 
     // Corrutina para cambiar gradualmente la intensidad del vignette

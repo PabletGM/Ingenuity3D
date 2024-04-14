@@ -5,7 +5,7 @@ using UnityEngine;
 public class PasarDeIdleAWait : MonoBehaviour
 {
     [SerializeField] private Animator animator;
-    public void PasarWalkIdle()
+    public void PasarIdleWait()
     {
         animator.SetTrigger("Wait");
     }
