@@ -354,6 +354,25 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         StartCoroutine(PutTestCarasMongoDB(itemNameItemsSecuencia3, softskillItemsSecuencia3, type, puntuacionItemsSecuencia3, totalTime));
     }
 
+    public void RecolectarArgumentosItemsSecuencia32()
+    {
+        //para recolectar el token
+        _myUIManagerLogin = UIManagerLogin.GetInstanceUI();
+
+        int totalTime = _myManagerItemsSecuencia3.TiempoPartidaItemsSecuencia32();
+        string itemNameItemsSecuencia3 = _myManagerItemsSecuencia3.itemNameItemSecuencia32();
+        string[] softskillItemsSecuencia3 = _myManagerItemsSecuencia3.softskillItemsSecuencia32();
+        int type = _myManagerItemsSecuencia3.typeItemsSecuencia32();
+        float[] puntuacionItemsSecuencia3 = _myManagerItemsSecuencia3.puntuacionItemSecuencia32();
+
+        //recolectar token de script login register
+        access_token = _myUIManagerLogin.GetAccessToken();
+        //access token temporal
+        //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+        //se empieza corrutina hoyosMongoDB
+        StartCoroutine(PutTestCarasMongoDB(itemNameItemsSecuencia3, softskillItemsSecuencia3, type, puntuacionItemsSecuencia3, totalTime));
+    }
+
     #endregion
 
     #region MethodsConnectItemsSecuencia4
