@@ -1797,6 +1797,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 929159981}
   m_CullTransparentMesh: 1
+--- !u!1 &1002258844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1002258846}
+  - component: {fileID: 1002258845}
+  m_Layer: 0
+  m_Name: mongoDB
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1002258845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002258844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7952d04e05051214698201406f6d68c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1002258846
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002258844}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 205.06346, y: -121.223816, z: 6097.9595}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1222160813
 GameObject:
   m_ObjectHideFlags: 0
@@ -2307,6 +2351,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7372659697080725244, guid: 54b2751710c85ef4bb3418055756e622,
         type: 3}
+      propertyPath: musicSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7372659697080725244, guid: 54b2751710c85ef4bb3418055756e622,
+        type: 3}
       propertyPath: sfxSounds.Array.data[19].clip
       value: 
       objectReference: {fileID: 8300000, guid: b1ced1918008e19429790ca64ffbdf1c, type: 3}
@@ -2365,6 +2414,31 @@ PrefabInstance:
       propertyPath: sfxSounds.Array.data[24].name
       value: itemSound
       objectReference: {fileID: 0}
+    - target: {fileID: 7372659697080725244, guid: 54b2751710c85ef4bb3418055756e622,
+        type: 3}
+      propertyPath: musicSounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ff6ad48e8c3db244b1406f5858da424, type: 3}
+    - target: {fileID: 7372659697080725244, guid: 54b2751710c85ef4bb3418055756e622,
+        type: 3}
+      propertyPath: musicSounds.Array.data[0].name
+      value: normal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7372659697080725244, guid: 54b2751710c85ef4bb3418055756e622,
+        type: 3}
+      propertyPath: musicSounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9b1793bfb6d6fca41beefa0961789982, type: 3}
+    - target: {fileID: 7372659697080725244, guid: 54b2751710c85ef4bb3418055756e622,
+        type: 3}
+      propertyPath: musicSounds.Array.data[1].name
+      value: tension
+      objectReference: {fileID: 0}
+    - target: {fileID: 7736272677083720429, guid: 54b2751710c85ef4bb3418055756e622,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ff6ad48e8c3db244b1406f5858da424, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

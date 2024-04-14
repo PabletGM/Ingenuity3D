@@ -235,7 +235,7 @@ public class ManagerItemsSecuencia3 : MonoBehaviour
 
     public string itemNameItemSecuencia32()
     {
-        return itemNameItemsSecuencia3;
+        return itemNameItemsSecuencia32;
     }
 
     public string[] softskillItemsSecuencia32()
@@ -248,13 +248,13 @@ public class ManagerItemsSecuencia3 : MonoBehaviour
     public int typeItemsSecuencia32()
     {
 
-        return type;
+        return type2;
     }
 
     public float[] puntuacionItemSecuencia32()
     {
         puntuacionItemsSecuencia32 = new float[1];
-        puntuacionItemsSecuencia3[0] = resultadoNumPruebaItemsSecuencia32;
+        puntuacionItemsSecuencia32[0] = resultadoNumPruebaItemsSecuencia32;
         return puntuacionItemsSecuencia32;
     }
 
