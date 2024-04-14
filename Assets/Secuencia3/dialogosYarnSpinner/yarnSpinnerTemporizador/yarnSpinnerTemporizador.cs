@@ -27,7 +27,7 @@ public class yarnSpinnerTemporizador : MonoBehaviour
             // Realizar la acción aquí
             pasarSiguienteTexto.OnContinueClicked();
 
-            // Esperar 6 segundos antes de realizar la próxima acción
+            // Esperar x segundos antes de realizar la próxima acción
             yield return new WaitForSeconds(contadorPasarSiguienteTexto);
         }
     }
