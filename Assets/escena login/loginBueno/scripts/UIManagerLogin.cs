@@ -545,7 +545,7 @@ public class UIManagerLogin : MonoBehaviour
             else
             {
                 //SceneManager.LoadScene("escenaIntro");
-                 SceneManager.LoadScene("4.1TareasReparacionDialogo");
+                 SceneManager.LoadScene("5.1ReunionComandante");
             }
         }
 
