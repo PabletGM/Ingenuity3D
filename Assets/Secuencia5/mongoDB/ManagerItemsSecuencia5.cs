@@ -59,29 +59,29 @@ public class ManagerItemsSecuencia5 : MonoBehaviour
 
     #endregion
 
-    #region argumentos Tanda2ItemsSecuencia5
+    //#region argumentos Tanda2ItemsSecuencia5
 
-    private string resultadoPruebaItemsSecuencia52 = "";
+    //private string resultadoPruebaItemsSecuencia52 = "";
 
-    private int resultadoNumPruebaItemsSecuencia52 = 0;
+    //private int resultadoNumPruebaItemsSecuencia52 = 0;
 
-    #endregion
-    #region campos tanda2 ItemsSecuencia5
+    //#endregion
+    //#region campos tanda2 ItemsSecuencia5
 
-    private string itemNameItemsSecuencia52 = "RES_3";
+    //private string itemNameItemsSecuencia52 = "RES_3";
 
-    //cantidad de softskills que mide y nombres
-    private string[] softSkillItemsSecuencia52;
+    ////cantidad de softskills que mide y nombres
+    //private string[] softSkillItemsSecuencia52;
 
-    //tipo de test que es, en este caso las caras es type 2
-    private int type2 = 1;
+    ////tipo de test que es, en este caso las caras es type 2
+    //private int type2 = 1;
 
-    //cantidad de puntuaciones de todas las softskills que recoge
-    private float[] puntuacionItemsSecuencia52;
-    //numero de segundos por partida
-    private int numSecsPartidaItemsSecuencia52 = 0;
+    ////cantidad de puntuaciones de todas las softskills que recoge
+    //private float[] puntuacionItemsSecuencia52;
+    ////numero de segundos por partida
+    //private int numSecsPartidaItemsSecuencia52 = 0;
 
-    #endregion
+    //#endregion
 
     #region argumentos Tanda3ItemsSecuencia5
 
@@ -199,94 +199,94 @@ public class ManagerItemsSecuencia5 : MonoBehaviour
 
     #endregion
 
-    #region methods ItemsSecuencia52
+    //#region methods ItemsSecuencia52
 
-    //metodo que elige la opcion A de la prueba1 de capacidad
-    public void ChooseOptionAItemsSecuencia52()
-    {
-        resultadoPruebaItemsSecuencia52 = "a";
-        //ponemos valor numerico segun el resultado
-        resultadoNumPruebaItemsSecuencia52 = 0;
-        //enviamos respuesta
-        SetItemsSecuencia52();
+    ////metodo que elige la opcion A de la prueba1 de capacidad
+    //public void ChooseOptionAItemsSecuencia52()
+    //{
+    //    resultadoPruebaItemsSecuencia52 = "a";
+    //    //ponemos valor numerico segun el resultado
+    //    resultadoNumPruebaItemsSecuencia52 = 0;
+    //    //enviamos respuesta
+    //    SetItemsSecuencia52();
 
-    }
+    //}
 
-    //metodo que elige la opcion B de la prueba1 de capacidad
-    public void ChooseOptionBItemsSecuencia52()
-    {
-        resultadoPruebaItemsSecuencia52 = "b";
-        //ponemos valor numerico segun el resultado
-        resultadoNumPruebaItemsSecuencia52 = 5;
-        //enviamos respuesta
-        SetItemsSecuencia52();
-    }
+    ////metodo que elige la opcion B de la prueba1 de capacidad
+    //public void ChooseOptionBItemsSecuencia52()
+    //{
+    //    resultadoPruebaItemsSecuencia52 = "b";
+    //    //ponemos valor numerico segun el resultado
+    //    resultadoNumPruebaItemsSecuencia52 = 5;
+    //    //enviamos respuesta
+    //    SetItemsSecuencia52();
+    //}
 
-    //metodo que elige la opcion C de la prueba1 de capacidad
-    public void ChooseOptionCItemsSecuencia52()
-    {
-        resultadoPruebaItemsSecuencia52 = "c";
-        //ponemos valor numerico segun el resultado
-        resultadoNumPruebaItemsSecuencia52 = 10;
-        //enviamos respuesta
-        SetItemsSecuencia52();
-    }
+    ////metodo que elige la opcion C de la prueba1 de capacidad
+    //public void ChooseOptionCItemsSecuencia52()
+    //{
+    //    resultadoPruebaItemsSecuencia52 = "c";
+    //    //ponemos valor numerico segun el resultado
+    //    resultadoNumPruebaItemsSecuencia52 = 10;
+    //    //enviamos respuesta
+    //    SetItemsSecuencia52();
+    //}
 
-    //metodo que elige la opcion C de la prueba1 de capacidad
-    public void ChooseOptionDSecuencia52()
-    {
-        resultadoPruebaItemsSecuencia52 = "d";
-        //ponemos valor numerico segun el resultado
-        resultadoNumPruebaItemsSecuencia52 = 0;
-        //enviamos respuesta
-        SetItemsSecuencia52();
-    }
+    ////metodo que elige la opcion C de la prueba1 de capacidad
+    //public void ChooseOptionDSecuencia52()
+    //{
+    //    resultadoPruebaItemsSecuencia52 = "d";
+    //    //ponemos valor numerico segun el resultado
+    //    resultadoNumPruebaItemsSecuencia52 = 0;
+    //    //enviamos respuesta
+    //    SetItemsSecuencia52();
+    //}
 
-    //para pasar a siguiente test
-    public void SetItemsSecuencia52()
-    {
-        //mandas solicitud para guardar en base de datos
-        _instanceItems.RecolectarArgumentosItemsSecuencia52();
-        //como ya has mandando solicitud de test anterior a backend reinicias valores
-        //para reutilizar parametros vacios
-    }
+    ////para pasar a siguiente test
+    //public void SetItemsSecuencia52()
+    //{
+    //    //mandas solicitud para guardar en base de datos
+    //    _instanceItems.RecolectarArgumentosItemsSecuencia52();
+    //    //como ya has mandando solicitud de test anterior a backend reinicias valores
+    //    //para reutilizar parametros vacios
+    //}
 
-    public int TiempoPartidaItemsSecuencia52()
-    {
-        numSecsPartidaItemsSecuencia52 = 0;
-        return numSecsPartidaItemsSecuencia52;
-    }
+    //public int TiempoPartidaItemsSecuencia52()
+    //{
+    //    numSecsPartidaItemsSecuencia52 = 0;
+    //    return numSecsPartidaItemsSecuencia52;
+    //}
 
-    #endregion
-    #region Argumentos2
+    //#endregion
+    //#region Argumentos2
 
-    public string itemNameItemSecuencia52()
-    {
-        return itemNameItemsSecuencia52;
-    }
+    //public string itemNameItemSecuencia52()
+    //{
+    //    return itemNameItemsSecuencia52;
+    //}
 
-    public string[] softskillItemsSecuencia52()
-    {
-        softSkillItemsSecuencia52 = new string[1];
-        softSkillItemsSecuencia52[0] = "resiliencia";
-        return softSkillItemsSecuencia52;
-    }
+    //public string[] softskillItemsSecuencia52()
+    //{
+    //    softSkillItemsSecuencia52 = new string[1];
+    //    softSkillItemsSecuencia52[0] = "resiliencia";
+    //    return softSkillItemsSecuencia52;
+    //}
 
-    public int typeItemsSecuencia52()
-    {
+    //public int typeItemsSecuencia52()
+    //{
 
-        return type2;
-    }
+    //    return type2;
+    //}
 
-    public float[] puntuacionItemSecuencia52()
-    {
-        puntuacionItemsSecuencia52 = new float[1];
-        puntuacionItemsSecuencia52[0] = resultadoNumPruebaItemsSecuencia52;
-        return puntuacionItemsSecuencia52;
-    }
+    //public float[] puntuacionItemSecuencia52()
+    //{
+    //    puntuacionItemsSecuencia52 = new float[1];
+    //    puntuacionItemsSecuencia52[0] = resultadoNumPruebaItemsSecuencia52;
+    //    return puntuacionItemsSecuencia52;
+    //}
 
 
-    #endregion
+    //#endregion
 
     #region methods ItemsSecuencia53
 

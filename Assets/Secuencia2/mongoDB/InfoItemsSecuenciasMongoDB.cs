@@ -455,24 +455,24 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
         StartCoroutine(PutTestCarasMongoDB(itemNameItemsSecuencia5, softskillItemsSecuencia5, type, puntuacionItemsSecuencia5, totalTime));
     }
 
-    public void RecolectarArgumentosItemsSecuencia52()
-    {
-        //para recolectar el token
-        _myUIManagerLogin = UIManagerLogin.GetInstanceUI();
+    //public void RecolectarArgumentosItemsSecuencia52()
+    //{
+    //    //para recolectar el token
+    //    _myUIManagerLogin = UIManagerLogin.GetInstanceUI();
 
-        int totalTime = _myManagerItemsSecuencia5.TiempoPartidaItemsSecuencia52();
-        string itemNameItemsSecuencia5 = _myManagerItemsSecuencia5.itemNameItemSecuencia52();
-        string[] softskillItemsSecuencia5 = _myManagerItemsSecuencia5.softskillItemsSecuencia52();
-        int type = _myManagerItemsSecuencia5.typeItemsSecuencia52();
-        float[] puntuacionItemsSecuencia5 = _myManagerItemsSecuencia5.puntuacionItemSecuencia52();
+    //    int totalTime = _myManagerItemsSecuencia5.TiempoPartidaItemsSecuencia52();
+    //    string itemNameItemsSecuencia5 = _myManagerItemsSecuencia5.itemNameItemSecuencia52();
+    //    string[] softskillItemsSecuencia5 = _myManagerItemsSecuencia5.softskillItemsSecuencia52();
+    //    int type = _myManagerItemsSecuencia5.typeItemsSecuencia52();
+    //    float[] puntuacionItemsSecuencia5 = _myManagerItemsSecuencia5.puntuacionItemSecuencia52();
 
-        //recolectar token de script login register
-        access_token = _myUIManagerLogin.GetAccessToken();
-        //access token temporal
-        //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
-        //se empieza corrutina hoyosMongoDB
-        StartCoroutine(PutTestCarasMongoDB(itemNameItemsSecuencia5, softskillItemsSecuencia5, type, puntuacionItemsSecuencia5, totalTime));
-    }
+    //    //recolectar token de script login register
+    //    access_token = _myUIManagerLogin.GetAccessToken();
+    //    //access token temporal
+    //    //access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdGVydHJlNTlAZ21haWwuY29tIiwiZXhwIjoxNzEwOTIxNTQ3fQ.fgMqT48uaLX49sAuRcxgVu9g9xrNPxWGb6B0LE5cpsI";
+    //    //se empieza corrutina hoyosMongoDB
+    //    StartCoroutine(PutTestCarasMongoDB(itemNameItemsSecuencia5, softskillItemsSecuencia5, type, puntuacionItemsSecuencia5, totalTime));
+    //}
 
     public void RecolectarArgumentosItemsSecuencia53()
     {
