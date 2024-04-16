@@ -1603,7 +1603,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1699542809}
   - component: {fileID: 1699542808}
-  - component: {fileID: 1699542810}
   m_Layer: 0
   m_Name: fondo
   m_TagString: Untagged
@@ -1678,26 +1677,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1699542810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1699542807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 532add3e67f1c384695dfc054bab89bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nave: {fileID: 0}
-  vfxAterrizaje1: {fileID: 0}
-  vfxAterrizaje2: {fileID: 0}
-  vfxAterrizaje1Fuego: {fileID: 0}
-  vfxAterrizaje2Fuego: {fileID: 0}
-  humo: {fileID: 1892078897026156}
-  nameSecuencia2: aterrizajePlaneta
-  nameSecuencia5: 5.3aterrizajePlaneta
 --- !u!1001 &1787506848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2424,12 +2403,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1892078897026156 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6290071983430030956, guid: df76345cde5881f4897a615a1d0e3a25,
-    type: 3}
-  m_PrefabInstance: {fileID: 5797134133167771036}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4977646709504266 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1401016538191758130, guid: df76345cde5881f4897a615a1d0e3a25,
