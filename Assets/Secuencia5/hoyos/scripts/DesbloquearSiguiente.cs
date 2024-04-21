@@ -15,11 +15,14 @@ public class DesbloquearSiguiente : MonoBehaviour
     [SerializeField]
     private Button botonSiguienteExcavacion;
 
+
+
     public void DesbloquearExcavacion()
     {
         //cambiamos a sprite Pico
         botonSiguienteExcavacion.GetComponent<Image>().sprite = pico;
         //hacemos boton interactuable
         botonSiguienteExcavacion.GetComponent<Button>().interactable = true;
+
     }
 }

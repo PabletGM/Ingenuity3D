@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     private SelectedButton[] buttons;
 
     [SerializeField]
+    private GameObject[] hoyos;
+
+    [SerializeField]
     private GameObject[] butonFlechas;
     //saber en que posicion de boton estamos
     private int posBotonHoyo;
@@ -75,14 +78,27 @@ public class GameManager : MonoBehaviour
         return _instance;
     }
 
+    private void Update()
+    {
+        //comprobamos en que hoyos se puede picar mas, sino se puede ponemos boton Interactable a false
+        for(int i = 0;i<buttons.Length;i++)
+        {
+            //para cada hoyo comprobamos si se puede picar mas, si es false es que no, y si la excavacion esta cerrada para que no se pueda ir hacia atrás
+            if (!hoyos[i].GetComponent<Excavando>().picarMas)
+            {
+                //quitamos el interactable de su boton
+                buttons[i].GetComponent<Button>().interactable = false;
+            }
+
+            
+           
+        }
+       
+    }
+
     //segun el booleano que se pase se activará en el boton selected el isInteractable o no para así solo se pueda presionar en el pico mientras no hace animacion
     public void FuncionalidadBotonPicoTemporalPonerQuitar(bool estado)
     {
-
-        for(int i=0; i< buttons.Length; i++)
-        {
-            buttons[i].gameObject.GetComponent<Button>().interactable = estado;
-        }
 
         for (int i = 0; i < butonFlechas.Length; i++)
         {

@@ -29,7 +29,8 @@ public class Excavando : MonoBehaviour
     [SerializeField]
     private int numeroToquesAgua;
 
-    private bool picarMas = true;
+    [SerializeField,HideInInspector]
+    public bool picarMas = true;
 
 
     [SerializeField]

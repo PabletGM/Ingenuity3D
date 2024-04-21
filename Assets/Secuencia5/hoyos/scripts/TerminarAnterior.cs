@@ -15,7 +15,8 @@ public class TerminarAnterior : MonoBehaviour
     [SerializeField]
     private Button botonAnteriorExcavacion;
 
-
+    [HideInInspector]
+    public bool excavacionCerrada = false;
 
 
     public void CerrarExcavacion()
@@ -25,9 +26,6 @@ public class TerminarAnterior : MonoBehaviour
         //hacemos boton interactuable
         botonAnteriorExcavacion.GetComponent<Button>().interactable = false;
 
-        //flechaAsociada.SetActive(false);
-
-        
     }
 
     //asi se puede cerrar la excavacion de un hoyo concreto y no del anterior todo el rato
@@ -39,7 +37,5 @@ public class TerminarAnterior : MonoBehaviour
         go.GetComponent<Image>().sprite = dobleTick;
         //hacemos boton interactuable
         go.GetComponent<Button>().interactable = false;
-
-        
     }
 }
