@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
     public IEnumerator Picar()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.4f);
         playerPicoAnimations.GetComponent<DOTweenAnimation>().DORestartById("Picar");
         yield return new WaitForSeconds(1f);
 
