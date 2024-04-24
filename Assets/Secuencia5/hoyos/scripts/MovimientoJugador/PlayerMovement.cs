@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,13 +17,59 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     //mientras no haya llegado a la meta
     private bool movimiento = false;
+
+    [SerializeField]
+    private GameObject playerPico;
+
+    [SerializeField]
+    private GameObject playerPicoAnimations;
+
+    private bool puedePicar = false;
+
+
+    #region Picar
+    
+
+
+
+    public IEnumerator Picar()
+    {
+        yield return new WaitForSeconds(0.2f);
+        playerPicoAnimations.GetComponent<DOTweenAnimation>().DORestartById("Picar");
+        yield return new WaitForSeconds(1f);
+
+
+    }
+
+    public void methodPicar()
+    {
+        StartCoroutine(Picar());
+    }
+
+
+    #endregion
+
+
+
+
     // Start is called before the first frame update
     void Update()
     {
         if(movimiento)
         {
-            transform.position = Vector3.MoveTowards(transform.position, target.position, speed);
+            playerPico.transform.position = Vector3.MoveTowards(playerPico.transform.position, target.position, speed);
+            playerPico.transform.position = new Vector3(playerPico.transform.position.x, 0,0);
+
+            
+            //si ha llegado a la posicion y no puede picar, puedePicar = true
+            if (playerPico.transform.position.x >= target.position.x - 0.1f)
+            {
+                
+                movimiento = false;
+            }
         }
+
+       
     }
 
     //pregunta al GameManager que botón se ha pulsado y nos lo devuelve
@@ -96,6 +143,10 @@ public class PlayerMovement : MonoBehaviour
                 
                 break;
         }
+
+
+
+
     }
 
     private void Flechas(GameObject flechaBuena)
@@ -124,6 +175,8 @@ public class PlayerMovement : MonoBehaviour
                flecha.SetActive(false);
             }
         }
+
+       
     }
     
     //comenzamos la corrutina de desplazamiento del player
@@ -132,6 +185,8 @@ public class PlayerMovement : MonoBehaviour
         //según que boton haya pulsado debemos cambiar el target
         EncontrarBotonPulsado();
         StartCoroutine(WalkingWaypoint());
+       
+
     }
 
 
@@ -155,8 +210,10 @@ public class PlayerMovement : MonoBehaviour
     //loop de mover jugador hasta que llegue a la meta
     private void seguirandando()
     {
+        movimiento = true;
         MoverJugador();
         EmpezarMoverJugador();
+        
         //StartCoroutine(WalkingWaypoint());
     }
     public void MoverJugador()
