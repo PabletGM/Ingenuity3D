@@ -545,7 +545,7 @@ public class UIManagerLogin : MonoBehaviour
             else
             {
                 //SceneManager.LoadScene("escenaIntro");
-                 SceneManager.LoadScene("6.1RobotInterrumpe");
+                 SceneManager.LoadScene("7.1Pasillo");
             }
         }
 
