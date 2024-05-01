@@ -31,15 +31,15 @@ public class ChangingDialogues : MonoBehaviour
             switch (opcionElegida)
             {
                 case "Rio":
-                    textToModify.text = "Tu decisión de cruzar el río no ha sido la más adecuada. Es la opción más peligrosa y puede que nunca lleguemos a nuestro destino.";
+                    textToModify.text = "Cruzar el río no ha sido lo más adecuado. Es la opción más peligrosa y puede que nunca lleguemos a nuestro destino";
                     break;
 
                 case "CaminoEstablecido":
-                    textToModify.text = "Tu decisión de ir por el camino establecido no ha sido la más acertada. Tardaremos mucho más y no podemos permitirnos perder más tiempo. ";
+                    textToModify.text = "Ir por el camino establecido no ha sido lo más acertado. Tardaremos mucho más y no podemos permitirnos perder más tiempo.";
                     break;
 
                 case "Bosque":
-                    textToModify.text = "Tu decisión de atravesar la selva no ha sido la más adecuada. Es la opción más peligrosa y puede que nunca lleguemos a nuestro destino.";
+                    textToModify.text = "Atravesar la selva no ha sido lo más acertado. Es la opción más peligrosa y puede que nunca lleguemos a nuestro destino";
                     break;
             }
         }
