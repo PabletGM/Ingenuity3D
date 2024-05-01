@@ -111,10 +111,10 @@ public class PlaySoundSecuencia7 : MonoBehaviour
 
 
     #region Music
-    //public void PlayMusic(string music)
-    //{
-    //    AudioManagerSecuencia6.instance.PlayMusic(music);
-    //}
+    public void PlayMusic(string music)
+    {
+        AudioManagerSecuencia7.instance.PlayMusic(music,1f);
+    }
 
     public void ChangeVolumeMusic(float volume)
     {
