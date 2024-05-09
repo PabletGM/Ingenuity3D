@@ -111,14 +111,14 @@ public class PlaySoundSecuencia8 : MonoBehaviour
 
 
     #region Music
-    //public void PlayMusic(string music)
-    //{
-    //    AudioManagerSecuencia6.instance.PlayMusic(music);
-    //}
+    public void PlayMusic(string music)
+    {
+        AudioManagerSecuencia8.instance.PlayMusic(music, volumeMusic);
+    }
 
     public void ChangeVolumeMusic(float volume)
     {
-        volume = volumeMusic;
+        volumeMusic = volume;
     }
 
     public void StopAllMusic()
