@@ -2860,7 +2860,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 59409385}
         m_TargetAssemblyTypeName: PlaySoundSecuencia8, Assembly-CSharp
-        m_MethodName: PlaySFX3
+        m_MethodName: PlayTransition
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4572,7 +4572,7 @@ MonoBehaviour:
   targetGO: {fileID: 0}
   tweenTargetIsTargetGO: 1
   delay: 0
-  duration: 8
+  duration: 16
   easeType: 1
   easeCurve:
     serializedVersion: 2
@@ -4785,85 +4785,6 @@ Transform:
   m_Father: {fileID: 974285676}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 36.116, y: -30, z: 0}
---- !u!1001 &1757559042
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1261706723861835227, guid: 85b5311b1f96f1a478a671fb284c26fc,
-        type: 3}
-      propertyPath: m_Name
-      value: AudioManagerSecuencia8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2033097244184914141, guid: 85b5311b1f96f1a478a671fb284c26fc,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2695339371752545970, guid: 85b5311b1f96f1a478a671fb284c26fc,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 2695339371752545970, guid: 85b5311b1f96f1a478a671fb284c26fc,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 689.87775
-      objectReference: {fileID: 0}
-    - target: {fileID: 2695339371752545970, guid: 85b5311b1f96f1a478a671fb284c26fc,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 387.8537
-      objectReference: {fileID: 0}
-    - target: {fileID: 2695339371752545970, guid: 85b5311b1f96f1a478a671fb284c26fc,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6.1774817
-      objectReference: {fileID: 0}
-    - target: {fileID: 2695339371752545970, guid: 85b5311b1f96f1a478a671fb284c26fc,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2695339371752545970, guid: 85b5311b1f96f1a478a671fb284c26fc,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2695339371752545970, guid: 85b5311b1f96f1a478a671fb284c26fc,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2695339371752545970, guid: 85b5311b1f96f1a478a671fb284c26fc,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2695339371752545970, guid: 85b5311b1f96f1a478a671fb284c26fc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2695339371752545970, guid: 85b5311b1f96f1a478a671fb284c26fc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2695339371752545970, guid: 85b5311b1f96f1a478a671fb284c26fc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2033097244184914141, guid: 85b5311b1f96f1a478a671fb284c26fc, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 85b5311b1f96f1a478a671fb284c26fc, type: 3}
 --- !u!1001 &1816801236
 PrefabInstance:
   m_ObjectHideFlags: 0
