@@ -64,11 +64,11 @@ public class ItemSlot : EventTrigger
             //miramos si nuestra pos hueco al quue vamos a ir coincidio con algun disco
             //si coincidio eentonces 2 discos tendrán misma posicion y no podemos permitir ese movimiento
             //COMPROBACION EXTRA
-            if (_myGameManagerHanoi.ComprobarSihayDiscoEnPos(huecoLibre.transform))
-            {
-                posibilidadDiscoEncima = false;
-                //para que así vuelva a su sitio
-            }
+            //if (_myGameManagerHanoi.ComprobarSihayDiscoEnPos(huecoLibre.transform))
+            //{
+            //    posibilidadDiscoEncima = false;
+            //    //para que así vuelva a su sitio
+            //}
 
 
             //si es true se hace todo normal, o si el palo está vacio
