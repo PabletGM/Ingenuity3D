@@ -49,6 +49,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         ultimaPos = transform.position;
         //registra width del disco
         widthDisco = this.gameObject.GetComponent<RectTransform>().sizeDelta.x;
+        this.gameObject.GetComponent<RectTransform>().position = ultimaPosicionSeleccionadaUltimoDisco.transform.position;
         ultimaPosicionSeleccionadaUltimoDisco = _myGameManagerHanoi.BuscandoHuecoConPosicion(ultimaPos);
         //ponemos disco entero
         this.gameObject.GetComponent<Image>().sprite = discoMetidoEnPalo;
