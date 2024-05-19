@@ -43,7 +43,7 @@ public class AudioManagerBengalas : MonoBehaviour
 
     private void Start()
     {
-       //PlayMusicNature();
+        //PlayMusicNature();
     }
 
     public void PlayMusicNature()
