@@ -544,8 +544,8 @@ public class UIManagerLogin : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene("Intro");
-                //SceneManager.LoadScene("6.1RobotInterrumpe");
+                //SceneManager.LoadScene("Intro");
+                SceneManager.LoadScene("4.1TareasReparacionDialogo");
             }
         }
 
