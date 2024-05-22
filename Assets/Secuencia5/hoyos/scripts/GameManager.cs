@@ -88,12 +88,8 @@ public class GameManager : MonoBehaviour
             {
                 //quitamos el interactable de su boton
                 buttons[i].GetComponent<Button>().interactable = false;
-            }
-
-            
-           
-        }
-       
+            } 
+        }       
     }
 
     //segun el booleano que se pase se activará en el boton selected el isInteractable o no para así solo se pueda presionar en el pico mientras no hace animacion

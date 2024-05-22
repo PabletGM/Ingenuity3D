@@ -1090,13 +1090,6 @@ public class GameManagerHanoi : MonoBehaviour
 
     }
 
-    //en todo momento sabemos cual es el disco que está mas arriba en cada palo
-    void Update()
-    {
-
-        //si se quedan 2 discos en 1 posicion lo resuelve y sube uno a la siguiente pos
-        //MismaPosicionDiscoMismoPalo();
-    }
 
     public GameObject BuscarDiscoSegunNombre(string discoName)
     {
