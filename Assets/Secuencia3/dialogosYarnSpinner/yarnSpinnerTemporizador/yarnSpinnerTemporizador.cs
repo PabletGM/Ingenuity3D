@@ -14,7 +14,7 @@ public class yarnSpinnerTemporizador : MonoBehaviour
     // Método principal que se ejecuta al iniciar el script
     void Start()
     {
-        Debug.Log(pasarSiguienteTexto);
+        //Debug.Log(pasarSiguienteTexto);
         // Iniciar la corrutina
         StartCoroutine(RealizarAccionPasarSiguienteTexto());
     }
@@ -29,6 +29,7 @@ public class yarnSpinnerTemporizador : MonoBehaviour
 
             // Esperar x segundos antes de realizar la próxima acción
             yield return new WaitForSeconds(contadorPasarSiguienteTexto);
+            RealizarAccionPasarSiguienteTexto();
         }
     }
 }
