@@ -18,9 +18,9 @@ public class TimeController : MonoBehaviour
 
     GameManager _myGameManager;
 
-    CapacidadAdaptacionManager _myCapacidadAdaptacionManager;
+    //CapacidadAdaptacionManager _myCapacidadAdaptacionManager;
 
-    ConfianzaManager _myConfianzaManager;
+    //ConfianzaManager _myConfianzaManager;
 
     private string testActualCapacidadAdaptacion = "test1";
     private string testActualConfianza = "test1";
@@ -59,7 +59,7 @@ public class TimeController : MonoBehaviour
         //    ActivarTimer();
         //}
         //si es en circulos
-        else if(SceneManager.GetActiveScene().name == "circulosNave")
+        if(SceneManager.GetActiveScene().name == "circulosNave")
         {
             ActivarTimer();
         }
@@ -108,32 +108,32 @@ public class TimeController : MonoBehaviour
         }
         else if(SceneManager.GetActiveScene().name == "capacidadDeAdaptacion")
         {
-            //test1 Capacidad adaptacion
-            if(TestActualCapacidadAdaptacion() == "test1")
-            {
+            ////test1 Capacidad adaptacion
+            //if(TestActualCapacidadAdaptacion() == "test1")
+            //{
                 
-                //test1 capacidad adaptacion
-                _myCapacidadAdaptacionManager.NumSecsPartidaCapacidad1((int)restante);
-            }
-            else if(TestActualCapacidadAdaptacion() == "test2")
-            {
-                //test2 capacidad adaptacion
-                _myCapacidadAdaptacionManager.NumSecsPartidaCapacidad2((int)restante);
-            }
+            //    //test1 capacidad adaptacion
+            //    _myCapacidadAdaptacionManager.NumSecsPartidaCapacidad1((int)restante);
+            //}
+            //else if(TestActualCapacidadAdaptacion() == "test2")
+            //{
+            //    //test2 capacidad adaptacion
+            //    _myCapacidadAdaptacionManager.NumSecsPartidaCapacidad2((int)restante);
+            //}
         }
         else if (SceneManager.GetActiveScene().name == "confianza")
         {
-            //test1 Capacidad adaptacion
-            if (TestActualConfianza() == "test1")
-            {
-                //test1 capacidad adaptacion
-                _myConfianzaManager.NumSecsPartidaConfianza1((int)restante);
-            }
-            else if (TestActualConfianza() == "test2")
-            {
-                //test2 capacidad adaptacion
-                _myConfianzaManager.NumSecsPartidaConfianza2((int)restante);
-            }
+            ////test1 Capacidad adaptacion
+            //if (TestActualConfianza() == "test1")
+            //{
+            //    //test1 capacidad adaptacion
+            //    _myConfianzaManager.NumSecsPartidaConfianza1((int)restante);
+            //}
+            //else if (TestActualConfianza() == "test2")
+            //{
+            //    //test2 capacidad adaptacion
+            //    _myConfianzaManager.NumSecsPartidaConfianza2((int)restante);
+            //}
             
         }
         else if(SceneManager.GetActiveScene().name == "TareaBengalasGame")

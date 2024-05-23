@@ -774,10 +774,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 3292657646989946650}
-  optionViewPrefab: {fileID: 5665317717604146022, guid: 3ff4e0d87ab7d4789a1565ac303e8261, type: 3}
-  lastLineText: {fileID: 3292657646415102837}
+  optionViewPrefab: {fileID: 5665317717604146022, guid: 3ff4e0d87ab7d4789a1565ac303e8261,
+    type: 3}
+  palette: {fileID: 0}
   fadeTime: 0.1
   showUnavailableOptions: 0
+  lastLineText: {fileID: 3292657646415102837}
+  lastLineContainer: {fileID: 0}
+  lastLineCharacterNameText: {fileID: 0}
+  lastLineCharacterNameContainer: {fileID: 0}
 --- !u!225 &3292657646989946650
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -925,7 +930,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yarnProject: {fileID: 7545569452688597077, guid: cca77789b2f76f54f93ed6cd953ac404, type: 3}
+  yarnProject: {fileID: 7545569452688597077, guid: cca77789b2f76f54f93ed6cd953ac404,
+    type: 3}
   _variableStorage: {fileID: 3831113770799361710}
   dialogueViews:
   - {fileID: 7778558436156463853}
@@ -1890,14 +1896,22 @@ MonoBehaviour:
   lineText: {fileID: 7778558436030263635}
   showCharacterNameInLineView: 1
   characterNameText: {fileID: 7778558434670733629}
+  characterNameContainer: {fileID: 0}
   useTypewriterEffect: 1
   onCharacterTyped:
+    m_PersistentCalls:
+      m_Calls: []
+  onPauseStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onPauseEnded:
     m_PersistentCalls:
       m_Calls: []
   typewriterEffectSpeed: 120
   continueButton: {fileID: 7778558436020692681}
   holdTime: 1
   autoAdvance: 0
+  palette: {fileID: 0}
 --- !u!114 &7778558436156463854
 MonoBehaviour:
   m_ObjectHideFlags: 0
