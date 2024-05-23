@@ -52,12 +52,12 @@ public class TimeController : MonoBehaviour
         _myGameManagerBengalas = GameManagerTareaBengalas.GetInstanceGM();
         _myGameManager = GameManager.GetInstance();
         //si la escena activa es CapacidadAdaptacion o confianza se llama al timer inmediatamente
-        if(SceneManager.GetActiveScene().name =="capacidadDeAdaptacion" || SceneManager.GetActiveScene().name == "confianza")
-        {
-            _myCapacidadAdaptacionManager = CapacidadAdaptacionManager.GetInstanceCapacidadAdaptacionManager();
-            _myConfianzaManager = ConfianzaManager.GetInstanceConfianzaManager();
-            ActivarTimer();
-        }
+        //if(SceneManager.GetActiveScene().name =="capacidadDeAdaptacion" || SceneManager.GetActiveScene().name == "confianza")
+        //{
+        //    _myCapacidadAdaptacionManager = CapacidadAdaptacionManager.GetInstanceCapacidadAdaptacionManager();
+        //    _myConfianzaManager = ConfianzaManager.GetInstanceConfianzaManager();
+        //    ActivarTimer();
+        //}
         //si es en circulos
         else if(SceneManager.GetActiveScene().name == "circulosNave")
         {
