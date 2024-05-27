@@ -18,6 +18,7 @@ public class UIManagerLogin : MonoBehaviour
 
     private string access_tokenEntreEscenas = "";
 
+
     #region CambiarPanelLoginRegister
     [SerializeField]
     private GameObject loginPanel;
@@ -54,8 +55,8 @@ public class UIManagerLogin : MonoBehaviour
     [SerializeField]
     private TMP_InputField lastName;
 
-    [SerializeField]
-    private TMP_InputField age;
+    //[SerializeField]
+    //private TMP_InputField age;
 
     [SerializeField]
     private TMP_InputField passwordRegister;
@@ -101,6 +102,8 @@ public class UIManagerLogin : MonoBehaviour
     
     #endregion
 
+
+    //inicializa uri del register y login
     private void Awake()
     {
         uriRegisterBackend = uriBackend + uriRegister;
@@ -118,6 +121,7 @@ public class UIManagerLogin : MonoBehaviour
         }
     }
 
+    //instancia
     static public UIManagerLogin GetInstanceUI()
     {
         return _instanceUILogin;
@@ -435,7 +439,14 @@ public class UIManagerLogin : MonoBehaviour
                     RegisterCorrecto("el register se ha hecho correctamente");
                     break;
 
+                case "HTTP/1.1 406 Not Acceptable":
+                    Debug.Log("Error desconocido");
+                    ErrorCreacionUsuarioRegister("Error 406");
+                    break;
                 
+
+
+
                 default:
                         Console.WriteLine("It's something else.");
                         break;
@@ -457,6 +468,11 @@ public class UIManagerLogin : MonoBehaviour
 
         //metodo que escribe por pantalla login correcto
         public void RegisterCorrecto(string mensaje)
+        {
+            CambiarMensajeRegister(mensaje);
+        }
+
+        public void Error406(string mensaje)
         {
             CambiarMensajeRegister(mensaje);
         }
@@ -529,12 +545,15 @@ public class UIManagerLogin : MonoBehaviour
 
         string body = $"{{ \"processId\": \"{processIdLogin.text}\"}}";
 
+        loading.SetActive(true);
+
         using (UnityWebRequest request = UnityWebRequest.Post(uriStartGameBackend, body, "application/json"))
         {
             //porque tiene candado necesita token con acceso 
             request.SetRequestHeader("Authorization", "Bearer " + access_tokenEntreEscenas);
             request.SetRequestHeader("Content-Type", "application/json");
-           
+
+            
             yield return request.SendWebRequest();
 
             if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
@@ -544,8 +563,8 @@ public class UIManagerLogin : MonoBehaviour
             }
             else
             {
-                //SceneManager.LoadScene("Intro");
-                SceneManager.LoadScene("9.1");
+                SceneManager.LoadScene("Intro");
+                //SceneManager.LoadScene("9.1");
             }
         }
 
