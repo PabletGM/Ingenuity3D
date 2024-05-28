@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+
 public class EleccionGenero : MonoBehaviour
 {
     [SerializeField]
@@ -10,10 +11,20 @@ public class EleccionGenero : MonoBehaviour
 
     private string actualGender;
 
+    public List<string> generosLista;
+
+
     private void Start()
     {
+        //initiliace list
+        generosLista=new List<string>();
+        //add generos
+        //init actualGender
         actualGender = "Masculino";
     }
+
+
+  
 
     public void ChangeGender()
     {
@@ -24,8 +35,15 @@ public class EleccionGenero : MonoBehaviour
         }
         else if (actualGender == "Femenino")
         {
+            genderToChange.text = "Otro";
+            actualGender = "Otro";
+        }
+        else if (actualGender == "Otro")
+        {
             genderToChange.text = "Masculino";
             actualGender = "Masculino";
         }
     }
+
+   
 }
