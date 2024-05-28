@@ -55,6 +55,18 @@ public class UIManagerLogin : MonoBehaviour
     [SerializeField]
     private TMP_InputField lastName;
 
+    [SerializeField]
+    private TMP_InputField name;
+
+    [SerializeField]
+    private TMP_InputField surname;
+
+    [SerializeField]
+    private TMP_InputField IDRegister;
+
+
+
+
     //[SerializeField]
     //private TMP_InputField age;
 
@@ -65,6 +77,8 @@ public class UIManagerLogin : MonoBehaviour
     private TMP_InputField confirmPasswordRegister;
 
     private int numeroCaracteresMinContraseñaRegister = 4;
+
+    
 
     #endregion
 
@@ -78,6 +92,9 @@ public class UIManagerLogin : MonoBehaviour
 
     [SerializeField]
     private TMP_InputField processIdLogin;
+
+    [SerializeField]
+    private TMP_InputField couponCodeLogin;
 
     [SerializeField]
     private GameObject loading;
@@ -99,7 +116,10 @@ public class UIManagerLogin : MonoBehaviour
     private string uriLoginBackend;
     private string uriRegister = "Users/register";
     private string uriLogin = "Users/login";
-    
+
+    private string uriLoginCoupon = "Users/couponLogin";
+    private string uriRegisterCoupon = "Users/registerv2";
+
     #endregion
 
 
@@ -162,11 +182,25 @@ public class UIManagerLogin : MonoBehaviour
             StartCoroutine(PostRegister(userNameRegister.text, emailRegister.text, passwordRegister.text, company.text));
         }
 
+        [Obsolete]
+        public void DebugLoginCouponParameters()
+        {
+            //metodo que envia a la base de datos un post del Login
+            StartCoroutine(CouponLogin(couponCodeLogin.text));
+        }
+
+        //metodo que escribe parametros de Registers
+        [Obsolete]
+        public void DebugRegisterCouponParameters()
+        {
+            StartCoroutine(PostRegisterCoupon(name.text, surname.text, emailRegister.text, IDRegister.text));
+        }
+
     #endregion
 
     #region ExecuteLoginRegister
-    
-        [Obsolete]
+
+    [Obsolete]
         IEnumerator PostLogin(string email, string passwordLogin)
         {
             // Crear formulario con los datos, todo en minusculas , porque va predefinido el formulario y username esta vez en minuscula
@@ -207,61 +241,136 @@ public class UIManagerLogin : MonoBehaviour
         }
 
 
+    [Obsolete]
+    IEnumerator CouponLogin(string couponCode)
+    {
+
+        // Cambia esto al valor adecuado de la edad
+        string body;
+
+        body = $@"{{
+                            ""couponCode"": ""{couponCode}"",
+                          
+                        }}";
+
+
+        using (UnityWebRequest request = UnityWebRequest.Post(uriLoginCoupon, body, "application/json"))
+        {
+
+            yield return request.SendWebRequest();
+
+           
+            if (request.isNetworkError || request.isHttpError)
+            {
+                
+                errorCode = request.error;
+                //segunda barrera de seguridad, fallo numerico
+                TiposFalloCouponNumerico(errorCode);
+            }
+            else
+            {
+
+                ComprobacionAccessTokenLoginCorrect(request.downloadHandler.text);
+                //next Scene
+                StartCoroutine(CreateNewGame());
+            }
+        }
+    }
+
         public void Loading()
         {
             //activamos loading
             loading.SetActive(true);
         }
 
-        [Obsolete]
-        IEnumerator PostRegister(string userNameRegister, string email, string passwordRegister, string company)
-        {
+    [Obsolete]
+    IEnumerator PostRegister(string userNameRegister, string email, string passwordRegister, string company)
+    {
 
-                // Cambia esto al valor adecuado de la edad
-                string body;
+            // Cambia esto al valor adecuado de la edad
+            string body;
            
-            Debug.Log(email);
-                body = $@"{{
-                            ""email"": ""{email}"",
-                            ""firstName"": ""{firstName}"",
-                            ""lastName"": ""{lastName}"",
-                            ""password"": ""{passwordRegister}""
-                        }}";
+        Debug.Log(email);
+            body = $@"{{
+                        ""email"": ""{email}"",
+                        ""firstName"": ""{firstName}"",
+                        ""lastName"": ""{lastName}"",
+                        ""password"": ""{passwordRegister}""
+                    }}";
 
-            using (UnityWebRequest request = UnityWebRequest.Post(uriRegisterBackend, body, "application/json"))
-            {
-                yield return request.SendWebRequest();
+        using (UnityWebRequest request = UnityWebRequest.Post(uriRegisterBackend, body, "application/json"))
+        {
+            yield return request.SendWebRequest();
               
 
-                //primera barrera de seguridad para ver fallo
-                TipoFalloDetailRegister(request.downloadHandler.text);
+            //primera barrera de seguridad para ver fallo
+            TipoFalloDetailRegister(request.downloadHandler.text);
 
-                //si es incorrecto, esto es si solicitud no llega a base de datos
-                if (request.isNetworkError || request.isHttpError)
-                {  
-                    //ponemos errorCode
-                    errorCode = request.error;
-                    TiposFalloRegisterNumerico(errorCode);
-                    Debug.Log(errorCode);
-                }
-                //si la solicitud llega a base de datos vemos el texto que devuelve
-                else
-                {
-                    
-                    //comprobamos si es correcto el register
-                    Comprobacion201RegisterCorrect(request.downloadHandler.text);
-                    //vamos al login
-                    Invoke("OpenLoginPanel", 1f);
-                    
-                }
+            //si es incorrecto, esto es si solicitud no llega a base de datos
+            if (request.isNetworkError || request.isHttpError)
+            {  
+                //ponemos errorCode
+                errorCode = request.error;
+                TiposFalloRegisterNumerico(errorCode);
+                Debug.Log(errorCode);
             }
-
+            //si la solicitud llega a base de datos vemos el texto que devuelve
+            else
+            {
+                    
+                //comprobamos si es correcto el register
+                Comprobacion201RegisterCorrect(request.downloadHandler.text);
+                //vamos al login
+                Invoke("OpenLoginPanel", 1f);
+                    
+            }
         }
+
+    }
+
+
+    [Obsolete]
+    IEnumerator PostRegisterCoupon(string name, string surname, string email, string IDProcess)
+    {
+
+        // Cambia esto al valor adecuado de la edad
+        string body;
+
+        Debug.Log(email);
+        body = $@"{{
+                            ""email"": ""{email}"",
+                            ""firstName"": ""{name}"",
+                            ""lastName"": ""{surname}"",
+                            ""couponCode"": ""{IDProcess}""
+                        }}";
+
+        using (UnityWebRequest request = UnityWebRequest.Post(uriRegisterCoupon, body, "application/json"))
+        {
+            yield return request.SendWebRequest();
+
+            //si es incorrecto, esto es si solicitud no llega a base de datos
+            if (request.isNetworkError || request.isHttpError)
+            {
+                //ponemos errorCode
+                errorCode = request.error;
+                TiposFalloCouponNumerico(errorCode);
+                Debug.Log(errorCode);
+            }
+            //si la solicitud llega a base de datos vemos el texto que devuelve
+            else
+            {
+
+                //comprobamos si es correcto el register
+                Comprobacion201RegisterCorrect(request.downloadHandler.text);
+                //nextScene
+            }
+        }
+    }
 
     #endregion
 
 
-   
+
 
     #region ComprobationLoginRegisterCorrect
     //metodo que mira a ver si lo que ha devuelto el register es un codigo 201, esto es register correct
@@ -379,6 +488,10 @@ public class UIManagerLogin : MonoBehaviour
                     break;
             }
         }
+
+        
+
+    
     #endregion
 
     #region TiposRegisterIncorrecto
@@ -416,6 +529,9 @@ public class UIManagerLogin : MonoBehaviour
             }
 
         }
+
+
+        
         public void TiposFalloRegisterNumerico(string errorCode)
         {
             
@@ -453,8 +569,53 @@ public class UIManagerLogin : MonoBehaviour
             }
         }
 
-        //metodo que escribe por pantalla contraseña incorrecta
-        public void UsuarioYaExiste(string mensaje)
+
+    public void TiposFalloCouponNumerico(string errorCode)
+    {
+
+        switch (errorCode)
+        {
+            //usuario ya existe
+            case "HTTP/1.1 409 Conflict":
+                //fallo de register porque usuario ya existente
+                Debug.Log("Usuario ya existe");
+                UsuarioYaExiste("Usuario ya existe");
+                break;
+
+            //error en creacion de usuario y solicutud register
+            case "HTTP/1.1 422 Unprocessable Entity":
+                Debug.Log("Error en creacion de usuario, que todo tenga 3 caracteres minimo");
+                ErrorCreacionUsuarioRegister("Error, que todo tenga 3 caracteres minimo");
+                break;
+
+            case "Status Code: 201":
+                Debug.Log("BIEN...el register se ha hecho correctamente, ahora login...");
+                RegisterCorrecto("el register se ha hecho correctamente");
+                break;
+
+            case "HTTP/1.1 406 Not Acceptable":
+                Debug.Log("Error desconocido");
+                ErrorCreacionUsuarioRegister("Error 406");
+                break;
+
+            case "HTTP/1.1 304 Not Modified":
+                Debug.Log("Error desconocido");
+                ErrorCreacionUsuarioRegister("Error 304");
+                break;
+
+            case "HTTP/1.1 404 Not found":
+                Debug.Log("Error desconocido");
+                ErrorCreacionUsuarioRegister("Error 404");
+                break;
+
+            default:
+                Console.WriteLine("It's something else.");
+                break;
+        }
+    }
+
+    //metodo que escribe por pantalla contraseña incorrecta
+    public void UsuarioYaExiste(string mensaje)
         {
             CambiarMensajeRegister(mensaje);
             
