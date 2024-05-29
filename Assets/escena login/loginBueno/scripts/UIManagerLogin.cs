@@ -19,12 +19,24 @@ public class UIManagerLogin : MonoBehaviour
     private string access_tokenEntreEscenas = "";
 
 
-    #region CambiarPanelLoginRegister
+    #region CambiarPanelLoginRegisterGenderHistory
     [SerializeField]
     private GameObject loginPanel;
 
     [SerializeField]
     private GameObject registrationPanel;
+
+    [SerializeField]
+    private GameObject genderPanelLogin;
+
+    [SerializeField]
+    private GameObject HistoryPanelLogin;
+
+    [SerializeField]
+    private GameObject genderPanelRegister;
+
+    [SerializeField]
+    private GameObject HistoryPanelRegister;
 
 
     [SerializeField]
@@ -163,12 +175,48 @@ public class UIManagerLogin : MonoBehaviour
         loginPanel.SetActive(false);
     }
 
+    public void OpenGenderPanelLogin()
+    {
+        registrationPanel.SetActive(false);
+        loginPanel.SetActive(false);
+
+        genderPanelLogin.SetActive(true);
+    }
+
+    public void OpenHistoryPanelLogin()
+    {
+        registrationPanel.SetActive(false);
+        loginPanel.SetActive(false);
+        genderPanelLogin.SetActive(false);
+
+        HistoryPanelLogin.SetActive(true);
+    }
+
+    public void OpenGenderPanelRegister()
+    {
+        registrationPanel.SetActive(false);
+        loginPanel.SetActive(false);
+
+        genderPanelRegister.SetActive(true);
+    }
+
+    public void OpenHistoryPanelRegister()
+    {
+        registrationPanel.SetActive(false);
+        loginPanel.SetActive(false);
+        genderPanelRegister.SetActive(false);
+
+        HistoryPanelRegister.SetActive(true);
+    }
+
+
+
     #endregion
 
     #region DebugLoginRegister
 
-        //metodo que escribe parametros de Login
-        [Obsolete]
+    //metodo que escribe parametros de Login
+    [Obsolete]
         public void DebugLoginParameters()
         {
             //metodo que envia a la base de datos un post del Login
@@ -182,18 +230,20 @@ public class UIManagerLogin : MonoBehaviour
             StartCoroutine(PostRegister(userNameRegister.text, emailRegister.text, passwordRegister.text, company.text));
         }
 
-        [Obsolete]
+        
         public void DebugLoginCouponParameters()
         {
             //metodo que envia a la base de datos un post del Login
             StartCoroutine(CouponLogin(couponCodeLogin.text));
+            
         }
 
         //metodo que escribe parametros de Registers
-        [Obsolete]
+        
         public void DebugRegisterCouponParameters()
         {
             StartCoroutine(PostRegisterCoupon(name.text, surname.text, emailRegister.text, IDRegister.text));
+            
         }
 
     #endregion
