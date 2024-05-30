@@ -11,25 +11,27 @@ public class yarnSpinnerTemporizador : MonoBehaviour
     [SerializeField]
     private LineView pasarSiguienteTexto;
 
+    public float actualTime = 0;
+
     // Método principal que se ejecuta al iniciar el script
-    void Start()
+   
+
+    private void Update()
     {
-        //Debug.Log(pasarSiguienteTexto);
-        // Iniciar la corrutina
-        StartCoroutine(RealizarAccionPasarSiguienteTexto());
+        //si supera tiempo maximo
+        if(actualTime >= contadorPasarSiguienteTexto)
+        {
+            // Realizar la acción click automatica
+            pasarSiguienteTexto.OnContinueClicked();
+            //reinicia contador
+            actualTime = 0;
+        }
+        //suma al contador
+        actualTime += Time.deltaTime;
     }
 
-    // Corrutina que realiza una acción cada 6 segundos
-    IEnumerator RealizarAccionPasarSiguienteTexto()
+    public void ReiniciarTimer()
     {
-        while (true)
-        {
-            // Realizar la acción aquí
-            pasarSiguienteTexto.OnContinueClicked();
-
-            // Esperar x segundos antes de realizar la próxima acción
-            yield return new WaitForSeconds(contadorPasarSiguienteTexto);
-            RealizarAccionPasarSiguienteTexto();
-        }
+        actualTime = 0;
     }
 }
