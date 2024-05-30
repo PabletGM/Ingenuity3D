@@ -1832,6 +1832,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -6341680641571132688, guid: a14aee02f030d4a4ba85660c69149562,
         type: 2}
+    - target: {fileID: 8783212017482056793, guid: 9e0841b82a4ebcd438730d23886e17e6,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783212017482056793, guid: 9e0841b82a4ebcd438730d23886e17e6,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783212017482056793, guid: 9e0841b82a4ebcd438730d23886e17e6,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1272258116}
+    - target: {fileID: 8783212017482056793, guid: 9e0841b82a4ebcd438730d23886e17e6,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783212017482056793, guid: 9e0841b82a4ebcd438730d23886e17e6,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ReiniciarTimer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783212017482056793, guid: 9e0841b82a4ebcd438730d23886e17e6,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: yarnSpinnerTemporizador, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783212017482056793, guid: 9e0841b82a4ebcd438730d23886e17e6,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 9184206409336196516, guid: 9e0841b82a4ebcd438730d23886e17e6,
         type: 3}
       propertyPath: m_text
@@ -1952,6 +1987,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contadorPasarSiguienteTexto: 10
   pasarSiguienteTexto: {fileID: 1272258112}
+  actualTime: 0
 --- !u!1001 &1503354553
 PrefabInstance:
   m_ObjectHideFlags: 0
