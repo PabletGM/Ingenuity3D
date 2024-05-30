@@ -4098,6 +4098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contadorPasarSiguienteTexto: 10
   pasarSiguienteTexto: {fileID: 6798407037677481600}
+  actualTime: 0
 --- !u!1 &703850769
 GameObject:
   m_ObjectHideFlags: 0
@@ -6935,6 +6936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contadorPasarSiguienteTexto: 10
   pasarSiguienteTexto: {fileID: 6798407036022748473}
+  actualTime: 0
 --- !u!1 &1300534867
 GameObject:
   m_ObjectHideFlags: 0
@@ -14613,6 +14615,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1273297588}
+          m_TargetAssemblyTypeName: yarnSpinnerTemporizador, Assembly-CSharp
+          m_MethodName: ReiniciarTimer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &8783212017080067402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14633,6 +14647,18 @@ MonoBehaviour:
         - m_Target: {fileID: 6798407037677481600}
           m_TargetAssemblyTypeName: Yarn.Unity.LineView, YarnSpinner.Unity
           m_MethodName: OnContinueClicked
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 671752477}
+          m_TargetAssemblyTypeName: yarnSpinnerTemporizador, Assembly-CSharp
+          m_MethodName: ReiniciarTimer
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
