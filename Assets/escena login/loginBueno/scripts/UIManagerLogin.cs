@@ -131,6 +131,7 @@ public class UIManagerLogin : MonoBehaviour
 
     private string uriLoginCoupon = "Users/couponLogin";
     private string uriRegisterCoupon = "Users/registerv2";
+    private string uriGenreUpdate = "Users/me/updateInfo";
 
     #endregion
 
@@ -230,12 +231,13 @@ public class UIManagerLogin : MonoBehaviour
             StartCoroutine(PostRegister(userNameRegister.text, emailRegister.text, passwordRegister.text, company.text));
         }
 
-        
+        [Obsolete]
         public void DebugLoginCouponParameters()
         {
             //metodo que envia a la base de datos un post del Login
+            //Debug.Log(couponCodeLogin.text);
             StartCoroutine(CouponLogin(couponCodeLogin.text));
-            
+
         }
 
         //metodo que escribe parametros de Registers
@@ -297,29 +299,30 @@ public class UIManagerLogin : MonoBehaviour
 
         // Cambia esto al valor adecuado de la edad
         string body;
-
+        
         body = $@"{{
                             ""couponCode"": ""{couponCode}"",
                           
                         }}";
 
-
+        
         using (UnityWebRequest request = UnityWebRequest.Post(uriLoginCoupon, body, "application/json"))
         {
 
             yield return request.SendWebRequest();
-
            
+
             if (request.isNetworkError || request.isHttpError)
             {
                 
                 errorCode = request.error;
+                Debug.Log(errorCode);
                 //segunda barrera de seguridad, fallo numerico
                 TiposFalloCouponNumerico(errorCode);
             }
             else
             {
-
+                Debug.Log("entra");
                 ComprobacionAccessTokenLoginCorrect(request.downloadHandler.text);
                 //next Scene
                 StartCoroutine(CreateNewGame());
@@ -747,6 +750,7 @@ public class UIManagerLogin : MonoBehaviour
 
     IEnumerator CreateNewGame()
     {
+        Debug.Log("entra2");
 
         string uriStartGameBackend = uriBackend + "Users/me/startGame";
         
@@ -774,8 +778,8 @@ public class UIManagerLogin : MonoBehaviour
             }
             else
             {
-                //SceneManager.LoadScene("Intro");
-                SceneManager.LoadScene("escenaIntro");
+                SceneManager.LoadScene("3.10");
+                //SceneManager.LoadScene("escenaIntro");
             }
         }
 
