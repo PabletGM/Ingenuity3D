@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
+
 //script que hará el feedback visual del boton cuando está pulsado
 public class SelectedButton : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class SelectedButton : MonoBehaviour
         Selected = isSelected;
         //se hace mas grande la pala correspondiente y el resto se quedan normales
         _myGameManager.ChangeBiggerPala(aumentoSize, this);
+        
 
     }
     // Start is called before the first frame update

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class DesbloquearSiguiente : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class DesbloquearSiguiente : MonoBehaviour
         botonSiguienteExcavacion.GetComponent<Image>().sprite = pico;
         //hacemos boton interactuable
         botonSiguienteExcavacion.GetComponent<Button>().interactable = true;
+        
+        
 
     }
 }
