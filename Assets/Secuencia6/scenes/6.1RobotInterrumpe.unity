@@ -1069,7 +1069,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateType: 0
   isSpeedBased: 0
-  hasOnStart: 0
+  hasOnStart: 1
   hasOnPlay: 0
   hasOnUpdate: 0
   hasOnStepComplete: 0
@@ -1078,7 +1078,19 @@ MonoBehaviour:
   hasOnRewind: 0
   onStart:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onPlay:
     m_PersistentCalls:
       m_Calls: []
@@ -1113,7 +1125,7 @@ MonoBehaviour:
   targetGO: {fileID: 0}
   tweenTargetIsTargetGO: 1
   delay: 0
-  duration: 1
+  duration: 2
   easeType: 6
   easeCurve:
     serializedVersion: 2
@@ -2811,6 +2823,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2117830480828975049, guid: 4ad824ffc19bd9a4fa70c8a747af3c17,
+        type: 3}
+      propertyPath: sfxSounds.Array.size
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2117830480828975049, guid: 4ad824ffc19bd9a4fa70c8a747af3c17,
+        type: 3}
+      propertyPath: sfxSounds.Array.data[27].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: fbdd36f488c909f41aa149ed0355a918, type: 3}
+    - target: {fileID: 2117830480828975049, guid: 4ad824ffc19bd9a4fa70c8a747af3c17,
+        type: 3}
+      propertyPath: sfxSounds.Array.data[27].name
+      value: alarma
+      objectReference: {fileID: 0}
     - target: {fileID: 4216342990802428160, guid: 4ad824ffc19bd9a4fa70c8a747af3c17,
         type: 3}
       propertyPath: m_Name

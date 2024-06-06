@@ -753,12 +753,16 @@ public class UIManagerLogin : MonoBehaviour
         Debug.Log("entra2");
 
         string uriStartGameBackend = uriBackend + "Users/me/startGame";
-        
+
         //string body = $@"{{
-        //            ""processId"": ""{processIdText}""
+        //            ""processId"": ""{processIdLogin.text}""
         //        }}";
 
-        string body = $"{{ \"processId\": \"{processIdLogin.text}\"}}";
+        string body = $@"{{
+                   
+                }}";
+
+        //string body = $"{{ \"processId\": \"{processIdLogin.text}\"}}";
 
         loading.SetActive(true);
 
@@ -778,8 +782,8 @@ public class UIManagerLogin : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene("3.10");
-                //SceneManager.LoadScene("escenaIntro");
+                //SceneManager.LoadScene("3.10");
+                SceneManager.LoadScene("escenaIntro");
             }
         }
 
