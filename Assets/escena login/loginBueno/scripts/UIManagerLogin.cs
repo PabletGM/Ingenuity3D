@@ -754,13 +754,23 @@ public class UIManagerLogin : MonoBehaviour
 
         string uriStartGameBackend = uriBackend + "Users/me/startGame";
 
-        //string body = $@"{{
-        //            ""processId"": ""{processIdLogin.text}""
-        //        }}";
+        string body;
 
-        string body = $@"{{
+        //if there is not processId
+        if(processIdLogin.text == "")
+        {
+             body = $@"{{
                    
                 }}";
+        }
+
+        else
+        {
+             body = $@"{{
+                        ""processId"": ""{processIdLogin.text}""
+              }}";  
+        }
+
 
         //string body = $"{{ \"processId\": \"{processIdLogin.text}\"}}";
 

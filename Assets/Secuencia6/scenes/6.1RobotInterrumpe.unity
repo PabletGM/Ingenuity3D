@@ -1079,16 +1079,16 @@ MonoBehaviour:
   onStart:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 854089698}
+        m_TargetAssemblyTypeName: PlaySoundSecuencia6, Assembly-CSharp
+        m_MethodName: PlaySFX3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: alarma
           m_BoolArgument: 0
         m_CallState: 2
   onPlay:
@@ -1113,6 +1113,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 854089698}
+        m_TargetAssemblyTypeName: PlaySoundSecuencia6, Assembly-CSharp
+        m_MethodName: stopSFX3
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: alarma
           m_BoolArgument: 1
         m_CallState: 2
   onTweenCreated:
@@ -2832,7 +2844,7 @@ PrefabInstance:
         type: 3}
       propertyPath: sfxSounds.Array.data[27].clip
       value: 
-      objectReference: {fileID: 8300000, guid: fbdd36f488c909f41aa149ed0355a918, type: 3}
+      objectReference: {fileID: 8300000, guid: 353cec88f65e4454599ccafdd1b2f5d4, type: 3}
     - target: {fileID: 2117830480828975049, guid: 4ad824ffc19bd9a4fa70c8a747af3c17,
         type: 3}
       propertyPath: sfxSounds.Array.data[27].name
