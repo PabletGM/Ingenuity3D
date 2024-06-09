@@ -792,8 +792,8 @@ public class UIManagerLogin : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene("8.0");
-                //SceneManager.LoadScene("escenaIntro");
+                //SceneManager.LoadScene("8.0");
+                SceneManager.LoadScene("Intro");
             }
         }
 
