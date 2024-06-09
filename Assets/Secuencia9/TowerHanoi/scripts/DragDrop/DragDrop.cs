@@ -226,7 +226,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     public void ComprobarLimites(PointerEventData eventData)
     {
-        if (eventData.delta.x >= -180 && eventData.delta.x <= 230 && eventData.delta.y >= -130 && eventData.delta.y <= 45 && rectTransform.anchoredPosition.x >= -180 && rectTransform.anchoredPosition.x <= 230 && rectTransform.anchoredPosition.y >= -130 && rectTransform.anchoredPosition.y <= 45)
+        if (eventData.delta.x >= -200 && eventData.delta.x <= 250 && eventData.delta.y >= -150 && eventData.delta.y <= 75 && rectTransform.anchoredPosition.x >= -200 && rectTransform.anchoredPosition.x <= 250 && rectTransform.anchoredPosition.y >= -150 && rectTransform.anchoredPosition.y <= 75)
         {
             //no sale de limites
             SetLimitesSuperados(false);
