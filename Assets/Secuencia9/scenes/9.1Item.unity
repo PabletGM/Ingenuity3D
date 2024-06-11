@@ -2491,7 +2491,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 906038557}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4166652337681838917, guid: 0311957f516547b40afe2f76d553d05c,
         type: 3}
@@ -6166,6 +6166,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[6].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2520473200346001888, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2520473200346001888, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -67
+      objectReference: {fileID: 0}
     - target: {fileID: 2694813141540597903, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
         type: 3}
       propertyPath: m_Name
@@ -6176,6 +6186,21 @@ PrefabInstance:
       propertyPath: m_text
       value: "Viendo todo lo que ha causado,\n \xBFQu\xE9 destino eliges para tu
         compa\xF1ero?\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2794560190621608355, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2794560190621608355, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2794560190621608355, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2997718980305905892, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
         type: 3}
@@ -6862,6 +6887,14 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4906254626042937732, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 364141163}
+    - targetCorrespondingSourceObject: {fileID: 4906254626042937732, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1522543782}
     - targetCorrespondingSourceObject: {fileID: 5180608755200626153, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
         type: 3}
       insertIndex: -1
@@ -6878,25 +6911,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 450939752}
-    - targetCorrespondingSourceObject: {fileID: 5604919202896989357, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 364141163}
-    - targetCorrespondingSourceObject: {fileID: 5604919202896989357, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1522543782}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b09d6ab0be214c4db8f7fe27233fe81, type: 3}
 --- !u!224 &906038556 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5180608755200626153, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
-    type: 3}
-  m_PrefabInstance: {fileID: 906038555}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &906038557 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5604919202896989357, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
     type: 3}
   m_PrefabInstance: {fileID: 906038555}
   m_PrefabAsset: {fileID: 0}
@@ -10419,7 +10438,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 906038557}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4166652337681838917, guid: 1e384f6f61a13c74783dc2d55d5dff1c,
         type: 3}
