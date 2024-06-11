@@ -11,12 +11,18 @@ using static System.Net.WebRequestMethods;
 
 public class UIManagerLogin : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject fadeIn;
+
+
     //singleton
     static private UIManagerLogin _instanceUILogin;
 
     private string errorCode = "";
 
     private string access_tokenEntreEscenas = "";
+
+    
 
 
     #region CambiarPanelLoginRegisterGenderHistory
@@ -793,7 +799,9 @@ public class UIManagerLogin : MonoBehaviour
             else
             {
                 //SceneManager.LoadScene("8.0");
-                SceneManager.LoadScene("Intro");
+                //SceneManager.LoadScene("Intro");
+                fadeIn.SetActive(true);
+                fadeIn.GetComponent<DOTweenAnimation>().DORestartById("FadeIn");
             }
         }
 
