@@ -511,7 +511,7 @@ namespace Yarn.Unity.Example {
 			pulsoVerde.SetActive(true);
 
 			//next scene
-			Invoke("NextSceneSecuencia2", 4f);
+			Invoke("NextSceneSecuencia2", 4.5f);
 		}
 
 		public void NextSceneSecuencia2()
