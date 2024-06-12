@@ -12,7 +12,7 @@ public class resolucionPantalla : MonoBehaviour
     private GameObject item16x10;
 
     [SerializeField]
-    private GameObject item16x10_16x9;
+    private GameObject freeAspect;
     void Start()
     {
         // Obtenemos la resolución actual de la pantalla
@@ -28,22 +28,24 @@ public class resolucionPantalla : MonoBehaviour
         //Determinamos la categoría de la relación de aspecto
         string aspectRatioCategory;
 
-        if (aspectRatio > 1.7f && aspectRatio < 1.8f)
+        if (aspectRatio >= 1.7f && aspectRatio < 1.8f)
         {
             aspectRatioCategory = "16:9";
             item16x9_1920x1080.SetActive(true);
         }
-        else if (aspectRatio > 1.5f && aspectRatio < 1.6f)
+        else if (aspectRatio > 1.5f && aspectRatio < 1.7f)
         {
             aspectRatioCategory = "16:10";
             item16x10.SetActive(true);
         }
+        //<1.5
         else
         {
             aspectRatioCategory = "Otro";
-            item16x10_16x9.SetActive(true);
+            Debug.Log(aspectRatioCategory);
+            freeAspect.SetActive(true);
         }
 
-        Debug.Log("Relación de aspecto: " + aspectRatioCategory);
+        Debug.Log(aspectRatio);
     }
 }
