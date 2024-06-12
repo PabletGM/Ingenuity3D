@@ -799,9 +799,9 @@ public class UIManagerLogin : MonoBehaviour
             else
             {
 
-                //SceneManager.LoadScene("Intro");
-                fadeIn.SetActive(true);
-                fadeIn.GetComponent<DOTweenAnimation>().DORestartById("FadeIn");
+                SceneManager.LoadScene("3.10Item");
+                //fadeIn.SetActive(true);
+                //fadeIn.GetComponent<DOTweenAnimation>().DORestartById("FadeIn");
             }
         }
 
