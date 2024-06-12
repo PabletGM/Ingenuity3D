@@ -799,7 +799,7 @@ public class UIManagerLogin : MonoBehaviour
             else
             {
 
-                SceneManager.LoadScene("3.10Item");
+                SceneManager.LoadScene("4.9");
                 //fadeIn.SetActive(true);
                 //fadeIn.GetComponent<DOTweenAnimation>().DORestartById("FadeIn");
             }
