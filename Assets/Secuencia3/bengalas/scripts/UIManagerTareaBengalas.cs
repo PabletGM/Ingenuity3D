@@ -212,7 +212,7 @@ public class UIManagerTareaBengalas : MonoBehaviour
     {
         dialogoRobotAlejado.SetActive(true);
         //dejas la notificacion 1.5 segundos
-        Invoke("QuitarDialogoRobotAlejadoAviso", 2f);
+        Invoke("QuitarDialogoRobotAlejadoAviso", 3f);
     }
     public void QuitarDialogoRobotAlejadoAviso()
     {
