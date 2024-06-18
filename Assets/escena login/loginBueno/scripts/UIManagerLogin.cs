@@ -246,17 +246,32 @@ public class UIManagerLogin : MonoBehaviour
 
 
 
-
+    //login 1
     public void DebugCouponLogin1()
     {
         StartCoroutine(MethodComprobacionAccessTokenLoginCorrectMethod());
     }
 
+    //Register 1
+    public void DebugRegisterCoupon1()
+    {
+        StartCoroutine(MethodComprobacionAccessTokenRegisterV2CorrectMethod());
+
+    }
+
+    //login gender
     public void DebugCouponLogin2()
     {
         StartCoroutine(GenreLogin());
     }
 
+    //register gender
+    public void DebugCouponRegister2()
+    {
+        StartCoroutine(GenreRegister());
+    }
+
+    //login/register game
     public void DebugStartGameLoginCouponParameters()
     {
         //metodo que envia a la base de datos un post del Login
@@ -266,13 +281,7 @@ public class UIManagerLogin : MonoBehaviour
 
     }
 
-    //metodo que escribe parametros de Registers
-
-    public void DebugRegisterCoupon1()
-    {
-        StartCoroutine(MethodComprobacionAccessTokenRegisterV2CorrectMethod());
-
-    }
+    
 
     #endregion
 
@@ -312,8 +321,8 @@ public class UIManagerLogin : MonoBehaviour
             {
                 Debug.Log("entra");
                 ComprobacionAccessTokenLoginCorrect(request.downloadHandler.text);
-                //next Scene
-                //StartCoroutine(CreateNewGame());
+                //next login panel
+                OpenGenderPanelLogin();
             }
         }
     }
@@ -350,7 +359,7 @@ public class UIManagerLogin : MonoBehaviour
                 Debug.Log("entra");
                 ComprobacionAccessTokenLoginCorrect(request.downloadHandler.text);
                 //next Scene
-                //StartCoroutine(CreateNewGame());
+                OpenGenderPanelRegister();
             }
         }
     } 
@@ -386,7 +395,41 @@ public class UIManagerLogin : MonoBehaviour
             }
             else
             {
-               
+                OpenHistoryPanelLogin();
+                Debug.Log("BIEN");
+            }
+        }
+    }
+
+    //2 --> Elegir Genero 
+    public IEnumerator GenreRegister()
+    {
+
+        // Cambia esto al valor adecuado de la edad
+        string body;
+
+        //correct body format
+        body = $@"{{
+            ""gender"": ""male""
+        }}";
+
+        string uri = uriBackend + uriGenreUpdate;
+
+        using (UnityWebRequest request = UnityWebRequest.Put(uri, body))
+        {
+            request.SetRequestHeader("Authorization", "Bearer " + access_tokenEntreEscenas);
+            request.SetRequestHeader("Content-Type", "application/json");
+
+            yield return request.SendWebRequest();
+
+            if (request.isNetworkError || request.isHttpError)
+            {
+
+                Debug.Log(request.error);
+            }
+            else
+            {
+                OpenHistoryPanelRegister();
                 Debug.Log("BIEN");
             }
         }
