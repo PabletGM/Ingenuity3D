@@ -23,7 +23,7 @@ public class UIManagerLogin : MonoBehaviour
 
     private string access_tokenEntreEscenas = "";
 
-    
+
 
 
     #region CambiarPanelLoginRegisterGenderHistory
@@ -97,7 +97,7 @@ public class UIManagerLogin : MonoBehaviour
 
     private int numeroCaracteresMinContraseñaRegister = 4;
 
-    
+
 
     #endregion
 
@@ -152,7 +152,7 @@ public class UIManagerLogin : MonoBehaviour
         if (_instanceUILogin == null)
         {
             _instanceUILogin = this;
-            
+
         }
         //si la instancia existe , destruimos la copia
         else
@@ -223,108 +223,72 @@ public class UIManagerLogin : MonoBehaviour
 
     #region DebugLoginRegister
 
-       //metodo que escribe parametros de Login
-       [Obsolete]
-        public void DebugLoginParameters()
-        {
-            //metodo que envia a la base de datos un post del Login
-            StartCoroutine(PostLogin(emailLogin.text, passwordLogin.text));
-        }
+    //metodo que escribe parametros de Login
+    [Obsolete]
+    public void DebugLoginParameters()
+    {
+        //metodo que envia a la base de datos un post del Login
+        StartCoroutine(PostLogin(emailLogin.text, passwordLogin.text));
+    }
 
-        //metodo que escribe parametros de Registers
-        [Obsolete]
-        public void DebugRegisterParameters()
-        {
-            StartCoroutine(PostRegister(userNameRegister.text, emailRegister.text, passwordRegister.text, company.text));
-        }
-
-
-       
+    //metodo que escribe parametros de Registers
+    [Obsolete]
+    public void DebugRegisterParameters()
+    {
+        StartCoroutine(PostRegister(userNameRegister.text, emailRegister.text, passwordRegister.text, company.text));
+    }
 
 
-    
 
-    
-        public void DebugStartGameLoginCouponParameters()
-        {
-            //metodo que envia a la base de datos un post del Login
-            Debug.Log(couponCodeLogin.text);
-            //call the scene
-            StartGameCouponLogin();
 
-        }
 
-        public void DebugCouponLogin1()
-        {
-            StartCoroutine(MethodComprobacionAccessTokenLoginCorrectMethod());
-        }
 
-        public void DebugCouponLogin2()
-        {
-            StartCoroutine(GenreLogin());
-        }
+
+
+
+
+    public void DebugCouponLogin1()
+    {
+        StartCoroutine(MethodComprobacionAccessTokenLoginCorrectMethod());
+    }
+
+    public void DebugCouponLogin2()
+    {
+        StartCoroutine(GenreLogin());
+    }
+
+    public void DebugStartGameLoginCouponParameters()
+    {
+        //metodo que envia a la base de datos un post del Login
+        Debug.Log(couponCodeLogin.text);
+        //call the scene
+        StartGameCouponLogin();
+
+    }
 
     //metodo que escribe parametros de Registers
 
-    public void DebugRegisterCouponParameters()
-        {
-            StartCoroutine(PostRegisterCoupon(name.text, surname.text, emailRegister.text, IDRegister.text));
-            
-        }
+    public void DebugRegisterCoupon1()
+    {
+        StartCoroutine(MethodComprobacionAccessTokenRegisterV2CorrectMethod());
+
+    }
 
     #endregion
 
     #region ExecuteLoginRegister
 
-        [Obsolete]
-        IEnumerator PostLogin(string email, string passwordLogin)
-        {
-            // Crear formulario con los datos, todo en minusculas , porque va predefinido el formulario y username esta vez en minuscula
-            Debug.Log(email);
-            Debug.Log(passwordLogin);
-            WWWForm form = new WWWForm();
-            form.AddField("username", email);
-            form.AddField("password", passwordLogin);
+   
 
 
-            using (UnityWebRequest request = UnityWebRequest.Post(uriLoginBackend, form))
-            {
-                        
-                yield return request.SendWebRequest();
-                
-                //primera barrera de seguridad, para ver fallo
-                TipoFalloDetailLogin(request.downloadHandler.text);
-                
-                if (request.isNetworkError || request.isHttpError)
-                {
-                    Debug.Log(request.error);
-                    Debug.Log("holaaa");
-                    errorCode = request.error;
-                    //segunda barrera de seguridad, fallo numerico
-                    TiposFalloLoginNumero(errorCode);
-                }
-                else
-                {
-                    
-                    ComprobacionAccessTokenLoginCorrect(request.downloadHandler.text);
-                    //en caso de que sea correcto nos movemos a escena hoyos
-                    //SceneManager.LoadScene("EscenaInicial3EnRaya");
-                    Debug.Log("login hecho");
-                    //LevelLoader.LoadLevel("tareaCaras2");
-                    StartCoroutine(CreateNewGame());
-                }
-            }
-        }
+    #region Coupon Login_Register
 
 
-    #region Coupon Login
-
-  
     //1--> comprpobacion access token login token    
     public IEnumerator MethodComprobacionAccessTokenLoginCorrectMethod()
     {
-            //correct body format
-                string body = $@"{{
+        //correct body format
+        string body = $@"{{
             ""couponCode"": ""{couponCodeLogin.text}""
         }}";
 
@@ -353,6 +317,45 @@ public class UIManagerLogin : MonoBehaviour
             }
         }
     }
+
+    public IEnumerator MethodComprobacionAccessTokenRegisterV2CorrectMethod()
+    {
+
+                    string body = $@"{{
+                ""email"": ""{emailRegister.text}"",
+                ""firstName"": ""{name.text}"",
+                ""lastName"": ""{surname.text}"",
+                ""processId"": ""{IDRegister.text}""
+            }}";
+
+
+        string uri = uriBackend + uriRegisterCoupon;
+
+        using (UnityWebRequest request = UnityWebRequest.Post(uri, body, "application/json"))
+        {
+
+            yield return request.SendWebRequest();
+
+
+            if (request.isNetworkError || request.isHttpError)
+            {
+
+                errorCode = request.error;
+                Debug.Log(errorCode);
+                //segunda barrera de seguridad, fallo numerico
+                TiposFalloCouponNumerico(errorCode);
+            }
+            else
+            {
+                Debug.Log("entra");
+                ComprobacionAccessTokenLoginCorrect(request.downloadHandler.text);
+                //next Scene
+                //StartCoroutine(CreateNewGame());
+            }
+        }
+    } 
+
+
 
 
     //2 --> Elegir Genero 
@@ -443,6 +446,46 @@ public class UIManagerLogin : MonoBehaviour
         }
 
     [Obsolete]
+    IEnumerator PostLogin(string email, string passwordLogin)
+    {
+        // Crear formulario con los datos, todo en minusculas , porque va predefinido el formulario y username esta vez en minuscula
+        Debug.Log(email);
+        Debug.Log(passwordLogin);
+        WWWForm form = new WWWForm();
+        form.AddField("username", email);
+        form.AddField("password", passwordLogin);
+
+
+        using (UnityWebRequest request = UnityWebRequest.Post(uriLoginBackend, form))
+        {
+
+            yield return request.SendWebRequest();
+
+            //primera barrera de seguridad, para ver fallo
+            TipoFalloDetailLogin(request.downloadHandler.text);
+
+            if (request.isNetworkError || request.isHttpError)
+            {
+                Debug.Log(request.error);
+                Debug.Log("holaaa");
+                errorCode = request.error;
+                //segunda barrera de seguridad, fallo numerico
+                TiposFalloLoginNumero(errorCode);
+            }
+            else
+            {
+
+                ComprobacionAccessTokenLoginCorrect(request.downloadHandler.text);
+                //en caso de que sea correcto nos movemos a escena hoyos
+                //SceneManager.LoadScene("EscenaInicial3EnRaya");
+                Debug.Log("login hecho");
+                //LevelLoader.LoadLevel("tareaCaras2");
+                StartCoroutine(CreateNewGame());
+            }
+        }
+    }
+
+    [Obsolete]
     IEnumerator PostRegister(string userNameRegister, string email, string passwordRegister, string company)
     {
 
@@ -488,43 +531,8 @@ public class UIManagerLogin : MonoBehaviour
     }
 
 
-    [Obsolete]
-    IEnumerator PostRegisterCoupon(string name, string surname, string email, string IDProcess)
-    {
-
-        // Cambia esto al valor adecuado de la edad
-        string body;
-
-        Debug.Log(email);
-        body = $@"{{
-                            ""email"": ""{email}"",
-                            ""firstName"": ""{name}"",
-                            ""lastName"": ""{surname}"",
-                            ""couponCode"": ""{IDProcess}""
-                        }}";
-
-        using (UnityWebRequest request = UnityWebRequest.Post(uriRegisterCoupon, body, "application/json"))
-        {
-            yield return request.SendWebRequest();
-
-            //si es incorrecto, esto es si solicitud no llega a base de datos
-            if (request.isNetworkError || request.isHttpError)
-            {
-                //ponemos errorCode
-                errorCode = request.error;
-                TiposFalloCouponNumerico(errorCode);
-                Debug.Log(errorCode);
-            }
-            //si la solicitud llega a base de datos vemos el texto que devuelve
-            else
-            {
-
-                //comprobamos si es correcto el register
-                Comprobacion201RegisterCorrect(request.downloadHandler.text);
-                //nextScene
-            }
-        }
-    }
+   
+    
 
     #endregion
 
