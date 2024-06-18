@@ -795,6 +795,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4069274146157532973, guid: e675d9e345623694cb08be7c75ba6d74,
         type: 3}
+      propertyPath: volumeSFX1
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069274146157532973, guid: e675d9e345623694cb08be7c75ba6d74,
+        type: 3}
+      propertyPath: volumeSFX2
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069274146157532973, guid: e675d9e345623694cb08be7c75ba6d74,
+        type: 3}
       propertyPath: volumeMusic
       value: 0.3
       objectReference: {fileID: 0}
@@ -6014,7 +6024,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.62
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6208,6 +6218,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6067089634426036575, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
         type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067089634426036575, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
+        type: 3}
       propertyPath: rolloffMode
       value: 1
       objectReference: {fileID: 0}
@@ -6234,7 +6249,7 @@ PrefabInstance:
     - target: {fileID: 7388874994180943669, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
         type: 3}
       propertyPath: musicSounds.Array.size
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7388874994180943669, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
         type: 3}
@@ -6360,7 +6375,7 @@ PrefabInstance:
         type: 3}
       propertyPath: musicSounds.Array.data[7].clip
       value: 
-      objectReference: {fileID: 8300000, guid: a0fbd360638b4e140b28e2e18d1cc367, type: 3}
+      objectReference: {fileID: 8300000, guid: 2524e5b36d437c24fbf42408f4e89422, type: 3}
     - target: {fileID: 7388874994180943669, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
         type: 3}
       propertyPath: musicSounds.Array.data[7].name
@@ -6370,11 +6385,11 @@ PrefabInstance:
         type: 3}
       propertyPath: musicSounds.Array.data[8].clip
       value: 
-      objectReference: {fileID: 8300000, guid: a0fbd360638b4e140b28e2e18d1cc367, type: 3}
+      objectReference: {fileID: 8300000, guid: 264f3909144438a459e862eee77e999c, type: 3}
     - target: {fileID: 7388874994180943669, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
         type: 3}
       propertyPath: musicSounds.Array.data[8].name
-      value: winSound
+      value: musicaLaboratorio
       objectReference: {fileID: 0}
     - target: {fileID: 8430161515356261443, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
         type: 3}
