@@ -795,6 +795,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4069274146157532973, guid: e675d9e345623694cb08be7c75ba6d74,
         type: 3}
+      propertyPath: volumeMusic
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069274146157532973, guid: e675d9e345623694cb08be7c75ba6d74,
+        type: 3}
       propertyPath: volumeDialogue1
       value: 0.09
       objectReference: {fileID: 0}
@@ -2475,6 +2480,18 @@ MonoBehaviour:
   onStart:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 327934663}
+        m_TargetAssemblyTypeName: PlaySoundSecuencia3, Assembly-CSharp
+        m_MethodName: ChangeVolumeMusic
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.3
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 327934663}
         m_TargetAssemblyTypeName: PlaySoundSecuencia3, Assembly-CSharp
         m_MethodName: PlayMusic
@@ -6091,6 +6108,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 515988185518048538, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
         type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 515988185518048538, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
+        type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 57b8ef0caff096440afa981ad62bdbba, type: 3}
@@ -6207,12 +6229,12 @@ PrefabInstance:
     - target: {fileID: 7388874994180943669, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
         type: 3}
       propertyPath: sfxSounds.Array.size
-      value: 25
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 7388874994180943669, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
         type: 3}
       propertyPath: musicSounds.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7388874994180943669, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
         type: 3}
@@ -6306,6 +6328,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7388874994180943669, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
         type: 3}
+      propertyPath: sfxSounds.Array.data[25].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a0fbd360638b4e140b28e2e18d1cc367, type: 3}
+    - target: {fileID: 7388874994180943669, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
+        type: 3}
+      propertyPath: sfxSounds.Array.data[25].name
+      value: winSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388874994180943669, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
+        type: 3}
       propertyPath: musicSounds.Array.data[0].clip
       value: 
       objectReference: {fileID: 8300000, guid: 57b8ef0caff096440afa981ad62bdbba, type: 3}
@@ -6323,6 +6355,26 @@ PrefabInstance:
         type: 3}
       propertyPath: musicSounds.Array.data[6].name
       value: InteriorNave
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388874994180943669, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
+        type: 3}
+      propertyPath: musicSounds.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a0fbd360638b4e140b28e2e18d1cc367, type: 3}
+    - target: {fileID: 7388874994180943669, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
+        type: 3}
+      propertyPath: musicSounds.Array.data[7].name
+      value: IntroIngenuityParteFinal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388874994180943669, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
+        type: 3}
+      propertyPath: musicSounds.Array.data[8].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a0fbd360638b4e140b28e2e18d1cc367, type: 3}
+    - target: {fileID: 7388874994180943669, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
+        type: 3}
+      propertyPath: musicSounds.Array.data[8].name
+      value: winSound
       objectReference: {fileID: 0}
     - target: {fileID: 8430161515356261443, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
         type: 3}

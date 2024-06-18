@@ -108,7 +108,7 @@ public class PlaySoundSecuencia3 : MonoBehaviour
     #region Music
     public void PlayMusic(string music)
     {
-        AudioManagerBengalas.instance.PlayMusic(music,1f);
+        AudioManagerBengalas.instance.PlayMusic(music,volumeMusic);
     }
 
     public void ChangeVolumeMusic(float volume)
