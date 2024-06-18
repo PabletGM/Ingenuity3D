@@ -441,7 +441,8 @@ public class UIManagerLogin : MonoBehaviour
     //3 --> Coupon Login
     public void StartGameCouponLogin()
     {
-        SceneManager.LoadScene("Intro");
+        
+        fadeIn.GetComponent<DOTweenAnimation>().DORestartById("FadeIn");
     }
 
 
