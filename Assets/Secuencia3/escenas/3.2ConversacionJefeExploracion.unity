@@ -443,7 +443,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -792,6 +792,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069274146157532973, guid: e675d9e345623694cb08be7c75ba6d74,
+        type: 3}
+      propertyPath: volumeDialogue1
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069274146157532973, guid: e675d9e345623694cb08be7c75ba6d74,
+        type: 3}
+      propertyPath: volumeDialogue2
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069274146157532973, guid: e675d9e345623694cb08be7c75ba6d74,
+        type: 3}
+      propertyPath: volumeDialogue3
+      value: 0.09
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2998,6 +3013,16 @@ PrefabInstance:
     - target: {fileID: 4626815408203434, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82675393856402862, guid: 9e0841b82a4ebcd438730d23886e17e6,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 82675393856402862, guid: 9e0841b82a4ebcd438730d23886e17e6,
+        type: 3}
+      propertyPath: rolloffMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114099955469796580, guid: 9e0841b82a4ebcd438730d23886e17e6,
         type: 3}
@@ -5855,7 +5880,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -5983,7 +6008,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -6069,6 +6094,11 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 57b8ef0caff096440afa981ad62bdbba, type: 3}
+    - target: {fileID: 515988185518048538, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
+        type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 733432104342730276, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
         type: 3}
       propertyPath: m_Name
@@ -6134,6 +6164,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3434531591371538848, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434531591371538848, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
+        type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3930488510068930550, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6143,6 +6183,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067089634426036575, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
+        type: 3}
+      propertyPath: rolloffMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7388874994180943669, guid: 4fc60fa7af3134e4aa5aaf78b071f3ee,
         type: 3}
