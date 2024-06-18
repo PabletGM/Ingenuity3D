@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
@@ -222,8 +223,8 @@ public class UIManagerLogin : MonoBehaviour
 
     #region DebugLoginRegister
 
-    //metodo que escribe parametros de Login
-    [Obsolete]
+       //metodo que escribe parametros de Login
+       [Obsolete]
         public void DebugLoginParameters()
         {
             //metodo que envia a la base de datos un post del Login
@@ -237,18 +238,35 @@ public class UIManagerLogin : MonoBehaviour
             StartCoroutine(PostRegister(userNameRegister.text, emailRegister.text, passwordRegister.text, company.text));
         }
 
-        [Obsolete]
-        public void DebugLoginCouponParameters()
+
+       
+
+
+    
+
+    
+        public void DebugStartGameLoginCouponParameters()
         {
             //metodo que envia a la base de datos un post del Login
-            //Debug.Log(couponCodeLogin.text);
-            StartCoroutine(CouponLogin(couponCodeLogin.text));
+            Debug.Log(couponCodeLogin.text);
+            //call the scene
+            StartGameCouponLogin();
 
         }
 
-        //metodo que escribe parametros de Registers
-        
-        public void DebugRegisterCouponParameters()
+        public void DebugCouponLogin1()
+        {
+            StartCoroutine(MethodComprobacionAccessTokenLoginCorrectMethod());
+        }
+
+        public void DebugCouponLogin2()
+        {
+            StartCoroutine(GenreLogin());
+        }
+
+    //metodo que escribe parametros de Registers
+
+    public void DebugRegisterCouponParameters()
         {
             StartCoroutine(PostRegisterCoupon(name.text, surname.text, emailRegister.text, IDRegister.text));
             
@@ -258,7 +276,7 @@ public class UIManagerLogin : MonoBehaviour
 
     #region ExecuteLoginRegister
 
-    [Obsolete]
+        [Obsolete]
         IEnumerator PostLogin(string email, string passwordLogin)
         {
             // Crear formulario con los datos, todo en minusculas , porque va predefinido el formulario y username esta vez en minuscula
@@ -299,28 +317,28 @@ public class UIManagerLogin : MonoBehaviour
         }
 
 
-    [Obsolete]
-    IEnumerator CouponLogin(string couponCode)
+    #region Coupon Login
+
+  
+    //1--> comprpobacion access token login token    
+    public IEnumerator MethodComprobacionAccessTokenLoginCorrectMethod()
     {
+            //correct body format
+                string body = $@"{{
+            ""couponCode"": ""{couponCodeLogin.text}""
+        }}";
 
-        // Cambia esto al valor adecuado de la edad
-        string body;
-        
-        body = $@"{{
-                            ""couponCode"": ""{couponCode}"",
-                          
-                        }}";
+        string uri = uriBackend + uriLoginCoupon;
 
-        
-        using (UnityWebRequest request = UnityWebRequest.Post(uriLoginCoupon, body, "application/json"))
+        using (UnityWebRequest request = UnityWebRequest.Post(uri, body, "application/json"))
         {
 
             yield return request.SendWebRequest();
-           
+
 
             if (request.isNetworkError || request.isHttpError)
             {
-                
+
                 errorCode = request.error;
                 Debug.Log(errorCode);
                 //segunda barrera de seguridad, fallo numerico
@@ -331,12 +349,94 @@ public class UIManagerLogin : MonoBehaviour
                 Debug.Log("entra");
                 ComprobacionAccessTokenLoginCorrect(request.downloadHandler.text);
                 //next Scene
-                StartCoroutine(CreateNewGame());
+                //StartCoroutine(CreateNewGame());
             }
         }
     }
 
-        public void Loading()
+
+    //2 --> Elegir Genero 
+    public IEnumerator GenreLogin()
+    {
+
+        // Cambia esto al valor adecuado de la edad
+        string body;
+
+        //correct body format
+         body = $@"{{
+            ""gender"": ""male""
+        }}";
+
+        string uri = uriBackend + uriGenreUpdate;
+
+        using (UnityWebRequest request = UnityWebRequest.Put(uri, body))
+        {
+            request.SetRequestHeader("Authorization", "Bearer " + access_tokenEntreEscenas);
+            request.SetRequestHeader("Content-Type", "application/json");
+
+            yield return request.SendWebRequest();
+           
+            if (request.isNetworkError || request.isHttpError)
+            {
+
+                Debug.Log(request.error);
+            }
+            else
+            {
+               
+                Debug.Log("BIEN");
+            }
+        }
+    }
+
+
+
+    //3 --> Coupon Login
+    public void StartGameCouponLogin()
+    {
+
+        SceneManager.LoadScene("Intro");
+
+        //// Cambia esto al valor adecuado de la edad
+        //string body;
+
+        //body = $@"{{
+        //                    ""couponCode"": ""{couponCode}"",
+
+        //                }}";
+
+
+        //string uri = uriBackend + uriLoginCoupon;
+
+        //using (UnityWebRequest request = UnityWebRequest.Post(uri, body, "application/json"))
+        //{
+
+        //    yield return request.SendWebRequest();
+
+
+        //    if (request.isNetworkError || request.isHttpError)
+        //    {
+
+        //        errorCode = request.error;
+        //        Debug.Log(errorCode);
+        //        //segunda barrera de seguridad, fallo numerico
+        //        TiposFalloCouponNumerico(errorCode);
+        //    }
+        //    else
+        //    {
+        //        Debug.Log("entra");
+        //        //ComprobacionAccessTokenLoginCorrect(request.downloadHandler.text);
+        //        //next Scene
+        //        StartCoroutine(CreateNewGame());
+        //    }
+        //}
+
+    }
+
+
+    #endregion
+
+    public void Loading()
         {
             //activamos loading
             loading.SetActive(true);
