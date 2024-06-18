@@ -804,8 +804,8 @@ public class UIManagerLogin : MonoBehaviour
                 break;
 
             case "HTTP/1.1 406 Not Acceptable":
-                Debug.Log("Error desconocido");
-                ErrorCreacionUsuarioRegister("Error 406");
+                Debug.Log("406: No se acepta el formato ");
+                ErrorCreacionUsuarioRegister("406: No se acepta el formato");
                 break;
 
             case "HTTP/1.1 304 Not Modified":
@@ -813,9 +813,9 @@ public class UIManagerLogin : MonoBehaviour
                 ErrorCreacionUsuarioRegister("Error 304");
                 break;
 
-            case "HTTP/1.1 404 Not found":
-                Debug.Log("Error desconocido");
-                ErrorCreacionUsuarioRegister("Error 404");
+            case "HTTP/1.1 404 Not Found":
+                Debug.Log("incorrecto");
+                ErrorCreacionUsuarioRegister("Codigo Incorrecto");
                 break;
 
             default:
@@ -835,6 +835,18 @@ public class UIManagerLogin : MonoBehaviour
         public void ErrorCreacionUsuarioRegister(string mensaje)
         {
             CambiarMensajeRegister(mensaje);
+
+            //distincion de casos, si esta vacio el codigo ID o no
+            if(processIdLogin.text == "")
+            {
+                CambiarMensajeLogin("Insertar Codigo");
+            }
+            //no vacio
+            else
+            {
+                CambiarMensajeLogin("Codigo Incorrecto");
+            }
+            
         }
 
         //metodo que escribe por pantalla login correcto
