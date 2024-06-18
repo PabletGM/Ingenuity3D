@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Text.RegularExpressions;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
@@ -440,43 +441,7 @@ public class UIManagerLogin : MonoBehaviour
     //3 --> Coupon Login
     public void StartGameCouponLogin()
     {
-
         SceneManager.LoadScene("Intro");
-
-        //// Cambia esto al valor adecuado de la edad
-        //string body;
-
-        //body = $@"{{
-        //                    ""couponCode"": ""{couponCode}"",
-
-        //                }}";
-
-
-        //string uri = uriBackend + uriLoginCoupon;
-
-        //using (UnityWebRequest request = UnityWebRequest.Post(uri, body, "application/json"))
-        //{
-
-        //    yield return request.SendWebRequest();
-
-
-        //    if (request.isNetworkError || request.isHttpError)
-        //    {
-
-        //        errorCode = request.error;
-        //        Debug.Log(errorCode);
-        //        //segunda barrera de seguridad, fallo numerico
-        //        TiposFalloCouponNumerico(errorCode);
-        //    }
-        //    else
-        //    {
-        //        Debug.Log("entra");
-        //        //ComprobacionAccessTokenLoginCorrect(request.downloadHandler.text);
-        //        //next Scene
-        //        StartCoroutine(CreateNewGame());
-        //    }
-        //}
-
     }
 
 
@@ -825,7 +790,7 @@ public class UIManagerLogin : MonoBehaviour
     }
 
     //metodo que escribe por pantalla contraseña incorrecta
-    public void UsuarioYaExiste(string mensaje)
+        public void UsuarioYaExiste(string mensaje)
         {
             CambiarMensajeRegister(mensaje);
             
@@ -834,23 +799,64 @@ public class UIManagerLogin : MonoBehaviour
         //metodo que escribe por pantalla usuario incorrecta
         public void ErrorCreacionUsuarioRegister(string mensaje)
         {
-            CambiarMensajeRegister(mensaje);
 
-            //distincion de casos, si esta vacio el codigo ID o no
-            if(processIdLogin.text == "")
+
+            #region RegisterExceptions
+            //miramos si está vacío
+            if(name.text=="")
             {
-                CambiarMensajeLogin("Insertar Codigo");
+                CambiarMensajeRegister("Porfavor ingresa tu nombre");
             }
-            //no vacio
-            else
+            else if (ContainsNumbers(name.text))
             {
-                CambiarMensajeLogin("Codigo Incorrecto");
+                //miramos si nombre tiene solo letras o caracteres invalidos
+                CambiarMensajeRegister("El nombre solo puede contener letras");
+            }
+            //miramos si tiene minimo 2 caracteres
+            else if(!HasMinimumCharacters(name.text,2))
+            {
+                //miramos si nombre tiene solo letras o caracteres invalidos
+                CambiarMensajeRegister("Debe contener al menos 2 caracteres");
             }
             
+            
+
+            #endregion
+
+
+
+                #region LoginExceptions
+                //distincion de casos, si esta vacio el codigo ID o no
+                if (processIdLogin.text == "")
+                {
+                    CambiarMensajeLogin("Insertar Codigo");
+                }
+                //no vacio
+                else
+                {
+                    CambiarMensajeLogin("Codigo Incorrecto");
+                }
+            #endregion
+
         }
 
-        //metodo que escribe por pantalla login correcto
-        public void RegisterCorrecto(string mensaje)
+        #region Exceptions
+
+            bool ContainsNumbers(string text)
+            {
+                return Regex.IsMatch(text, @"\d");
+            }
+
+            bool HasMinimumCharacters(string text, int minLength)
+            {
+                return text.Length >= minLength;
+            }
+
+    #endregion
+
+
+    //metodo que escribe por pantalla login correcto
+    public void RegisterCorrecto(string mensaje)
         {
             CambiarMensajeRegister(mensaje);
         }
