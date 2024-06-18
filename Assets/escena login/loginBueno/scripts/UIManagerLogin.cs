@@ -801,33 +801,90 @@ public class UIManagerLogin : MonoBehaviour
         {
 
 
-            #region RegisterExceptions
-            //miramos si está vacío
-            if(name.text=="")
-            {
-                CambiarMensajeRegister("Porfavor ingresa tu nombre");
-            }
-            else if (ContainsNumbers(name.text))
-            {
-                //miramos si nombre tiene solo letras o caracteres invalidos
-                CambiarMensajeRegister("El nombre solo puede contener letras");
-            }
-            //miramos si tiene minimo 2 caracteres
-            else if(!HasMinimumCharacters(name.text,2))
-            {
-                //miramos si nombre tiene solo letras o caracteres invalidos
-                CambiarMensajeRegister("Debe contener al menos 2 caracteres");
-            }
-            
-            
+        #region RegisterExceptions
 
+            #region NameExceptions
+                //miramos si está vacío
+                if (name.text=="")
+                {
+                    CambiarMensajeRegister("Porfavor introduce tu nombre");
+                }
+                else if (ContainsNumbers(name.text))
+                {
+                    //miramos si nombre tiene solo letras o caracteres invalidos
+                    CambiarMensajeRegister("El nombre solo puede contener letras");
+                }
+                //miramos si tiene minimo 2 caracteres
+                else if(!HasMinimumCharacters(name.text,2))
+                {
+                    //miramos si nombre tiene solo letras o caracteres invalidos
+                    CambiarMensajeRegister("Debe contener al menos 2 caracteres");
+                }
+            #endregion
+
+            #region SurnameExceptions
+                //miramos si está vacío
+                else if (surname.text == "")
+                {
+                    CambiarMensajeRegister("Porfavor introduce tu apellido");
+                }
+                else if (ContainsNumbers(surname.text))
+                {
+                    //miramos si nombre tiene solo letras o caracteres invalidos
+                    CambiarMensajeRegister("El apellido solo puede contener letras");
+                }
+                //miramos si tiene minimo 2 caracteres
+                else if (!HasMinimumCharacters(surname.text, 2))
+                {
+                    //miramos si nombre tiene solo letras o caracteres invalidos
+                    CambiarMensajeRegister("Debe contener al menos 2 caracteres");
+                }
+           #endregion
+
+            #region mailExceptions
+                //miramos si está vacío
+                else if (emailRegister.text == "")
+                {
+                    CambiarMensajeRegister("Porfavor introduce tu email");
+                }
+                //miramos si es correo valido, si acaba en .com y .es y si tiene @
+                else if (!emailRegister.text.Contains("@") || !emailRegister.text.EndsWith(".com") && !emailRegister.text.EndsWith(".es"))
+                {
+                
+                    //miramos si nombre tiene solo letras o caracteres invalidos
+                    CambiarMensajeRegister("El email no posee formato correcto");
+                }
+                //correo ya registrado o ya existe
+                //else if ()
+                //{
+                //    //miramos si nombre tiene solo letras o caracteres invalidos
+                //    CambiarMensajeRegister("Correo ya registrado");
+                //}
+        #endregion
+
+            #region codigoIDExceptions
+                //miramos si está vacío
+                else if (IDRegister.text == "")
+                {
+                    CambiarMensajeRegister("Porfavor introduce tu ID");
+                }
+                ////codigo si es correcto
+                //else if ()
+                //{
+                //    //miramos si nombre tiene solo letras o caracteres invalidos
+                //    CambiarMensajeRegister("El codigo es incorrecto");
+                //}
             #endregion
 
 
 
-                #region LoginExceptions
-                //distincion de casos, si esta vacio el codigo ID o no
-                if (processIdLogin.text == "")
+        #endregion
+
+
+
+        #region LoginExceptions
+        //distincion de casos, si esta vacio el codigo ID o no
+        if (processIdLogin.text == "")
                 {
                     CambiarMensajeLogin("Insertar Codigo");
                 }
