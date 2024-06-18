@@ -348,7 +348,7 @@ public class UIManagerLogin : MonoBehaviour
             else
             {
                 Debug.Log("entra");
-                //ComprobacionAccessTokenLoginCorrect(request.downloadHandler.text);
+                ComprobacionAccessTokenLoginCorrect(request.downloadHandler.text);
                 //next Scene
                 //StartCoroutine(CreateNewGame());
             }
