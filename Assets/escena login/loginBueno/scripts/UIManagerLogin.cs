@@ -184,13 +184,7 @@ public class UIManagerLogin : MonoBehaviour
 
     private void Start()
     {
-        //dataProtectionToggleRegister.onValueChanged.AddListener(delegate {
-        //    CheckBoxToggleValueSetButtonAvailableRegister(dataProtectionToggleRegister);
-        //});
-
-        //dataProtectionToggleLogin.onValueChanged.AddListener(delegate {
-        //    CheckBoxToggleValueSetButtonAvailableLogin(dataProtectionToggleLogin);
-        //});
+       
     }
 
     private void Update()
@@ -402,8 +396,13 @@ public class UIManagerLogin : MonoBehaviour
         using (UnityWebRequest request = UnityWebRequest.Post(uri, body, "application/json"))
         {
 
+            //initialize loading
+            loading.SetActive(true);
+
             yield return request.SendWebRequest();
 
+            //quit loading
+            loading.SetActive(false);
 
             if (request.isNetworkError || request.isHttpError)
             {
@@ -438,8 +437,13 @@ public class UIManagerLogin : MonoBehaviour
 
         using (UnityWebRequest request = UnityWebRequest.Post(uri, body, "application/json"))
         {
+            //initialize loading
+            loading.SetActive(true);
 
             yield return request.SendWebRequest();
+
+            //quit loading
+            loading.SetActive(false);
 
 
             if (request.isNetworkError || request.isHttpError)
@@ -536,7 +540,7 @@ public class UIManagerLogin : MonoBehaviour
     //3 --> Coupon Login
     public void StartGameCouponLogin()
     {
-        
+        loading.SetActive(true);
         fadeIn.GetComponent<DOTweenAnimation>().DORestartById("FadeIn");
     }
 
@@ -544,10 +548,10 @@ public class UIManagerLogin : MonoBehaviour
     #endregion
 
     public void Loading()
-        {
-            //activamos loading
-            loading.SetActive(true);
-        }
+    {
+        //activamos loading
+        loading.SetActive(true);
+    }
 
     [Obsolete]
     IEnumerator PostLogin(string email, string passwordLogin)
