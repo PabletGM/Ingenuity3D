@@ -36,6 +36,17 @@ public class UIManagerLogin : MonoBehaviour
 
     #endregion
 
+    #region politicaDePrivacidadLogin
+
+    [SerializeField]
+    private Toggle dataProtectionToggleLogin;
+
+    [SerializeField]
+    private Button botonAvanzaLogin;
+
+    #endregion
+
+
     #region CambiarPanelLoginRegisterGenderHistory
     [SerializeField]
     private GameObject loginPanel;
@@ -173,14 +184,19 @@ public class UIManagerLogin : MonoBehaviour
 
     private void Start()
     {
-        dataProtectionToggleRegister.onValueChanged.AddListener(delegate {
-            CheckBoxToggleValueSetButtonAvailable(dataProtectionToggleRegister);
-        });
+        //dataProtectionToggleRegister.onValueChanged.AddListener(delegate {
+        //    CheckBoxToggleValueSetButtonAvailableRegister(dataProtectionToggleRegister);
+        //});
+
+        //dataProtectionToggleLogin.onValueChanged.AddListener(delegate {
+        //    CheckBoxToggleValueSetButtonAvailableLogin(dataProtectionToggleLogin);
+        //});
     }
 
     private void Update()
     {
-        CheckBoxToggleValueSetButtonAvailable(dataProtectionToggleRegister);
+        CheckBoxToggleValueSetButtonAvailableRegister(dataProtectionToggleRegister);
+        CheckBoxToggleValueSetButtonAvailableLogin(dataProtectionToggleLogin);
     }
 
     //instancia
@@ -196,22 +212,55 @@ public class UIManagerLogin : MonoBehaviour
         Application.OpenURL("https://ingenuityhr.es/politica-de-privacidad/");
     }
 
-    public void CheckBoxToggleValueSetButtonAvailable(Toggle change)
+    public void CheckBoxToggleValueSetButtonAvailableRegister(Toggle change)
     {
-        //si todos los campos del register no estan vacios
-        if(emailRegister.text != "" && name.text != "" && surname.text != "" && IDRegister.text != "")
+        //si todos los campos del register no estan vacios Y CHECKBOX PULSADA
+        if (emailRegister.text != "" && name.text != "" && surname.text != "" && IDRegister.text != "" && change.isOn)
         {
             //el valor de que sea interactuable el boton avanza dependerá del valor de la checkbox
             botonAvanzaRegister.interactable = change.isOn;
             //opacidad del boton
             Color color = botonAvanzaRegister.GetComponent<Image>().color;
-            color.a = change.isOn ? 1f : 0.5f; // 1f es opacidad completa, 0.5f es mitad opacidad
+            color.a = 1f; // 1f es opacidad completa, 0.5f es mitad opacidad
+            botonAvanzaRegister.GetComponent<Image>().color = color;
+        }
+        else
+        {
+            //el valor de que sea interactuable el boton avanza dependerá del valor de la checkbox
+            botonAvanzaRegister.interactable = change.isOn = false;
+            //opacidad del boton
+            Color color = botonAvanzaRegister.GetComponent<Image>().color;
+            color.a =  0.5f; // 1f es opacidad completa, 0.5f es mitad opacidad
             botonAvanzaRegister.GetComponent<Image>().color = color;
         }
         
     }
 
-   
+    public void CheckBoxToggleValueSetButtonAvailableLogin(Toggle change)
+    {
+        //si todos los campos del register no estan vacios Y CHECKBOX PULSADA
+        if ( couponCodeLogin.text != "" && change.isOn )
+        {
+            //el valor de que sea interactuable el boton avanza dependerá del valor de la checkbox
+            botonAvanzaLogin.interactable = change.isOn;
+            //opacidad del boton
+            Color color = botonAvanzaLogin.GetComponent<Image>().color;
+            color.a = 1f; // 1f es opacidad completa, 0.5f es mitad opacidad
+            botonAvanzaLogin.GetComponent<Image>().color = color;
+        }
+        else
+        {
+            //el valor de que sea interactuable el boton avanza dependerá del valor de la checkbox
+            botonAvanzaLogin.interactable = change.isOn = false;
+            //opacidad del boton
+            Color color = botonAvanzaLogin.GetComponent<Image>().color;
+            color.a = 0.5f; // 1f es opacidad completa, 0.5f es mitad opacidad
+            botonAvanzaLogin.GetComponent<Image>().color = color;
+        }
+
+    }
+
+
 
     #endregion
 
