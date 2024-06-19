@@ -9,6 +9,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using static System.Net.WebRequestMethods;
 
 public class UIManagerLogin : MonoBehaviour
@@ -25,7 +26,15 @@ public class UIManagerLogin : MonoBehaviour
     private string access_tokenEntreEscenas = "";
 
 
+    #region politicaDePrivacidadRegister
+    
+    [SerializeField]
+    private Toggle dataProtectionToggleRegister;
 
+    [SerializeField]
+    private Button botonAvanzaRegister;
+
+    #endregion
 
     #region CambiarPanelLoginRegisterGenderHistory
     [SerializeField]
@@ -162,12 +171,49 @@ public class UIManagerLogin : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        dataProtectionToggleRegister.onValueChanged.AddListener(delegate {
+            CheckBoxToggleValueSetButtonAvailable(dataProtectionToggleRegister);
+        });
+    }
+
+    private void Update()
+    {
+        CheckBoxToggleValueSetButtonAvailable(dataProtectionToggleRegister);
+    }
+
     //instancia
     static public UIManagerLogin GetInstanceUI()
     {
         return _instanceUILogin;
     }
 
+    #region Politica de Privacidad
+
+    public void GoToLinkIngenuityWebPoliticy()
+    {
+        Application.OpenURL("https://ingenuityhr.es/politica-de-privacidad/");
+    }
+
+    public void CheckBoxToggleValueSetButtonAvailable(Toggle change)
+    {
+        //si todos los campos del register no estan vacios
+        if(emailRegister.text != "" && name.text != "" && surname.text != "" && IDRegister.text != "")
+        {
+            //el valor de que sea interactuable el boton avanza dependerá del valor de la checkbox
+            botonAvanzaRegister.interactable = change.isOn;
+            //opacidad del boton
+            Color color = botonAvanzaRegister.GetComponent<Image>().color;
+            color.a = change.isOn ? 1f : 0.5f; // 1f es opacidad completa, 0.5f es mitad opacidad
+            botonAvanzaRegister.GetComponent<Image>().color = color;
+        }
+        
+    }
+
+   
+
+    #endregion
 
     #region OpenPanelsMethods
     //quitas el panel de registro y pones el de login
