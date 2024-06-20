@@ -878,6 +878,12 @@ public class UIManagerLogin : MonoBehaviour
                 ErrorCreacionUsuarioRegister("Error 304");
                 break;
 
+            case "HTTP/1.1 401 Unauthorized":
+                Debug.Log("Codigo ya utilizado");
+                ErrorCreacionUsuarioRegister("Codigo ya utilizado");
+                break;
+                
+
             case "HTTP/1.1 404 Not Found":
                 Debug.Log("incorrecto");
                 ErrorCreacionUsuarioRegister("Codigo Incorrecto");
@@ -968,13 +974,13 @@ public class UIManagerLogin : MonoBehaviour
                 {
                     CambiarMensajeRegister("Porfavor introduce tu ID");
                 }
-                ////codigo si es correcto
-                //else if ()
-                //{
-                //    //miramos si nombre tiene solo letras o caracteres invalidos
-                //    CambiarMensajeRegister("El codigo es incorrecto");
-                //}
-            #endregion
+                //sino esta vacio es que es incorrecto
+                else
+                {
+                    //miramos si nombre tiene solo letras o caracteres invalidos
+                    CambiarMensajeRegister("El código es incorrecto");
+                }
+        #endregion
 
 
 
@@ -983,15 +989,20 @@ public class UIManagerLogin : MonoBehaviour
 
 
         #region LoginExceptions
-        //distincion de casos, si esta vacio el codigo ID o no
-        if (processIdLogin.text == "")
+                //distincion de casos, si esta vacio el codigo ID o no
+                if (processIdLogin.text == "")
                 {
                     CambiarMensajeLogin("Insertar Codigo");
                 }
                 //no vacio
-                else
+                else 
                 {
-                    CambiarMensajeLogin("Codigo Incorrecto");
+                    CambiarMensajeLogin("Código Incorrecto");
+                }
+                //si es un codigo ya utilizado
+                if(mensaje == "Codigo ya utilizado")
+                {
+                    CambiarMensajeLogin("Código ya utilizado");
                 }
             #endregion
 
