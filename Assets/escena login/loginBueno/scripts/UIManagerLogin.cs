@@ -924,7 +924,7 @@ public class UIManagerLogin : MonoBehaviour
                 else if(!HasMinimumCharacters(name.text,2))
                 {
                     //miramos si nombre tiene solo letras o caracteres invalidos
-                    CambiarMensajeRegister("Debe contener al menos 2 caracteres");
+                    CambiarMensajeRegister("El nombre debe contener al menos 2 caracteres");
                 }
             #endregion
 
@@ -943,7 +943,7 @@ public class UIManagerLogin : MonoBehaviour
                 else if (!HasMinimumCharacters(surname.text, 2))
                 {
                     //miramos si nombre tiene solo letras o caracteres invalidos
-                    CambiarMensajeRegister("Debe contener al menos 2 caracteres");
+                    CambiarMensajeRegister("El apellido debe contener al menos 2 caracteres");
                 }
            #endregion
 
