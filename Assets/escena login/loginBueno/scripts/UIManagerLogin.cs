@@ -431,9 +431,9 @@ public class UIManagerLogin : MonoBehaviour
     {
 
                     string body = $@"{{
-                ""email"": ""{emailRegister.text}"",
                 ""firstName"": ""{name.text}"",
                 ""lastName"": ""{surname.text}"",
+                ""email"": ""{emailRegister.text}"",
                 ""processId"": ""{IDRegister.text}""
             }}";
 
