@@ -40,7 +40,7 @@ public class EleccionGenero : MonoBehaviour
         else if (genderToChange.text == "Femenino")
         {
             genderToChange.text = "Otro";
-            actualGender = "other";
+            actualGender = "";
         }
         else if( genderToChange.text == "Otro")
         {
@@ -48,7 +48,8 @@ public class EleccionGenero : MonoBehaviour
             actualGender = "male";
         }
 
-        uiManagerLogin.actualGender = actualGender;
+        uiManagerLogin.actualGenderLogin = actualGender;
+        uiManagerLogin.actualGenderRegister = actualGender;
     }
 
    
