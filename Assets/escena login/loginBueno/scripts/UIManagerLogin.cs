@@ -484,10 +484,7 @@ public class UIManagerLogin : MonoBehaviour
             ""gender"": ""{actualGenderLogin}""
         }}";
 
-        ////correct body format
-        //body = $@"{{
-        //    ""gender"": ""male""
-        //}}";
+       
 
         Debug.Log(actualGenderLogin);
 
@@ -519,11 +516,6 @@ public class UIManagerLogin : MonoBehaviour
 
         // Cambia esto al valor adecuado de la edad
         string body;
-
-        ////correct body format
-        //body = $@"{{
-        //    ""gender"": ""male""
-        //}}";
 
         //correct body format
         body = $@"{{
