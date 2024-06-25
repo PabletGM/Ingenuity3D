@@ -13,14 +13,18 @@ public class EleccionGenero : MonoBehaviour
 
     public List<string> generosLista;
 
+    private UIManagerLogin uiManagerLogin;
+
 
     private void Start()
     {
+        //connect to uiManagerLogin
+        uiManagerLogin = UIManagerLogin.GetInstanceUI();
         //initiliace list
-        generosLista=new List<string>();
+        generosLista =new List<string>();
         //add generos
         //init actualGender
-        actualGender = "Masculino";
+        actualGender = "male";
     }
 
 
@@ -28,21 +32,23 @@ public class EleccionGenero : MonoBehaviour
 
     public void ChangeGender()
     {
-        if(actualGender == "Masculino")
+        if(genderToChange.text == "Masculino")
         {
             genderToChange.text = "Femenino";
-            actualGender = "Femenino";
+            actualGender = "female";
         }
-        else if (actualGender == "Femenino")
+        else if (genderToChange.text == "Femenino")
         {
             genderToChange.text = "Otro";
-            actualGender = "Otro";
+            actualGender = "other";
         }
-        else if (actualGender == "Otro")
+        else if( genderToChange.text == "Otro")
         {
             genderToChange.text = "Masculino";
-            actualGender = "Masculino";
+            actualGender = "male";
         }
+
+        uiManagerLogin.actualGender = actualGender;
     }
 
    

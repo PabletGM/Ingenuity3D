@@ -163,6 +163,9 @@ public class UIManagerLogin : MonoBehaviour
 
     #endregion
 
+    
+    public string actualGender;
+
 
     //inicializa uri del register y login
     private void Awake()
@@ -475,9 +478,16 @@ public class UIManagerLogin : MonoBehaviour
         string body;
 
         //correct body format
-         body = $@"{{
-            ""gender"": ""male""
+        body = $@"{{
+            ""gender"": ""{actualGender}""
         }}";
+
+        ////correct body format
+        //body = $@"{{
+        //    ""gender"": ""male""
+        //}}";
+
+        Debug.Log(actualGender);
 
         string uri = uriBackend + uriGenreUpdate;
 
@@ -512,6 +522,11 @@ public class UIManagerLogin : MonoBehaviour
         body = $@"{{
             ""gender"": ""male""
         }}";
+
+        ////TO-DO
+        //body = $@"{{
+        //    ""gender"": ""{actualGender}""
+        //}}";
 
         string uri = uriBackend + uriGenreUpdate;
 
