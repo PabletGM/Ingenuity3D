@@ -1147,7 +1147,7 @@ public class UIManagerLogin : MonoBehaviour
             else
             {
 
-                SceneManager.LoadScene("9.1");
+                SceneManager.LoadScene("8.0");
                 //fadeIn.SetActive(true);
                 //fadeIn.GetComponent<DOTweenAnimation>().DORestartById("FadeIn");
             }
