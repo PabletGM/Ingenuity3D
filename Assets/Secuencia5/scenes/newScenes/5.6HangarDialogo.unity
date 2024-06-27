@@ -1024,14 +1024,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 621ff7d4c3746b2468de936874fa3c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSFX1: 1
-  volumeSFX2: 1
-  volumeSFX3: 1
-  volumeMusic: 1
-  volumeDialogue1: 1
-  volumeDialogue2: 1
-  volumeDialogue3: 1
-  volumeTransition: 1
+  volumeSFX1: 0.2
+  volumeSFX2: 0.2
+  volumeSFX3: 0.2
+  volumeMusic: 0.2
+  volumeDialogue1: 0.2
+  volumeDialogue2: 0.2
+  volumeDialogue3: 0.2
+  volumeTransition: 0.2
 --- !u!1 &641604233
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,6 +1508,11 @@ PrefabInstance:
     - target: {fileID: 4626815408203434, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82675393856402862, guid: 9e0841b82a4ebcd438730d23886e17e6,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 114099955469796580, guid: 9e0841b82a4ebcd438730d23886e17e6,
         type: 3}
