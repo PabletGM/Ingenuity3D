@@ -1375,6 +1375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 394083056}
   - component: {fileID: 394083057}
+  - component: {fileID: 394083058}
   m_Layer: 0
   m_Name: eventAnimation
   m_TagString: Untagged
@@ -1421,6 +1422,30 @@ MonoBehaviour:
   onStart:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 2020714618}
+        m_TargetAssemblyTypeName: PlaySoundSceneSecuencia4, Assembly-CSharp
+        m_MethodName: PlayMusic
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: normal
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 394083058}
+        m_TargetAssemblyTypeName: FadeVolumeAudioSource, Assembly-CSharp
+        m_MethodName: StartFadeIn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1439504552}
         m_TargetAssemblyTypeName: PasarDeWalkAIdle, Assembly-CSharp
         m_MethodName: PasarWalkIdle
@@ -1529,6 +1554,19 @@ MonoBehaviour:
   optionalScrambleMode: 0
   optionalShakeRandomnessMode: 0
   optionalString: 
+--- !u!114 &394083058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394083055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b4ec7c94b7f0364f95f44106688db1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeDuration: 3
 --- !u!1 &407854824
 GameObject:
   m_ObjectHideFlags: 0
@@ -6431,7 +6469,7 @@ MonoBehaviour:
   volumeSFX1: 0.2
   volumeSFX2: 0.2
   volumeSFX3: 0.2
-  volumeMusic: 0.1
+  volumeMusic: 0.2
   volumeDialogue1: 0.2
   volumeDialogue2: 0.2
   volumeDialogue3: 0.2
