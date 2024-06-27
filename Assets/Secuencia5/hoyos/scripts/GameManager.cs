@@ -375,7 +375,7 @@ public class GameManager : MonoBehaviour
     public void NextScene()
     {
         //HACES fADEOUT
-        nextScene.GetComponent<DOTweenAnimation>().DORestart();
+        nextScene.GetComponent<DOTweenAnimation>().DORestartById("PutWinSong");
     }
 
     
