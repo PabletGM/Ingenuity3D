@@ -1031,6 +1031,30 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 988354071}
         m_TargetAssemblyTypeName: PlaySoundSecuencia9, Assembly-CSharp
+        m_MethodName: ChangeVolumeMusic
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 988354071}
+        m_TargetAssemblyTypeName: PlaySoundSecuencia9, Assembly-CSharp
+        m_MethodName: StopAllMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 988354071}
+        m_TargetAssemblyTypeName: PlaySoundSecuencia9, Assembly-CSharp
         m_MethodName: PlaySFX1
         m_Mode: 5
         m_Arguments:
@@ -6601,6 +6625,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlaySoundSceneGeneric
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164743115386472203, guid: 1e384f6f61a13c74783dc2d55d5dff1c,
+        type: 3}
+      propertyPath: volumeSFX1
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164743115386472203, guid: 1e384f6f61a13c74783dc2d55d5dff1c,
+        type: 3}
+      propertyPath: volumeSFX2
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164743115386472203, guid: 1e384f6f61a13c74783dc2d55d5dff1c,
+        type: 3}
+      propertyPath: volumeSFX3
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164743115386472203, guid: 1e384f6f61a13c74783dc2d55d5dff1c,
+        type: 3}
+      propertyPath: volumeMusic
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164743115386472203, guid: 1e384f6f61a13c74783dc2d55d5dff1c,
+        type: 3}
+      propertyPath: volumeDialogue1
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164743115386472203, guid: 1e384f6f61a13c74783dc2d55d5dff1c,
+        type: 3}
+      propertyPath: volumeDialogue2
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164743115386472203, guid: 1e384f6f61a13c74783dc2d55d5dff1c,
+        type: 3}
+      propertyPath: volumeDialogue3
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164743115386472203, guid: 1e384f6f61a13c74783dc2d55d5dff1c,
+        type: 3}
+      propertyPath: volumeTransition
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8227059599525611476, guid: 1e384f6f61a13c74783dc2d55d5dff1c,
         type: 3}
