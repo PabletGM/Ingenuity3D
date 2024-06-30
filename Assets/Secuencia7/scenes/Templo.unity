@@ -800,8 +800,9 @@ GameObject:
   m_Component:
   - component: {fileID: 63555727}
   - component: {fileID: 63555728}
+  - component: {fileID: 63555729}
   m_Layer: 0
-  m_Name: eventAudio
+  m_Name: eventAudioStopAllMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -846,9 +847,9 @@ MonoBehaviour:
   onStart:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2044551344}
-        m_TargetAssemblyTypeName: PlaySoundSecuencia7, Assembly-CSharp
-        m_MethodName: StopAllMusic
+      - m_Target: {fileID: 63555729}
+        m_TargetAssemblyTypeName: FadeVolumeAudioSource, Assembly-CSharp
+        m_MethodName: StartFadeOut
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -908,7 +909,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   loopType: 0
   loops: 1
-  id: 
+  id: StopAllMusic
   isRelative: 0
   isFrom: 0
   isIndependentUpdate: 0
@@ -920,7 +921,7 @@ MonoBehaviour:
   animationType: 4
   targetType: 11
   forcedTargetType: 0
-  autoPlay: 1
+  autoPlay: 0
   useTargetAsV3: 0
   endValueFloat: 0
   endValueV3: {x: 0, y: 0, z: 0}
@@ -942,6 +943,19 @@ MonoBehaviour:
   optionalScrambleMode: 0
   optionalShakeRandomnessMode: 0
   optionalString: 
+--- !u!114 &63555729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63555726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b4ec7c94b7f0364f95f44106688db1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeDuration: 4
 --- !u!1 &88310275
 GameObject:
   m_ObjectHideFlags: 0
@@ -6473,6 +6487,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 63555728}
+        m_TargetAssemblyTypeName: DG.Tweening.DOTweenAnimation, Assembly-CSharp-firstpass
+        m_MethodName: DORestartById
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: StopAllMusic
+          m_BoolArgument: 0
+        m_CallState: 2
   onPlay:
     m_PersistentCalls:
       m_Calls: []
@@ -6485,10 +6511,10 @@ MonoBehaviour:
   onComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PasarDeWalkAIdle, Assembly-CSharp
-        m_MethodName: PasarWalkIdle
-        m_Mode: 1
+      - m_Target: {fileID: 63555728}
+        m_TargetAssemblyTypeName: DG.Tweening.DOTweenAnimation, Assembly-CSharp-firstpass
+        m_MethodName: DORestartById
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10518,7 +10544,7 @@ PrefabInstance:
     - target: {fileID: 3291360475323283168, guid: cf1816ea55d6df24c8302b0cd1d579d1,
         type: 3}
       propertyPath: volumeMusic
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3291360475323283168, guid: cf1816ea55d6df24c8302b0cd1d579d1,
         type: 3}
