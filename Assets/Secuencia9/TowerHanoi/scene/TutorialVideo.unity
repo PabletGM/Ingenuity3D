@@ -327,6 +327,18 @@ MonoBehaviour:
   onComplete:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1375321970}
+        m_TargetAssemblyTypeName: PlaySoundSecuencia9, Assembly-CSharp
+        m_MethodName: ChangeVolumeMusic
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1597171194}
         m_TargetAssemblyTypeName: NextSceneGenericMethod2, Assembly-CSharp
         m_MethodName: NextScene
@@ -649,6 +661,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1375321970}
+        m_TargetAssemblyTypeName: PlaySoundSecuencia9, Assembly-CSharp
+        m_MethodName: StopAllSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1597171194}
         m_TargetAssemblyTypeName: NextSceneGenericMethod2, Assembly-CSharp
         m_MethodName: NextScene
@@ -854,6 +878,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1375321968}
+    - targetCorrespondingSourceObject: {fileID: 355103628728093083, guid: e80a28a56d137574fa9c302ee389731b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1375321970}
   m_SourcePrefab: {fileID: 100100000, guid: e80a28a56d137574fa9c302ee389731b, type: 3}
 --- !u!1 &1375321967 stripped
 GameObject:
@@ -887,6 +915,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1375321966}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1375321970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375321967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1797527ed2437047bed429ac933ab38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSFX1: 0.2
+  volumeSFX2: 0.2
+  volumeSFX3: 0.2
+  volumeMusic: 0.2
+  volumeDialogue1: 0.2
+  volumeDialogue2: 0.2
+  volumeDialogue3: 0.2
+  volumeTransition: 0.2
 --- !u!1 &1463990474
 GameObject:
   m_ObjectHideFlags: 0
