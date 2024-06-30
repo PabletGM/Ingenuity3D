@@ -70,6 +70,25 @@ public class FadeVolumeAudioSource : MonoBehaviour
             }
         }
         #endregion
+
+        #region AudioManagerSec7
+        // Busca el GameObject llamado "AudioManagerBengalasSecuencia3" en la jerarquía, audioManager sec3
+        GameObject audioManagerSec7 = GameObject.Find("AudioManagerSecuencia7");
+
+        if (audioManagerSec7 != null)
+        {
+            // Busca el hijo llamado "Music Source"
+            Transform musicSourceTransform = audioManagerSec7.transform.Find("Music Source");
+
+            if (musicSourceTransform != null)
+            {
+                // Obtén el componente AudioSource del hijo "Music Source"
+                audioSource = musicSourceTransform.GetComponent<AudioSource>();
+
+                Debug.Log("Found audioSource: " + audioSource);
+            }
+        }
+        #endregion
     }
 
 

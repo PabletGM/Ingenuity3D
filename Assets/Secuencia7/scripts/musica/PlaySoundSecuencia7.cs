@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class PlaySoundSecuencia7 : MonoBehaviour
 {
@@ -113,12 +114,12 @@ public class PlaySoundSecuencia7 : MonoBehaviour
     #region Music
     public void PlayMusic(string music)
     {
-        AudioManagerSecuencia7.instance.PlayMusic(music,1f);
+        AudioManagerSecuencia7.instance.PlayMusic(music, volumeMusic);
     }
 
     public void ChangeVolumeMusic(float volume)
     {
-        volume = volumeMusic;
+        volumeMusic = volume;
     }
 
     public void StopAllMusic()
