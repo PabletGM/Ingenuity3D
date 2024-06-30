@@ -1520,6 +1520,7 @@ GameObject:
   m_Component:
   - component: {fileID: 998174278}
   - component: {fileID: 998174279}
+  - component: {fileID: 998174280}
   m_Layer: 0
   m_Name: musicOriginal
   m_TagString: Untagged
@@ -1566,10 +1567,10 @@ MonoBehaviour:
   onStart:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlaySoundSecuencia3, Assembly-CSharp
-        m_MethodName: PlayMusic
-        m_Mode: 5
+      - m_Target: {fileID: 998174280}
+        m_TargetAssemblyTypeName: FadeVolumeAudioSource, Assembly-CSharp
+        m_MethodName: StartFadeOut
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1662,6 +1663,19 @@ MonoBehaviour:
   optionalScrambleMode: 0
   optionalShakeRandomnessMode: 0
   optionalString: 
+--- !u!114 &998174280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998174277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b4ec7c94b7f0364f95f44106688db1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeDuration: 3
 --- !u!1001 &1153905764
 PrefabInstance:
   m_ObjectHideFlags: 0
