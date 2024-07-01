@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class ComportamientoCrearPantalla : MonoBehaviour
 {
-
     [SerializeField]
     private GameObject pantalla;
     public void Pantalla()
