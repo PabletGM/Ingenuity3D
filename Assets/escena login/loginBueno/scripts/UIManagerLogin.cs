@@ -189,7 +189,9 @@ public class UIManagerLogin : MonoBehaviour
 
     private void Start()
     {
-       
+        //los generos por defecto del login y register si estan vacias se les pone "unknown"
+        actualGenderLogin = "unknown";
+        actualGenderRegister = "unknown";
     }
 
     private void Update()
@@ -203,6 +205,18 @@ public class UIManagerLogin : MonoBehaviour
     {
         return _instanceUILogin;
     }
+
+    #region ActualGenderRegisterLogin
+    public string GetActualGenderLogin()
+    {
+        return actualGenderLogin;
+    }
+
+    public string GetActualGenderRegister()
+    {
+        return actualGenderRegister;
+    }
+    #endregion
 
     #region Politica de Privacidad
 
