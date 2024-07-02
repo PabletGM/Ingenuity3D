@@ -49,7 +49,10 @@ public class EleccionGenero : MonoBehaviour
         }
 
         uiManagerLogin.actualGenderLogin = actualGender;
+        uiManagerLogin.dontDestroyOnLoadGenreChosen.GetComponent<GenreLoginRegisterChosen>().SetActualGenderLogin(actualGender);
+
         uiManagerLogin.actualGenderRegister = actualGender;
+        uiManagerLogin.dontDestroyOnLoadGenreChosen.GetComponent<GenreLoginRegisterChosen>().SetActualGenderRegister(actualGender);
     }
 
    

@@ -17,6 +17,8 @@ public class UIManagerLogin : MonoBehaviour
     [SerializeField]
     private GameObject fadeIn;
 
+    public GameObject dontDestroyOnLoadGenreChosen;
+
 
     //singleton
     static private UIManagerLogin _instanceUILogin;

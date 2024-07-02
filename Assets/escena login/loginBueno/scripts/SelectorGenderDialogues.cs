@@ -6,7 +6,7 @@ public class SelectorGenderDialogues : MonoBehaviour
 {
 
     // Referencia al UIManagerLogin
-    static private UIManagerLogin uiManagerLogin;
+    static private GenreLoginRegisterChosen genreChosen;
 
     //options depending of gender
     [SerializeField]
@@ -19,24 +19,24 @@ public class SelectorGenderDialogues : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        uiManagerLogin = UIManagerLogin.GetInstanceUI();
+        genreChosen = GenreLoginRegisterChosen.GetInstanceUI();
         //comprobamos si existe la instancia UIManagerLogin
-        if (uiManagerLogin != null)
+        if (genreChosen != null)
         {
             //ask for the gender
             string genderChosen;
             //first on login, if it has done login
-            if(uiManagerLogin.GetActualGenderLogin() != "unknown")
+            if(genreChosen.GetActualGenderLogin() != "unknown")
             {
-                genderChosen = uiManagerLogin.GetActualGenderLogin();
-                Debug.Log(uiManagerLogin.GetActualGenderLogin());
+                genderChosen = genreChosen.GetActualGenderLogin();
+                Debug.Log(genreChosen.GetActualGenderLogin());
                 ChangeDialogueDependingOfGender(genderChosen);
             }
             //second on register, if it has done register
-            else if(uiManagerLogin.GetActualGenderRegister() != "unknown")
+            else if(genreChosen.GetActualGenderRegister() != "unknown")
             {
-                genderChosen = uiManagerLogin.GetActualGenderRegister();
-                Debug.Log(uiManagerLogin.GetActualGenderRegister());
+                genderChosen = genreChosen.GetActualGenderRegister();
+                Debug.Log(genreChosen.GetActualGenderRegister());
                 ChangeDialogueDependingOfGender(genderChosen);
             }
         }
