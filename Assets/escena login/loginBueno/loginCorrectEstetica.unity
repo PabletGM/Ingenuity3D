@@ -1281,6 +1281,7 @@ Transform:
   - {fileID: 1988898317}
   - {fileID: 1412327741}
   - {fileID: 1053908445}
+  - {fileID: 915696034}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1644,7 +1645,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1898360291}
+      - m_Target: {fileID: 915696035}
         m_TargetAssemblyTypeName: UIManagerLogin, Assembly-CSharp
         m_MethodName: DebugCouponLogin2
         m_Mode: 1
@@ -2968,7 +2969,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &639377909
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3963,7 +3964,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1898360291}
+      - m_Target: {fileID: 915696035}
         m_TargetAssemblyTypeName: UIManagerLogin, Assembly-CSharp
         m_MethodName: DebugCouponLogin1
         m_Mode: 1
@@ -4426,7 +4427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &855592757
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4621,7 +4622,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1898360291}
+      - m_Target: {fileID: 915696035}
         m_TargetAssemblyTypeName: UIManagerLogin, Assembly-CSharp
         m_MethodName: OpenRegistrationPanel
         m_Mode: 1
@@ -4807,6 +4808,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890421036}
   m_CullTransparentMesh: 1
+--- !u!1 &915696033
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 915696034}
+  - component: {fileID: 915696035}
+  m_Layer: 0
+  m_Name: uiManagerLoginRegister
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &915696034
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915696033}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 314284451}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &915696035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915696033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 447da601b1caed744b5c79806986d881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeIn: {fileID: 843464792}
+  dataProtectionToggleRegister: {fileID: 1741231983}
+  botonAvanzaRegister: {fileID: 1191243932}
+  dataProtectionToggleLogin: {fileID: 979717291}
+  botonAvanzaLogin: {fileID: 828273842}
+  loginPanel: {fileID: 855592756}
+  registrationPanel: {fileID: 639377908}
+  genderPanelLogin: {fileID: 457199344}
+  HistoryPanelLogin: {fileID: 591310178}
+  genderPanelRegister: {fileID: 1571008424}
+  HistoryPanelRegister: {fileID: 514520481}
+  buttonChangeStateLoginToRegister: {fileID: 965920260}
+  buttonChangeStateRegisterToLogin: {fileID: 0}
+  userNameRegister: {fileID: 0}
+  company: {fileID: 0}
+  emailRegister: {fileID: 703988486}
+  emailLogin: {fileID: 0}
+  firstName: {fileID: 0}
+  lastName: {fileID: 0}
+  name: {fileID: 1706037678}
+  surname: {fileID: 1652942023}
+  IDRegister: {fileID: 1151111195}
+  passwordRegister: {fileID: 0}
+  confirmPasswordRegister: {fileID: 0}
+  userNameLogin: {fileID: 0}
+  passwordLogin: {fileID: 0}
+  processIdLogin: {fileID: 1499924468}
+  couponCodeLogin: {fileID: 1499924468}
+  loading: {fileID: 633117775}
+  popUpLoginFallo: {fileID: 1271095146}
+  popUpRegisterFallo: {fileID: 734973735}
+  actualGenderLogin: unknown
+  actualGenderRegister: unknown
 --- !u!1 &928639124
 GameObject:
   m_ObjectHideFlags: 0
@@ -5027,7 +5105,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1898360291}
+      - m_Target: {fileID: 915696035}
         m_TargetAssemblyTypeName: UIManagerLogin, Assembly-CSharp
         m_MethodName: GoToLinkIngenuityWebPoliticy
         m_Mode: 1
@@ -5373,7 +5451,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1898360291}
+      - m_Target: {fileID: 915696035}
         m_TargetAssemblyTypeName: UIManagerLogin, Assembly-CSharp
         m_MethodName: OpenRegistrationPanel
         m_Mode: 1
@@ -6024,7 +6102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tiempoEsperaPasoEscena: 0
-  nombreCambioEscena: Intro
+  nombreCambioEscena: escenaIntro
 --- !u!1 &1067315005
 GameObject:
   m_ObjectHideFlags: 0
@@ -6166,7 +6244,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1898360291}
+      - m_Target: {fileID: 915696035}
         m_TargetAssemblyTypeName: UIManagerLogin, Assembly-CSharp
         m_MethodName: DebugStartGameLoginCouponParameters
         m_Mode: 1
@@ -7017,7 +7095,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1898360291}
+      - m_Target: {fileID: 915696035}
         m_TargetAssemblyTypeName: UIManagerLogin, Assembly-CSharp
         m_MethodName: DebugRegisterCoupon1
         m_Mode: 1
@@ -9273,7 +9351,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1898360291}
+      - m_Target: {fileID: 915696035}
         m_TargetAssemblyTypeName: UIManagerLogin, Assembly-CSharp
         m_MethodName: GoToLinkIngenuityWebPoliticy
         m_Mode: 1
@@ -10150,7 +10228,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1898360291}
+      - m_Target: {fileID: 915696035}
         m_TargetAssemblyTypeName: UIManagerLogin, Assembly-CSharp
         m_MethodName: OpenLoginPanel
         m_Mode: 1
@@ -11040,7 +11118,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1898360291}
+      - m_Target: {fileID: 915696035}
         m_TargetAssemblyTypeName: UIManagerLogin, Assembly-CSharp
         m_MethodName: DebugStartGameLoginCouponParameters
         m_Mode: 1
@@ -11102,7 +11180,6 @@ GameObject:
   - component: {fileID: 1898360289}
   - component: {fileID: 1898360288}
   - component: {fileID: 1898360287}
-  - component: {fileID: 1898360291}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -11195,51 +11272,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1898360291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1898360286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 447da601b1caed744b5c79806986d881, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeIn: {fileID: 843464792}
-  dataProtectionToggleRegister: {fileID: 1741231983}
-  botonAvanzaRegister: {fileID: 1191243932}
-  dataProtectionToggleLogin: {fileID: 979717291}
-  botonAvanzaLogin: {fileID: 828273842}
-  loginPanel: {fileID: 855592756}
-  registrationPanel: {fileID: 639377908}
-  genderPanelLogin: {fileID: 457199344}
-  HistoryPanelLogin: {fileID: 591310178}
-  genderPanelRegister: {fileID: 1571008424}
-  HistoryPanelRegister: {fileID: 514520481}
-  buttonChangeStateLoginToRegister: {fileID: 965920260}
-  buttonChangeStateRegisterToLogin: {fileID: 0}
-  userNameRegister: {fileID: 0}
-  company: {fileID: 0}
-  emailRegister: {fileID: 703988486}
-  emailLogin: {fileID: 0}
-  firstName: {fileID: 0}
-  lastName: {fileID: 0}
-  name: {fileID: 1706037678}
-  surname: {fileID: 1652942023}
-  IDRegister: {fileID: 1151111195}
-  passwordRegister: {fileID: 0}
-  confirmPasswordRegister: {fileID: 0}
-  userNameLogin: {fileID: 0}
-  passwordLogin: {fileID: 0}
-  processIdLogin: {fileID: 1499924468}
-  couponCodeLogin: {fileID: 1499924468}
-  loading: {fileID: 633117775}
-  popUpLoginFallo: {fileID: 1271095146}
-  popUpRegisterFallo: {fileID: 734973735}
-  actualGenderLogin: unknown
-  actualGenderRegister: unknown
 --- !u!1 &1974288005
 GameObject:
   m_ObjectHideFlags: 0
@@ -12386,7 +12418,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1898360291}
+      - m_Target: {fileID: 915696035}
         m_TargetAssemblyTypeName: UIManagerLogin, Assembly-CSharp
         m_MethodName: OpenLoginPanel
         m_Mode: 1
@@ -12655,7 +12687,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1898360291}
+      - m_Target: {fileID: 915696035}
         m_TargetAssemblyTypeName: UIManagerLogin, Assembly-CSharp
         m_MethodName: DebugCouponRegister2
         m_Mode: 1
