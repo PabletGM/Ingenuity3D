@@ -156,6 +156,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &203808768 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3294407724654678568, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
+    type: 3}
+  m_PrefabInstance: {fileID: 731623067}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731623071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &207349885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1954,6 +1966,34 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0311957f516547b40afe2f76d553d05c, type: 3}
+--- !u!1 &577742033 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2859488870358262165, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
+    type: 3}
+  m_PrefabInstance: {fileID: 731623067}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &577742034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577742033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417b4434442c2f347b379dd8f63e0214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleItemGenre: {fileID: 1438260371}
+  titleItemMasculine: "Como experto, estudiar\xEDa el caso y decidir\xEDa cu\xE1l
+    es la mejor opci\xF3n. Preguntar a varias personas sobre su opini\xF3n podr\xEDa
+    causar conflicto."
+  titleItemFemenine: "Como experta, estudiar\xEDa el caso y decidir\xEDa cu\xE1l
+    es la mejor opci\xF3n. Preguntar a varias personas sobre su opini\xF3n podr\xEDa
+    causar conflicto."
+  titleItemNeutre: "Con mi experiencia, estudiar\xEDa el caso y decidir\xEDa cu\xE1l
+    es la mejor opci\xF3n. Preguntar a varias personas sobre su opini\xF3n podr\xEDa
+    causar conflicto."
 --- !u!1 &628133193
 GameObject:
   m_ObjectHideFlags: 0
@@ -5525,6 +5565,18 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1827023526}
+    - targetCorrespondingSourceObject: {fileID: 8783780358555914779, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 731623076}
+    - targetCorrespondingSourceObject: {fileID: 2859488870358262165, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 577742034}
+    - targetCorrespondingSourceObject: {fileID: 5190589276621298053, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1215680430}
   m_SourcePrefab: {fileID: 100100000, guid: 8b09d6ab0be214c4db8f7fe27233fe81, type: 3}
 --- !u!1 &731623068 stripped
 GameObject:
@@ -5550,6 +5602,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6b35364bdd3cc439a1f3e77047ad6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &731623071 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8783780358555914779, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
+    type: 3}
+  m_PrefabInstance: {fileID: 731623067}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &731623072 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1352644084664645300, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
@@ -5592,6 +5650,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6b35364bdd3cc439a1f3e77047ad6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &731623076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731623071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417b4434442c2f347b379dd8f63e0214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleItemGenre: {fileID: 203808768}
+  titleItemMasculine: "Como experto, estudiar\xEDa el caso y decidir\xEDa cu\xE1l
+    es la mejor opci\xF3n. Preguntar a varias personas sobre su opini\xF3n podr\xEDa
+    causar conflicto."
+  titleItemFemenine: "Como experta, estudiar\xEDa el caso y decidir\xEDa cu\xE1l
+    es la mejor opci\xF3n. Preguntar a varias personas sobre su opini\xF3n podr\xEDa
+    causar conflicto."
+  titleItemNeutre: "Con mi experiencia, estudiar\xEDa el caso y decidir\xEDa cu\xE1l
+    es la mejor opci\xF3n. Preguntar a varias personas sobre su opini\xF3n podr\xEDa
+    causar conflicto."
 --- !u!1 &733944267
 GameObject:
   m_ObjectHideFlags: 0
@@ -7248,6 +7328,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1797527ed2437047bed429ac933ab38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1215680428 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5190589276621298053, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
+    type: 3}
+  m_PrefabInstance: {fileID: 731623067}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1215680429 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2042095038953544118, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
+    type: 3}
+  m_PrefabInstance: {fileID: 731623067}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215680428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1215680430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215680428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417b4434442c2f347b379dd8f63e0214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleItemGenre: {fileID: 1215680429}
+  titleItemMasculine: "Como experto, estudiar\xEDa el caso y decidir\xEDa cu\xE1l
+    es la mejor opci\xF3n. Preguntar a varias personas sobre su opini\xF3n podr\xEDa
+    causar conflicto."
+  titleItemFemenine: "Como experta, estudiar\xEDa el caso y decidir\xEDa cu\xE1l
+    es la mejor opci\xF3n. Preguntar a varias personas sobre su opini\xF3n podr\xEDa
+    causar conflicto."
+  titleItemNeutre: "Con mi experiencia, estudiar\xEDa el caso y decidir\xEDa cu\xE1l
+    es la mejor opci\xF3n. Preguntar a varias personas sobre su opini\xF3n podr\xEDa
+    causar conflicto."
 --- !u!1 &1387243180
 GameObject:
   m_ObjectHideFlags: 0
@@ -7399,6 +7519,18 @@ Transform:
   m_Father: {fileID: 414265829}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -38.04, y: 177.113, z: -130.835}
+--- !u!114 &1438260371 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8354359923558850982, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
+    type: 3}
+  m_PrefabInstance: {fileID: 731623067}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577742033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1464594468
 GameObject:
   m_ObjectHideFlags: 0
