@@ -515,6 +515,46 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &282509095 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 888257031461585887, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
+    type: 3}
+  m_PrefabInstance: {fileID: 343912918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &282509097 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 924218371937301043, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
+    type: 3}
+  m_PrefabInstance: {fileID: 343912918}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282509095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &282509099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282509095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417b4434442c2f347b379dd8f63e0214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleItemGenre: {fileID: 282509097}
+  titleItemMasculine: "Tengo la conciencia tranquila. He sido claro con mis instrucciones
+    y, aunque me resulte dif\xEDcil, cada uno debe asumir las consecuencias de sus
+    acciones "
+  titleItemFemenine: "Tengo la conciencia tranquila. He sido clara con mis instrucciones
+    y, aunque me resulte dif\xEDcil, cada uno debe asumir las consecuencias de sus
+    acciones "
+  titleItemNeutre: "Tengo la conciencia tranquila. Mis instrucciones han sido claras
+    y, aunque me resulte dif\xEDcil, cada uno debe asumir las consecuencias de sus
+    acciones "
 --- !u!1001 &343912918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2529,6 +2569,18 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 343912923}
+    - targetCorrespondingSourceObject: {fileID: 4448806362825312321, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 623248867}
+    - targetCorrespondingSourceObject: {fileID: 7202915621633735631, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 784985802}
+    - targetCorrespondingSourceObject: {fileID: 888257031461585887, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 282509099}
   m_SourcePrefab: {fileID: 100100000, guid: 8b09d6ab0be214c4db8f7fe27233fe81, type: 3}
 --- !u!224 &343912919 stripped
 RectTransform:
@@ -2796,6 +2848,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b34e9a2fbb8a8574ca610c52e270a5ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &623248863 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4448806362825312321, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
+    type: 3}
+  m_PrefabInstance: {fileID: 343912918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &623248865 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4412849746260523437, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
+    type: 3}
+  m_PrefabInstance: {fileID: 343912918}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623248863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &623248867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623248863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417b4434442c2f347b379dd8f63e0214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleItemGenre: {fileID: 623248865}
+  titleItemMasculine: "Tengo la conciencia tranquila. He sido claro con mis instrucciones
+    y, aunque me resulte dif\xEDcil, cada uno debe asumir las consecuencias de sus
+    acciones "
+  titleItemFemenine: "Tengo la conciencia tranquila. He sido clara con mis instrucciones
+    y, aunque me resulte dif\xEDcil, cada uno debe asumir las consecuencias de sus
+    acciones "
+  titleItemNeutre: "Tengo la conciencia tranquila. Mis instrucciones han sido claras
+    y, aunque me resulte dif\xEDcil, cada uno debe asumir las consecuencias de sus
+    acciones "
 --- !u!1001 &741343864
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3546,6 +3638,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &784985798 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7202915621633735631, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
+    type: 3}
+  m_PrefabInstance: {fileID: 343912918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &784985800 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7166677531035404835, guid: 8b09d6ab0be214c4db8f7fe27233fe81,
+    type: 3}
+  m_PrefabInstance: {fileID: 343912918}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784985798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &784985802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784985798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417b4434442c2f347b379dd8f63e0214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleItemGenre: {fileID: 784985800}
+  titleItemMasculine: "Tengo la conciencia tranquila. He sido claro con mis instrucciones
+    y, aunque me resulte dif\xEDcil, cada uno debe asumir las consecuencias de sus
+    acciones "
+  titleItemFemenine: "Tengo la conciencia tranquila. He sido clara con mis instrucciones
+    y, aunque me resulte dif\xEDcil, cada uno debe asumir las consecuencias de sus
+    acciones "
+  titleItemNeutre: "Tengo la conciencia tranquila. Mis instrucciones han sido claras
+    y, aunque me resulte dif\xEDcil, cada uno debe asumir las consecuencias de sus
+    acciones "
 --- !u!1001 &839995970
 PrefabInstance:
   m_ObjectHideFlags: 0
