@@ -39,7 +39,7 @@ public class ChangingDialogues : MonoBehaviour
                     break;
 
                 case "Bosque":
-                    textToModify.text = "Atravesar la selva no ha sido lo más acertado. Es la opción más peligrosa y puede que nunca lleguemos a nuestro destino";
+                    textToModify.text = "Atravesar el bosque no ha sido lo más acertado. Es la opción más peligrosa y puede que nunca lleguemos a nuestro destino";
                     break;
             }
         }
