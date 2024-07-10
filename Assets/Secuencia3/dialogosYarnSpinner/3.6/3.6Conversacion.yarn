@@ -6,17 +6,23 @@ colorID: 0
 
 
 <<PlayAudio robot1>>
-Robot: Parece que nos hemos separado del grupo y…¡Hemos perdido la comunicación con la nave!
+Robot: Parece que nos hemos separado del grupo y... ¡Hemos perdido la comunicación con la nave!
 <<PlayAudio clickButton>>
 
 
 <<PlayAudio robot2>>
-Robot: ¡Activando Protocolo de Rescate!
+Robot: ¡Activando Protocolo de Rescate!... Lanzar bengalas es nuestra única oportunidad de salvarnos.
 <<PlayAudio clickButton>>
+
+<<PlayAudio robot2>>
+Robot: Cuanto más alto las lancemos, más probabilidades tendremos de que la nave nos encuentre.
+<<PlayAudio clickButton>>
+
+
 
 
 // // fade to black, from 0% opacity to 100% opacity, in 2.0 seconds
 <<Fade black 0.0 1.0 2.0>>
-<<SceneChange BengalasPrueba>>
+<<SceneChange tutorialBengalas>>
 THE END.
 ===
