@@ -12,14 +12,14 @@ public class ElegirCaminoMapa : MonoBehaviour
         if (instance == null )
         {
             instance = this;
-            DontDestroyOnLoad( this );
+            DontDestroyOnLoad( this.gameObject );
         }
         else
         {
             Destroy( this.gameObject );
         }
     }
-    private string chosenOption = "";
+    private string chosenOption = "CaminoEstablecido";
 
     public void ChooseWayRio()
     {

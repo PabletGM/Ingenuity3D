@@ -12,12 +12,12 @@ public class ChangingDialogues : MonoBehaviour
     [SerializeField]
     private string nameActualScene;
 
-    private void Update()
+    private void Start()
     {
         //miramos cual es la escena actual
         if(nameActualScene == "7.8DialogoOpciones")
         {
-            ChangeTextWithOption();
+            Invoke("ChangeTextWithOption", 6f);
         }
     }
 
@@ -42,6 +42,8 @@ public class ChangingDialogues : MonoBehaviour
                     textToModify.text = "Atravesar el bosque no ha sido lo más acertado. Es la opción más peligrosa y puede que nunca lleguemos a nuestro destino";
                     break;
             }
+            Destroy(ElegirCaminoMapa.instance.gameObject);
+            
         }
         
     }
