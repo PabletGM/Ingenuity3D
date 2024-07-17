@@ -59,6 +59,9 @@ public class gamecontroller : MonoBehaviour
     [SerializeField]
     private GameObject background;
 
+    [SerializeField]
+    private GameObject dontDestroyOnLoadResultMatches;
+
 
     //booleano que permite que durante el modo de dificultad medio se haga la comprobacion 1 vez para taponar jugada player de victoria
     private bool modoMedioTaponarPrimeraJugadaVictoria = true;
@@ -78,6 +81,14 @@ public class gamecontroller : MonoBehaviour
 
     private bool evitarDobleJugadaPlayer = false;
 
+    private void Start()
+    {
+        //mirar si estamos en escena 
+        if(SceneManager.GetActiveScene().name == "mecanicas3EnRayaModoFacil")
+        {
+            dontDestroyOnLoadResultMatches.GetComponent<DontDestroyOnLoadResultsMatches3EnRaya>().SetActualMatch("easy");
+        }
+    }
 
 
     static public gamecontroller GetInstanceGameController()
@@ -1754,6 +1765,8 @@ public class gamecontroller : MonoBehaviour
 
         gameover.SetActive(true);
         gameoverText.text = "Derrota";
+        //avisar arbol de dialogos que hemos perdido
+        dontDestroyOnLoadResultMatches.GetComponent<DontDestroyOnLoadResultsMatches3EnRaya>().SetEasyMatchResultWin(false);
     }
 
     private void YouLost()
@@ -1776,6 +1789,8 @@ public class gamecontroller : MonoBehaviour
 
         win.SetActive(true);
         gameoverText.text ="Victoria";
+        //avisar arbol de dialogos que hemos ganado
+        dontDestroyOnLoadResultMatches.GetComponent<DontDestroyOnLoadResultsMatches3EnRaya>().SetEasyMatchResultWin(true);
     }
 
     //segun en que nivel estés pasas a uno u otro
