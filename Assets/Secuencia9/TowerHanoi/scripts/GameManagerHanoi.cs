@@ -1162,6 +1162,11 @@ public class GameManagerHanoi : MonoBehaviour
         InfoHanoiMongoDB.GetInstanceManagerItemsSecuencia9().RecolectarArgumentosHanoiI();
     }
 
+    public void Rendirse()
+    {
+        InfoHanoiMongoDB.GetInstanceManagerItemsSecuencia9().RecolectarArgumentosHanoiSinAcabar();
+    }
+
    
 
     //comprobacion si hay combinacion ganadora palo3

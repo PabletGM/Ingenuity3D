@@ -57,6 +57,20 @@ public class InfoHanoiMongoDB : MonoBehaviour
 
     }
 
+    public void RecolectarArgumentosHanoiSinAcabar()
+    {
+        int TotalTime = 0;
+        int numJugadas = 0;
+        int numMovimientosIncorrectos = 0;
+        int numMovimientosOutOfLimits = 0;
+        //recolectar token de script login register
+        access_token = _myUIManagerLogin.GetAccessToken();
+        //se empieza corrutina hoyosMongoDB
+        StartCoroutine(PutHanoiMongoDB(TotalTime, numJugadas, numMovimientosIncorrectos, numMovimientosOutOfLimits));
+        //se hace getMethod de endGame tras esto para terminar
+        _instanceItems.EndGame();
+    }
+
     [System.Obsolete]
     IEnumerator PutHanoiMongoDB(int totalTime, int numJugadas, int numMovimientosIncorrectos, int numMovimientosOutOfLimits)
     {
