@@ -11,6 +11,7 @@ using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static System.Net.WebRequestMethods;
+using static UnityEngine.UI.GridLayoutGroup;
 
 public class UIManagerLogin : MonoBehaviour
 {
@@ -925,8 +926,8 @@ public class UIManagerLogin : MonoBehaviour
             //usuario ya existe
             case "HTTP/1.1 409 Conflict":
                 //fallo de register porque usuario ya existente
-                Debug.Log("Usuario ya existe");
-                UsuarioYaExiste("Usuario ya existe");
+                Debug.Log("Correo electronico repetido");
+                ErrorCreacionUsuarioRegister("Correo electronico repetido");
                 break;
 
             //error en creacion de usuario y solicutud register
@@ -1033,11 +1034,15 @@ public class UIManagerLogin : MonoBehaviour
                     CambiarMensajeRegister("El email no posee formato correcto");
                 }
                 //correo ya registrado o ya existe
-                //else if ()
-                //{
-                //    //miramos si nombre tiene solo letras o caracteres invalidos
-                //    CambiarMensajeRegister("Correo ya registrado");
-                //}
+                else if (mensaje == "Correo electronico repetido")
+                {
+                    //miramos si nombre tiene solo letras o caracteres invalidos
+                    CambiarMensajeRegister("Correo ya registrado");
+                }
+                else if(mensaje == "406: No se acepta el formato")
+                {
+                    CambiarMensajeRegister("Correo ya registrado");
+                }
         #endregion
 
             #region codigoIDExceptions
