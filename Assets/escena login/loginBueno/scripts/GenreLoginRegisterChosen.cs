@@ -56,7 +56,7 @@ public class GenreLoginRegisterChosen : MonoBehaviour
     private void Start()
     {
         //los generos por defecto del login y register si estan vacias se les pone "unknown"
-        actualGenderLogin = "unknown";
-        actualGenderRegister = "unknown";
+        actualGenderLogin = "male";
+        actualGenderRegister = "male";
     }  
 }
