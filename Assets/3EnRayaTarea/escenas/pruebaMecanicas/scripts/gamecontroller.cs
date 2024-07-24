@@ -83,8 +83,9 @@ public class gamecontroller : MonoBehaviour
 
     private void Start()
     {
+        endPartida = false;
         //mirar si estamos en escena 
-        if(SceneManager.GetActiveScene().name == "mecanicas3EnRayaModoFacil")
+        if (SceneManager.GetActiveScene().name == "mecanicas3EnRayaModoFacil")
         {
             dontDestroyOnLoadResultMatches.GetComponent<DontDestroyOnLoadResultsMatches3EnRaya>().SetActualMatch("easy");
         }
@@ -1758,15 +1759,24 @@ public class gamecontroller : MonoBehaviour
     //para decir si ha ganado enemy
     void GameOver()
     {
-        AudioManagerSecuencia6.instance.PlaySFX2("gameOver", 0.3f);
-        Invoke("YouLost", 1f);
-        SetBoardInteractable(false);
-        DesactivarTableroAlGanarOPerder();
-
-        gameover.SetActive(true);
-        gameoverText.text = "Derrota";
-        //avisar arbol de dialogos que hemos perdido
-        dontDestroyOnLoadResultMatches.GetComponent<DontDestroyOnLoadResultsMatches3EnRaya>().SetEasyMatchResultWin(false);
+        if(!endPartida)
+        {
+            AudioManagerSecuencia6.instance.PlaySFX2("gameOver", 0.3f);
+            Invoke("YouLost", 1f);
+            SetBoardInteractable(false);
+            DesactivarTableroAlGanarOPerder();
+            endPartida = true;
+            gameover.SetActive(true);
+            gameoverText.text = "Derrota";
+            //avisar arbol de dialogos que hemos perdido
+            if(dontDestroyOnLoadResultMatches)
+            {
+                dontDestroyOnLoadResultMatches.GetComponent<DontDestroyOnLoadResultsMatches3EnRaya>().SetEasyMatchResultWin(false);
+            }
+           
+            
+        }
+       
     }
 
     private void YouLost()
