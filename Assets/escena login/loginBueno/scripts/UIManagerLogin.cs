@@ -8,8 +8,10 @@ using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.Purchasing.MiniJSON;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 using static System.Net.WebRequestMethods;
 using static UnityEngine.UI.GridLayoutGroup;
 
@@ -160,6 +162,7 @@ public class UIManagerLogin : MonoBehaviour
     private string uriRegister = "Users/register";
     private string uriLogin = "Users/login";
 
+    private string uriLoginPrivacidadCondiciones = "Users/me/accept/privacyConditions";
     private string uriLoginCoupon = "Users/couponLogin";
     private string uriRegisterCoupon = "Users/registerv2";
     private string uriGenreUpdate = "Users/me/updateInfo";
@@ -195,12 +198,66 @@ public class UIManagerLogin : MonoBehaviour
         //los generos por defecto del login y register si estan vacias se les pone "unknown"
         actualGenderLogin = "male";
         actualGenderRegister = "male";
+
+        // Asegurarse de que el Toggle esté asignado
+        if (dataProtectionToggleLogin != null)
+        {
+            // Suscribirse al evento onValueChanged del Toggle
+            dataProtectionToggleLogin.onValueChanged.AddListener(CheckBoxToggleValueSetButtonAvailableLogin);
+        }
+    }
+
+    private void CheckBoxToggleValueSetButtonAvailableLogin(bool isOn)
+    {
+        isOn = dataProtectionToggleLogin.isOn;
+        //si todos los campos del register no estan vacios Y CHECKBOX PULSADA
+        if (couponCodeLogin.text != "" && isOn)
+        {
+            //el valor de que sea interactuable el boton avanza dependerá del valor de la checkbox
+            botonAvanzaLogin.interactable = dataProtectionToggleLogin.isOn;
+            //opacidad del boton
+            Color color = botonAvanzaLogin.GetComponent<Image>().color;
+            color.a = 1f; // 1f es opacidad completa, 0.5f es mitad opacidad
+            botonAvanzaLogin.GetComponent<Image>().color = color;
+            //llamar a EndPoint
+            StartCoroutine(GetPrivacyConditions());
+        }
+        else
+        {
+            //el valor de que sea interactuable el boton avanza dependerá del valor de la checkbox
+            botonAvanzaLogin.interactable = dataProtectionToggleLogin.isOn = false;
+            //opacidad del boton
+            Color color = botonAvanzaLogin.GetComponent<Image>().color;
+            color.a = 0.5f; // 1f es opacidad completa, 0.5f es mitad opacidad
+            botonAvanzaLogin.GetComponent<Image>().color = color;
+        }
+    }
+
+    IEnumerator GetPrivacyConditions()
+    {
+
+        string uri = uriBackend + uriLoginPrivacidadCondiciones;
+
+        using (UnityWebRequest request = UnityWebRequest.Get(uri))
+        {
+            yield return request.SendWebRequest();
+            if (request.isNetworkError || request.isHttpError)
+            {
+
+                errorCode = request.error;
+                Debug.Log(errorCode);
+            }
+            else
+            {
+                Debug.Log("well done privacy Conditions sent...");
+            }
+        }
     }
 
     private void Update()
     {
-        CheckBoxToggleValueSetButtonAvailableRegister(dataProtectionToggleRegister);
-        CheckBoxToggleValueSetButtonAvailableLogin(dataProtectionToggleLogin);
+        //CheckBoxToggleValueSetButtonAvailableRegister(dataProtectionToggleRegister);
+        //CheckBoxToggleValueSetButtonAvailableLogin(false);
     }
 
     //instancia
@@ -252,29 +309,7 @@ public class UIManagerLogin : MonoBehaviour
         
     }
 
-    public void CheckBoxToggleValueSetButtonAvailableLogin(Toggle change)
-    {
-        //si todos los campos del register no estan vacios Y CHECKBOX PULSADA
-        if ( couponCodeLogin.text != "" && change.isOn )
-        {
-            //el valor de que sea interactuable el boton avanza dependerá del valor de la checkbox
-            botonAvanzaLogin.interactable = change.isOn;
-            //opacidad del boton
-            Color color = botonAvanzaLogin.GetComponent<Image>().color;
-            color.a = 1f; // 1f es opacidad completa, 0.5f es mitad opacidad
-            botonAvanzaLogin.GetComponent<Image>().color = color;
-        }
-        else
-        {
-            //el valor de que sea interactuable el boton avanza dependerá del valor de la checkbox
-            botonAvanzaLogin.interactable = change.isOn = false;
-            //opacidad del boton
-            Color color = botonAvanzaLogin.GetComponent<Image>().color;
-            color.a = 0.5f; // 1f es opacidad completa, 0.5f es mitad opacidad
-            botonAvanzaLogin.GetComponent<Image>().color = color;
-        }
 
-    }
 
 
 
