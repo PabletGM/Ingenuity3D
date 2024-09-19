@@ -234,6 +234,7 @@ public class UIManagerLogin : MonoBehaviour
 
     IEnumerator GetPrivacyConditions()
     {
+        Debug.Log(access_tokenEntreEscenas);
 
         string uri = uriBackend + uriLoginPrivacidadCondiciones;
 
@@ -253,6 +254,8 @@ public class UIManagerLogin : MonoBehaviour
                 Debug.Log("well done privacy Conditions sent...");
             }
         }
+
+
     }
 
     private void Update()
@@ -397,9 +400,7 @@ public class UIManagerLogin : MonoBehaviour
     public void DebugCouponLogin1()
     {
         StartCoroutine(MethodComprobacionAccessTokenLoginCorrectMethod());
-        //privacy conditions
-        //llamar a EndPoint
-        StartCoroutine(GetPrivacyConditions());
+       
 
     }
 
@@ -480,7 +481,7 @@ public class UIManagerLogin : MonoBehaviour
             {
                 Debug.Log("entra");
                 ComprobacionAccessTokenLoginCorrect(request.downloadHandler.text);
-                StartCoroutine(AcceptedConditions());
+                StartCoroutine(GetPrivacyConditions());
                 //next login panel
                 OpenGenderPanelLogin();
             }
@@ -523,7 +524,7 @@ public class UIManagerLogin : MonoBehaviour
             {
                 Debug.Log("entra");
                 ComprobacionAccessTokenLoginCorrect(request.downloadHandler.text);
-                StartCoroutine(AcceptedConditions());
+                StartCoroutine(GetPrivacyConditions());
                 //next Scene
                 OpenGenderPanelRegister();
             }
@@ -571,44 +572,8 @@ public class UIManagerLogin : MonoBehaviour
         }
     }
 
-    //2 
-    public IEnumerator AcceptedConditions()
-    {
 
-        // Cambia esto al valor adecuado de la edad
-        string body;
-
-        bool acceptedConditions = true;
-
-        //correct body format
-        body = $@"{{
-            ""acceptedConditions"": ""{acceptedConditions}""
-        }}";
-
-
-
-        string uri = uriBackend + uriGenreUpdate;
-
-        using (UnityWebRequest request = UnityWebRequest.Put(uri, body))
-        {
-            request.SetRequestHeader("Authorization", "Bearer " + access_tokenEntreEscenas);
-            request.SetRequestHeader("Content-Type", "application/json");
-
-            yield return request.SendWebRequest();
-
-            if (request.isNetworkError || request.isHttpError)
-            {
-
-                Debug.Log(request.error);
-                Debug.Log(access_tokenEntreEscenas);
-                
-            }
-            else
-            {
-                Debug.Log("BIEN");
-            }
-        }
-    }
+    
 
     //2 --> Elegir Genero 
     public IEnumerator GenreRegister()
