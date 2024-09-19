@@ -219,8 +219,7 @@ public class UIManagerLogin : MonoBehaviour
             Color color = botonAvanzaLogin.GetComponent<Image>().color;
             color.a = 1f; // 1f es opacidad completa, 0.5f es mitad opacidad
             botonAvanzaLogin.GetComponent<Image>().color = color;
-            //llamar a EndPoint
-            StartCoroutine(GetPrivacyConditions());
+
         }
         else
         {
@@ -240,6 +239,8 @@ public class UIManagerLogin : MonoBehaviour
 
         using (UnityWebRequest request = UnityWebRequest.Get(uri))
         {
+            request.SetRequestHeader("Authorization", "Bearer " + access_tokenEntreEscenas);
+            request.SetRequestHeader("Content-Type", "application/json");
             yield return request.SendWebRequest();
             if (request.isNetworkError || request.isHttpError)
             {
@@ -256,8 +257,7 @@ public class UIManagerLogin : MonoBehaviour
 
     private void Update()
     {
-        //CheckBoxToggleValueSetButtonAvailableRegister(dataProtectionToggleRegister);
-        //CheckBoxToggleValueSetButtonAvailableLogin(false);
+       
     }
 
     //instancia
@@ -397,7 +397,10 @@ public class UIManagerLogin : MonoBehaviour
     public void DebugCouponLogin1()
     {
         StartCoroutine(MethodComprobacionAccessTokenLoginCorrectMethod());
-       
+        //privacy conditions
+        //llamar a EndPoint
+        StartCoroutine(GetPrivacyConditions());
+
     }
 
     //Register 1
