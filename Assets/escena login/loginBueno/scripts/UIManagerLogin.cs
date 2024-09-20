@@ -162,7 +162,7 @@ public class UIManagerLogin : MonoBehaviour
     private string uriRegister = "Users/register";
     private string uriLogin = "Users/login";
 
-    private string uriLoginPrivacidadCondiciones = "/me/accept/privacyPolicy";
+    private string uriLoginPrivacidadCondiciones = "Users/me/accept/privacyPolicy";
     private string uriLoginCoupon = "Users/couponLogin";
     private string uriRegisterCoupon = "Users/registerv2";
     private string uriGenreUpdate = "Users/me/updateInfo";
