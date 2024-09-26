@@ -16,7 +16,7 @@ public class AndandoBosqueManager : MonoBehaviour
     {
         Invoke("TelefonoPopUpAparecer", 0f);
         //INVOCAMOS
-        Invoke("NextScene", timeNextSceneWait);
+        //Invoke("NextScene", timeNextSceneWait);
     }
 
     public void TelefonoPopUpAparecer()
