@@ -126,7 +126,7 @@ namespace Yarn.Unity.Example {
 				//activa objeto con tweens que hagan cosas
 				tweenObject.SetActive(true);
 				tweenObject.GetComponent<DOTweenAnimation>().DORestartById("catchOrange");
-				Invoke("Fade", 2f);
+				Invoke("DramaticFade", 2f);
 			}
 			else
 			{
@@ -143,7 +143,12 @@ namespace Yarn.Unity.Example {
             SetFade("black", 0.0f, 1.0f, 2.0f);
         }
 
-		private void EventAfterDialogue()
+        private void DramaticFade()
+        {
+            SetFade("black", 0.0f, 1.0f, 4.0f);
+        }
+
+        private void EventAfterDialogue()
 		{
             if (tweenObject != null)
             {
