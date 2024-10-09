@@ -161,7 +161,10 @@ namespace Yarn.Unity.Example {
 
 		private void FinishAnimation()
 		{
-            visualNovelPrefab.SetActive(false);
+			if(visualNovelPrefab!=null)
+			{
+                visualNovelPrefab.SetActive(false);
+            } 
         }
 
 		private void NextSceneManual()
