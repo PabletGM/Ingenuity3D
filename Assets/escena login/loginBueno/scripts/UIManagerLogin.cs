@@ -234,7 +234,7 @@ public class UIManagerLogin : MonoBehaviour
 
     IEnumerator GetPrivacyConditions()
     {
-        Debug.Log(access_tokenEntreEscenas);
+        //Debug.Log(access_tokenEntreEscenas);
 
         string uri = uriBackend + uriLoginPrivacidadCondiciones;
 

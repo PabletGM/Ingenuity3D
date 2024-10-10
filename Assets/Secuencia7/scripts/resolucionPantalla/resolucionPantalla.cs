@@ -46,6 +46,6 @@ public class resolucionPantalla : MonoBehaviour
             freeAspect.SetActive(true);
         }
 
-        Debug.Log(aspectRatio);
+        //Debug.Log(aspectRatio);
     }
 }
