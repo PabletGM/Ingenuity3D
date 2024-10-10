@@ -1940,12 +1940,12 @@ PrefabInstance:
     - target: {fileID: 4034489572841062405, guid: 9e0841b82a4ebcd438730d23886e17e6,
         type: 3}
       propertyPath: onNameUpdate.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4034489572841062405, guid: 9e0841b82a4ebcd438730d23886e17e6,
         type: 3}
       propertyPath: onDialogueStarted.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4034489572841062405, guid: 9e0841b82a4ebcd438730d23886e17e6,
         type: 3}
@@ -1965,7 +1965,7 @@ PrefabInstance:
     - target: {fileID: 4034489572841062405, guid: 9e0841b82a4ebcd438730d23886e17e6,
         type: 3}
       propertyPath: onDialogueStarted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4034489572841062405, guid: 9e0841b82a4ebcd438730d23886e17e6,
         type: 3}
@@ -1979,13 +1979,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4034489572841062405, guid: 9e0841b82a4ebcd438730d23886e17e6,
         type: 3}
+      propertyPath: onNameUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4034489572841062405, guid: 9e0841b82a4ebcd438730d23886e17e6,
+        type: 3}
       propertyPath: onNameNotPresent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1980393223}
     - target: {fileID: 4034489572841062405, guid: 9e0841b82a4ebcd438730d23886e17e6,
         type: 3}
       propertyPath: onNameUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 4034489572841062405, guid: 9e0841b82a4ebcd438730d23886e17e6,
         type: 3}
@@ -1996,7 +2001,7 @@ PrefabInstance:
         type: 3}
       propertyPath: onDialogueStarted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1980393223}
     - target: {fileID: 4034489572841062405, guid: 9e0841b82a4ebcd438730d23886e17e6,
         type: 3}
       propertyPath: onDialogueStarted.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -2030,7 +2035,7 @@ PrefabInstance:
     - target: {fileID: 4034489572841062405, guid: 9e0841b82a4ebcd438730d23886e17e6,
         type: 3}
       propertyPath: onDialogueStarted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: stopSFX1
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 4034489572841062405, guid: 9e0841b82a4ebcd438730d23886e17e6,
         type: 3}
@@ -2050,7 +2055,7 @@ PrefabInstance:
     - target: {fileID: 4034489572841062405, guid: 9e0841b82a4ebcd438730d23886e17e6,
         type: 3}
       propertyPath: onDialogueStarted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PlaySoundSecuencia9, Assembly-CSharp
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4034489572841062405, guid: 9e0841b82a4ebcd438730d23886e17e6,
         type: 3}
@@ -2060,7 +2065,12 @@ PrefabInstance:
     - target: {fileID: 4034489572841062405, guid: 9e0841b82a4ebcd438730d23886e17e6,
         type: 3}
       propertyPath: onDialogueStarted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: gente
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4034489572841062405, guid: 9e0841b82a4ebcd438730d23886e17e6,
+        type: 3}
+      propertyPath: onNameUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4034489572841062405, guid: 9e0841b82a4ebcd438730d23886e17e6,
         type: 3}
@@ -2739,7 +2749,7 @@ MonoBehaviour:
   hasOnPlay: 0
   hasOnUpdate: 0
   hasOnStepComplete: 0
-  hasOnComplete: 1
+  hasOnComplete: 0
   hasOnTweenCreated: 0
   hasOnRewind: 0
   onStart:

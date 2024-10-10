@@ -735,7 +735,7 @@ public class InfoItemsSecuenciasMongoDB : MonoBehaviour
             else
             {
                 //outputArea.text = request.downloadHandler.text;
-                Debug.Log("BIEN");
+                //Debug.Log("BIEN");
             }
         }
     }
