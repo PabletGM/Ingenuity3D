@@ -632,6 +632,7 @@ public class UIManagerLogin : MonoBehaviour
     [Obsolete]
     IEnumerator PostLogin(string email, string passwordLogin)
     {
+        
         // Crear formulario con los datos, todo en minusculas , porque va predefinido el formulario y username esta vez en minuscula
         Debug.Log(email);
         Debug.Log(passwordLogin);
@@ -1173,7 +1174,7 @@ public class UIManagerLogin : MonoBehaviour
 
     IEnumerator CreateNewGame()
     {
-        Debug.Log("entra2");
+        
 
         string uriStartGameBackend = uriBackend + "Users/me/startGame";
 
@@ -1215,10 +1216,8 @@ public class UIManagerLogin : MonoBehaviour
             }
             else
             {
-
-                SceneManager.LoadScene("8.0");
-                //fadeIn.SetActive(true);
-                //fadeIn.GetComponent<DOTweenAnimation>().DORestartById("FadeIn");
+                //next scene
+                fadeIn.GetComponent<DOTweenAnimation>().DORestartById("FadeIn");
             }
         }
 
